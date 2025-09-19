@@ -85,8 +85,8 @@ const projectsData = {
       { id: 4, name: "Budget Breakdown 2024", type: "XLSX", size: "892 KB", date: "2024-01-01" },
     ],
     feedback: [
-      { id: 1, author: "Maria Santos", date: "2024-11-10", comment: "Great progress on the project! The reduced traffic in our area is already noticeable.", upvotes: 24, downvotes: 2, userVote: "up" as const },
-      { id: 2, author: "Juan Dela Cruz", date: "2024-11-08", comment: "Construction noise has been disruptive, but understanding it's for long-term benefit.", upvotes: 15, downvotes: 8, userVote: null },
+      { id: 1, author: "Juan Dela Cruz", date: "2024-11-10", comment: "Great progress on the project! The reduced traffic in our area is already noticeable.", upvotes: 24, downvotes: 2, userVote: "up" as const },
+      { id: 2, author: "Maria Santos", date: "2024-11-08", comment: "Construction noise has been disruptive, but understanding it's for long-term benefit.", upvotes: 15, downvotes: 8, userVote: null },
       { id: 3, author: "Ana Rodriguez", date: "2024-11-05", comment: "Looking forward to the completion. This will greatly improve commuting in Metro Manila.", upvotes: 31, downvotes: 1, userVote: "up" as const },
     ],
   },

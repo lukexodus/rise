@@ -116,7 +116,7 @@ const mockNotifications = {
       id: 9,
       type: "reply",
       title: "New Reply",
-      message: "Maria Santos replied to your comment on subway construction",
+      message: "Juan Dela Cruz replied to your comment on subway construction",
       timestamp: "2024-11-14T15:45:00Z",
       read: false,
       priority: "medium",

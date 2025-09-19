@@ -1,11 +1,30 @@
-import { useState } from "react";
+import { useState, useMemo } from "react";
 import { CommunityPost } from "./CommunityPost";
 import { Button } from "./ui/button";
 import { Input } from "./ui/input";
 import { Textarea } from "./ui/textarea";
 import { Card } from "./ui/card";
 import { Badge } from "./ui/badge";
-import { Plus, Filter, TrendingUp, Camera, X, Search, Building, Building2, Users, Upload, FileText } from "lucide-react";
+import { 
+  Plus, 
+  Filter, 
+  TrendingUp, 
+  Camera, 
+  X, 
+  Search, 
+  Building, 
+  Building2, 
+  Users, 
+  Upload, 
+  FileText, 
+  Clock,
+  Construction,
+  Shield,
+  Zap,
+  TreePine,
+  Cross,
+  GraduationCap
+} from "lucide-react";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription, DialogTrigger } from "./ui/dialog";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "./ui/select";
 
@@ -112,6 +131,7 @@ const mockPosts = [
     downvotes: 12,
     status: "in_review" as const,
     timeAgo: "2 hours ago",
+    timestamp: new Date(Date.now() - 2 * 60 * 60 * 1000).toISOString(),
     department: "DPWH Metro Manila",
     hasUserVoted: null as const,
     imageUrl: "https://images.unsplash.com/photo-1647650299423-7d645ffe320f?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
@@ -127,8 +147,10 @@ const mockPosts = [
     downvotes: 8,
     status: "responded" as const,
     timeAgo: "5 hours ago",
+    timestamp: new Date(Date.now() - 5 * 60 * 60 * 1000).toISOString(),
     department: "Makati Public Works",
-    hasUserVoted: "up" as const
+    hasUserVoted: "up" as const,
+    imageUrl: "https://images.unsplash.com/photo-1598104469673-048b8f2729ea?q=80&w=712&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
   },
   {
     id: "3",
@@ -141,8 +163,10 @@ const mockPosts = [
     downvotes: 4,
     status: "pending" as const,
     timeAgo: "1 day ago",
+    timestamp: new Date(Date.now() - 24 * 60 * 60 * 1000).toISOString(),
     department: "Manila Water Company",
-    hasUserVoted: null as const
+    hasUserVoted: null as const,
+    imageUrl: "https://plus.unsplash.com/premium_photo-1734029815125-58149f75742e?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
   },
   {
     id: "4",
@@ -155,9 +179,186 @@ const mockPosts = [
     downvotes: 2,
     status: "resolved" as const,
     timeAgo: "3 days ago",
+    timestamp: new Date(Date.now() - 3 * 24 * 60 * 60 * 0).toISOString(),
     department: "Pasig City Government",
     hasUserVoted: null as const,
     imageUrl: "https://images.unsplash.com/photo-1719036723449-37680727c0e0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxicm9rZW4lMjBzdHJlZXRsaWdodCUyMG5pZ2h0JTIwZGFya3xlbnwxfHx8fDE3NTc5NDM2MzB8MA"
+  },
+  {
+    id: "5",
+    title: "Illegal dumping in vacant lot near residential area",
+    description: "Large amounts of construction debris and household waste being dumped daily. Creating health hazards and attracting pests.",
+    location: "Taguig City",
+    category: "Environment",
+    priority: "high" as const,
+    upvotes: 142,
+    downvotes: 3,
+    status: "pending" as const,
+    timeAgo: "6 hours ago",
+    timestamp: new Date(Date.now() - 6 * 60 * 60 * 1000).toISOString(),
+    department: "Taguig Environmental Management",
+    hasUserVoted: "up" as const,
+    imageUrl: "https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?q=80&w=1470&auto=format&fit=crop"
+  },
+  {
+    id: "6",
+    title: "Public school lacks proper ventilation and maintenance",
+    description: "Classrooms are overcrowded with broken windows and non-functional electric fans. Students are suffering in hot weather.",
+    location: "Manila City",
+    category: "Education",
+    priority: "medium" as const,
+    upvotes: 87,
+    downvotes: 1,
+    status: "in_review" as const,
+    timeAgo: "8 hours ago",
+    timestamp: new Date(Date.now() - 8 * 60 * 60 * 1000).toISOString(),
+    department: "Department of Education Manila",
+    hasUserVoted: null as const,
+    imageUrl: "https://images.unsplash.com/photo-1580582932707-520aed937b7b?q=80&w=1532&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+  },
+  {
+    id: "7",
+    title: "Frequent power outages during peak hours",
+    description: "Daily brownouts lasting 2-3 hours affecting businesses and residents. No advance notice from Meralco.",
+    location: "Muntinlupa City",
+    category: "Utilities",
+    priority: "high" as const,
+    upvotes: 203,
+    downvotes: 7,
+    status: "responded" as const,
+    timeAgo: "12 hours ago",
+    timestamp: new Date(Date.now() - 12 * 60 * 60 * 1000).toISOString(),
+    department: "Meralco",
+    hasUserVoted: "up" as const,
+    imageUrl: "https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+  },
+  {
+    id: "8",
+    title: "Healthcare center understaffed and lacks medicine",
+    description: "Only 1 doctor for entire barangay of 5000+ residents. Basic medicines out of stock for weeks.",
+    location: "Caloocan City",
+    category: "Healthcare",
+    priority: "high" as const,
+    upvotes: 178,
+    downvotes: 2,
+    status: "pending" as const,
+    timeAgo: "1 day ago",
+    timestamp: new Date(Date.now() - 26 * 60 * 60 * 1000).toISOString(),
+    department: "Caloocan Health Department",
+    hasUserVoted: null as const,
+    imageUrl: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?q=80&w=1631&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+  },
+  {
+    id: "9",
+    title: "Blocked drainage causing frequent flooding",
+    description: "Main drainage system clogged with debris. Even light rain causes street flooding affecting 50+ houses.",
+    location: "Valenzuela City",
+    category: "Infrastructure",
+    priority: "high" as const,
+    upvotes: 167,
+    downvotes: 5,
+    status: "in_review" as const,
+    timeAgo: "18 hours ago",
+    timestamp: new Date(Date.now() - 18 * 60 * 60 * 1000).toISOString(),
+    department: "Valenzuela Public Works",
+    hasUserVoted: "up" as const,
+    imageUrl: "https://images.unsplash.com/photo-1547036967-23d11aacaee0?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+  },
+  {
+    id: "10",
+    title: "Air pollution from nearby factory affecting neighborhood",
+    description: "Chemical plant releasing toxic fumes daily. Residents experiencing respiratory problems and bad odor.",
+    location: "Navotas City",
+    category: "Environment",
+    priority: "high" as const,
+    upvotes: 134,
+    downvotes: 8,
+    status: "pending" as const,
+    timeAgo: "2 days ago",
+    timestamp: new Date(Date.now() - 2 * 24 * 60 * 60 * 1000).toISOString(),
+    department: "DENR NCR",
+    hasUserVoted: null as const,
+    imageUrl: "https://images.unsplash.com/photo-1569163139394-de4e5f43e4e3?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+  },
+  {
+    id: "11",
+    title: "Traffic signal malfunction at major intersection",
+    description: "Traffic lights have been blinking yellow for 5 days. Creating dangerous conditions and traffic jams during rush hour.",
+    location: "Parañaque City",
+    category: "Infrastructure",
+    priority: "medium" as const,
+    upvotes: 76,
+    downvotes: 3,
+    status: "responded" as const,
+    timeAgo: "4 hours ago",
+    timestamp: new Date(Date.now() - 4 * 60 * 60 * 1000).toISOString(),
+    department: "MMDA",
+    hasUserVoted: null as const,
+    imageUrl: "https://images.unsplash.com/photo-1533134486753-c833f0ed4866?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+  },
+  {
+    id: "12",
+    title: "Playground equipment broken and unsafe for children",
+    description: "Swings have broken chains, slides have sharp edges. Multiple children have been injured but no repairs done.",
+    location: "Las Piñas City",
+    category: "Safety",
+    priority: "medium" as const,
+    upvotes: 92,
+    downvotes: 1,
+    status: "resolved" as const,
+    timeAgo: "5 days ago",
+    timestamp: new Date(Date.now() - 5 * 24 * 60 * 60 * 1000).toISOString(),
+    department: "Las Piñas Parks and Recreation",
+    hasUserVoted: "up" as const,
+    imageUrl: "https://images.unsplash.com/photo-1544551763-46a013bb70d5?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+  },
+  {
+    id: "13",
+    title: "Internet connectivity issues in public WiFi zones",
+    description: "Free WiFi in parks and plazas constantly disconnecting. Students can't access online classes.",
+    location: "Malabon City",
+    category: "Utilities",
+    priority: "low" as const,
+    upvotes: 45,
+    downvotes: 12,
+    status: "pending" as const,
+    timeAgo: "3 days ago",
+    timestamp: new Date(Date.now() - 3 * 24 * 60 * 60 * 1000).toISOString(),
+    department: "Malabon IT Department",
+    hasUserVoted: null as const,
+    imageUrl: "https://images.unsplash.com/photo-1562654501-a0ccc0fc3fb1?q=80&w=1632&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+  },
+  {
+    id: "14",
+    title: "Stray dogs forming packs and threatening residents",
+    description: "Groups of 8-10 aggressive stray dogs roaming the neighborhood. Several residents have been chased and bitten.",
+    location: "San Juan City",
+    category: "Safety",
+    priority: "high" as const,
+    upvotes: 156,
+    downvotes: 23,
+    status: "in_review" as const,
+    timeAgo: "1 day ago",
+    timestamp: new Date(Date.now() - 28 * 60 * 60 * 1000).toISOString(),
+    department: "San Juan Animal Control",
+    hasUserVoted: "up" as const,
+    imageUrl: "https://images.unsplash.com/photo-1583337130417-3346a1be7dee?q=80&w=1064&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+  },
+  {
+    id: "15",
+    title: "Noise pollution from construction site during night hours",
+    description: "Heavy machinery operating from 10PM to 6AM violating city ordinances. Affecting sleep of nearby residents.",
+    location: "Mandaluyong City",
+    category: "Environment",
+    priority: "medium" as const,
+    upvotes: 68,
+    downvotes: 15,
+    status: "responded" as const,
+    timeAgo: "6 days ago",
+    timestamp: new Date(Date.now() - 6 * 24 * 60 * 60 * 1000).toISOString(),
+    department: "Mandaluyong Building Office",
+    hasUserVoted: null as const,
+    imageUrl: "https://images.unsplash.com/photo-1581833971358-2c8b550f87b3?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
   }
 ];
 
@@ -194,14 +395,18 @@ export function CommunityFeed({ onPostClick }: CommunityFeedProps) {
 
   const categories = ["Infrastructure", "Safety", "Utilities", "Environment", "Healthcare", "Education"];
 
-  const filteredPosts = posts
-    .filter(post => filterCategory === "all" || post.category === filterCategory)
-    .sort((a, b) => {
-      if (sortBy === "trending") {
-        return (b.upvotes - b.downvotes) - (a.upvotes - a.downvotes);
-      }
-      return 0; // Default to original order for "recent"
-    });
+  const filteredPosts = useMemo(() => {
+    return posts
+      .filter(post => filterCategory === "all" || post.category === filterCategory)
+      .sort((a, b) => {
+        if (sortBy === "trending") {
+          return (b.upvotes - b.downvotes) - (a.upvotes - a.downvotes);
+        } else if (sortBy === "recent") {
+          return new Date(b.timestamp).getTime() - new Date(a.timestamp).getTime();
+        }
+        return 0;
+      });
+  }, [posts, sortBy, filterCategory]);
 
   const handleSubmitPost = () => {
     // In a real app, this would submit to backend
@@ -212,7 +417,7 @@ export function CommunityFeed({ onPostClick }: CommunityFeedProps) {
       location: "",
       category: "",
       priority: "medium"
-    });
+    }); 
     setNewPostImage(null);
     setUploadedDocuments([]);
     setSelectedEntities([]);
@@ -252,6 +457,25 @@ export function CommunityFeed({ onPostClick }: CommunityFeedProps) {
       return <Users className="w-4 h-4" />;
     }
     return <Building2 className="w-4 h-4" />;
+  };
+
+  const getCategoryIconForDropdown = (category: string) => {
+    switch (category) {
+      case "Infrastructure":
+        return <Construction className="w-3 h-3" />;
+      case "Safety":
+        return <Shield className="w-3 h-3" />;
+      case "Utilities":
+        return <Zap className="w-3 h-3" />;
+      case "Environment":
+        return <TreePine className="w-3 h-3" />;
+      case "Healthcare":
+        return <Cross className="w-3 h-3" />;
+      case "Education":
+        return <GraduationCap className="w-3 h-3" />;
+      default:
+        return null;
+    }
   };
 
   const handleDocumentUpload = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -327,7 +551,7 @@ export function CommunityFeed({ onPostClick }: CommunityFeedProps) {
                 </div>
                 <div>
                   <label className="text-sm font-medium text-[#1A3E73] mb-2 block">
-                    Category
+                    Sector
                   </label>
                   <Select onValueChange={(value) => setNewPostData(prev => ({...prev, category: value}))}>
                     <SelectTrigger>
@@ -532,9 +756,9 @@ export function CommunityFeed({ onPostClick }: CommunityFeedProps) {
         </div>
 
         {/* Filters */}
-        <Card className="p-3 lg:p-4">
-          <div className="flex flex-col lg:flex-row lg:items-center gap-3 lg:gap-4">
-            <div className="flex items-center gap-2">
+        <Card className="p-3 sm:p-4">
+          <div className="space-y-3 sm:space-y-0 sm:flex sm:items-center sm:justify-between sm:gap-4">
+            <div className="flex items-center gap-2 sm:gap-3">
               <Filter className="w-4 h-4 text-muted-foreground flex-shrink-0" />
               <div className="flex gap-2">
                 <Button
@@ -552,33 +776,30 @@ export function CommunityFeed({ onPostClick }: CommunityFeedProps) {
                   onClick={() => setSortBy("recent")}
                   className={sortBy === "recent" ? "bg-[#1A3E73] text-white" : ""}
                 >
+                  <Clock className="w-3 h-3 mr-1" />
                   Recent
                 </Button>
               </div>
             </div>
             
-            <div className="flex gap-1 overflow-x-auto lg:flex-wrap">
-              <Badge
-                variant={filterCategory === "all" ? "default" : "outline"}
-                className={`cursor-pointer text-xs ${
-                  filterCategory === "all" ? "bg-[#F2C063] text-[#1A3E73]" : ""
-                }`}
-                onClick={() => setFilterCategory("all")}
-              >
-                All
-              </Badge>
-              {categories.map(cat => (
-                <Badge
-                  key={cat}
-                  variant={filterCategory === cat ? "default" : "outline"}
-                  className={`cursor-pointer text-xs whitespace-nowrap ${
-                    filterCategory === cat ? "bg-[#F2C063] text-[#1A3E73]" : ""
-                  }`}
-                  onClick={() => setFilterCategory(cat)}
-                >
-                  {cat}
-                </Badge>
-              ))}
+            <div className="flex items-center gap-2 lg:gap-3">
+              <span className="text-sm text-muted-foreground whitespace-nowrap">Sector:</span>
+              <Select value={filterCategory} onValueChange={setFilterCategory}>
+                <SelectTrigger className="w-[160px] lg:w-[180px]">
+                  <SelectValue placeholder="Select category" />
+                </SelectTrigger>
+                <SelectContent>
+                  <SelectItem value="all">All</SelectItem>
+                  {categories.map(cat => (
+                    <SelectItem key={cat} value={cat} className="flex items-center gap-2">
+                      <div className="flex items-center gap-2">
+                        {getCategoryIconForDropdown(cat)}
+                        <span>{cat}</span>
+                      </div>
+                    </SelectItem>
+                  ))}
+                </SelectContent>
+              </Select>
             </div>
           </div>
         </Card>

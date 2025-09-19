@@ -25,8 +25,8 @@ import {
 
 // Mock user data
 const mockUser = {
-  name: "Maria Santos",
-  email: "maria.santos@email.com",
+  name: "Juan Dela Cruz",
+  email: "juan@email.com",
   phone: "+63 917 123 4567",
   location: "Quezon City, Metro Manila",
   joinDate: "March 2024",

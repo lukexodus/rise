@@ -20,17 +20,10 @@ export function Header({ onNotificationsClick, onProfileClick }: HeaderProps) {
         <div className="flex items-center gap-3">
           {/* Philippine Flag Circle Logo */}
           <div className="w-10 h-10 rounded-full bg-white flex items-center justify-center overflow-hidden">
-            <svg viewBox="0 0 100 100" className="w-8 h-8">
-              {/* Philippine Flag - Simplified circular version */}
-              <circle cx="50" cy="50" r="48" fill="#0038A8" stroke="#CE1126" strokeWidth="2"/>
-              <path d="M50 2 L98 35 L98 65 L50 98 L2 65 L2 35 Z" fill="#FECA57"/>
-              <polygon points="2,35 50,2 50,50 2,50" fill="#0038A8"/>
-              <polygon points="50,50 98,35 98,50 50,50" fill="#CE1126"/>
-              <circle cx="20" cy="25" r="4" fill="#FECA57"/>
-              <polygon points="15,20 20,15 25,20 23,26 17,26" fill="#FECA57"/>
-              <polygon points="30,25 35,20 40,25 38,31 32,31" fill="#FECA57"/>
-              <polygon points="25,35 30,30 35,35 33,41 27,41" fill="#FECA57"/>
-            </svg>
+            <img 
+              src="/src/assets/ph.png" 
+              alt="Philippine Flag" 
+              className="w-[2.45rem] h-[2.45rem] object-cover" />
           </div>
           
           {/* App Name */}

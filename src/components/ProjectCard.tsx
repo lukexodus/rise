@@ -2,6 +2,15 @@ import React from "react";
 import { Card } from "./ui/card";
 import { Progress } from "./ui/progress";
 import { Badge } from "./ui/badge";
+import { 
+  PhilippinePeso, 
+  TrendingUp, 
+  Calendar, 
+  MapPin, 
+  Play, 
+  CheckCircle, 
+  AlertTriangle 
+} from "lucide-react";
 
 interface ProjectCardProps {
   id: number;
@@ -50,6 +59,19 @@ export function ProjectCard({ id, title, budget, progress, status, location, end
     }
   };
 
+  const getStatusIcon = () => {
+    switch (status) {
+      case "ongoing":
+        return <Play className="w-3 h-3" />;
+      case "completed":
+        return <CheckCircle className="w-3 h-3" />;
+      case "delayed":
+        return <AlertTriangle className="w-3 h-3" />;
+      default:
+        return null;
+    }
+  };
+
   const handleClick = () => {
     if (onProjectClick) {
       // Map home page project IDs to the correct project detail IDs
@@ -71,20 +93,30 @@ export function ProjectCard({ id, title, budget, progress, status, location, end
         <h3 className="text-sm font-medium text-[#1A3E73] leading-tight flex-1 mr-2">
           {title}
         </h3>
-        <Badge className={`text-xs px-2 py-1 ${getStatusColor()}`}>
+        <Badge className={`text-xs px-2 py-1 flex items-center gap-1 ${getStatusColor()}`}>
+          {getStatusIcon()}
           {status.charAt(0).toUpperCase() + status.slice(1)}
         </Badge>
       </div>
 
       <div className="space-y-3">
         <div className="flex justify-between items-center text-xs text-muted-foreground">
-          <span>Budget: {formatCurrency(budget)}</span>
-          <span>{location}</span>
+          <div className="flex items-center gap-1">
+            <PhilippinePeso className="w-3 h-3" />
+            <span>Budget: {formatCurrency(budget)}</span>
+          </div>
+          <div className="flex items-center gap-1">
+            <MapPin className="w-3 h-3" />
+            <span>{location}</span>
+          </div>
         </div>
 
         <div className="space-y-2">
           <div className="flex justify-between items-center text-xs">
-            <span className="text-muted-foreground">Progress</span>
+            <div className="flex items-center gap-1 text-muted-foreground">
+              <TrendingUp className="w-3 h-3" />
+              <span>Progress</span>
+            </div>
             <span className="font-medium text-[#1A3E73]">{progress}%</span>
           </div>
           <div className="relative">
@@ -99,8 +131,9 @@ export function ProjectCard({ id, title, budget, progress, status, location, end
           </div>
         </div>
 
-        <div className="text-xs text-muted-foreground">
-          Target completion: {endDate}
+        <div className="flex items-center gap-1 text-xs text-muted-foreground">
+          <Calendar className="w-3 h-3" />
+          <span>Target completion: {endDate}</span>
         </div>
       </div>
     </Card>

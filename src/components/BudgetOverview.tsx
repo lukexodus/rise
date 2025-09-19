@@ -1,4 +1,5 @@
 import { Card } from "./ui/card";
+import { PieChart, TrendingDown, Wallet } from "lucide-react";
 
 interface BudgetOverviewProps {
   totalBudget: number;
@@ -41,7 +42,10 @@ export function BudgetOverview({ totalBudget, allocated, spent, remaining }: Bud
         <div className="grid grid-cols-3 lg:grid-cols-6 gap-3 lg:gap-4">
           <Card className="p-3 lg:p-4 bg-white/95 border-0 lg:col-span-2">
             <div className="text-center">
-              <div className="text-xs lg:text-sm text-muted-foreground mb-1">Allocated</div>
+              <div className="flex items-center justify-center gap-1 text-xs lg:text-sm text-muted-foreground mb-1">
+                <PieChart className="w-3 h-3 lg:w-4 lg:h-4" />
+                <span>Allocated</span>
+              </div>
               <div className="text-sm lg:text-base font-medium text-[#1A3E73]">
                 {formatCurrency(allocated)}
               </div>
@@ -53,7 +57,10 @@ export function BudgetOverview({ totalBudget, allocated, spent, remaining }: Bud
 
           <Card className="p-3 lg:p-4 bg-white/95 border-0 lg:col-span-2">
             <div className="text-center">
-              <div className="text-xs lg:text-sm text-muted-foreground mb-1">Spent</div>
+              <div className="flex items-center justify-center gap-1 text-xs lg:text-sm text-muted-foreground mb-1">
+                <TrendingDown className="w-3 h-3 lg:w-4 lg:h-4" />
+                <span>Spent</span>
+              </div>
               <div className="text-sm lg:text-base font-medium text-[#BF4226]">
                 {formatCurrency(spent)}
               </div>
@@ -65,7 +72,10 @@ export function BudgetOverview({ totalBudget, allocated, spent, remaining }: Bud
 
           <Card className="p-3 lg:p-4 bg-white/95 border-0 lg:col-span-2">
             <div className="text-center">
-              <div className="text-xs lg:text-sm text-muted-foreground mb-1">Remaining</div>
+              <div className="flex items-center justify-center gap-1 text-xs lg:text-sm text-muted-foreground mb-1">
+                <Wallet className="w-3 h-3 lg:w-4 lg:h-4" />
+                <span>Remaining</span>
+              </div>
               <div className="text-sm lg:text-base font-medium text-[#F2C063]">
                 {formatCurrency(remaining)}
               </div>

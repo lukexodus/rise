@@ -305,7 +305,7 @@ export function ProjectMap({ onProjectClick }: ProjectMapProps) {
         ))}
 
         {/* Map Controls */}
-        <div className={`${isScrolled ? 'fixed top-4 right-4 z-40' : 'absolute top-4 right-4'} flex flex-col gap-2 transition-all duration-200`}>
+        <div className={`${isScrolled ? 'fixed top-6 right-4 z-40' : 'absolute top-6 right-4'} flex flex-col gap-2 transition-all duration-200`}>
           <Button size="sm" variant="outline" className="bg-white/90 backdrop-blur-sm w-10 h-10 p-0 shadow-lg transition-all duration-200">
             <ZoomIn className="w-4 h-4" />
           </Button>
@@ -325,7 +325,6 @@ export function ProjectMap({ onProjectClick }: ProjectMapProps) {
           </Button>
         </div>
 
-        {/* Legend */}
         {/* Legend */}
         {showLegend && (
           <div className="fixed bottom-20 left-4 bg-white/95 backdrop-blur-sm rounded-lg p-3 shadow-lg z-30">
@@ -349,7 +348,7 @@ export function ProjectMap({ onProjectClick }: ProjectMapProps) {
 
         {/* Project Info Card */}
         {selectedProject && (
-          <div className="absolute bottom-4 left-4 right-4 bg-white rounded-lg shadow-xl p-4 z-20">
+          <div className="fixed bottom-4 left-4 right-4 bg-white rounded-lg shadow-xl p-4 z-20">
             <div className="flex justify-between items-start mb-3">
               <h3 className="font-medium text-[#1A3E73] flex-1 pr-2">
                 {selectedProject.title}
