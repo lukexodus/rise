@@ -23,7 +23,19 @@ import {
   Zap,
   TreePine,
   Cross,
-  GraduationCap
+  GraduationCap,
+  Car,
+  Gavel,
+  Wifi,
+  Briefcase,
+  Globe,
+  Home,
+  Utensils,
+  Coins,
+  MessageSquare,
+  MapPin,
+  Tag,
+  AlertTriangle
 } from "lucide-react";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription, DialogTrigger } from "./ui/dialog";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "./ui/select";
@@ -198,7 +210,7 @@ const mockPosts = [
     timestamp: new Date(Date.now() - 6 * 60 * 60 * 1000).toISOString(),
     department: "Taguig Environmental Management",
     hasUserVoted: "up" as const,
-    imageUrl: "https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?q=80&w=1470&auto=format&fit=crop"
+    imageUrl: "https://childrenofthedump.org.uk/wp-content/uploads/2025/05/20191125_101451-1024x768.jpg"
   },
   {
     id: "6",
@@ -214,7 +226,7 @@ const mockPosts = [
     timestamp: new Date(Date.now() - 8 * 60 * 60 * 1000).toISOString(),
     department: "Department of Education Manila",
     hasUserVoted: null as const,
-    imageUrl: "https://images.unsplash.com/photo-1580582932707-520aed937b7b?q=80&w=1532&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    imageUrl: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiFxh-sGbJiWVlaHO99JmVjw619X2JPfF0UDhWgzqmn1Q1-9A-STChJ8b-aO2XbLBO1EPZl9jt-YV0admfPiSCB54uWEjstcDVeZZm4FKklwmdlOi-Uu-mqls50L38mRs9zSZIw0QVBUWg/w1200-h630-p-k-no-nu/classroomshortage.png"
   },
   {
     id: "7",
@@ -230,7 +242,7 @@ const mockPosts = [
     timestamp: new Date(Date.now() - 12 * 60 * 60 * 1000).toISOString(),
     department: "Meralco",
     hasUserVoted: "up" as const,
-    imageUrl: "https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    imageUrl: "https://images.unsplash.com/photo-1743069625024-8fdf92a17724?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
   },
   {
     id: "8",
@@ -246,7 +258,7 @@ const mockPosts = [
     timestamp: new Date(Date.now() - 26 * 60 * 60 * 1000).toISOString(),
     department: "Caloocan Health Department",
     hasUserVoted: null as const,
-    imageUrl: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?q=80&w=1631&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    imageUrl: "https://plus.unsplash.com/premium_photo-1753205867821-b022fae68a0d?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
   },
   {
     id: "9",
@@ -262,7 +274,7 @@ const mockPosts = [
     timestamp: new Date(Date.now() - 18 * 60 * 60 * 1000).toISOString(),
     department: "Valenzuela Public Works",
     hasUserVoted: "up" as const,
-    imageUrl: "https://images.unsplash.com/photo-1547036967-23d11aacaee0?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    imageUrl: "https://images.unsplash.com/photo-1741038579797-8560cc8b4d38?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
   },
   {
     id: "10",
@@ -278,7 +290,7 @@ const mockPosts = [
     timestamp: new Date(Date.now() - 2 * 24 * 60 * 60 * 1000).toISOString(),
     department: "DENR NCR",
     hasUserVoted: null as const,
-    imageUrl: "https://images.unsplash.com/photo-1569163139394-de4e5f43e4e3?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    imageUrl: "https://images.unsplash.com/photo-1711553460847-172fea01f6e2?q=80&w=1633&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
   },
   {
     id: "11",
@@ -294,7 +306,7 @@ const mockPosts = [
     timestamp: new Date(Date.now() - 4 * 60 * 60 * 1000).toISOString(),
     department: "MMDA",
     hasUserVoted: null as const,
-    imageUrl: "https://images.unsplash.com/photo-1533134486753-c833f0ed4866?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    imageUrl: "https://images.metronewscentral.net/XaCVy3bB80MMDA-22.jpg"
   },
   {
     id: "12",
@@ -310,7 +322,7 @@ const mockPosts = [
     timestamp: new Date(Date.now() - 5 * 24 * 60 * 60 * 1000).toISOString(),
     department: "Las Piñas Parks and Recreation",
     hasUserVoted: "up" as const,
-    imageUrl: "https://images.unsplash.com/photo-1544551763-46a013bb70d5?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    imageUrl: "https://images.unsplash.com/photo-1752157087934-ba84fa96afe5?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
   },
   {
     id: "13",
@@ -326,7 +338,7 @@ const mockPosts = [
     timestamp: new Date(Date.now() - 3 * 24 * 60 * 60 * 1000).toISOString(),
     department: "Malabon IT Department",
     hasUserVoted: null as const,
-    imageUrl: "https://images.unsplash.com/photo-1562654501-a0ccc0fc3fb1?q=80&w=1632&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    imageUrl: "https://media.philstar.com/photos/2020/03/05/wifi_2020-03-05_19-16-16738_thumbnail.jpg"
   },
   {
     id: "14",
@@ -342,7 +354,7 @@ const mockPosts = [
     timestamp: new Date(Date.now() - 28 * 60 * 60 * 1000).toISOString(),
     department: "San Juan Animal Control",
     hasUserVoted: "up" as const,
-    imageUrl: "https://images.unsplash.com/photo-1583337130417-3346a1be7dee?q=80&w=1064&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    imageUrl: "https://images.indianexpress.com/2016/09/stray-dogs-480.jpg?w=640?w=414"
   },
   {
     id: "15",
@@ -358,7 +370,7 @@ const mockPosts = [
     timestamp: new Date(Date.now() - 6 * 24 * 60 * 60 * 1000).toISOString(),
     department: "Mandaluyong Building Office",
     hasUserVoted: null as const,
-    imageUrl: "https://images.unsplash.com/photo-1581833971358-2c8b550f87b3?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    imageUrl: "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/ihMo6pbP7V4Y/v7/-1x-1.webp"
   }
 ];
 
@@ -393,7 +405,25 @@ export function CommunityFeed({ onPostClick }: CommunityFeedProps) {
     !selectedEntities.includes(entity)
   );
 
-  const categories = ["Infrastructure", "Safety", "Utilities", "Environment", "Healthcare", "Education"];
+  const categories = [
+    "Infrastructure", 
+    "Safety & Security", 
+    "Utilities", 
+    "Environment", 
+    "Healthcare", 
+    "Education",
+    "Transportation",
+    "Public Services",
+    "Technology & Digital Services",
+    "Economic Development",
+    "Social Services",
+    "Housing & Urban Planning",
+    "Food Safety & Agriculture",
+    "Legal & Justice",
+    "Emergency Services",
+    "Tourism & Culture",
+    "Finance & Budget"
+  ];
 
   const filteredPosts = useMemo(() => {
     return posts
@@ -463,7 +493,7 @@ export function CommunityFeed({ onPostClick }: CommunityFeedProps) {
     switch (category) {
       case "Infrastructure":
         return <Construction className="w-3 h-3" />;
-      case "Safety":
+      case "Safety & Security":
         return <Shield className="w-3 h-3" />;
       case "Utilities":
         return <Zap className="w-3 h-3" />;
@@ -473,6 +503,28 @@ export function CommunityFeed({ onPostClick }: CommunityFeedProps) {
         return <Cross className="w-3 h-3" />;
       case "Education":
         return <GraduationCap className="w-3 h-3" />;
+      case "Transportation":
+        return <Car className="w-3 h-3" />;
+      case "Public Services":
+        return <Users className="w-3 h-3" />;
+      case "Technology & Digital Services":
+        return <Wifi className="w-3 h-3" />;
+      case "Economic Development":
+        return <Briefcase className="w-3 h-3" />;
+      case "Social Services":
+        return <Users className="w-3 h-3" />;
+      case "Housing & Urban Planning":
+        return <Home className="w-3 h-3" />;
+      case "Food Safety & Agriculture":
+        return <Utensils className="w-3 h-3" />;
+      case "Legal & Justice":
+        return <Gavel className="w-3 h-3" />;
+      case "Emergency Services":
+        return <Shield className="w-3 h-3" />;
+      case "Tourism & Culture":
+        return <Globe className="w-3 h-3" />;
+      case "Finance & Budget":
+        return <Coins className="w-3 h-3" />;
       default:
         return null;
     }
@@ -502,24 +554,25 @@ export function CommunityFeed({ onPostClick }: CommunityFeedProps) {
             <h2 className="text-lg lg:text-2xl font-medium text-[#1A3E73]">Community Issues</h2>
             <p className="text-sm lg:text-base text-muted-foreground">Report and track issues in your area</p>
           </div>
-          <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
+          <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen} className="">
             <DialogTrigger asChild>
               <Button className="bg-[#1A3E73] hover:bg-[#1A3E73]/90 text-white lg:px-6">
-                <Plus className="w-4 h-4 mr-2" />
-                Report Issue
+                <Plus className="w-4 h-4" />
+                Report
               </Button>
             </DialogTrigger>
             <DialogContent className="w-[95vw] max-w-md lg:max-w-lg">
             <DialogHeader>
-              <DialogTitle className="text-[#1A3E73]">Report New Issue</DialogTitle>
+              <DialogTitle className="text-[#1A3E73]">Report Issue</DialogTitle>
               <DialogDescription className="text-muted-foreground">
                 Fill out the form below to report a new issue in your community.
               </DialogDescription>
             </DialogHeader>
             <div className="space-y-4">
               <div>
-                <label className="text-sm font-medium text-[#1A3E73] mb-2 block">
-                  Issue Title
+                <label className="text-sm font-medium text-[#1A3E73] mb-2 block flex items-center gap-1.5">
+                  <MessageSquare className="w-4 h-4" />
+                  Title
                 </label>
                 <Input
                   placeholder="Brief description of the issue"
@@ -528,8 +581,9 @@ export function CommunityFeed({ onPostClick }: CommunityFeedProps) {
                 />
               </div>
               <div>
-                <label className="text-sm font-medium text-[#1A3E73] mb-2 block">
-                  Detailed Description
+                <label className="text-sm font-medium text-[#1A3E73] mb-2 block flex items-center gap-1.5">
+                  <FileText className="w-4 h-4" />
+                  Description
                 </label>
                 <Textarea
                   placeholder="Provide more details about the issue..."
@@ -540,7 +594,8 @@ export function CommunityFeed({ onPostClick }: CommunityFeedProps) {
               </div>
               <div className="grid grid-cols-2 gap-2">
                 <div>
-                  <label className="text-sm font-medium text-[#1A3E73] mb-2 block">
+                  <label className="text-sm font-medium text-[#1A3E73] mb-2 block flex items-center gap-1.5">
+                    <MapPin className="w-4 h-4" />
                     Location
                   </label>
                   <Input
@@ -550,7 +605,8 @@ export function CommunityFeed({ onPostClick }: CommunityFeedProps) {
                   />
                 </div>
                 <div>
-                  <label className="text-sm font-medium text-[#1A3E73] mb-2 block">
+                  <label className="text-sm font-medium text-[#1A3E73] mb-2 block flex items-center gap-1.5">
+                    <Tag className="w-4 h-4" />
                     Sector
                   </label>
                   <Select onValueChange={(value) => setNewPostData(prev => ({...prev, category: value}))}>
@@ -566,7 +622,8 @@ export function CommunityFeed({ onPostClick }: CommunityFeedProps) {
                 </div>
               </div>
               <div>
-                <label className="text-sm font-medium text-[#1A3E73] mb-2 block">
+                <label className="text-sm font-medium text-[#1A3E73] mb-2 block flex items-center gap-1.5">
+                  <AlertTriangle className="w-4 h-4" />
                   Priority Level
                 </label>
                 <Select 
@@ -586,7 +643,8 @@ export function CommunityFeed({ onPostClick }: CommunityFeedProps) {
               
               {/* Responsible Entity Tagging */}
               <div>
-                <label className="text-sm font-medium text-[#1A3E73] mb-2 block">
+                <label className="text-sm font-medium text-[#1A3E73] mb-2 block flex items-center gap-1.5">
+                  <Building2 className="w-4 h-4" />
                   Tag Responsible Agencies/Institutions
                 </label>
                 <div className="space-y-3">
@@ -655,7 +713,8 @@ export function CommunityFeed({ onPostClick }: CommunityFeedProps) {
 
               {/* Image Upload */}
               <div>
-                <label className="text-sm font-medium text-[#1A3E73] mb-2 block">
+                <label className="text-sm font-medium text-[#1A3E73] mb-2 block flex items-center gap-1.5">
+                  <Camera className="w-4 h-4" />
                   Upload Image (Optional)
                 </label>
                 {newPostImage ? (
@@ -695,7 +754,8 @@ export function CommunityFeed({ onPostClick }: CommunityFeedProps) {
 
               {/* Document Upload */}
               <div>
-                <label className="text-sm font-medium text-[#1A3E73] mb-2 block">
+                <label className="text-sm font-medium text-[#1A3E73] mb-2 block flex items-center gap-1.5">
+                  <Upload className="w-4 h-4" />
                   Upload Documents (Optional)
                 </label>
                 
@@ -791,7 +851,7 @@ export function CommunityFeed({ onPostClick }: CommunityFeedProps) {
                 <SelectContent>
                   <SelectItem value="all">All</SelectItem>
                   {categories.map(cat => (
-                    <SelectItem key={cat} value={cat} className="flex items-center gap-2">
+                    <SelectItem key={cat} value={cat}>
                       <div className="flex items-center gap-2">
                         {getCategoryIconForDropdown(cat)}
                         <span>{cat}</span>
@@ -816,7 +876,7 @@ export function CommunityFeed({ onPostClick }: CommunityFeedProps) {
         </div>
 
         {filteredPosts.length === 0 && (
-          <div className="text-center py-8 sm:col-span-2">
+          <div className="text-center py-8">
             <p className="text-muted-foreground">No issues found for this category.</p>
           </div>
         )}

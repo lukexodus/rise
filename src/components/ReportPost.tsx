@@ -365,7 +365,7 @@ const mockDetailedPosts = {
     ],
     hasUserVoted: "up" as const,
     images: [
-      "https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?q=80&w=1470&auto=format&fit=crop",
+      "https://childrenofthedump.org.uk/wp-content/uploads/2025/05/20191125_101451-1024x768.jpg",
     ],
     documents: [
       { name: "Dumping_Site_Photos.pdf", size: "3.2 MB" },
@@ -418,7 +418,7 @@ const mockDetailedPosts = {
     ],
     hasUserVoted: null as const,
     images: [
-      "https://images.unsplash.com/photo-1580582932707-520aed937b7b?q=80&w=1532&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiFxh-sGbJiWVlaHO99JmVjw619X2JPfF0UDhWgzqmn1Q1-9A-STChJ8b-aO2XbLBO1EPZl9jt-YV0admfPiSCB54uWEjstcDVeZZm4FKklwmdlOi-Uu-mqls50L38mRs9zSZIw0QVBUWg/w1200-h630-p-k-no-nu/classroomshortage.png",
     ],
     documents: [
       { name: "Classroom_Conditions_Report.pdf", size: "2.1 MB" },
@@ -471,7 +471,7 @@ const mockDetailedPosts = {
     ],
     hasUserVoted: "up" as const,
     images: [
-      "https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "https://images.unsplash.com/photo-1743069625024-8fdf92a17724?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     ],
     documents: [
       { name: "Power_Outage_Log.xlsx", size: "890 KB" },
@@ -524,7 +524,7 @@ const mockDetailedPosts = {
     ],
     hasUserVoted: null as const,
     images: [
-      "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?q=80&w=1631&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "https://plus.unsplash.com/premium_photo-1753205867821-b022fae68a0d?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     ],
     documents: [
       { name: "Medicine_Inventory_Report.pdf", size: "1.3 MB" },
@@ -577,7 +577,7 @@ const mockDetailedPosts = {
     ],
     hasUserVoted: "up" as const,
     images: [
-      "https://images.unsplash.com/photo-1547036967-23d11aacaee0?q=80&w=1470&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1741038579797-8560cc8b4d38?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     ],
     documents: [
       { name: "Flood_Damage_Assessment.pdf", size: "2.8 MB" },
@@ -631,7 +631,7 @@ const mockDetailedPosts = {
     ],
     hasUserVoted: null as const,
     images: [
-      "https://images.unsplash.com/photo-1569163139394-de4e5f43e4e3?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "https://images.unsplash.com/photo-1711553460847-172fea01f6e2?q=80&w=1633&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     ],
     documents: [
       { name: "Air_Quality_Test_Results.pdf", size: "1.7 MB" },
@@ -676,7 +676,7 @@ const mockDetailedPosts = {
     ],
     hasUserVoted: null as const,
     images: [
-      "https://images.unsplash.com/photo-1533134486753-c833f0ed4866?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "https://images.metronewscentral.net/XaCVy3bB80MMDA-22.jpg",
     ],
     documents: [
       { name: "Traffic_Count_Analysis.xlsx", size: "680 KB" },
@@ -720,7 +720,7 @@ const mockDetailedPosts = {
     ],
     hasUserVoted: "up" as const,
     images: [
-      "https://images.unsplash.com/photo-1544551763-46a013bb70d5?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "https://images.unsplash.com/photo-1752157087934-ba84fa96afe5?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     ],
     documents: [
       { name: "Safety_Inspection_Report.pdf", size: "1.1 MB" },
@@ -772,7 +772,7 @@ const mockDetailedPosts = {
     ],
     hasUserVoted: null as const,
     images: [
-      "https://images.unsplash.com/photo-1562654501-a0ccc0fc3fb1?q=80&w=1632&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "https://media.philstar.com/photos/2020/03/05/wifi_2020-03-05_19-16-16738_thumbnail.jpg",
     ],
     documents: [
       { name: "WiFi_Performance_Test.pdf", size: "540 KB" },
@@ -815,7 +815,7 @@ const mockDetailedPosts = {
     ],
     hasUserVoted: "up" as const,
     images: [
-      "https://images.unsplash.com/photo-1583337130417-3346a1be7dee?q=80&w=1064&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "https://images.indianexpress.com/2016/09/stray-dogs-480.jpg?w=640?w=414",
     ],
     documents: [
       { name: "Animal_Bite_Incidents.pdf", size: "920 KB" },
@@ -868,7 +868,7 @@ const mockDetailedPosts = {
     ],
     hasUserVoted: null as const,
     images: [
-      "https://images.unsplash.com/photo-1581833971358-2c8b550f87b3?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/ihMo6pbP7V4Y/v7/-1x-1.webp",
     ],
     documents: [
       { name: "Noise_Level_Measurements.pdf", size: "1.2 MB" },
@@ -921,6 +921,11 @@ export function ReportPost({
     useState(3);
   const [isLoadingMore, setIsLoadingMore] = useState(false);
   const loadMoreTriggerRef = useRef<HTMLDivElement>(null);
+
+  // Scroll to top when component mounts or postId changes
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+  }, [postId]);
 
   const handleVote = (type: "up" | "down") => {
     if (userVote === type) {

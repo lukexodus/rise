@@ -327,7 +327,8 @@ export function ProjectMap({ onProjectClick }: ProjectMapProps) {
 
         {/* Legend */}
         {showLegend && (
-          <div className="fixed bottom-20 left-4 bg-white/95 backdrop-blur-sm rounded-lg p-3 shadow-lg z-30">
+          <>
+          <div className="absolute bottom-20 lg:hidden left-4 bg-white/95 backdrop-blur-sm rounded-lg p-3 shadow-lg z-30">
             <div className="text-xs font-medium text-[#1A3E73] mb-2">Project Status</div>
             <div className="space-y-1">
               <div className="flex items-center gap-2">
@@ -344,6 +345,26 @@ export function ProjectMap({ onProjectClick }: ProjectMapProps) {
               </div>
             </div>
           </div>
+
+          <div className="hidden lg:block absolute bottom-4 left-4 bg-white/95 backdrop-blur-sm rounded-lg p-3 shadow-lg z-30">
+            <div className="text-xs font-medium text-[#1A3E73] mb-2">Project Status</div>
+            <div className="space-y-1">
+              <div className="flex items-center gap-2">
+                <div className="w-3 h-3 rounded-full bg-green-500"></div>
+                <span className="text-xs text-gray-600">Completed</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
+                <span className="text-xs text-gray-600">Ongoing</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <div className="w-3 h-3 rounded-full bg-red-500"></div>
+                <span className="text-xs text-gray-600">Delayed</span>
+              </div>
+            </div>
+          </div>
+          </>
+          
         )}
 
         {/* Project Info Card */}

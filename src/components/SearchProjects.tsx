@@ -3,8 +3,11 @@ import { Card } from "./ui/card";
 import { Input } from "./ui/input";
 import { Button } from "./ui/button";
 import { Badge } from "./ui/badge";
-import { Search, Filter, Calendar, MapPin, DollarSign } from "lucide-react";
+import { Search, Filter, Calendar, MapPin, DollarSign, Check, ChevronsUpDown } from "lucide-react";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "./ui/select";
+import { Popover, PopoverContent, PopoverTrigger } from "./ui/popover";
+import { Command, CommandEmpty, CommandGroup, CommandInput, CommandItem } from "./ui/command";
+import { cn } from "@/lib/utils";
 
 const mockSearchResults = [
   {
@@ -149,6 +152,8 @@ export function SearchProjects({ onProjectClick }: SearchProjectsProps) {
   const [filterLocation, setFilterLocation] = useState("all");
   const [results, setResults] = useState(mockSearchResults);
   const [selectedProject, setSelectedProject] = useState<typeof mockSearchResults[0] | null>(null);
+  const [openDepartment, setOpenDepartment] = useState(false);
+  const [openLocation, setOpenLocation] = useState(false);
 
   const formatCurrency = (amount: number) => {
     return new Intl.NumberFormat('en-PH', {
@@ -213,8 +218,107 @@ export function SearchProjects({ onProjectClick }: SearchProjectsProps) {
   };
 
   const categories = ["Transportation", "Utilities", "Technology", "Healthcare", "Education", "Infrastructure"];
-  const departments = ["Department of Transportation", "Department of Public Works and Highways", "Department of Information and Communications Technology", "Department of Energy", "Department of Health"];
-  const locations = ["Metro Manila", "CALABARZON", "Central Visayas", "Mindanao", "Ilocos Region", "MIMAROPA", "Bicol Region", "Nationwide"];
+  const departments = [
+    "Department of Transportation",
+    "Department of Public Works and Highways", 
+    "Department of Information and Communications Technology",
+    "Department of Energy",
+    "Department of Health",
+    "Department of Education",
+    "Department of Agriculture",
+    "Department of Environment and Natural Resources",
+    "Department of Finance",
+    "Department of Budget and Management",
+    "Department of Interior and Local Government",
+    "Department of Justice",
+    "Department of Labor and Employment",
+    "Department of National Defense",
+    "Department of Science and Technology",
+    "Department of Social Welfare and Development",
+    "Department of Tourism",
+    "Department of Trade and Industry",
+    "Department of Foreign Affairs",
+    "Department of Human Settlements and Urban Development",
+    "Department of Migrant Workers",
+    "National Economic and Development Authority",
+    "Office of the President",
+    "Office of the Vice President",
+    "Bangko Sentral ng Pilipinas",
+    "Bureau of Internal Revenue",
+    "Bureau of Customs",
+    "Securities and Exchange Commission",
+    "Commission on Audit",
+    "Civil Service Commission",
+    "Commission on Elections",
+    "Commission on Human Rights",
+    "Office of the Ombudsman",
+    "Philippine Statistics Authority",
+    "Technical Education and Skills Development Authority",
+    "Professional Regulation Commission",
+    "Philippine Health Insurance Corporation",
+    "Social Security System",
+    "Government Service Insurance System",
+    "Pag-IBIG Fund",
+    "Philippine Amusement and Gaming Corporation",
+    "Land Transportation Office",
+    "Maritime Industry Authority",
+    "Civil Aviation Authority of the Philippines",
+    "Philippine Ports Authority",
+    "Toll Regulatory Board",
+    "Metropolitan Manila Development Authority",
+    "Housing and Urban Development Coordinating Council",
+    "National Housing Authority",
+    "Philippine Reclamation Authority",
+    "Bases Conversion and Development Authority",
+    "Clark Development Corporation",
+    "Subic Bay Metropolitan Authority",
+    "Cagayan Economic Zone Authority",
+    "Philippine Economic Zone Authority",
+    "Aurora Pacific Economic Zone and Freeport Authority",
+    "John Hay Management Corporation",
+    "Zamboanga City Special Economic Zone Authority"
+  ];
+  const locations = [
+    "Nationwide",
+    // NCR
+    "National Capital Region (NCR)",
+    "Metro Manila",
+    // Luzon Regions
+    "Ilocos Region (Region I)",
+    "Ilocos Norte", "Ilocos Sur", "La Union", "Pangasinan",
+    "Cagayan Valley (Region II)",
+    "Batanes", "Cagayan", "Isabela", "Nueva Vizcaya", "Quirino",
+    "Central Luzon (Region III)",
+    "Aurora", "Bataan", "Bulacan", "Nueva Ecija", "Pampanga", "Tarlac", "Zambales",
+    "CALABARZON (Region IV-A)",
+    "Batangas", "Cavite", "Laguna", "Quezon", "Rizal",
+    "MIMAROPA (Region IV-B)",
+    "Marinduque", "Occidental Mindoro", "Oriental Mindoro", "Palawan", "Romblon",
+    "Bicol Region (Region V)",
+    "Albay", "Camarines Norte", "Camarines Sur", "Catanduanes", "Masbate", "Sorsogon",
+    "Cordillera Administrative Region (CAR)",
+    "Abra", "Apayao", "Benguet", "Ifugao", "Kalinga", "Mountain Province",
+    // Visayas Regions
+    "Western Visayas (Region VI)",
+    "Aklan", "Antique", "Capiz", "Guimaras", "Iloilo", "Negros Occidental",
+    "Central Visayas (Region VII)",
+    "Bohol", "Cebu", "Negros Oriental", "Siquijor",
+    "Eastern Visayas (Region VIII)",
+    "Biliran", "Eastern Samar", "Leyte", "Northern Samar", "Samar", "Southern Leyte",
+    // Mindanao Regions
+    "Zamboanga Peninsula (Region IX)",
+    "Zamboanga del Norte", "Zamboanga del Sur", "Zamboanga Sibugay",
+    "Northern Mindanao (Region X)",
+    "Bukidnon", "Camiguin", "Lanao del Norte", "Misamis Occidental", "Misamis Oriental",
+    "Davao Region (Region XI)",
+    "Davao de Oro", "Davao del Norte", "Davao del Sur", "Davao Occidental", "Davao Oriental",
+    "SOCCSKSARGEN (Region XII)",
+    "Cotabato", "Sarangani", "South Cotabato", "Sultan Kudarat",
+    "Caraga (Region XIII)",
+    "Agusan del Norte", "Agusan del Sur", "Dinagat Islands", "Surigao del Norte", "Surigao del Sur",
+    "Bangsamoro Autonomous Region in Muslim Mindanao (BARMM)",
+    "Basilan", "Lanao del Sur", "Maguindanao del Norte", "Maguindanao del Sur", "Sulu", "Tawi-Tawi"
+  ];
 
   return (
     <div className="px-4 lg:px-8 py-4 lg:py-6">
@@ -270,29 +374,121 @@ export function SearchProjects({ onProjectClick }: SearchProjectsProps) {
                 </SelectContent>
               </Select>
 
-              <Select value={filterDepartment} onValueChange={setFilterDepartment}>
-                <SelectTrigger className="text-xs lg:text-sm">
-                  <SelectValue placeholder="Department" />
-                </SelectTrigger>
-                <SelectContent>
-                  <SelectItem value="all">All Departments</SelectItem>
-                  {departments.map(dept => (
-                    <SelectItem key={dept} value={dept}>{dept.split(' ').slice(2).join(' ')}</SelectItem>
-                  ))}
-                </SelectContent>
-              </Select>
+              <Popover open={openDepartment} onOpenChange={setOpenDepartment}>
+                <PopoverTrigger asChild>
+                  <Button
+                    variant="outline"
+                    role="combobox"
+                    aria-expanded={openDepartment}
+                    className="justify-between text-xs lg:text-sm h-10"
+                  >
+                    {filterDepartment === "all"
+                      ? "Department"
+                      : departments.find((dept) => dept === filterDepartment)?.split(' ').slice(2).join(' ') || "Department"}
+                    <ChevronsUpDown className="ml-2 h-4 w-4 shrink-0 opacity-50" />
+                  </Button>
+                </PopoverTrigger>
+                <PopoverContent className="w-[300px] p-0">
+                  <Command>
+                    <CommandInput placeholder="Search departments..." />
+                    <CommandEmpty>No department found.</CommandEmpty>
+                    <CommandGroup className="max-h-64 overflow-auto">
+                      <CommandItem
+                        key="all"
+                        value="all"
+                        onSelect={() => {
+                          setFilterDepartment("all");
+                          setOpenDepartment(false);
+                        }}
+                      >
+                        <Check
+                          className={cn(
+                            "mr-2 h-4 w-4",
+                            filterDepartment === "all" ? "opacity-100" : "opacity-0"
+                          )}
+                        />
+                        All Departments
+                      </CommandItem>
+                      {departments.map((dept) => (
+                        <CommandItem
+                          key={dept}
+                          value={dept}
+                          onSelect={(currentValue) => {
+                            setFilterDepartment(currentValue === filterDepartment ? "all" : currentValue);
+                            setOpenDepartment(false);
+                          }}
+                        >
+                          <Check
+                            className={cn(
+                              "mr-2 h-4 w-4",
+                              filterDepartment === dept ? "opacity-100" : "opacity-0"
+                            )}
+                          />
+                          {dept}
+                        </CommandItem>
+                      ))}
+                    </CommandGroup>
+                  </Command>
+                </PopoverContent>
+              </Popover>
 
-              <Select value={filterLocation} onValueChange={setFilterLocation}>
-                <SelectTrigger className="text-xs lg:text-sm">
-                  <SelectValue placeholder="Location" />
-                </SelectTrigger>
-                <SelectContent>
-                  <SelectItem value="all">All Locations</SelectItem>
-                  {locations.map(location => (
-                    <SelectItem key={location} value={location}>{location}</SelectItem>
-                  ))}
-                </SelectContent>
-              </Select>
+              <Popover open={openLocation} onOpenChange={setOpenLocation}>
+                <PopoverTrigger asChild>
+                  <Button
+                    variant="outline"
+                    role="combobox"
+                    aria-expanded={openLocation}
+                    className="justify-between text-xs lg:text-sm h-10"
+                  >
+                    {filterLocation === "all"
+                      ? "Location"
+                      : locations.find((loc) => loc === filterLocation) || "Location"}
+                    <ChevronsUpDown className="ml-2 h-4 w-4 shrink-0 opacity-50" />
+                  </Button>
+                </PopoverTrigger>
+                <PopoverContent className="w-[300px] p-0">
+                  <Command>
+                    <CommandInput placeholder="Search locations..." />
+                    <CommandEmpty>No location found.</CommandEmpty>
+                    <CommandGroup className="max-h-64 overflow-auto">
+                      <CommandItem
+                        key="all"
+                        value="all"
+                        onSelect={() => {
+                          setFilterLocation("all");
+                          setOpenLocation(false);
+                        }}
+                      >
+                        <Check
+                          className={cn(
+                            "mr-2 h-4 w-4",
+                            filterLocation === "all" ? "opacity-100" : "opacity-0"
+                          )}
+                        />
+                        All Locations
+                      </CommandItem>
+                      {locations.map((loc) => (
+                        <CommandItem
+                          key={loc}
+                          value={loc}
+                          onSelect={(currentValue) => {
+                            setFilterLocation(currentValue === filterLocation ? "all" : currentValue);
+                            setOpenLocation(false);
+                          }}
+                        >
+                          <Check
+                            className={cn(
+                              "mr-2 h-4 w-4",
+                              filterLocation === loc ? "opacity-100" : "opacity-0"
+                            )}
+                          />
+                          {loc}
+                        </CommandItem>
+                      ))}
+                    </CommandGroup>
+                  </Command>
+                </PopoverContent>
+              </Popover>
             </div>
 
             <div className="flex justify-between items-center">
