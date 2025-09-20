@@ -6,7 +6,17 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      spacing: {
+        '8': '2rem',
+        '10': '2.5rem',
+        '20': '5rem',
+      },
+      screens: {
+        'lg': '1024px',
+        'xl': '1280px',
+      }
+    },
   },
   plugins: [],
 } satisfies Config;

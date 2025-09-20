@@ -433,23 +433,6 @@ export function CommunityFeed({ onPostClick }: CommunityFeedProps) {
               )}
             </p>
           </div>
-          
-          {/* Clear Filters Button */}
-          {(filterSector !== "all" || filterStatus !== "all" || sortBy !== "trending") && (
-            <Button
-              variant="outline"
-              size="sm"
-              onClick={() => {
-                setSortBy("trending");
-                setFilterSector("all");
-                setFilterStatus("all");
-                updateFiltersInURL("trending", "all", "all");
-              }}
-              className="text-[#1A3E73] border-[#1A3E73] hover:bg-[#1A3E73]/5"
-            >
-              Clear Filters
-            </Button>
-          )}
 
           <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen} className="">
             <DialogTrigger asChild>
@@ -825,53 +808,73 @@ export function CommunityFeed({ onPostClick }: CommunityFeedProps) {
               </div>
             </div>
             
-            {/* Sector and Status Filter*/}
-            <div className="grid grid-cols-2 gap-3">
-              <div className="sm:w-40 md:w-52 xl:w-60">
-                <label className="text-xs text-muted-foreground block mb-1 flex items-center gap-1">
-                  <Building2 className="w-3 h-3" />
-                  Sector
-                </label>
-                <Select value={filterSector} onValueChange={handleFilterSectorChange}>
-                  <SelectTrigger className="w-full">
-                    <SelectValue placeholder="Select sector" />
-                  </SelectTrigger>
-                  <SelectContent>
-                    <SelectItem value="all">All Sectors</SelectItem>
-                    {sectors.map(cat => (
-                      <SelectItem key={cat} value={cat}>
-                        <div className="flex items-center gap-2">
-                          {getSectorIconForDropdown(cat)}
-                          <span>{cat}</span>
-                        </div>
-                      </SelectItem>
-                    ))}
-                  </SelectContent>
-                </Select>
+            {/* Sector and Status Filter with Clear Button */}
+            <div className="space-y-3 lg:space-y-0 lg:flex lg:items-end lg:justify-start lg:gap-3">
+              <div className="grid grid-cols-2 gap-3">
+                <div className="sm:w-40 xl:w-52">
+                  <label className="text-xs text-muted-foreground block mb-1 flex items-center gap-1">
+                    <Building2 className="w-3 h-3" />
+                    Sector
+                  </label>
+                  <Select value={filterSector} onValueChange={handleFilterSectorChange}>
+                    <SelectTrigger className="w-full">
+                      <SelectValue placeholder="Select sector" />
+                    </SelectTrigger>
+                    <SelectContent>
+                      <SelectItem value="all">All Sectors</SelectItem>
+                      {sectors.map(cat => (
+                        <SelectItem key={cat} value={cat}>
+                          <div className="flex items-center gap-2">
+                            {getSectorIconForDropdown(cat)}
+                            <span>{cat}</span>
+                          </div>
+                        </SelectItem>
+                      ))}
+                    </SelectContent>
+                  </Select>
+                </div>
+                
+                <div className="sm:w-40 xl:w-52">
+                  <label className="text-xs text-muted-foreground block mb-1 flex items-center gap-1">
+                    <Clock className="w-3 h-3" />
+                    Status
+                  </label>
+                  <Select value={filterStatus} onValueChange={handleFilterStatusChange}>
+                    <SelectTrigger className="w-full">
+                      <SelectValue placeholder="Select status" />
+                    </SelectTrigger>
+                    <SelectContent>
+                      <SelectItem value="all">All Statuses</SelectItem>
+                      {statusesData.statuses.filter(status => ["pending", "in_review", "responded", "resolved"].includes(status.id)).map((status) => (
+                        <SelectItem key={status.id} value={status.id}>
+                          <div className="flex items-center gap-2">
+                            {getStatusIcon(status.name)}
+                            <span>{status.name}</span>
+                          </div>
+                        </SelectItem>
+                      ))}
+                    </SelectContent>
+                  </Select>
+                </div>
               </div>
               
-              <div className="sm:w-40 md:w-52 xl:w-60">
-                <label className="text-xs text-muted-foreground block mb-1 flex items-center gap-1">
-                  <Clock className="w-3 h-3" />
-                  Status
-                </label>
-                <Select value={filterStatus} onValueChange={handleFilterStatusChange}>
-                  <SelectTrigger className="w-full">
-                    <SelectValue placeholder="Select status" />
-                  </SelectTrigger>
-                  <SelectContent>
-                    <SelectItem value="all">All Statuses</SelectItem>
-                    {statusesData.statuses.filter(status => ["pending", "in_review", "responded", "resolved"].includes(status.id)).map((status) => (
-                      <SelectItem key={status.id} value={status.id}>
-                        <div className="flex items-center gap-2">
-                          {getStatusIcon(status.name)}
-                          <span>{status.name}</span>
-                        </div>
-                      </SelectItem>
-                    ))}
-                  </SelectContent>
-                </Select>
-              </div>
+              {/* Clear Filters Button */}
+              {(filterSector !== "all" || filterStatus !== "all" || sortBy !== "trending") && (
+                <Button
+                  variant="outline"
+                  size="sm"
+                  onClick={() => {
+                    setSortBy("trending");
+                    setFilterSector("all");
+                    setFilterStatus("all");
+                    updateFiltersInURL("trending", "all", "all");
+                  }}
+                  className="text-[#1A3E73] border-[#1A3E73] hover:bg-[#1A3E73]/5 col-span-2 sm:col-span-1"
+                >
+                  <X className="w-4 h-4 mr-1" />
+                  Clear
+                </Button>
+              )}
             </div>
           </div>
         </Card>

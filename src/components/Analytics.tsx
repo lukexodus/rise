@@ -122,46 +122,47 @@ export function Analytics() {
   return (
     <div className="pb-20 lg:pb-0">
       {/* Header */}
-      <div className="bg-gradient-to-br from-[#1A3E73] to-[#2A4E83] text-white p-4 lg:p-6">
-        <h1 className="text-xl lg:text-2xl xl:text-3xl font-medium mb-2">Analytics & Trends</h1>
-        <p className="text-sm lg:text-base xl:text-lg opacity-90">Government spending insights and project performance</p>
+      <div className="bg-gradient-to-br from-[#1A3E73] to-[#2A4E83] text-white p-4 lg:py-6 lg:px-20 xl:p-12 flex flex-col space-y-0">
+        <h1 className="text-2xl lg:text-3xl xl:text-4xl font-semibold mb-0.5 lg:mb-1 pl-2">Analytics & Trends</h1>
+        <p className="text-base lg:text-lg xl:text-xl opacity-90 pl-2">Government spending insights and project performance</p>
       </div>
 
       {/* Key Metrics */}
-      <div className="p-4 lg:p-6 xl:p-8 space-y-4 lg:space-y-6">
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 lg:gap-4">
-          <Card className="p-3 lg:p-4 xl:p-5">
-            <div className="flex items-center gap-2 mb-1 lg:mb-2">
-              <TrendingUp className="w-4 h-4 lg:w-5 lg:h-5 xl:w-6 xl:h-6 text-green-600" />
-              <span className="text-xs lg:text-sm xl:text-base text-muted-foreground">Monthly Spending</span>
+      <div className="p-4 lg:p-8 xl:p-10 space-y-4 lg:space-y-8 xl:space-y-10">
+        {/* Key Metrics Grid - Hidden on lg+ screens */}
+        <div className="grid grid-cols-2 gap-3 lg:hidden">
+          <Card className="p-4">
+            <div className="flex items-center gap-3 mb-3">
+              <TrendingUp className="w-5 h-5 text-green-600" />
+              <span className="text-sm font-medium text-muted-foreground">Monthly Spending</span>
             </div>
-            <div className="text-lg lg:text-xl xl:text-2xl font-medium text-[#1A3E73]">₱575B</div>
-            <div className="flex items-center gap-1 text-xs lg:text-sm xl:text-base">
-              <span className="text-green-600">+{spendingChange}%</span>
+            <div className="text-xl font-semibold text-[#1A3E73] mb-2">₱575B</div>
+            <div className="flex items-center gap-1 text-sm">
+              <span className="text-green-600 font-medium">+{spendingChange}%</span>
               <span className="text-muted-foreground">vs last month</span>
             </div>
           </Card>
 
-          <Card className="p-3 lg:p-4 xl:p-5">
-            <div className="flex items-center gap-2 mb-1 lg:mb-2">
-              <Clock className="w-4 h-4 lg:w-5 lg:h-5 xl:w-6 xl:h-6 text-orange-600" />
-              <span className="text-xs lg:text-sm xl:text-base text-muted-foreground">Avg Delay</span>
+          <Card className="p-4">
+            <div className="flex items-center gap-3 mb-3">
+              <Clock className="w-5 h-5 text-orange-600" />
+              <span className="text-sm font-medium text-muted-foreground">Avg Delay</span>
             </div>
-            <div className="text-lg lg:text-xl xl:text-2xl font-medium text-[#1A3E73]">{avgDelay} mo</div>
-            <div className="text-xs lg:text-sm xl:text-base text-muted-foreground">5 delayed projects</div>
+            <div className="text-xl font-semibold text-[#1A3E73] mb-2">{avgDelay} mo</div>
+            <div className="text-sm text-muted-foreground">5 delayed projects</div>
           </Card>
         </div>
 
-        {/* Main Analytics Grid - Responsive Layout */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-4 lg:gap-6">
+        {/* Main Analytics Grid - 4 columns 3 rows on lg+ */}
+        <div className="grid grid-cols-1 lg:grid-cols-4 gap-3 lg:gap-6">
           
-          {/* Top 5 Sectors by Budget - Larger on xl screens */}
-          <Card className="lg:col-span-1 xl:col-span-2 p-4 lg:p-5 xl:p-6">
-            <h3 className="font-medium text-[#1A3E73] mb-3 lg:mb-4 text-base lg:text-lg xl:text-xl">Top 5 Sectors by Budget</h3>
-            <div className="grid grid-cols-1 xl:grid-cols-3 gap-4 xl:gap-6">
+          {/* Top 5 Sectors by Budget - Column 1-2, Row 1-3 */}
+          <Card className="lg:col-span-2 lg:row-span-3 p-4 lg:p-8 xl:p-10">
+            <h3 className="text-lg lg:text-xl xl:text-2xl font-semibold text-[#1A3E73] mb-0.5 lg:mb-1">Top 5 Sectors by Budget</h3>
+            <div className="space-y-4 lg:space-y-6">
               {/* Chart Section */}
-              <div className="xl:col-span-2">
-                <div className="h-48 lg:h-64 xl:h-80 mb-4">
+              <div>
+                <div className="h-40 lg:h-48 xl:h-56 mb-4">
                   <ResponsiveContainer width="100%" height="100%">
                     <PieChart>
                       <Pie
@@ -186,19 +187,19 @@ export function Analytics() {
                 </div>
               </div>
               {/* Legend Section */}
-              <div className="xl:col-span-1">
-                <div className="space-y-2 lg:space-y-3 xl:space-y-4">
+              <div>
+                <div className="space-y-3 lg:space-y-4">
                   {sectorBudgetData.map((sector, index) => (
-                    <div key={index} className="flex items-center justify-between xl:flex-col xl:items-start xl:text-center xl:p-3 xl:bg-gray-50 xl:rounded-lg">
-                      <div className="flex items-center gap-2 lg:gap-3 xl:flex-col xl:gap-1">
+                    <div key={index} className="flex items-center justify-between">
+                      <div className="flex items-center gap-3 lg:gap-4">
                         <div 
-                          className="w-3 h-3 lg:w-4 lg:h-4 xl:w-6 xl:h-6 rounded-full xl:mx-auto" 
+                          className="w-4 h-4 lg:w-5 lg:h-5 rounded-full" 
                           style={{ backgroundColor: sector.color }}
                         />
-                        <span className="text-sm lg:text-base xl:text-lg xl:font-medium">{sector.name}</span>
+                        <span className="text-sm lg:text-base xl:text-lg font-medium">{sector.name}</span>
                       </div>
-                      <div className="text-right xl:text-center xl:mt-2">
-                        <div className="text-sm lg:text-base xl:text-lg font-medium">{formatCurrency(sector.budget)}</div>
+                      <div className="text-right">
+                        <div className="text-sm lg:text-base xl:text-lg font-semibold text-[#1A3E73]">{formatCurrency(sector.budget)}</div>
                         <div className="text-xs lg:text-sm xl:text-base text-muted-foreground">{sector.percentage}%</div>
                       </div>
                     </div>
@@ -208,10 +209,33 @@ export function Analytics() {
             </div>
           </Card>
 
-          {/* Efficiency Trends - Sidebar on xl screens */}
-          <Card className="lg:col-span-1 xl:col-span-1 p-4 lg:p-5 xl:p-6">
-            <h3 className="font-medium text-[#1A3E73] mb-3 lg:mb-4 text-base lg:text-lg xl:text-xl">Spending Efficiency</h3>
-            <div className="h-32 lg:h-40 xl:h-48 mb-4">
+          {/* Key Metric 1 - Column 3, Row 1 */}
+          <Card className="hidden lg:block p-6 xl:p-8">
+            <div className="flex items-center gap-3 mb-4 xl:mb-5">
+              <TrendingUp className="w-6 h-6 xl:w-7 xl:h-7 text-green-600" />
+              <span className="text-sm xl:text-base font-medium text-muted-foreground">Monthly Spending</span>
+            </div>
+            <div className="text-2xl xl:text-3xl font-bold text-[#1A3E73] mb-3 xl:mb-4">₱575B</div>
+            <div className="flex items-center gap-2 text-sm xl:text-base">
+              <span className="text-green-600 font-semibold">+{spendingChange}%</span>
+              <span className="text-muted-foreground">vs last month</span>
+            </div>
+          </Card>
+
+          {/* Key Metric 2 - Column 4, Row 1 */}
+          <Card className="hidden lg:block p-6 xl:p-8">
+            <div className="flex items-center gap-3 mb-4 xl:mb-5">
+              <Clock className="w-6 h-6 xl:w-7 xl:h-7 text-orange-600" />
+              <span className="text-sm xl:text-base font-medium text-muted-foreground">Avg Delay</span>
+            </div>
+            <div className="text-2xl xl:text-3xl font-bold text-[#1A3E73] mb-3 xl:mb-4">{avgDelay} mo</div>
+            <div className="text-sm xl:text-base text-muted-foreground">5 delayed projects</div>
+          </Card>
+
+          {/* Efficiency Trends - Column 3-4, Row 2-3 */}
+          <Card className="lg:col-span-2 lg:row-span-2 p-4 lg:p-8 xl:p-10">
+            <h3 className="text-lg lg:text-xl xl:text-2xl font-semibold text-[#1A3E73]">Spending Efficiency</h3>
+            <div className="h-40 lg:h-48 xl:h-56">
               <ResponsiveContainer width="100%" height="100%">
                 <BarChart data={spendingTrendsData.slice(-6)}>
                   <XAxis 
@@ -239,15 +263,15 @@ export function Analytics() {
                 </BarChart>
               </ResponsiveContainer>
             </div>
-            <div className="p-3 lg:p-4 bg-blue-50 rounded-lg">
-              <div className="flex items-center gap-2 mb-1 lg:mb-2">
-                <TrendingUp className="w-4 h-4 lg:w-5 lg:h-5 xl:w-6 xl:h-6 text-blue-600" />
-                <span className="text-sm lg:text-base xl:text-lg font-medium text-blue-800">Current</span>
+            <div className="p-4 lg:p-5 xl:p-6 bg-blue-50 rounded-lg">
+              <div className="flex items-center gap-3 mb-3 lg:mb-4">
+                <TrendingUp className="w-5 h-5 lg:w-6 lg:h-6 xl:w-7 xl:h-7 text-blue-600" />
+                <span className="text-base lg:text-lg xl:text-xl font-semibold text-blue-800">Current</span>
               </div>
-              <div className="text-lg lg:text-xl xl:text-2xl font-medium text-blue-800">
+              <div className="text-2xl lg:text-3xl xl:text-4xl font-bold text-blue-800 mb-2">
                 {currentSpending.efficiency}%
               </div>
-              <div className="text-xs lg:text-sm xl:text-base text-blue-600">
+              <div className="text-sm lg:text-base xl:text-lg text-blue-600 font-medium">
                 Optimal: 90-95%
               </div>
             </div>
@@ -255,9 +279,9 @@ export function Analytics() {
         </div>
 
         {/* Secondary Grid - Spending Trends Full Width */}
-        <Card className="p-4 lg:p-5 xl:p-6">
-          <h3 className="font-medium text-[#1A3E73] mb-3 lg:mb-4 text-base lg:text-lg xl:text-xl">Monthly Spending Trends</h3>
-          <div className="h-48 lg:h-64 xl:h-80 mb-4">
+        <Card className="p-4 lg:p-8 xl:p-10">
+          <h3 className="text-lg lg:text-xl xl:text-2xl font-semibold text-[#1A3E73] mb-6 lg:mb-8">Monthly Spending Trends</h3>
+          <div className="h-56 lg:h-72 xl:h-80 mb-6 lg:mb-8">
             <ResponsiveContainer width="100%" height="100%">
               <LineChart data={spendingTrendsData}>
                 <CartesianGrid strokeDasharray="3 3" stroke="#e5e7eb" />
@@ -293,44 +317,44 @@ export function Analytics() {
               </LineChart>
             </ResponsiveContainer>
           </div>
-          <div className="grid grid-cols-2 lg:grid-cols-4 xl:grid-cols-6 gap-3 lg:gap-4 text-center">
-            <div className="lg:col-start-2 xl:col-start-3 flex items-center justify-center gap-2">
-              <div className="w-3 h-3 lg:w-4 lg:h-4 bg-[#1A3E73] rounded-full" />
-              <span className="text-sm lg:text-base xl:text-lg">Allocated</span>
+          <div className="grid grid-cols-2 lg:grid-cols-4 xl:grid-cols-6 gap-3 lg:gap-6 text-center">
+            <div className="lg:col-start-2 xl:col-start-3 flex items-center justify-center gap-3">
+              <div className="w-4 h-4 lg:w-5 lg:h-5 bg-[#1A3E73] rounded-full" />
+              <span className="text-sm lg:text-base xl:text-lg font-medium">Allocated</span>
             </div>
-            <div className="flex items-center justify-center gap-2">
-              <div className="w-3 h-3 lg:w-4 lg:h-4 bg-[#F2C063] rounded-full" />
-              <span className="text-sm lg:text-base xl:text-lg">Spent</span>
+            <div className="flex items-center justify-center gap-3">
+              <div className="w-4 h-4 lg:w-5 lg:h-5 bg-[#F2C063] rounded-full" />
+              <span className="text-sm lg:text-base xl:text-lg font-medium">Spent</span>
             </div>
           </div>
         </Card>
 
         {/* Bottom Grid - Delayed Projects */}
-        <Card className="p-4 lg:p-5 xl:p-6">
-          <h3 className="font-medium text-[#1A3E73] mb-3 lg:mb-4 text-base lg:text-lg xl:text-xl">Top 5 Delayed Projects</h3>
-          <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-3 lg:gap-4">
+        <Card className="p-4 lg:p-8 xl:p-10">
+          <h3 className="text-lg lg:text-xl xl:text-2xl font-semibold text-[#1A3E73] mb-6 lg:mb-8">Top 5 Delayed Projects</h3>
+          <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-3 lg:gap-6">
             {delayedProjectsData.map((project, index) => (
-              <div key={index} className="border border-gray-200 rounded-lg p-3 lg:p-4 hover:shadow-md transition-shadow">
-                <div className="flex justify-between items-start mb-2 lg:mb-3">
+              <div key={index} className="border border-gray-200 rounded-lg p-3 lg:p-5 xl:p-6 hover:shadow-md transition-shadow">
+                <div className="flex justify-between items-start mb-3 lg:mb-4">
                   <div className="flex-1">
-                    <h4 className="font-medium text-sm lg:text-base xl:text-lg text-[#1A3E73] mb-1 line-clamp-2">{project.name}</h4>
-                    <div className="text-xs lg:text-sm xl:text-base text-muted-foreground mb-1">
+                    <h4 className="text-sm lg:text-base xl:text-lg font-semibold text-[#1A3E73] mb-2 line-clamp-2">{project.name}</h4>
+                    <div className="text-sm lg:text-base xl:text-lg text-muted-foreground font-medium mb-1">
                       {formatCurrency(project.budget)}
                     </div>
                   </div>
-                  <Badge variant="destructive" className="text-xs lg:text-sm flex-shrink-0 ml-2">
+                  <Badge variant="destructive" className="text-xs lg:text-sm flex-shrink-0 ml-3">
                     <AlertTriangle className="w-3 h-3 lg:w-4 lg:h-4 mr-1" />
                     {project.delay} mo
                   </Badge>
                 </div>
-                <div className="space-y-1 text-xs lg:text-sm xl:text-base">
+                <div className="space-y-2 text-sm lg:text-base xl:text-lg">
                   <div className="flex justify-between">
                     <span className="text-muted-foreground">Original:</span>
-                    <span>{project.originalEnd}</span>
+                    <span className="font-medium">{project.originalEnd}</span>
                   </div>
                   <div className="flex justify-between">
                     <span className="text-muted-foreground">New:</span>
-                    <span className="text-[#BF4226] font-medium">{project.newEnd}</span>
+                    <span className="text-[#BF4226] font-semibold">{project.newEnd}</span>
                   </div>
                 </div>
               </div>

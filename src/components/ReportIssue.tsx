@@ -150,7 +150,7 @@ export function ReportIssue({
   }
 
   return (
-    <div className="pb-20">
+    <div className="pb-20 min-h-screen bg-gray-50">
       {/* Header */}
       <div className="bg-[#1A3E73] text-white p-4">
         <div className="flex items-center gap-3 mb-3">
@@ -198,7 +198,8 @@ export function ReportIssue({
       )}
 
       {/* Report Form */}
-      <div className="px-4 mt-4 space-y-4">
+      <div className="px-4 mt-4 space-y-4 lg:grid lg:grid-cols-2 lg:gap-4 lg:space-y-0 max-w-7xl mx-auto">
+        {/* Left Column - Report Form */}
         <Card className="p-4">
           <div className="space-y-4">
             <div>
@@ -348,7 +349,7 @@ export function ReportIssue({
           </div>
         </Card>
 
-        {/* Previous Reports */}
+        {/* Right Column - Previous Reports */}
         <Card className="p-4 mb-8">
           <h3 className="font-medium text-[#1A3E73] mb-3">
             Your Previous Reports

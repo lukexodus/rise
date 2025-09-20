@@ -195,7 +195,7 @@ export function ReportPost() {
         </div>
       </div>
 
-      <div className="p-4 space-y-4">
+      <div className="p-4 space-y-4 lg:grid lg:grid-cols-2 lg:gap-4 lg:space-y-0 max-w-7xl mx-auto">
         {/* Main Post Card */}
         <Card className="p-4">
           <div className="space-y-4">

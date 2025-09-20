@@ -49,6 +49,10 @@ import {
   Gavel,
   Globe,
   Coins,
+  DollarSign,
+  BarChart3,
+  Info,
+  TrendingUp,
 } from "lucide-react";
 import { toast } from "sonner@2.0.3";
 import {
@@ -351,6 +355,19 @@ export function ProjectDetail({
             {getStatusIconFromData(project.status)}
             {project.status.charAt(0).toUpperCase() + project.status.slice(1)}
           </Badge>
+          
+          {/* Report Issue Button - only show on larger screens in header */}
+          <div className="hidden lg:flex lg:ml-auto">
+            <Button
+              onClick={onReportIssue}
+              variant="outline"
+              size="sm"
+              className="bg-white/10 text-white border-white/30 hover:bg-white/20 hover:border-white/50"
+            >
+              <AlertTriangle className="w-4 h-4 mr-2" />
+              Report Issue
+            </Button>
+          </div>
         </div>
       </div>
 
@@ -451,11 +468,11 @@ export function ProjectDetail({
           </Card>
         </div>
 
-        {/* Report Issue Button - full width on mobile, constrained on larger screens */}
-        <div className="mb-4 lg:max-w-md lg:mx-auto xl:max-w-none">
+        {/* Report Issue Button - show only on mobile between cards */}
+        <div className="mb-4 lg:hidden">
           <Button
             onClick={onReportIssue}
-            className="w-full lg:w-auto lg:px-8 xl:w-full bg-[#BF4226] hover:bg-[#BF4226]/90 text-white"
+            className="w-full bg-[#BF4226] hover:bg-[#BF4226]/90 text-white"
           >
             <AlertTriangle className="w-4 h-4 mr-2" />
             Report Issue

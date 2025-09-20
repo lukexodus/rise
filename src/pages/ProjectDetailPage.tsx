@@ -53,7 +53,14 @@ export function ProjectDetailPage() {
 
   // Handle report issue
   const handleReportIssue = () => {
+    console.log('Report issue clicked'); // Debug log
     setShowReportIssue(true);
+  };
+
+  // Handle close report issue
+  const handleCloseReportIssue = () => {
+    console.log('Closing report issue'); // Debug log
+    setShowReportIssue(false);
   };
 
   // Show loading state while checking project existence
@@ -82,17 +89,16 @@ export function ProjectDetailPage() {
 
   return (
     <>
-      <ProjectDetail
-        projectId={projectId}
-        onBack={handleBack}
-        onReportIssue={handleReportIssue}
-      />
-      
-      {/* Report Issue Modal */}
-      {showReportIssue && (
+      {!showReportIssue ? (
+        <ProjectDetail
+          projectId={projectId}
+          onBack={handleBack}
+          onReportIssue={handleReportIssue}
+        />
+      ) : (
         <ReportIssue
           projectId={projectId}
-          onBack={() => setShowReportIssue(false)}
+          onBack={handleCloseReportIssue}
         />
       )}
     </>
