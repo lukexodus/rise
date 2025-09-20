@@ -1,6 +1,7 @@
 import React from "react";
 import { ProjectCard } from "./ProjectCard";
 import { Button } from "./ui/button";
+import { useNavigationState } from "../hooks/useNavigationState";
 
 // Import data from external JSON file
 import projectsData from "../data/projects.json";
@@ -23,9 +24,15 @@ interface ProjectCardsProps {
 }
 
 export function ProjectCards({ onProjectClick, onSeeMore }: ProjectCardsProps) {
+  const { navigateWithState } = useNavigationState();
   const ongoingProjects = mockProjects.filter(p => p.status === "ongoing");
   const completedProjects = mockProjects.filter(p => p.status === "completed");
   const delayedProjects = mockProjects.filter(p => p.status === "delayed");
+
+  const handleSeeMore = (category: "ongoing" | "completed" | "delayed") => {
+    navigateWithState(`/list/${category}`, 'home');
+    // Remove the onSeeMore callback since we're handling navigation directly
+  };
 
   return (
     <div className="px-4 lg:px-8 py-4 lg:py-6">
@@ -37,7 +44,7 @@ export function ProjectCards({ onProjectClick, onSeeMore }: ProjectCardsProps) {
               <Button 
                 variant="ghost" 
                 size="sm" 
-                onClick={() => onSeeMore?.("ongoing")}
+                onClick={() => handleSeeMore("ongoing")}
                 className="text-[#1A3E73] hover:bg-transparent relative after:absolute after:bottom-0 after:left-1/2 after:h-[1px] after:w-0 after:bg-[#1A3E73] after:transition-all after:duration-300 after:ease-out hover:after:w-full hover:after:left-0"
               >
                 See More
@@ -58,7 +65,7 @@ export function ProjectCards({ onProjectClick, onSeeMore }: ProjectCardsProps) {
               <Button 
                 variant="ghost" 
                 size="sm" 
-                onClick={() => onSeeMore?.("completed")}
+                onClick={() => handleSeeMore("completed")}
                 className="text-[#1A3E73] hover:bg-transparent relative after:absolute after:bottom-0 after:left-1/2 after:h-[1px] after:w-0 after:bg-[#1A3E73] after:transition-all after:duration-300 after:ease-out hover:after:w-full hover:after:left-0"
               >
                 See More
@@ -79,7 +86,7 @@ export function ProjectCards({ onProjectClick, onSeeMore }: ProjectCardsProps) {
               <Button 
                 variant="ghost" 
                 size="sm" 
-                onClick={() => onSeeMore?.("delayed")}
+                onClick={() => handleSeeMore("delayed")}
                 className="text-[#1A3E73] hover:bg-transparent relative after:absolute after:bottom-0 after:left-1/2 after:h-[1px] after:w-0 after:bg-[#1A3E73] after:transition-all after:duration-300 after:ease-out hover:after:w-full hover:after:left-0"
               >
                 See More

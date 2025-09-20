@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Outlet, useLocation, useNavigate } from "react-router-dom";
 import { BottomNavigation } from "./BottomNavigation";
 import { Header } from "./Header";
@@ -6,6 +6,18 @@ import { Header } from "./Header";
 export function Layout() {
   const location = useLocation();
   const navigate = useNavigate();
+
+  // Reset scroll position when route changes
+  useEffect(() => {
+    // Reset scroll for mobile layout
+    window.scrollTo(0, 0);
+    
+    // Reset scroll for desktop layout main content area
+    const desktopScrollContainer = document.querySelector('.desktop-main-content');
+    if (desktopScrollContainer) {
+      desktopScrollContainer.scrollTop = 0;
+    }
+  }, [location.pathname]);
 
   // Check if current route should show header (only on home route)
   const showHeader = location.pathname === '/';
@@ -148,7 +160,7 @@ export function Layout() {
 
           {/* Main Content */}
           <div className="flex-1 overflow-hidden">
-            <div className="h-full overflow-y-auto bg-gray-50 pb-8">
+            <div className="h-full overflow-y-auto bg-gray-50 pb-8 desktop-main-content">
               <Outlet />
             </div>
           </div>

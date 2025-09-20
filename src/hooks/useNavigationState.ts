@@ -1,71 +1,96 @@
-import { useCallback } from 'react';
-import { useNavigate, useLocation } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
+
+interface NavigationState {
+  fromPage: string;
+  currentPath: string;
+  scrollPosition: {
+    mobile: number;
+    desktop: number;
+  };
+}
 
 export function useNavigationState() {
   const navigate = useNavigate();
-  const location = useLocation();
 
-  // Store scroll position and navigation context
-  const storeNavigationState = useCallback((context: string) => {
-    const currentPosition = window.innerWidth < 1024 
-      ? window.scrollY 
-      : document.querySelector('.overflow-y-auto')?.scrollTop || 0;
+  const getCurrentScrollPosition = () => {
+    const mobileScroll = window.scrollY;
+    const desktopScrollContainer = document.querySelector('.desktop-main-content') as HTMLElement;
+    const desktopScroll = desktopScrollContainer ? desktopScrollContainer.scrollTop : 0;
     
-    const navigationState = {
-      scrollPosition: currentPosition,
-      fromPath: location.pathname,
-      searchParams: location.search,
-      timestamp: Date.now()
+    return {
+      mobile: mobileScroll,
+      desktop: desktopScroll
+    };
+  };
+
+  const setScrollPosition = (position: { mobile: number; desktop: number }) => {
+    // Set mobile scroll
+    window.scrollTo(0, position.mobile);
+    
+    // Set desktop scroll
+    const desktopScrollContainer = document.querySelector('.desktop-main-content') as HTMLElement;
+    if (desktopScrollContainer) {
+      desktopScrollContainer.scrollTop = position.desktop;
+    }
+  };
+
+  const navigateWithState = (path: string, fromPageKey: string) => {
+    // Store current scroll position
+    const currentScroll = getCurrentScrollPosition();
+    
+    // Store the CURRENT path (where we're coming from), not the destination
+    const currentPath = window.location.pathname + window.location.search;
+    
+    const navigationState: NavigationState = {
+      fromPage: fromPageKey,
+      currentPath: currentPath, // This should be the current location, not the destination
+      scrollPosition: currentScroll
     };
     
-    localStorage.setItem(`nav_${context}`, JSON.stringify(navigationState));
-  }, [location]);
+    // Store navigation state in sessionStorage with the destination path as key
+    sessionStorage.setItem(`nav-state-${path.split('?')[0]}`, JSON.stringify(navigationState));
+    console.log('Storing navigation state:', navigationState, 'with key:', `nav-state-${path.split('?')[0]}`); // Debug log
+    
+    // Navigate to new path
+    navigate(path);
+  };
 
-  // Restore scroll position and handle navigation
-  const restoreNavigationState = useCallback((context: string, fallbackPath: string = '/') => {
-    const stored = localStorage.getItem(`nav_${context}`);
-    if (stored) {
+  const restoreNavigationState = (currentPageKey: string) => {
+    const currentPath = window.location.pathname;
+    const stateKey = `nav-state-${currentPath}`;
+    console.log('Attempting to restore navigation state with key:', stateKey); // Debug log
+    const savedState = sessionStorage.getItem(stateKey);
+    console.log('Saved state found:', savedState ? 'Yes' : 'No'); // Debug log
+    
+    if (savedState) {
       try {
-        const state = JSON.parse(stored);
-        // Navigate back to the stored path with search params
-        const targetPath = state.fromPath + state.searchParams;
-        navigate(targetPath);
+        const state: NavigationState = JSON.parse(savedState);
+        console.log('Parsed state:', state); // Debug log
         
-        // Restore scroll position after navigation
+        // Clean up the state
+        sessionStorage.removeItem(stateKey);
+        
+        // Navigate back to the previous page
+        console.log('Navigating to:', state.currentPath); // Debug log
+        navigate(state.currentPath);
+        
+        // Restore scroll position after a short delay
         setTimeout(() => {
-          const position = state.scrollPosition || 0;
-          if (window.innerWidth < 1024) {
-            window.scrollTo({ top: position, behavior: "smooth" });
-          } else {
-            const mainContent = document.querySelector('.overflow-y-auto');
-            if (mainContent) {
-              mainContent.scrollTo({ top: position, behavior: "smooth" });
-            }
-          }
-          // Clean up after restoring
-          localStorage.removeItem(`nav_${context}`);
+          console.log('Restoring scroll position:', state.scrollPosition); // Debug log
+          setScrollPosition(state.scrollPosition);
         }, 100);
         
         return true;
-      } catch (error) {
-        console.error('Error restoring navigation state:', error);
+      } catch (e) {
+        console.error('Failed to restore navigation state:', e);
       }
     }
     
-    // Fallback navigation
-    navigate(fallbackPath);
     return false;
-  }, [navigate]);
-
-  // Enhanced navigate function that stores state
-  const navigateWithState = useCallback((path: string, context: string) => {
-    storeNavigationState(context);
-    navigate(path);
-  }, [navigate, storeNavigationState]);
+  };
 
   return {
-    storeNavigationState,
-    restoreNavigationState,
-    navigateWithState
+    navigateWithState,
+    restoreNavigationState
   };
 }

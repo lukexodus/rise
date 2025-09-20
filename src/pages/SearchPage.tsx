@@ -5,9 +5,9 @@ import { SearchProjects } from "../components/SearchProjects";
 export function SearchPage() {
   const { navigateWithState } = useNavigationState();
 
-  // Handle project clicks with navigation state management
+  // Handle project clicks with navigation state and scroll position storage
   const handleProjectClick = (projectId: string) => {
-    navigateWithState(`/project/${projectId}`, 'search');
+    navigateWithState(`/project/${projectId}?from=search`, 'search');
   };
 
   return (

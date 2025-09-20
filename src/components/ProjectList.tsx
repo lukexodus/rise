@@ -30,6 +30,10 @@ export function ProjectList({ category, onBack, onProjectClick }: ProjectListPro
   const [sortBy, setSortBy] = React.useState("title");
   const [filterLocation, setFilterLocation] = React.useState("all");
 
+  const handleBack = () => {
+    onBack();
+  };
+
   // Filter projects by category
   const categoryProjects = mockProjects.filter(p => p.status === category);
 
@@ -97,7 +101,7 @@ export function ProjectList({ category, onBack, onProjectClick }: ProjectListPro
             <Button
               variant="ghost"
               size="sm"
-              onClick={onBack}
+              onClick={handleBack}
               className="text-white hover:bg-white/10 p-2"
             >
               <ArrowLeft className="w-5 h-5" />
@@ -120,7 +124,7 @@ export function ProjectList({ category, onBack, onProjectClick }: ProjectListPro
                 placeholder="Search projects..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="pl-10 font-body bg-white"
+                className="pl-10 font-body bg-white text-gray-900"
               />
             </div>
             

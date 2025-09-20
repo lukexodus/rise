@@ -153,7 +153,7 @@ export function SearchProjects({ onProjectClick }: SearchProjectsProps) {
 
   // Enhanced project click handler
   const handleProjectClick = (projectId: string) => {
-    navigateWithState(`/project/${projectId}`, 'search');
+    onProjectClick?.(projectId);
   };
 
   // Debounce department search

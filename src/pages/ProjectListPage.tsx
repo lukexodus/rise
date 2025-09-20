@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { useNavigationState } from "../hooks/useNavigationState";
 import { ProjectList } from "../components/ProjectList";
@@ -10,8 +10,11 @@ export function ProjectListPage() {
 
   // Handle back navigation with state restoration
   const handleBack = () => {
-    const restored = restoreNavigationState('home', '/');
+    console.log('Back button clicked'); // Debug log
+    const restored = restoreNavigationState('list');
+    console.log('Navigation state restored:', restored); // Debug log
     if (!restored) {
+      console.log('Falling back to navigate("/")'); // Debug log
       navigate('/');
     }
   };
@@ -32,10 +35,12 @@ export function ProjectListPage() {
   }
 
   return (
-    <ProjectList
-      category={category}
-      onBack={handleBack}
-      onProjectClick={handleProjectClick}
-    />
+    <div>
+      <ProjectList
+        category={category}
+        onBack={handleBack}
+        onProjectClick={handleProjectClick}
+      />
+    </div>
   );
 }

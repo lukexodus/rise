@@ -1,5 +1,5 @@
 import React from "react";
-import { useParams, useNavigate, useSearchParams } from "react-router-dom";
+import { useParams, useNavigate, useLocation } from "react-router-dom";
 import { ProjectDetail } from "../components/ProjectDetail";
 import { useState, useEffect } from "react";
 import { ReportIssue } from "../components/ReportIssue";
@@ -12,7 +12,7 @@ import projectsData from "../data/projects.json";
 export function ProjectDetailPage() {
   const { projectId } = useParams<{ projectId: string }>();
   const navigate = useNavigate();
-  const [searchParams] = useSearchParams();
+  const location = useLocation();
   const { restoreNavigationState } = useNavigationState();
   const [showReportIssue, setShowReportIssue] = useState(false);
   const [projectExists, setProjectExists] = useState<boolean | null>(null);
@@ -30,34 +30,22 @@ export function ProjectDetailPage() {
 
   // Handle back navigation with proper state restoration
   const handleBack = () => {
-    const from = searchParams.get('from');
-    const category = searchParams.get('category');
+    // Try to restore navigation state first
+    const restored = restoreNavigationState('project');
     
-    // Try to restore the previous navigation state based on where user came from
-    if (from === 'list' && category) {
-      const restored = restoreNavigationState('home', `/list/${category}`);
-      if (!restored) {
+    if (!restored) {
+      // Fallback navigation based on URL parameters
+      const searchParams = new URLSearchParams(location.search);
+      const from = searchParams.get('from');
+      const category = searchParams.get('category');
+      
+      if (from === 'list' && category) {
         navigate(`/list/${category}`);
-      }
-    } else if (from === 'search') {
-      const restored = restoreNavigationState('search', '/search');
-      if (!restored) {
-        navigate('/search');
-      }
-    } else if (from === 'map') {
-      const restored = restoreNavigationState('map', '/map');
-      if (!restored) {
+      } else if (from === 'map') {
         navigate('/map');
-      }
-    } else if (from === 'community') {
-      const restored = restoreNavigationState('community', '/community');
-      if (!restored) {
-        navigate('/community');
-      }
-    } else {
-      // Default to trying home navigation state, then fallback to home
-      const restored = restoreNavigationState('home', '/');
-      if (!restored) {
+      } else if (from === 'search') {
+        navigate('/search');
+      } else {
         navigate('/');
       }
     }

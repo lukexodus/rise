@@ -6,14 +6,9 @@ import { ProjectCards } from "../components/ProjectCards";
 export function HomePage() {
   const { navigateWithState } = useNavigationState();
 
-  // Handle project clicks with navigation state
+  // Handle project clicks with navigation state and scroll position storage
   const handleProjectClick = (projectId: string) => {
     navigateWithState(`/project/${projectId}`, 'home');
-  };
-
-  // Handle project list navigation with navigation state
-  const handleSeeMore = (category: "ongoing" | "completed" | "delayed") => {
-    navigateWithState(`/list/${category}`, 'home');
   };
 
   // Mock budget data
@@ -32,10 +27,7 @@ export function HomePage() {
       </div>
       
       {/* Project Cards */}
-      <ProjectCards 
-        onProjectClick={handleProjectClick}
-        onSeeMore={handleSeeMore}
-      />
+      <ProjectCards onProjectClick={handleProjectClick} />
     </>
   );
 }

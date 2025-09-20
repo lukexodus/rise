@@ -25,7 +25,7 @@ export function ReportPostPage() {
 
   // Handle back navigation with proper state restoration
   const handleBack = () => {
-    const restored = restoreNavigationState('community', '/community');
+    const restored = restoreNavigationState('post');
     if (!restored) {
       navigate('/community');
     }
