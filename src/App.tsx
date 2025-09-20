@@ -261,11 +261,11 @@ export default function App() {
           {/* Sidebar Navigation */}
           <div className="w-64 bg-white border-r border-gray-200 flex flex-col">
             <div className="p-6 border-b border-gray-200">
-              <h1 className="text-xl font-medium text-[#1A3E73]">
-                BantayBayan
+              <h1 className="text-xl font-heading font-semibold text-[#1A3E73]">
+                RISE
               </h1>
-              <p className="text-sm text-muted-foreground mt-1">
-                Government Transparency Platform
+              <p className="text-sm font-body text-muted-foreground mt-1">
+              Every Peso. Every Voice.<br/>Accounted For.
               </p>
             </div>
 
@@ -308,7 +308,7 @@ export default function App() {
                     }`}
                   >
                     <span className="text-lg">{item.icon}</span>
-                    <span className="font-medium">
+                    <span className="font-heading font-medium">
                       {item.label}
                     </span>
                   </button>
@@ -323,7 +323,7 @@ export default function App() {
                   className="w-full flex items-center gap-3 px-3 py-2 rounded-lg text-left text-gray-600 hover:bg-gray-100 transition-colors"
                 >
                   <span className="text-lg">🔔</span>
-                  <span className="font-medium">
+                  <span className="font-heading font-medium">
                     Notifications
                   </span>
                 </button>
@@ -332,7 +332,7 @@ export default function App() {
                   className="w-full flex items-center gap-3 px-3 py-2 rounded-lg text-left text-gray-600 hover:bg-gray-100 transition-colors"
                 >
                   <span className="text-lg">👤</span>
-                  <span className="font-medium">Profile</span>
+                  <span className="font-heading font-medium">Profile</span>
                 </button>
               </div>
             </div>

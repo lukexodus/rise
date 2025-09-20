@@ -28,8 +28,8 @@ export function Header({ onNotificationsClick, onProfileClick }: HeaderProps) {
           
           {/* App Name */}
           <div>
-            <h1 className="text-lg font-semibold">BantayBayan</h1>
-            <p className="text-xs text-blue-100">Transparency for All</p>
+            <h1 className="text-lg font-semibold">RISE</h1>
+            <p className="text-xs text-blue-100">Every Peso, Every Voice — Accounted For.</p>
           </div>
         </div>
 

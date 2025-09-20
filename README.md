@@ -1,7 +1,7 @@
 
-  # BantayBayan
+  # RISE
 
-  This is a code bundle for BantayBayan. The original project is available at https://www.figma.com/design/a3JAGLLjnEEwTCSw7M9fKg/BantayBayan.
+  This is a code bundle for RISE. The original project is available at https://www.figma.com/design/a3JAGLLjnEEwTCSw7M9fKg/BantayBayan.
 
   ## Running the code
 
