@@ -1,16 +1,32 @@
-import { useState } from "react";
+import { useState, useMemo, useCallback, useEffect } from "react";
+import { useSearchParams } from "react-router-dom";
+import { useNavigationState } from "../hooks/useNavigationState";
 import { Card } from "./ui/card";
 import { Input } from "./ui/input";
 import { Button } from "./ui/button";
 import { Badge } from "./ui/badge";
-import { Search, Filter, Calendar, MapPin, DollarSign, Check, ChevronsUpDown, X } from "lucide-react";
+import { 
+  Search, 
+  Filter, 
+  Calendar, 
+  MapPin, 
+  DollarSign, 
+  Check, 
+  ChevronsUpDown, 
+  X
+} from "lucide-react";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "./ui/select";
 import { Popover, PopoverContent, PopoverTrigger } from "./ui/popover";
 import { Command, CommandEmpty, CommandGroup, CommandInput, CommandItem } from "./ui/command";
 import { cn } from "@/lib/utils";
 
-// Import data from external JSON file
+// Import data from external JSON files
 import searchResultsData from "../data/searchResults.json";
+import locationsData from "../data/locations.json";
+import sectorsData from "../data/sectors.json";
+import statusesData from "../data/statuses.json";
+import departmentsData from "../data/departments.json";
+import { getSectorIcon, getIcon } from "../utils/iconUtils";
 
 const mockSearchResults = searchResultsData;
 
@@ -19,15 +35,23 @@ interface SearchProjectsProps {
 }
 
 export function SearchProjects({ onProjectClick }: SearchProjectsProps) {
-  const [searchQuery, setSearchQuery] = useState("");
-  const [filterCategory, setFilterCategory] = useState("all");
-  const [filterStatus, setFilterStatus] = useState("all");
-  const [filterDepartment, setFilterDepartment] = useState("all");
-  const [filterLocation, setFilterLocation] = useState("all");
+  const [searchParams, setSearchParams] = useSearchParams();
+  const { navigateWithState } = useNavigationState();
+  
+  // Initialize filters from URL search parameters
+  const [searchQuery, setSearchQuery] = useState(() => searchParams.get('q') || "");
+  const [filterSector, setFilterSector] = useState(() => searchParams.get('sector') || "all");
+  const [filterStatus, setFilterStatus] = useState(() => searchParams.get('status') || "all");
+  const [filterDepartment, setFilterDepartment] = useState(() => searchParams.get('department') || "all");
+  const [filterLocation, setFilterLocation] = useState(() => searchParams.get('location') || "all");
   const [results, setResults] = useState(mockSearchResults);
   const [selectedProject, setSelectedProject] = useState<typeof mockSearchResults[0] | null>(null);
   const [openDepartment, setOpenDepartment] = useState(false);
   const [openLocation, setOpenLocation] = useState(false);
+  const [departmentSearchTerm, setDepartmentSearchTerm] = useState("");
+  const [locationSearchTerm, setLocationSearchTerm] = useState("");
+  const [debouncedDepartmentSearch, setDebouncedDepartmentSearch] = useState("");
+  const [debouncedLocationSearch, setDebouncedLocationSearch] = useState("");
 
   const formatCurrency = (amount: number) => {
     return new Intl.NumberFormat('en-PH', {
@@ -51,7 +75,36 @@ export function SearchProjects({ onProjectClick }: SearchProjectsProps) {
     }
   };
 
-  const handleSearch = () => {
+  // Update URL when filters change
+  const updateFiltersInURL = useCallback(() => {
+    const params = new URLSearchParams();
+    
+    if (searchQuery.trim()) params.set('q', searchQuery.trim());
+    if (filterSector !== "all") params.set('sector', filterSector);
+    if (filterStatus !== "all") params.set('status', filterStatus);
+    if (filterDepartment !== "all") params.set('department', filterDepartment);
+    if (filterLocation !== "all") params.set('location', filterLocation);
+    
+    setSearchParams(params, { replace: true });
+  }, [searchQuery, filterSector, filterStatus, filterDepartment, filterLocation, setSearchParams]);
+
+  // Sync state with URL parameters
+  useEffect(() => {
+    const urlQuery = searchParams.get('q') || "";
+    const urlSector = searchParams.get('sector') || "all";
+    const urlStatus = searchParams.get('status') || "all";
+    const urlDepartment = searchParams.get('department') || "all";
+    const urlLocation = searchParams.get('location') || "all";
+    
+    if (urlQuery !== searchQuery) setSearchQuery(urlQuery);
+    if (urlSector !== filterSector) setFilterSector(urlSector);
+    if (urlStatus !== filterStatus) setFilterStatus(urlStatus);
+    if (urlDepartment !== filterDepartment) setFilterDepartment(urlDepartment);
+    if (urlLocation !== filterLocation) setFilterLocation(urlLocation);
+  }, [searchParams]);
+
+  // Perform search and update URL
+  const handleSearch = useCallback(() => {
     let filtered = mockSearchResults;
 
     if (searchQuery.trim()) {
@@ -63,8 +116,8 @@ export function SearchProjects({ onProjectClick }: SearchProjectsProps) {
       );
     }
 
-    if (filterCategory !== "all") {
-      filtered = filtered.filter(project => project.category === filterCategory);
+    if (filterSector !== "all") {
+      filtered = filtered.filter(project => project.sector === filterSector);
     }
 
     if (filterStatus !== "all") {
@@ -80,138 +133,90 @@ export function SearchProjects({ onProjectClick }: SearchProjectsProps) {
     }
 
     setResults(filtered);
-  };
+    updateFiltersInURL();
+  }, [searchQuery, filterSector, filterStatus, filterDepartment, filterLocation, updateFiltersInURL]);
+
+  // Auto-search when filters change
+  useEffect(() => {
+    handleSearch();
+  }, [searchQuery, filterSector, filterStatus, filterDepartment, filterLocation]);
 
   const clearFilters = () => {
     setSearchQuery("");
-    setFilterCategory("all");
+    setFilterSector("all");
     setFilterStatus("all");
     setFilterDepartment("all");
     setFilterLocation("all");
     setResults(mockSearchResults);
+    setSearchParams(new URLSearchParams(), { replace: true });
   };
 
-  const categories = [
-    "Infrastructure", 
-    "Safety & Security", 
-    "Utilities", 
-    "Environment", 
-    "Healthcare", 
-    "Education",
-    "Transportation",
-    "Public Services",
-    "Technology & Digital Services",
-    "Economic Development",
-    "Social Services",
-    "Housing & Urban Planning",
-    "Food Safety & Agriculture",
-    "Legal & Justice",
-    "Emergency Services",
-    "Tourism & Culture",
-    "Finance & Budget"
-  ];
-  
-  const departments = [
-    "Department of Transportation",
-    "Department of Public Works and Highways", 
-    "Department of Information and Communications Technology",
-    "Department of Energy",
-    "Department of Health",
-    "Department of Education",
-    "Department of Agriculture",
-    "Department of Environment and Natural Resources",
-    "Department of Finance",
-    "Department of Budget and Management",
-    "Department of Interior and Local Government",
-    "Department of Justice",
-    "Department of Labor and Employment",
-    "Department of National Defense",
-    "Department of Science and Technology",
-    "Department of Social Welfare and Development",
-    "Department of Tourism",
-    "Department of Trade and Industry",
-    "Department of Foreign Affairs",
-    "Department of Human Settlements and Urban Development",
-    "Department of Migrant Workers",
-    "National Economic and Development Authority",
-    "Office of the President",
-    "Office of the Vice President",
-    "Bangko Sentral ng Pilipinas",
-    "Bureau of Internal Revenue",
-    "Bureau of Customs",
-    "Securities and Exchange Commission",
-    "Commission on Audit",
-    "Civil Service Commission",
-    "Commission on Elections",
-    "Commission on Human Rights",
-    "Office of the Ombudsman",
-    "Philippine Statistics Authority",
-    "Technical Education and Skills Development Authority",
-    "Professional Regulation Commission",
-    "Philippine Health Insurance Corporation",
-    "Social Security System",
-    "Government Service Insurance System",
-    "Pag-IBIG Fund",
-    "Philippine Amusement and Gaming Corporation",
-    "Land Transportation Office",
-    "Maritime Industry Authority",
-    "Civil Aviation Authority of the Philippines",
-    "Philippine Ports Authority",
-    "Toll Regulatory Board",
-    "Metropolitan Manila Development Authority",
-    "Housing and Urban Development Coordinating Council",
-    "National Housing Authority",
-    "Philippine Reclamation Authority",
-    "Bases Conversion and Development Authority",
-    "Clark Development Corporation",
-    "Subic Bay Metropolitan Authority",
-    "Cagayan Economic Zone Authority",
-    "Philippine Economic Zone Authority",
-    "Aurora Pacific Economic Zone and Freeport Authority",
-    "John Hay Management Corporation",
-    "Zamboanga City Special Economic Zone Authority"
-  ];
-  const locations = [
-    "Nationwide",
-    // NCR
-    "National Capital Region (NCR)",
-    "Metro Manila",
-    // Luzon Regions
-    "Ilocos Region (Region I)",
-    "Ilocos Norte", "Ilocos Sur", "La Union", "Pangasinan",
-    "Cagayan Valley (Region II)",
-    "Batanes", "Cagayan", "Isabela", "Nueva Vizcaya", "Quirino",
-    "Central Luzon (Region III)",
-    "Aurora", "Bataan", "Bulacan", "Nueva Ecija", "Pampanga", "Tarlac", "Zambales",
-    "CALABARZON (Region IV-A)",
-    "Batangas", "Cavite", "Laguna", "Quezon", "Rizal",
-    "MIMAROPA (Region IV-B)",
-    "Marinduque", "Occidental Mindoro", "Oriental Mindoro", "Palawan", "Romblon",
-    "Bicol Region (Region V)",
-    "Albay", "Camarines Norte", "Camarines Sur", "Catanduanes", "Masbate", "Sorsogon",
-    "Cordillera Administrative Region (CAR)",
-    "Abra", "Apayao", "Benguet", "Ifugao", "Kalinga", "Mountain Province",
-    // Visayas Regions
-    "Western Visayas (Region VI)",
-    "Aklan", "Antique", "Capiz", "Guimaras", "Iloilo", "Negros Occidental",
-    "Central Visayas (Region VII)",
-    "Bohol", "Cebu", "Negros Oriental", "Siquijor",
-    "Eastern Visayas (Region VIII)",
-    "Biliran", "Eastern Samar", "Leyte", "Northern Samar", "Samar", "Southern Leyte",
-    // Mindanao Regions
-    "Zamboanga Peninsula (Region IX)",
-    "Zamboanga del Norte", "Zamboanga del Sur", "Zamboanga Sibugay",
-    "Northern Mindanao (Region X)",
-    "Bukidnon", "Camiguin", "Lanao del Norte", "Misamis Occidental", "Misamis Oriental",
-    "Davao Region (Region XI)",
-    "Davao de Oro", "Davao del Norte", "Davao del Sur", "Davao Occidental", "Davao Oriental",
-    "SOCCSKSARGEN (Region XII)",
-    "Cotabato", "Sarangani", "South Cotabato", "Sultan Kudarat",
-    "Caraga (Region XIII)",
-    "Agusan del Norte", "Agusan del Sur", "Dinagat Islands", "Surigao del Norte", "Surigao del Sur",
-    "Bangsamoro Autonomous Region in Muslim Mindanao (BARMM)",
-    "Basilan", "Lanao del Sur", "Maguindanao del Norte", "Maguindanao del Sur", "Sulu", "Tawi-Tawi"
-  ];
+  // Enhanced project click handler
+  const handleProjectClick = (projectId: string) => {
+    navigateWithState(`/project/${projectId}`, 'search');
+  };
+
+  // Debounce department search
+  const debounceDepartmentSearch = useCallback(
+    useMemo(() => {
+      let timeoutId: NodeJS.Timeout;
+      return (searchTerm: string) => {
+        clearTimeout(timeoutId);
+        timeoutId = setTimeout(() => {
+          setDebouncedDepartmentSearch(searchTerm);
+        }, 300);
+      };
+    }, []),
+    []
+  );
+
+  // Debounce location search
+  const debounceLocationSearch = useCallback(
+    useMemo(() => {
+      let timeoutId: NodeJS.Timeout;
+      return (searchTerm: string) => {
+        clearTimeout(timeoutId);
+        timeoutId = setTimeout(() => {
+          setDebouncedLocationSearch(searchTerm);
+        }, 300);
+      };
+    }, []),
+    []
+  );
+
+  // Filter departments based on debounced search term
+  const filteredDepartments = useMemo(() => {
+    if (!debouncedDepartmentSearch) return departmentsData.departments.slice(0, 20);
+    return departmentsData.departments.filter(dept =>
+      dept.name.toLowerCase().includes(debouncedDepartmentSearch.toLowerCase()) ||
+      dept.shortName.toLowerCase().includes(debouncedDepartmentSearch.toLowerCase())
+    ).slice(0, 50);
+  }, [debouncedDepartmentSearch]);
+
+  // Filter locations based on debounced search term
+  const filteredLocations = useMemo(() => {
+    const allLocations = [...locationsData.all_locations, ...locationsData.cities];
+    if (!debouncedLocationSearch) return allLocations.slice(0, 20);
+    return allLocations.filter(location =>
+      location.toLowerCase().includes(debouncedLocationSearch.toLowerCase())
+    ).slice(0, 50);
+  }, [debouncedLocationSearch]);
+
+  const handleDepartmentSearchChange = (value: string) => {
+    setDepartmentSearchTerm(value);
+    debounceDepartmentSearch(value);
+  };
+
+  const handleLocationSearchChange = (value: string) => {
+    setLocationSearchTerm(value);
+    debounceLocationSearch(value);
+  };
+
+  // Use sectors from JSON data
+  const categories = sectorsData.sectors.map(sector => sector.name);
+
+  // Use locations from the imported JSON file
+  const locations = locationsData.all_locations;
 
   return (
     <div className="px-4 lg:px-8 py-4 lg:py-6">
@@ -219,7 +224,14 @@ export function SearchProjects({ onProjectClick }: SearchProjectsProps) {
         {/* Header */}
         <div>
           <h2 className="text-lg lg:text-2xl font-medium text-[#1A3E73]">Search Projects</h2>
-          <p className="text-sm lg:text-base text-muted-foreground">Find specific projects, budgets, and allocations</p>
+          <p className="text-sm lg:text-base text-muted-foreground">
+            Find specific projects, budgets, and allocations
+            {(searchQuery || filterSector !== "all" || filterStatus !== "all" || filterDepartment !== "all" || filterLocation !== "all") && (
+              <span className="text-[#1A3E73]">
+                {" • "}{results.length} result{results.length !== 1 ? 's' : ''} found
+              </span>
+            )}
+          </p>
         </div>
 
         {/* Search Bar */}
@@ -229,7 +241,7 @@ export function SearchProjects({ onProjectClick }: SearchProjectsProps) {
               <div className="flex-1 relative">
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-muted-foreground" />
                 <Input
-                  placeholder="Search projects, departments, contractors..."
+                  placeholder="Search projects..."
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
                   className="pl-10 lg:text-base"
@@ -243,14 +255,19 @@ export function SearchProjects({ onProjectClick }: SearchProjectsProps) {
 
             {/* Filters */}
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-2 lg:gap-3 mb-2">
-              <Select value={filterCategory} onValueChange={setFilterCategory}>
+              <Select value={filterSector} onValueChange={setFilterSector}>
                 <SelectTrigger className="text-xs lg:text-sm">
-                  <SelectValue placeholder="Category" />
+                  <SelectValue placeholder="Sector" />
                 </SelectTrigger>
                 <SelectContent>
-                  <SelectItem value="all">All Categories</SelectItem>
+                  <SelectItem value="all">All Sectors</SelectItem>
                   {categories.map(cat => (
-                    <SelectItem key={cat} value={cat}>{cat}</SelectItem>
+                    <SelectItem key={cat} value={cat}>
+                      <div className="flex items-center gap-2">
+                        {getSectorIcon(cat)}
+                        <span>{cat}</span>
+                      </div>
+                    </SelectItem>
                   ))}
                 </SelectContent>
               </Select>
@@ -261,9 +278,14 @@ export function SearchProjects({ onProjectClick }: SearchProjectsProps) {
                 </SelectTrigger>
                 <SelectContent>
                   <SelectItem value="all">All Status</SelectItem>
-                  <SelectItem value="ongoing">Ongoing</SelectItem>
-                  <SelectItem value="completed">Completed</SelectItem>
-                  <SelectItem value="delayed">Delayed</SelectItem>
+                  {statusesData.statuses.filter(status => ["ongoing", "completed", "delayed"].includes(status.id)).map((status) => (
+                    <SelectItem key={status.id} value={status.id}>
+                      <div className="flex items-center gap-2">
+                        {getIcon(status.icon, "w-3 h-3")}
+                        <span>{status.name}</span>
+                      </div>
+                    </SelectItem>
+                  ))}
                 </SelectContent>
               </Select>
 
@@ -277,13 +299,17 @@ export function SearchProjects({ onProjectClick }: SearchProjectsProps) {
                   >
                     {filterDepartment === "all"
                       ? "Department"
-                      : departments.find((dept) => dept === filterDepartment)?.split(' ').slice(2).join(' ') || "Department"}
+                      : departmentsData.departments.find((dept) => dept.name === filterDepartment)?.shortName || "Department"}
                     <ChevronsUpDown className="ml-2 h-4 w-4 shrink-0 opacity-50" />
                   </Button>
                 </PopoverTrigger>
                 <PopoverContent className="w-[300px] p-0">
                   <Command>
-                    <CommandInput placeholder="Search departments..." />
+                    <CommandInput 
+                      placeholder="Search departments..." 
+                      value={departmentSearchTerm}
+                      onValueChange={handleDepartmentSearchChange}
+                    />
                     <CommandEmpty>No department found.</CommandEmpty>
                     <CommandGroup className="max-h-64 overflow-auto">
                       <CommandItem
@@ -292,6 +318,8 @@ export function SearchProjects({ onProjectClick }: SearchProjectsProps) {
                         onSelect={() => {
                           setFilterDepartment("all");
                           setOpenDepartment(false);
+                          setDepartmentSearchTerm("");
+                          setDebouncedDepartmentSearch("");
                         }}
                       >
                         <Check
@@ -302,22 +330,27 @@ export function SearchProjects({ onProjectClick }: SearchProjectsProps) {
                         />
                         All Departments
                       </CommandItem>
-                      {departments.map((dept) => (
+                      {filteredDepartments.map((dept) => (
                         <CommandItem
-                          key={dept}
-                          value={dept}
+                          key={dept.id}
+                          value={dept.name}
                           onSelect={(currentValue) => {
                             setFilterDepartment(currentValue === filterDepartment ? "all" : currentValue);
                             setOpenDepartment(false);
+                            setDepartmentSearchTerm("");
+                            setDebouncedDepartmentSearch("");
                           }}
                         >
                           <Check
                             className={cn(
                               "mr-2 h-4 w-4",
-                              filterDepartment === dept ? "opacity-100" : "opacity-0"
+                              filterDepartment === dept.name ? "opacity-100" : "opacity-0"
                             )}
                           />
-                          {dept}
+                          <div className="flex flex-col">
+                            <span className="font-medium">{dept.shortName}</span>
+                            <span className="text-xs text-muted-foreground">{dept.name}</span>
+                          </div>
                         </CommandItem>
                       ))}
                     </CommandGroup>
@@ -333,15 +366,17 @@ export function SearchProjects({ onProjectClick }: SearchProjectsProps) {
                     aria-expanded={openLocation}
                     className="justify-between text-xs lg:text-sm h-10"
                   >
-                    {filterLocation === "all"
-                      ? "Location"
-                      : locations.find((loc) => loc === filterLocation) || "Location"}
+                    {filterLocation === "all" ? "Location" : filterLocation}
                     <ChevronsUpDown className="ml-2 h-4 w-4 shrink-0 opacity-50" />
                   </Button>
                 </PopoverTrigger>
                 <PopoverContent className="w-[300px] p-0">
                   <Command>
-                    <CommandInput placeholder="Search locations..." />
+                    <CommandInput 
+                      placeholder="Search locations..." 
+                      value={locationSearchTerm}
+                      onValueChange={handleLocationSearchChange}
+                    />
                     <CommandEmpty>No location found.</CommandEmpty>
                     <CommandGroup className="max-h-64 overflow-auto">
                       <CommandItem
@@ -350,6 +385,8 @@ export function SearchProjects({ onProjectClick }: SearchProjectsProps) {
                         onSelect={() => {
                           setFilterLocation("all");
                           setOpenLocation(false);
+                          setLocationSearchTerm("");
+                          setDebouncedLocationSearch("");
                         }}
                       >
                         <Check
@@ -360,13 +397,15 @@ export function SearchProjects({ onProjectClick }: SearchProjectsProps) {
                         />
                         All Locations
                       </CommandItem>
-                      {locations.map((loc) => (
+                      {filteredLocations.map((loc) => (
                         <CommandItem
                           key={loc}
                           value={loc}
                           onSelect={(currentValue) => {
                             setFilterLocation(currentValue === filterLocation ? "all" : currentValue);
                             setOpenLocation(false);
+                            setLocationSearchTerm("");
+                            setDebouncedLocationSearch("");
                           }}
                         >
                           <Check
@@ -387,11 +426,14 @@ export function SearchProjects({ onProjectClick }: SearchProjectsProps) {
             <div className="flex justify-between items-center">
               <span className="text-sm lg:text-base text-muted-foreground">
                 {results.length} projects found
+                {searchQuery && ` for "${searchQuery}"`}
               </span>
-              <Button variant="outline" size="sm" onClick={clearFilters}>
-                <X className="w-4 h-4 mr-2" />
-                Clear Filters
-              </Button>
+              {(searchQuery || filterSector !== "all" || filterStatus !== "all" || filterDepartment !== "all" || filterLocation !== "all") && (
+                <Button variant="outline" size="sm" onClick={clearFilters}>
+                  <X className="w-4 h-4 mr-2" />
+                  Clear Filters
+                </Button>
+              )}
             </div>
           </div>
         </Card>
@@ -432,7 +474,7 @@ export function SearchProjects({ onProjectClick }: SearchProjectsProps) {
                     <span>{project.startDate} - {project.endDate}</span>
                   </div>
                   <div className="text-muted-foreground">
-                    Category: {project.category}
+                    Sector: {project.sector}
                   </div>
                 </div>
 
@@ -478,9 +520,7 @@ export function SearchProjects({ onProjectClick }: SearchProjectsProps) {
                       className="w-full mt-3 bg-[#1A3E73] hover:bg-[#1A3E73]/90 text-white"
                       onClick={(e) => {
                         e.stopPropagation();
-                        if (onProjectClick) {
-                          onProjectClick(`PROJ-2024-${project.id.toString().padStart(3, '0')}`);
-                        }
+                        handleProjectClick(`PROJ-2024-${project.id.toString().padStart(3, '0')}`);
                       }}
                     >
                       View Details
@@ -494,10 +534,17 @@ export function SearchProjects({ onProjectClick }: SearchProjectsProps) {
           {results.length === 0 && (
             <div className="text-center py-8 lg:col-span-2">
               <Search className="w-12 h-12 text-muted-foreground mx-auto mb-4" />
-              <p className="text-muted-foreground">No projects found matching your criteria.</p>
-              <Button variant="outline" onClick={clearFilters} className="mt-2">
-                Clear filters to see all projects
-              </Button>
+              <p className="text-muted-foreground">
+                {searchQuery || filterSector !== "all" || filterStatus !== "all" || filterDepartment !== "all" || filterLocation !== "all" 
+                  ? "No projects found matching your criteria." 
+                  : "Enter search terms or apply filters to find projects."
+                }
+              </p>
+              {(searchQuery || filterSector !== "all" || filterStatus !== "all" || filterDepartment !== "all" || filterLocation !== "all") && (
+                <Button variant="outline" onClick={clearFilters} className="mt-2">
+                  Clear filters to see all projects
+                </Button>
+              )}
             </div>
           )}
         </div>

@@ -19,6 +19,7 @@ import {
   Bookmark,
   Settings,
   X,
+  DollarSign,
 } from "lucide-react";
 
 // Import data from external JSON file
@@ -49,7 +50,7 @@ export function NotificationsPanel({ isOpen, onClose }: NotificationsPanelProps)
   const getNotificationIcon = (type: string) => {
     switch (type) {
       case "milestone": return <CheckCircle className="w-4 h-4 text-green-600" />;
-      case "budget": return <TrendingUp className="w-4 h-4 text-[#F2C063]" />;
+      case "budget": return <DollarSign className="w-4 h-4 text-[#F2C063]" />;
       case "delay": return <Clock className="w-4 h-4 text-yellow-600" />;
       case "audit": return <AlertTriangle className="w-4 h-4 text-[#BF4226]" />;
       case "status_change": return <FileText className="w-4 h-4 text-[#1A3E73]" />;

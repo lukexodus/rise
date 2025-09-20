@@ -24,6 +24,7 @@ import {
   FileText,
   Settings,
   ArrowLeft,
+  DollarSign,
 } from "lucide-react";
 
 // Import data from external JSON file
@@ -66,7 +67,7 @@ export function NotificationsPage({
         );
       case "budget":
         return (
-          <TrendingUp className="w-4 h-4 text-[#F2C063]" />
+          <DollarSign className="w-4 h-4 text-[#F2C063]" />
         );
       case "delay":
         return <Clock className="w-4 h-4 text-yellow-600" />;

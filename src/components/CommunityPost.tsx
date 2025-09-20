@@ -1,15 +1,17 @@
 import { Card } from "./ui/card";
 import { Badge } from "./ui/badge";
 import { Button } from "./ui/button";
-import { ArrowUp, ArrowDown, MapPin, Clock, AlertTriangle, Eye, MessageCircle, CheckCircle, Hourglass } from "lucide-react";
+import { ArrowUp, ArrowDown, MapPin, Clock, AlertTriangle, Eye, MessageCircle, CheckCircle, Hourglass, Construction, Shield, Zap, TreePine, Cross, GraduationCap, Car, Users, Wifi, Briefcase, Home, Utensils, Gavel, Globe, Coins } from "lucide-react";
 import { useState } from "react";
+import sectorsData from "../data/sectors.json";
+import statusesData from "../data/statuses.json";
 
 interface PostData {
   id: string;
   title: string;
   description: string;
   location: string;
-  category: string;
+  sector: string;
   priority: "low" | "medium" | "high";
   upvotes: number;
   downvotes: number;
@@ -99,18 +101,42 @@ export function CommunityPost({ post, onPostClick }: CommunityPostProps) {
     }
   };
 
+  const getSectorIcon = (sectorName: string) => {
+    const sector = sectorsData.sectors.find(s => s.name.toLowerCase() === sectorName.toLowerCase());
+    const iconName = sector?.icon;
+    
+    switch (iconName) {
+      case 'Construction': return <Construction className="w-3 h-3" />;
+      case 'Shield': return <Shield className="w-3 h-3" />;
+      case 'Zap': return <Zap className="w-3 h-3" />;
+      case 'TreePine': return <TreePine className="w-3 h-3" />;
+      case 'Cross': return <Cross className="w-3 h-3" />;
+      case 'GraduationCap': return <GraduationCap className="w-3 h-3" />;
+      case 'Car': return <Car className="w-3 h-3" />;
+      case 'Users': return <Users className="w-3 h-3" />;
+      case 'Wifi': return <Wifi className="w-3 h-3" />;
+      case 'Briefcase': return <Briefcase className="w-3 h-3" />;
+      case 'Home': return <Home className="w-3 h-3" />;
+      case 'Utensils': return <Utensils className="w-3 h-3" />;
+      case 'Gavel': return <Gavel className="w-3 h-3" />;
+      case 'Globe': return <Globe className="w-3 h-3" />;
+      case 'Coins': return <Coins className="w-3 h-3" />;
+      default: return <Users className="w-3 h-3" />;
+    }
+  };
+
   const getStatusIcon = () => {
-    switch (status) {
-      case "pending":
-        return <Hourglass className="w-3 h-3" />;
-      case "in_review":
-        return <Eye className="w-3 h-3" />;
-      case "responded":
-        return <MessageCircle className="w-3 h-3" />;
-      case "resolved":
-        return <CheckCircle className="w-3 h-3" />;
-      default:
-        return <Hourglass className="w-3 h-3" />;
+    const statusData = statusesData.statuses.find(s => s.id === status);
+    const iconName = statusData?.icon;
+    
+    switch (iconName) {
+      case 'Hourglass': return <Hourglass className="w-3 h-3" />;
+      case 'Eye': return <Eye className="w-3 h-3" />;
+      case 'MessageCircle': return <MessageCircle className="w-3 h-3" />;
+      case 'CheckCircle': return <CheckCircle className="w-3 h-3" />;
+      case 'Clock': return <Clock className="w-3 h-3" />;
+      case 'AlertTriangle': return <AlertTriangle className="w-3 h-3" />;
+      default: return <Hourglass className="w-3 h-3" />;
     }
   };
 
@@ -128,9 +154,6 @@ export function CommunityPost({ post, onPostClick }: CommunityPostProps) {
             {title}
           </h3>
           <div className="flex gap-1">
-            {/* {priority === "high" && (
-              <AlertTriangle className="w-4 h-4 text-[#BF4226]" />
-            )} */}
             <Badge className={`text-xs px-2 py-1 ${getPriorityColor()}`}>
               {priority.charAt(0).toUpperCase() + priority.slice(1)}
             </Badge>
@@ -154,6 +177,10 @@ export function CommunityPost({ post, onPostClick }: CommunityPostProps) {
           <div className="flex items-center gap-1">
             <MapPin className="w-3 h-3" />
             <span>{location}</span>
+          </div>
+          <div className="flex items-center gap-1">
+            {getSectorIcon(post.sector)}
+            <span>{post.sector}</span>
           </div>
           <div className="flex items-center gap-1">
             <Clock className="w-3 h-3" />

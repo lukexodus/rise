@@ -3,7 +3,7 @@ import { Card } from "./ui/card";
 import { Input } from "./ui/input";
 import { Button } from "./ui/button";
 import { Badge } from "./ui/badge";
-import { MapPin, Search, Navigation, ZoomIn, ZoomOut, X, HelpCircle } from "lucide-react";
+import { MapPin, Search, Navigation, ZoomIn, ZoomOut, X, HelpCircle, DollarSign } from "lucide-react";
 
 // Import data from external JSON file
 import projectsData from "../data/projects.json";
@@ -17,7 +17,7 @@ const mockMapProjects = Object.values(projectsData).map(project => ({
   budget: project.budget.total,
   status: project.status as "ongoing" | "completed" | "delayed",
   progress: project.progress,
-  category: project.category,
+  sector: project.sector,
   position: project.position
 }));
 
@@ -80,7 +80,7 @@ export function ProjectMap({ onProjectClick }: ProjectMapProps) {
     searchQuery === "" ||
     project.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
     project.location.toLowerCase().includes(searchQuery.toLowerCase()) ||
-    project.category.toLowerCase().includes(searchQuery.toLowerCase())
+    project.sector.toLowerCase().includes(searchQuery.toLowerCase())
   );
 
   const handlePinClick = (project: typeof mockMapProjects[0]) => {
@@ -253,7 +253,7 @@ export function ProjectMap({ onProjectClick }: ProjectMapProps) {
         {/* Legend */}
         {showLegend && (
           <>
-          <div className="absolute bottom-20 lg:hidden left-4 bg-white/95 backdrop-blur-sm rounded-lg p-3 shadow-lg z-30">
+          <div className="fixed bottom-20 lg:hidden left-4 bg-white/95 backdrop-blur-sm rounded-lg p-3 shadow-lg z-30">
             <div className="text-xs font-medium text-[#1A3E73] mb-2">Project Status</div>
             <div className="space-y-1">
               <div className="flex items-center gap-2">
@@ -294,51 +294,54 @@ export function ProjectMap({ onProjectClick }: ProjectMapProps) {
 
         {/* Project Info Card */}
         {selectedProject && (
-          <div className="fixed bottom-4 left-4 right-4 mx-auto bg-white rounded-lg shadow-xl p-4 z-20 lg:max-w-xl lg:left-1/2 lg:right-auto lg:transform lg:-translate-x-1/2">
-            <div className="flex justify-between items-start mb-3">
-              <h3 className="font-medium text-[#1A3E73] flex-1 pr-2">
-                {selectedProject.title}
-              </h3>
-              <div className="flex items-center gap-2">
-                <Badge className={`text-xs px-2 py-1 ${getStatusColor(selectedProject.status)}`}>
-                  {selectedProject.status.charAt(0).toUpperCase() + selectedProject.status.slice(1)}
-                </Badge>
-                <Button
-                  size="sm"
-                  variant="ghost"
-                  onClick={() => setSelectedProject(null)}
-                  className="w-6 h-6 p-0"
+          <div className="fixed bottom-4 left-4 right-4 z-30 md:bottom-4 md:left-0 md:right-0 md:flex md:justify-center pointer-events-none">
+            <div className="bg-white rounded-lg shadow-xl p-4 pointer-events-auto md:max-w-lg md:w-full md:mx-4">
+              <div className="flex justify-between items-start mb-3">
+                <h3 className="font-medium text-[#1A3E73] flex-1 pr-2">
+                  {selectedProject.title}
+                </h3>
+                <div className="flex items-center gap-2">
+                  <Badge className={`text-xs px-2 py-1 ${getStatusColor(selectedProject.status)}`}>
+                    {selectedProject.status.charAt(0).toUpperCase() + selectedProject.status.slice(1)}
+                  </Badge>
+                  <Button
+                    size="sm"
+                    variant="ghost"
+                    onClick={() => setSelectedProject(null)}
+                    className="w-6 h-6 p-0"
+                  >
+                    <X className="w-4 h-4" />
+                  </Button>
+                </div>
+              </div>
+
+              <div className="space-y-2 text-sm">
+                <div className="flex items-center gap-4 text-muted-foreground">
+                  <div className="flex items-center gap-1">
+                    <MapPin className="w-3 h-3" />
+                    <span>{selectedProject.location}</span>
+                  </div>
+                  {/* <span>{selectedProject.sector}</span> */}
+                </div>
+
+                <div className="flex justify-between items-center">
+                  <span className="text-muted-foreground flex items-center gap-1">
+                    <DollarSign className="w-3 h-3" />
+                    Budget: {formatCurrency(selectedProject.budget)}
+                  </span>
+                  <span className="font-medium text-[#1A3E73]">
+                    {selectedProject.progress}% Complete
+                  </span>
+                </div>
+
+                <Button 
+                  size="sm" 
+                  className="w-full mt-3 bg-[#1A3E73] hover:bg-[#1A3E73]/90 text-white"
+                  onClick={() => handleProjectDetailClick(selectedProject)}
                 >
-                  <X className="w-4 h-4" />
+                  View Details
                 </Button>
               </div>
-            </div>
-
-            <div className="space-y-2 text-sm">
-              <div className="flex items-center gap-4 text-muted-foreground">
-                <div className="flex items-center gap-1">
-                  <MapPin className="w-3 h-3" />
-                  <span>{selectedProject.location}</span>
-                </div>
-                <span>{selectedProject.category}</span>
-              </div>
-
-              <div className="flex justify-between items-center">
-                <span className="text-muted-foreground">
-                  Budget: {formatCurrency(selectedProject.budget)}
-                </span>
-                <span className="font-medium text-[#1A3E73]">
-                  {selectedProject.progress}% Complete
-                </span>
-              </div>
-
-              <Button 
-                size="sm" 
-                className="w-full mt-3 bg-[#1A3E73] hover:bg-[#1A3E73]/90 text-white"
-                onClick={() => handleProjectDetailClick(selectedProject)}
-              >
-                View Details
-              </Button>
             </div>
           </div>
         )}

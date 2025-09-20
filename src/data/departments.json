@@ -1,0 +1,294 @@
+{
+  "departments": [
+    {
+      "id": "dot",
+      "name": "Department of Transportation",
+      "shortName": "DOTr"
+    },
+    {
+      "id": "dpwh",
+      "name": "Department of Public Works and Highways",
+      "shortName": "DPWH"
+    },
+    {
+      "id": "dict",
+      "name": "Department of Information and Communications Technology",
+      "shortName": "DICT"
+    },
+    {
+      "id": "doe",
+      "name": "Department of Energy",
+      "shortName": "DOE"
+    },
+    {
+      "id": "doh",
+      "name": "Department of Health",
+      "shortName": "DOH"
+    },
+    {
+      "id": "deped",
+      "name": "Department of Education",
+      "shortName": "DepEd"
+    },
+    {
+      "id": "da",
+      "name": "Department of Agriculture",
+      "shortName": "DA"
+    },
+    {
+      "id": "denr",
+      "name": "Department of Environment and Natural Resources",
+      "shortName": "DENR"
+    },
+    {
+      "id": "dof",
+      "name": "Department of Finance",
+      "shortName": "DOF"
+    },
+    {
+      "id": "dbm",
+      "name": "Department of Budget and Management",
+      "shortName": "DBM"
+    },
+    {
+      "id": "dilg",
+      "name": "Department of Interior and Local Government",
+      "shortName": "DILG"
+    },
+    {
+      "id": "doj",
+      "name": "Department of Justice",
+      "shortName": "DOJ"
+    },
+    {
+      "id": "dole",
+      "name": "Department of Labor and Employment",
+      "shortName": "DOLE"
+    },
+    {
+      "id": "dnd",
+      "name": "Department of National Defense",
+      "shortName": "DND"
+    },
+    {
+      "id": "dost",
+      "name": "Department of Science and Technology",
+      "shortName": "DOST"
+    },
+    {
+      "id": "dswd",
+      "name": "Department of Social Welfare and Development",
+      "shortName": "DSWD"
+    },
+    {
+      "id": "dot-tourism",
+      "name": "Department of Tourism",
+      "shortName": "DOT"
+    },
+    {
+      "id": "dti",
+      "name": "Department of Trade and Industry",
+      "shortName": "DTI"
+    },
+    {
+      "id": "dfa",
+      "name": "Department of Foreign Affairs",
+      "shortName": "DFA"
+    },
+    {
+      "id": "dhsud",
+      "name": "Department of Human Settlements and Urban Development",
+      "shortName": "DHSUD"
+    },
+    {
+      "id": "dmw",
+      "name": "Department of Migrant Workers",
+      "shortName": "DMW"
+    },
+    {
+      "id": "neda",
+      "name": "National Economic and Development Authority",
+      "shortName": "NEDA"
+    },
+    {
+      "id": "op",
+      "name": "Office of the President",
+      "shortName": "OP"
+    },
+    {
+      "id": "ovp",
+      "name": "Office of the Vice President",
+      "shortName": "OVP"
+    },
+    {
+      "id": "bsp",
+      "name": "Bangko Sentral ng Pilipinas",
+      "shortName": "BSP"
+    },
+    {
+      "id": "bir",
+      "name": "Bureau of Internal Revenue",
+      "shortName": "BIR"
+    },
+    {
+      "id": "boc",
+      "name": "Bureau of Customs",
+      "shortName": "BOC"
+    },
+    {
+      "id": "sec",
+      "name": "Securities and Exchange Commission",
+      "shortName": "SEC"
+    },
+    {
+      "id": "coa",
+      "name": "Commission on Audit",
+      "shortName": "COA"
+    },
+    {
+      "id": "csc",
+      "name": "Civil Service Commission",
+      "shortName": "CSC"
+    },
+    {
+      "id": "comelec",
+      "name": "Commission on Elections",
+      "shortName": "COMELEC"
+    },
+    {
+      "id": "chr",
+      "name": "Commission on Human Rights",
+      "shortName": "CHR"
+    },
+    {
+      "id": "ombudsman",
+      "name": "Office of the Ombudsman",
+      "shortName": "OMB"
+    },
+    {
+      "id": "psa",
+      "name": "Philippine Statistics Authority",
+      "shortName": "PSA"
+    },
+    {
+      "id": "tesda",
+      "name": "Technical Education and Skills Development Authority",
+      "shortName": "TESDA"
+    },
+    {
+      "id": "prc",
+      "name": "Professional Regulation Commission",
+      "shortName": "PRC"
+    },
+    {
+      "id": "philhealth",
+      "name": "Philippine Health Insurance Corporation",
+      "shortName": "PhilHealth"
+    },
+    {
+      "id": "sss",
+      "name": "Social Security System",
+      "shortName": "SSS"
+    },
+    {
+      "id": "gsis",
+      "name": "Government Service Insurance System",
+      "shortName": "GSIS"
+    },
+    {
+      "id": "pagibig",
+      "name": "Pag-IBIG Fund",
+      "shortName": "Pag-IBIG"
+    },
+    {
+      "id": "pagcor",
+      "name": "Philippine Amusement and Gaming Corporation",
+      "shortName": "PAGCOR"
+    },
+    {
+      "id": "lto",
+      "name": "Land Transportation Office",
+      "shortName": "LTO"
+    },
+    {
+      "id": "marina",
+      "name": "Maritime Industry Authority",
+      "shortName": "MARINA"
+    },
+    {
+      "id": "caap",
+      "name": "Civil Aviation Authority of the Philippines",
+      "shortName": "CAAP"
+    },
+    {
+      "id": "ppa",
+      "name": "Philippine Ports Authority",
+      "shortName": "PPA"
+    },
+    {
+      "id": "trb",
+      "name": "Toll Regulatory Board",
+      "shortName": "TRB"
+    },
+    {
+      "id": "mmda",
+      "name": "Metropolitan Manila Development Authority",
+      "shortName": "MMDA"
+    },
+    {
+      "id": "hudcc",
+      "name": "Housing and Urban Development Coordinating Council",
+      "shortName": "HUDCC"
+    },
+    {
+      "id": "nha",
+      "name": "National Housing Authority",
+      "shortName": "NHA"
+    },
+    {
+      "id": "pra",
+      "name": "Philippine Reclamation Authority",
+      "shortName": "PRA"
+    },
+    {
+      "id": "bcda",
+      "name": "Bases Conversion and Development Authority",
+      "shortName": "BCDA"
+    },
+    {
+      "id": "cdc",
+      "name": "Clark Development Corporation",
+      "shortName": "CDC"
+    },
+    {
+      "id": "sbma",
+      "name": "Subic Bay Metropolitan Authority",
+      "shortName": "SBMA"
+    },
+    {
+      "id": "ceza",
+      "name": "Cagayan Economic Zone Authority",
+      "shortName": "CEZA"
+    },
+    {
+      "id": "peza",
+      "name": "Philippine Economic Zone Authority",
+      "shortName": "PEZA"
+    },
+    {
+      "id": "apeco",
+      "name": "Aurora Pacific Economic Zone and Freeport Authority",
+      "shortName": "APECO"
+    },
+    {
+      "id": "jhmc",
+      "name": "John Hay Management Corporation",
+      "shortName": "JHMC"
+    },
+    {
+      "id": "zamboanga-ecozone",
+      "name": "Zamboanga City Special Economic Zone Authority",
+      "shortName": "ZCSEZA"
+    }
+  ]
+}

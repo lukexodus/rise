@@ -152,85 +152,109 @@ export function Analytics() {
           </Card>
         </div>
 
-        {/* Top 5 Sectors by Budget */}
-        <Card className="p-4 lg:p-5 xl:p-6">
-          <h3 className="font-medium text-[#1A3E73] mb-3 lg:mb-4 text-base lg:text-lg xl:text-xl">Top 5 Sectors by Budget</h3>
-          <div className="h-48 lg:h-64 xl:h-80 mb-4">
-            <ResponsiveContainer width="100%" height="100%">
-              <PieChart>
-                <Pie
-                  data={sectorBudgetData}
-                  cx="50%"
-                  cy="50%"
-                  innerRadius={40}
-                  outerRadius={70}
-                  paddingAngle={2}
-                  dataKey="budget"
-                >
-                  {sectorBudgetData.map((entry, index) => (
-                    <Cell key={`cell-${index}`} fill={entry.color} />
-                  ))}
-                </Pie>
-                <Tooltip 
-                  formatter={(value) => [formatCurrency(Number(value)), 'Budget']}
-                  labelFormatter={() => ''}
-                />
-              </PieChart>
-            </ResponsiveContainer>
-          </div>
-          <div className="space-y-2 lg:space-y-3">
-            {sectorBudgetData.map((sector, index) => (
-              <div key={index} className="flex items-center justify-between">
-                <div className="flex items-center gap-2 lg:gap-3">
-                  <div 
-                    className="w-3 h-3 lg:w-4 lg:h-4 rounded-full" 
-                    style={{ backgroundColor: sector.color }}
-                  />
-                  <span className="text-sm lg:text-base xl:text-lg">{sector.name}</span>
-                </div>
-                <div className="text-right">
-                  <div className="text-sm lg:text-base xl:text-lg font-medium">{formatCurrency(sector.budget)}</div>
-                  <div className="text-xs lg:text-sm xl:text-base text-muted-foreground">{sector.percentage}%</div>
+        {/* Main Analytics Grid - Responsive Layout */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-4 lg:gap-6">
+          
+          {/* Top 5 Sectors by Budget - Larger on xl screens */}
+          <Card className="lg:col-span-1 xl:col-span-2 p-4 lg:p-5 xl:p-6">
+            <h3 className="font-medium text-[#1A3E73] mb-3 lg:mb-4 text-base lg:text-lg xl:text-xl">Top 5 Sectors by Budget</h3>
+            <div className="grid grid-cols-1 xl:grid-cols-3 gap-4 xl:gap-6">
+              {/* Chart Section */}
+              <div className="xl:col-span-2">
+                <div className="h-48 lg:h-64 xl:h-80 mb-4">
+                  <ResponsiveContainer width="100%" height="100%">
+                    <PieChart>
+                      <Pie
+                        data={sectorBudgetData}
+                        cx="50%"
+                        cy="50%"
+                        innerRadius={40}
+                        outerRadius={70}
+                        paddingAngle={2}
+                        dataKey="budget"
+                      >
+                        {sectorBudgetData.map((entry, index) => (
+                          <Cell key={`cell-${index}`} fill={entry.color} />
+                        ))}
+                      </Pie>
+                      <Tooltip 
+                        formatter={(value) => [formatCurrency(Number(value)), 'Budget']}
+                        labelFormatter={() => ''}
+                      />
+                    </PieChart>
+                  </ResponsiveContainer>
                 </div>
               </div>
-            ))}
-          </div>
-        </Card>
-
-        {/* Top 5 Delayed Projects */}
-        <Card className="p-4 lg:p-5 xl:p-6">
-          <h3 className="font-medium text-[#1A3E73] mb-3 lg:mb-4 text-base lg:text-lg xl:text-xl">Top 5 Delayed Projects</h3>
-          <div className="space-y-3 lg:space-y-4">
-            {delayedProjectsData.map((project, index) => (
-              <div key={index} className="border border-gray-200 rounded-lg p-3 lg:p-4">
-                <div className="flex justify-between items-start mb-2 lg:mb-3">
-                  <div className="flex-1">
-                    <h4 className="font-medium text-sm lg:text-base xl:text-lg text-[#1A3E73] mb-1">{project.name}</h4>
-                    <div className="text-xs lg:text-sm xl:text-base text-muted-foreground mb-1">
-                      Budget: {formatCurrency(project.budget)}
+              {/* Legend Section */}
+              <div className="xl:col-span-1">
+                <div className="space-y-2 lg:space-y-3 xl:space-y-4">
+                  {sectorBudgetData.map((sector, index) => (
+                    <div key={index} className="flex items-center justify-between xl:flex-col xl:items-start xl:text-center xl:p-3 xl:bg-gray-50 xl:rounded-lg">
+                      <div className="flex items-center gap-2 lg:gap-3 xl:flex-col xl:gap-1">
+                        <div 
+                          className="w-3 h-3 lg:w-4 lg:h-4 xl:w-6 xl:h-6 rounded-full xl:mx-auto" 
+                          style={{ backgroundColor: sector.color }}
+                        />
+                        <span className="text-sm lg:text-base xl:text-lg xl:font-medium">{sector.name}</span>
+                      </div>
+                      <div className="text-right xl:text-center xl:mt-2">
+                        <div className="text-sm lg:text-base xl:text-lg font-medium">{formatCurrency(sector.budget)}</div>
+                        <div className="text-xs lg:text-sm xl:text-base text-muted-foreground">{sector.percentage}%</div>
+                      </div>
                     </div>
-                  </div>
-                  <Badge variant="destructive" className="text-xs lg:text-sm">
-                    <AlertTriangle className="w-3 h-3 lg:w-4 lg:h-4 mr-1" />
-                    {project.delay} mo
-                  </Badge>
-                </div>
-                <div className="grid grid-cols-2 gap-2 lg:gap-3 text-xs lg:text-sm xl:text-base">
-                  <div>
-                    <span className="text-muted-foreground">Original: </span>
-                    <span>{project.originalEnd}</span>
-                  </div>
-                  <div>
-                    <span className="text-muted-foreground">New: </span>
-                    <span className="text-[#BF4226]">{project.newEnd}</span>
-                  </div>
+                  ))}
                 </div>
               </div>
-            ))}
-          </div>
-        </Card>
+            </div>
+          </Card>
 
-        {/* Spending Trends Over Time */}
+          {/* Efficiency Trends - Sidebar on xl screens */}
+          <Card className="lg:col-span-1 xl:col-span-1 p-4 lg:p-5 xl:p-6">
+            <h3 className="font-medium text-[#1A3E73] mb-3 lg:mb-4 text-base lg:text-lg xl:text-xl">Spending Efficiency</h3>
+            <div className="h-32 lg:h-40 xl:h-48 mb-4">
+              <ResponsiveContainer width="100%" height="100%">
+                <BarChart data={spendingTrendsData.slice(-6)}>
+                  <XAxis 
+                    dataKey="month" 
+                    axisLine={false}
+                    tickLine={false}
+                    tick={{ fontSize: 12, fill: '#6b7280' }}
+                  />
+                  <YAxis 
+                    axisLine={false}
+                    tickLine={false}
+                    tick={{ fontSize: 12, fill: '#6b7280' }}
+                    domain={[85, 95]}
+                    tickFormatter={(value) => `${value}%`}
+                  />
+                  <Tooltip 
+                    formatter={(value) => [`${value}%`, 'Efficiency']}
+                    labelFormatter={(label) => `Month: ${label}`}
+                  />
+                  <Bar 
+                    dataKey="efficiency" 
+                    fill="#1A3E73"
+                    radius={[2, 2, 0, 0]}
+                  />
+                </BarChart>
+              </ResponsiveContainer>
+            </div>
+            <div className="p-3 lg:p-4 bg-blue-50 rounded-lg">
+              <div className="flex items-center gap-2 mb-1 lg:mb-2">
+                <TrendingUp className="w-4 h-4 lg:w-5 lg:h-5 xl:w-6 xl:h-6 text-blue-600" />
+                <span className="text-sm lg:text-base xl:text-lg font-medium text-blue-800">Current</span>
+              </div>
+              <div className="text-lg lg:text-xl xl:text-2xl font-medium text-blue-800">
+                {currentSpending.efficiency}%
+              </div>
+              <div className="text-xs lg:text-sm xl:text-base text-blue-600">
+                Optimal: 90-95%
+              </div>
+            </div>
+          </Card>
+        </div>
+
+        {/* Secondary Grid - Spending Trends Full Width */}
         <Card className="p-4 lg:p-5 xl:p-6">
           <h3 className="font-medium text-[#1A3E73] mb-3 lg:mb-4 text-base lg:text-lg xl:text-xl">Monthly Spending Trends</h3>
           <div className="h-48 lg:h-64 xl:h-80 mb-4">
@@ -269,8 +293,8 @@ export function Analytics() {
               </LineChart>
             </ResponsiveContainer>
           </div>
-          <div className="grid grid-cols-2 gap-3 lg:gap-4 text-center">
-            <div className="flex items-center justify-center gap-2">
+          <div className="grid grid-cols-2 lg:grid-cols-4 xl:grid-cols-6 gap-3 lg:gap-4 text-center">
+            <div className="lg:col-start-2 xl:col-start-3 flex items-center justify-center gap-2">
               <div className="w-3 h-3 lg:w-4 lg:h-4 bg-[#1A3E73] rounded-full" />
               <span className="text-sm lg:text-base xl:text-lg">Allocated</span>
             </div>
@@ -281,48 +305,36 @@ export function Analytics() {
           </div>
         </Card>
 
-        {/* Efficiency Trends */}
+        {/* Bottom Grid - Delayed Projects */}
         <Card className="p-4 lg:p-5 xl:p-6">
-          <h3 className="font-medium text-[#1A3E73] mb-3 lg:mb-4 text-base lg:text-lg xl:text-xl">Spending Efficiency Trends</h3>
-          <div className="h-32 lg:h-40 xl:h-48">
-            <ResponsiveContainer width="100%" height="100%">
-              <BarChart data={spendingTrendsData.slice(-6)}>
-                <XAxis 
-                  dataKey="month" 
-                  axisLine={false}
-                  tickLine={false}
-                  tick={{ fontSize: 12, fill: '#6b7280' }}
-                />
-                <YAxis 
-                  axisLine={false}
-                  tickLine={false}
-                  tick={{ fontSize: 12, fill: '#6b7280' }}
-                  domain={[85, 95]}
-                  tickFormatter={(value) => `${value}%`}
-                />
-                <Tooltip 
-                  formatter={(value) => [`${value}%`, 'Efficiency']}
-                  labelFormatter={(label) => `Month: ${label}`}
-                />
-                <Bar 
-                  dataKey="efficiency" 
-                  fill="#1A3E73"
-                  radius={[2, 2, 0, 0]}
-                />
-              </BarChart>
-            </ResponsiveContainer>
-          </div>
-          <div className="mt-3 lg:mt-4 p-3 lg:p-4 bg-blue-50 rounded-lg">
-            <div className="flex items-center gap-2 mb-1 lg:mb-2">
-              <TrendingUp className="w-4 h-4 lg:w-5 lg:h-5 xl:w-6 xl:h-6 text-blue-600" />
-              <span className="text-sm lg:text-base xl:text-lg font-medium text-blue-800">Current Efficiency</span>
-            </div>
-            <div className="text-lg lg:text-xl xl:text-2xl font-medium text-blue-800">
-              {currentSpending.efficiency}%
-            </div>
-            <div className="text-xs lg:text-sm xl:text-base text-blue-600">
-              Optimal range: 90-95%
-            </div>
+          <h3 className="font-medium text-[#1A3E73] mb-3 lg:mb-4 text-base lg:text-lg xl:text-xl">Top 5 Delayed Projects</h3>
+          <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-3 lg:gap-4">
+            {delayedProjectsData.map((project, index) => (
+              <div key={index} className="border border-gray-200 rounded-lg p-3 lg:p-4 hover:shadow-md transition-shadow">
+                <div className="flex justify-between items-start mb-2 lg:mb-3">
+                  <div className="flex-1">
+                    <h4 className="font-medium text-sm lg:text-base xl:text-lg text-[#1A3E73] mb-1 line-clamp-2">{project.name}</h4>
+                    <div className="text-xs lg:text-sm xl:text-base text-muted-foreground mb-1">
+                      {formatCurrency(project.budget)}
+                    </div>
+                  </div>
+                  <Badge variant="destructive" className="text-xs lg:text-sm flex-shrink-0 ml-2">
+                    <AlertTriangle className="w-3 h-3 lg:w-4 lg:h-4 mr-1" />
+                    {project.delay} mo
+                  </Badge>
+                </div>
+                <div className="space-y-1 text-xs lg:text-sm xl:text-base">
+                  <div className="flex justify-between">
+                    <span className="text-muted-foreground">Original:</span>
+                    <span>{project.originalEnd}</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span className="text-muted-foreground">New:</span>
+                    <span className="text-[#BF4226] font-medium">{project.newEnd}</span>
+                  </div>
+                </div>
+              </div>
+            ))}
           </div>
         </Card>
       </div>

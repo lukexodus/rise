@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from "react";
+import { useParams, useNavigate } from "react-router-dom";
 import { Card } from "./ui/card";
 import { Badge } from "./ui/badge";
 import { Button } from "./ui/button";
@@ -16,27 +17,39 @@ import {
   Send,
 } from "lucide-react";
 
-interface ReportPostProps {
-  postId: string;
-  onBack: () => void;
-}
-
-export function ReportPost({
-  postId,
-  onBack,
-}: ReportPostProps) {
+export function ReportPost() {
+  const { postId } = useParams<{ postId: string }>();
+  const navigate = useNavigate();
+  
   const [post] = useState(mockDetailedPostsData[postId as keyof typeof mockDetailedPostsData] || mockDetailedPostsData["1"]);
   const [upvotes, setUpvotes] = useState(post.upvotes);
   const [downvotes, setDownvotes] = useState(post.downvotes);
-  const [userVote, setUserVote] = useState<
-    "up" | "down" | null
-  >(post.hasUserVoted);
+  const [userVote, setUserVote] = useState<"up" | "down" | null>(post.hasUserVoted);
   const [newComment, setNewComment] = useState("");
   const [comments, setComments] = useState(post.comments);
-  const [visibleCommentsCount, setVisibleCommentsCount] =
-    useState(3);
+  const [visibleCommentsCount, setVisibleCommentsCount] = useState(3);
   const [isLoadingMore, setIsLoadingMore] = useState(false);
   const loadMoreTriggerRef = useRef<HTMLDivElement>(null);
+
+  // Handle back navigation
+  const handleBack = () => {
+    navigate('/community');
+    // Restore scroll position after navigation
+    setTimeout(() => {
+      const savedPosition = localStorage.getItem('communityScrollPosition');
+      if (savedPosition) {
+        const position = parseInt(savedPosition);
+        if (window.innerWidth < 1024) {
+          window.scrollTo({ top: position, behavior: "smooth" });
+        } else {
+          const mainContent = document.querySelector('.overflow-y-auto');
+          if (mainContent) {
+            mainContent.scrollTo({ top: position, behavior: "smooth" });
+          }
+        }
+      }
+    }, 100);
+  };
 
   // Scroll to top when component mounts or postId changes
   useEffect(() => {
@@ -169,7 +182,7 @@ export function ReportPost({
           <Button
             variant="ghost"
             size="sm"
-            onClick={onBack}
+            onClick={handleBack}
             className="text-white hover:bg-white/20 p-2"
           >
             <ArrowLeft className="w-5 h-5" />
@@ -224,10 +237,10 @@ export function ReportPost({
               </div>
             </div>
 
-            {/* Category */}
+            {/* Sector */}
             <div className="text-sm text-muted-foreground">
-              <span className="font-medium">Category:</span>{" "}
-              {post.category}
+              <span className="font-medium">Sector:</span>{" "}
+              {post.sector}
             </div>
 
             {/* Description */}

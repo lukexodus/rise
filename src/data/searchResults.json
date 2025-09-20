@@ -9,11 +9,11 @@
     "remaining": 44400000000,
     "status": "ongoing",
     "department": "Department of Transportation",
-    "location": "Metro Manila",
+    "location": "National Capital Region (NCR)",
     "startDate": "Jan 2023",
     "endDate": "Dec 2025",
     "contractor": "Sumitomo Mitsui Construction Co.",
-    "category": "Transportation"
+    "sector": "Transportation"
   },
   {
     "id": 2,
@@ -25,11 +25,11 @@
     "remaining": 1230000000,
     "status": "ongoing",
     "department": "Department of Public Works and Highways",
-    "location": "CALABARZON",
+    "location": "CALABARZON (Region IV-A)",
     "startDate": "Mar 2023",
     "endDate": "Sep 2024",
     "contractor": "Megawide Construction Corporation",
-    "category": "Utilities"
+    "sector": "Utilities"
   },
   {
     "id": 3,
@@ -45,7 +45,7 @@
     "startDate": "Jun 2022",
     "endDate": "Jun 2026",
     "contractor": "PLDT Inc. & Globe Telecom",
-    "category": "Technology"
+    "sector": "Technology"
   },
   {
     "id": 4,
@@ -57,11 +57,11 @@
     "remaining": 0,
     "status": "completed",
     "department": "Department of Transportation",
-    "location": "Central Visayas",
+    "location": "Central Visayas (Region VII)",
     "startDate": "Jan 2022",
     "endDate": "Jan 2024",
     "contractor": "Asian Development Bank",
-    "category": "Transportation"
+    "sector": "Transportation"
   },
   {
     "id": 5,
@@ -73,11 +73,11 @@
     "remaining": 0,
     "status": "completed",
     "department": "Department of Energy",
-    "location": "Mindanao",
+    "location": "Northern Mindanao (Region X)",
     "startDate": "Jun 2021",
     "endDate": "Mar 2024",
     "contractor": "National Grid Corporation",
-    "category": "Utilities"
+    "sector": "Utilities"
   },
   {
     "id": 6,
@@ -89,11 +89,11 @@
     "remaining": 5700000000,
     "status": "ongoing",
     "department": "Department of Energy",
-    "location": "Ilocos Region",
+    "location": "Ilocos Region (Region I)",
     "startDate": "Sep 2023",
     "endDate": "Dec 2025",
     "contractor": "Solar Philippines",
-    "category": "Utilities"
+    "sector": "Utilities"
   },
   {
     "id": 7,
@@ -105,11 +105,11 @@
     "remaining": 4200000000,
     "status": "delayed",
     "department": "Department of Transportation",
-    "location": "MIMAROPA",
+    "location": "MIMAROPA (Region IV-B)",
     "startDate": "Apr 2023",
     "endDate": "Nov 2024",
     "contractor": "Filinvest Development Corp.",
-    "category": "Infrastructure"
+    "sector": "Infrastructure"
   },
   {
     "id": 8,
@@ -121,11 +121,11 @@
     "remaining": 500000000,
     "status": "ongoing",
     "department": "Department of Health",
-    "location": "Bicol Region",
+    "location": "Bicol Region (Region V)",
     "startDate": "Feb 2023",
     "endDate": "Aug 2024",
     "contractor": "D.M. Consunji Inc.",
-    "category": "Healthcare"
+    "sector": "Healthcare"
   },
   {
     "id": 9,
@@ -137,11 +137,11 @@
     "remaining": 8816000000,
     "status": "ongoing",
     "department": "Department of Information and Communications Technology",
-    "location": "Davao Region",
+    "location": "Davao Region (Region XI)",
     "startDate": "Aug 2023",
     "endDate": "Mar 2026",
     "contractor": "Smart Cities Philippines Inc.",
-    "category": "Technology & Digital Services"
+    "sector": "Technology & Digital Services"
   },
   {
     "id": 10,
@@ -153,11 +153,11 @@
     "remaining": 1680000000,
     "status": "ongoing",
     "department": "Department of Agriculture",
-    "location": "Cagayan Valley",
+    "location": "Cagayan Valley (Region II)",
     "startDate": "Jan 2023",
     "endDate": "Dec 2024",
     "contractor": "Philippine Agriculture Development Corp.",
-    "category": "Food Safety & Agriculture"
+    "sector": "Food Safety & Agriculture"
   },
   {
     "id": 11,
@@ -169,11 +169,11 @@
     "remaining": 616000000,
     "status": "ongoing",
     "department": "Department of National Defense",
-    "location": "Cordillera Administrative Region",
+    "location": "Cordillera Administrative Region (CAR)",
     "startDate": "May 2023",
     "endDate": "Nov 2024",
     "contractor": "Hazard Mitigation Solutions Inc.",
-    "category": "Emergency Services"
+    "sector": "Emergency Services"
   },
   {
     "id": 12,
@@ -185,11 +185,11 @@
     "remaining": 8325000000,
     "status": "ongoing",
     "department": "Department of Human Settlements and Urban Development",
-    "location": "Western Visayas",
+    "location": "Western Visayas (Region VI)",
     "startDate": "Apr 2023",
     "endDate": "Oct 2025",
     "contractor": "National Housing Authority",
-    "category": "Housing & Urban Planning"
+    "sector": "Housing & Urban Planning"
   },
   {
     "id": 13,
@@ -201,11 +201,11 @@
     "remaining": 7626000000,
     "status": "ongoing",
     "department": "Department of Environment and Natural Resources",
-    "location": "Central Luzon",
+    "location": "Central Luzon (Region III)",
     "startDate": "Jul 2023",
     "endDate": "Jun 2026",
     "contractor": "Environmental Solutions Corp.",
-    "category": "Environment"
+    "sector": "Environment"
   },
   {
     "id": 14,
@@ -217,11 +217,11 @@
     "remaining": 3306000000,
     "status": "ongoing",
     "department": "Department of Trade and Industry",
-    "location": "Zamboanga Peninsula",
+    "location": "Zamboanga Peninsula (Region IX)",
     "startDate": "Feb 2023",
     "endDate": "Dec 2024",
     "contractor": "Commercial Development Inc.",
-    "category": "Economic Development"
+    "sector": "Economic Development"
   },
   {
     "id": 15,
@@ -233,11 +233,11 @@
     "remaining": 10224000000,
     "status": "delayed",
     "department": "Department of Public Works and Highways",
-    "location": "Eastern Visayas",
+    "location": "Eastern Visayas (Region VIII)",
     "startDate": "Mar 2023",
     "endDate": "Aug 2025",
     "contractor": "Philippine Infrastructure Corp.",
-    "category": "Infrastructure"
+    "sector": "Infrastructure"
   },
   {
     "id": 16,
@@ -249,11 +249,11 @@
     "remaining": 1044000000,
     "status": "ongoing",
     "department": "Department of Social Welfare and Development",
-    "location": "Central Luzon",
+    "location": "Central Luzon (Region III)",
     "startDate": "Jan 2023",
     "endDate": "Sep 2024",
     "contractor": "Community Development Builders",
-    "category": "Social Services"
+    "sector": "Social Services"
   },
   {
     "id": 17,
@@ -265,11 +265,11 @@
     "remaining": 3410000000,
     "status": "ongoing",
     "department": "Office of the Presidential Adviser on Peace Process",
-    "location": "Bangsamoro Autonomous Region in Muslim Mindanao",
+    "location": "Bangsamoro Autonomous Region in Muslim Mindanao (BARMM)",
     "startDate": "Jun 2023",
     "endDate": "Mar 2025",
     "contractor": "Peace and Security Solutions Inc.",
-    "category": "Safety & Security"
+    "sector": "Safety & Security"
   },
   {
     "id": 18,
@@ -281,10 +281,10 @@
     "remaining": 3552000000,
     "status": "ongoing",
     "department": "Department of Tourism",
-    "location": "Central Visayas",
+    "location": "Central Visayas (Region VII)",
     "startDate": "Apr 2023",
     "endDate": "Jun 2025",
     "contractor": "Heritage Tourism Development Corp.",
-    "category": "Tourism & Culture"
+    "sector": "Tourism & Culture"
   }
 ]

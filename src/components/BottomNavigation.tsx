@@ -1,41 +1,69 @@
-import { Home, Map, Search, MessageSquare, BarChart3 } from "lucide-react";
+import React from "react";
+import { NavLink } from "react-router-dom";
+import { Home, Search, Map, Users, BarChart3 } from "lucide-react";
 
-interface BottomNavigationProps {
-  activeTab: string;
-  onTabChange: (tab: string) => void;
-}
-
-export function BottomNavigation({ activeTab, onTabChange }: BottomNavigationProps) {
+export function BottomNavigation() {
   const navItems = [
-    { id: "home", label: "Home", icon: Home },
-    { id: "map", label: "Map", icon: Map },
-    { id: "search", label: "Search", icon: Search },
-    { id: "community", label: "Community", icon: MessageSquare },
-    { id: "analytics", label: "Analytics", icon: BarChart3 },
+    {
+      id: "home",
+      label: "Home",
+      icon: Home,
+      path: "/"
+    },
+    {
+      id: "search", 
+      label: "Search",
+      icon: Search,
+      path: "/search"
+    },
+    {
+      id: "map",
+      label: "Map", 
+      icon: Map,
+      path: "/map"
+    },
+    {
+      id: "community",
+      label: "Community",
+      icon: Users,
+      path: "/community"
+    },
+    {
+      id: "analytics",
+      label: "Analytics",
+      icon: BarChart3,
+      path: "/analytics"
+    }
   ];
 
   return (
-    <div className="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 px-2 py-2">
-      <div className="flex justify-around items-center">
-        {navItems.map(({ id, label, icon: Icon }) => (
-          <button
-            key={id}
-            onClick={() => onTabChange(id)}
-            className={`flex flex-col items-center justify-center px-3 py-2 rounded-lg transition-colors ${
-              activeTab === id
-                ? "text-[#1A3E73] bg-[#F2C063]/20"
-                : "text-gray-500"
-            }`}
-          >
-            <Icon 
-              size={20} 
-              className={`mb-1 ${
-                activeTab === id ? "text-[#1A3E73]" : "text-gray-500"
-              }`} 
-            />
-            <span className="text-xs font-medium">{label}</span>
-          </button>
-        ))}
+    <div className="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 z-50">
+      <div className="grid grid-cols-5">
+        {navItems.map((item) => {
+          const IconComponent = item.icon;
+          return (
+            <NavLink
+              key={item.id}
+              to={item.path}
+              className={({ isActive }) =>
+                `flex flex-col items-center justify-center py-2 px-1 text-xs transition-colors ${
+                  isActive
+                    ? "text-[#1A3E73] bg-[#1A3E73]/5"
+                    : "text-gray-600 hover:text-[#1A3E73] hover:bg-gray-50"
+                }`
+              }
+            >
+              {({ isActive }) => (
+                <>
+                  <IconComponent className={`w-5 h-5 mb-1 ${isActive ? "text-[#1A3E73]" : ""}`} />
+                  <span className={`font-medium ${isActive ? "text-[#1A3E73]" : ""}`}>
+                    {item.label}
+                  </span>
+                </>
+              )}
+            </NavLink>
+          );
+        })}
       </div>
     </div>
   );

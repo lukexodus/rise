@@ -1,4 +1,5 @@
-import { useState, useMemo } from "react";
+import { useState, useMemo, useCallback, useEffect } from "react";
+import { useNavigate, useSearchParams } from "react-router-dom";
 import { CommunityPost } from "./CommunityPost";
 import { Button } from "./ui/button";
 import { Input } from "./ui/input";
@@ -6,6 +7,10 @@ import { Textarea } from "./ui/textarea";
 import { Card } from "./ui/card";
 import { Badge } from "./ui/badge";
 import mockPostsData from "../data/mockPosts.json";
+import locationsData from "../data/locations.json";
+import sectorsData from "../data/sectors.json";
+import statusesData from "../data/statuses.json";
+import { getSectorIcon, getStatusIcon } from "../utils/iconUtils";
 import { 
   Plus, 
   Filter, 
@@ -19,6 +24,16 @@ import {
   Upload, 
   FileText, 
   Clock,
+  AlertTriangle,
+  Hourglass,
+  Eye,
+  MessageCircle,
+  CheckCircle,
+  Check,
+  ChevronsUpDown,
+  MapPin,
+  Tag,
+  MessageSquare,
   Construction,
   Shield,
   Zap,
@@ -26,24 +41,19 @@ import {
   Cross,
   GraduationCap,
   Car,
-  Gavel,
   Wifi,
   Briefcase,
-  Globe,
   Home,
   Utensils,
-  Coins,
-  MessageSquare,
-  MapPin,
-  Tag,
-  AlertTriangle,
-  Hourglass,
-  Eye,
-  MessageCircle,
-  CheckCircle
+  Gavel,
+  Globe,
+  Coins
 } from "lucide-react";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription, DialogTrigger } from "./ui/dialog";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "./ui/select";
+import { Command, CommandEmpty, CommandGroup, CommandInput, CommandItem, CommandList } from "./ui/command";
+import { Popover, PopoverContent, PopoverTrigger } from "./ui/popover";
+import { cn } from "@/lib/utils";
 
 // Comprehensive list of Philippine government agencies, LGUs, and institutions
 const responsibleEntities = {
@@ -141,15 +151,20 @@ interface CommunityFeedProps {
 }
 
 export function CommunityFeed({ onPostClick }: CommunityFeedProps) {
+  const navigate = useNavigate();
+  const [searchParams, setSearchParams] = useSearchParams();
+  
   const [posts] = useState(mockPostsData);
-  const [sortBy, setSortBy] = useState("trending");
-  const [filterCategory, setFilterCategory] = useState("all");
-  const [filterStatus, setFilterStatus] = useState("all");
+  
+  // Initialize filters from URL search parameters or defaults
+  const [sortBy, setSortBy] = useState(() => searchParams.get('sortBy') || "trending");
+  const [filterSector, setFilterSector] = useState(() => searchParams.get('sector') || "all");
+  const [filterStatus, setFilterStatus] = useState(() => searchParams.get('status') || "all");
   const [newPostData, setNewPostData] = useState({
     title: "",
     description: "",
     location: "",
-    category: "",
+    sector: "",
     priority: "medium"
   });
   const [newPostImage, setNewPostImage] = useState<string | null>(null);
@@ -158,6 +173,10 @@ export function CommunityFeed({ onPostClick }: CommunityFeedProps) {
   const [entitySearchTerm, setEntitySearchTerm] = useState("");
   const [showEntityDropdown, setShowEntityDropdown] = useState(false);
   const [isDialogOpen, setIsDialogOpen] = useState(false);
+  const [openLocationCombobox, setOpenLocationCombobox] = useState(false);
+  const [openSectorCombobox, setOpenSectorCombobox] = useState(false);
+  const [locationSearchTerm, setLocationSearchTerm] = useState("");
+  const [debouncedLocationSearch, setDebouncedLocationSearch] = useState("");
 
   // Flatten all entities for searching
   const allEntities = Object.values(responsibleEntities).flat();
@@ -168,32 +187,18 @@ export function CommunityFeed({ onPostClick }: CommunityFeedProps) {
     !selectedEntities.includes(entity)
   );
 
-  const categories = [
-    "Infrastructure", 
-    "Safety & Security", 
-    "Utilities", 
-    "Environment", 
-    "Healthcare", 
-    "Education",
-    "Transportation",
-    "Public Services",
-    "Technology & Digital Services",
-    "Economic Development",
-    "Social Services",
-    "Housing & Urban Planning",
-    "Food Safety & Agriculture",
-    "Legal & Justice",
-    "Emergency Services",
-    "Tourism & Culture",
-    "Finance & Budget"
-  ];
+  // Combine all locations and cities
+  const allLocations = [...locationsData.all_locations, ...locationsData.cities];
+
+  // Use sectors from JSON data
+  const sectors = sectorsData.sectors.map(sector => sector.name);
 
   const filteredPosts = useMemo(() => {
     return posts
       .filter(post => {
-        const categoryMatch = filterCategory === "all" || post.category === filterCategory;
+        const sectorMatch = filterSector === "all" || post.sector === filterSector;
         const statusMatch = filterStatus === "all" || post.status === filterStatus;
-        return categoryMatch && statusMatch;
+        return sectorMatch && statusMatch;
       })
       .sort((a, b) => {
         if (sortBy === "trending") {
@@ -203,7 +208,7 @@ export function CommunityFeed({ onPostClick }: CommunityFeedProps) {
         }
         return 0;
       });
-  }, [posts, sortBy, filterCategory, filterStatus]);
+  }, [posts, sortBy, filterSector, filterStatus]);
 
   const handleSubmitPost = () => {
     // In a real app, this would submit to backend
@@ -212,7 +217,7 @@ export function CommunityFeed({ onPostClick }: CommunityFeedProps) {
       title: "",
       description: "",
       location: "",
-      category: "",
+      sector: "",
       priority: "medium"
     }); 
     setNewPostImage(null);
@@ -245,7 +250,7 @@ export function CommunityFeed({ onPostClick }: CommunityFeedProps) {
     setSelectedEntities(prev => prev.filter(entity => entity !== entityToRemove));
   };
 
-  const getCategoryIcon = (entity: string) => {
+  const getSectorIcon = (entity: string) => {
     if (entity.includes("City") || entity.includes("Municipality") || entity.includes("Provincial")) {
       return <Building className="w-4 h-4" />;
     } else if (entity.includes("Department") || entity.includes("Bureau") || entity.includes("Authority")) {
@@ -256,44 +261,27 @@ export function CommunityFeed({ onPostClick }: CommunityFeedProps) {
     return <Building2 className="w-4 h-4" />;
   };
 
-  const getCategoryIconForDropdown = (category: string) => {
-    switch (category) {
-      case "Infrastructure":
-        return <Construction className="w-3 h-3" />;
-      case "Safety & Security":
-        return <Shield className="w-3 h-3" />;
-      case "Utilities":
-        return <Zap className="w-3 h-3" />;
-      case "Environment":
-        return <TreePine className="w-3 h-3" />;
-      case "Healthcare":
-        return <Cross className="w-3 h-3" />;
-      case "Education":
-        return <GraduationCap className="w-3 h-3" />;
-      case "Transportation":
-        return <Car className="w-3 h-3" />;
-      case "Public Services":
-        return <Users className="w-3 h-3" />;
-      case "Technology & Digital Services":
-        return <Wifi className="w-3 h-3" />;
-      case "Economic Development":
-        return <Briefcase className="w-3 h-3" />;
-      case "Social Services":
-        return <Users className="w-3 h-3" />;
-      case "Housing & Urban Planning":
-        return <Home className="w-3 h-3" />;
-      case "Food Safety & Agriculture":
-        return <Utensils className="w-3 h-3" />;
-      case "Legal & Justice":
-        return <Gavel className="w-3 h-3" />;
-      case "Emergency Services":
-        return <Shield className="w-3 h-3" />;
-      case "Tourism & Culture":
-        return <Globe className="w-3 h-3" />;
-      case "Finance & Budget":
-        return <Coins className="w-3 h-3" />;
-      default:
-        return null;
+  const getSectorIconForDropdown = (sectorName: string) => {
+    const sector = sectorsData.sectors.find(s => s.name.toLowerCase() === sectorName.toLowerCase());
+    const iconName = sector?.icon;
+    
+    switch (iconName) {
+      case 'Construction': return <Construction className="w-4 h-4" />;
+      case 'Shield': return <Shield className="w-4 h-4" />;
+      case 'Zap': return <Zap className="w-4 h-4" />;
+      case 'TreePine': return <TreePine className="w-4 h-4" />;
+      case 'Cross': return <Cross className="w-4 h-4" />;
+      case 'GraduationCap': return <GraduationCap className="w-4 h-4" />;
+      case 'Car': return <Car className="w-4 h-4" />;
+      case 'Users': return <Users className="w-4 h-4" />;
+      case 'Wifi': return <Wifi className="w-4 h-4" />;
+      case 'Briefcase': return <Briefcase className="w-4 h-4" />;
+      case 'Home': return <Home className="w-4 h-4" />;
+      case 'Utensils': return <Utensils className="w-4 h-4" />;
+      case 'Gavel': return <Gavel className="w-4 h-4" />;
+      case 'Globe': return <Globe className="w-4 h-4" />;
+      case 'Coins': return <Coins className="w-4 h-4" />;
+      default: return <Building2 className="w-4 h-4" />;
     }
   };
 
@@ -312,6 +300,120 @@ export function CommunityFeed({ onPostClick }: CommunityFeedProps) {
     setUploadedDocuments(prev => prev.filter((_, index) => index !== indexToRemove));
   };
 
+  // Debounce location search
+  const debounceLocationSearch = useCallback(
+    useMemo(() => {
+      let timeoutId: NodeJS.Timeout;
+      return (searchTerm: string) => {
+        clearTimeout(timeoutId);
+        timeoutId = setTimeout(() => {
+          setDebouncedLocationSearch(searchTerm);
+        }, 300);
+      };
+    }, []),
+    []
+  );
+
+  // Filter locations based on debounced search term
+  const filteredLocations = useMemo(() => {
+    if (!debouncedLocationSearch) return allLocations.slice(0, 50); // Show first 50 by default
+    return allLocations.filter(location =>
+      location.toLowerCase().includes(debouncedLocationSearch.toLowerCase())
+    ).slice(0, 100); // Limit to 100 results
+  }, [allLocations, debouncedLocationSearch]);
+
+  const handleLocationSearchChange = (value: string) => {
+    setLocationSearchTerm(value);
+    debounceLocationSearch(value);
+  };
+
+  // Update URL when filters change
+  const updateFiltersInURL = useCallback((newSortBy: string, newSector: string, newStatus: string) => {
+    const params = new URLSearchParams();
+    
+    // Only add non-default values to keep URL clean
+    if (newSortBy && newSortBy !== "trending") {
+      params.set('sortBy', newSortBy);
+    }
+    if (newSector && newSector !== "all") {
+      params.set('sector', newSector);
+    }
+    if (newStatus && newStatus !== "all") {
+      params.set('status', newStatus);
+    }
+    
+    // Update URL without causing navigation
+    setSearchParams(params, { replace: true });
+  }, [setSearchParams]);
+
+  // Enhanced filter setters that update both state and URL
+  const handleSortByChange = useCallback((value: string) => {
+    setSortBy(value);
+    updateFiltersInURL(value, filterSector, filterStatus);
+  }, [filterSector, filterStatus, updateFiltersInURL]);
+
+  const handleFilterSectorChange = useCallback((value: string) => {
+    setFilterSector(value);
+    updateFiltersInURL(sortBy, value, filterStatus);
+  }, [sortBy, filterStatus, updateFiltersInURL]);
+
+  const handleFilterStatusChange = useCallback((value: string) => {
+    setFilterStatus(value);
+    updateFiltersInURL(sortBy, filterSector, value);
+  }, [sortBy, filterSector, updateFiltersInURL]);
+
+  // Sync state with URL parameters when they change (e.g., browser back/forward)
+  useEffect(() => {
+    const urlSortBy = searchParams.get('sortBy') || "trending";
+    const urlSector = searchParams.get('sector') || "all";
+    const urlStatus = searchParams.get('status') || "all";
+    
+    // Update local state if URL parameters differ
+    if (urlSortBy !== sortBy) setSortBy(urlSortBy);
+    if (urlSector !== filterSector) setFilterSector(urlSector);
+    if (urlStatus !== filterStatus) setFilterStatus(urlStatus);
+  }, [searchParams, sortBy, filterSector, filterStatus]);
+
+  // Handle post clicks with scroll position preservation
+  const handlePostClick = useCallback((postId: string) => {
+    // Store current scroll position
+    const currentPosition = window.innerWidth < 1024 
+      ? window.scrollY 
+      : document.querySelector('.overflow-y-auto')?.scrollTop || 0;
+    
+    localStorage.setItem('communityScrollPosition', currentPosition.toString());
+    
+    // Navigate to post detail while preserving current URL parameters
+    navigate(`/community/post/${postId}`);
+  }, [navigate]);
+
+  // Restore scroll position when returning from post detail
+  useEffect(() => {
+    const restoreScrollPosition = () => {
+      const savedPosition = localStorage.getItem('communityScrollPosition');
+      if (savedPosition) {
+        const position = parseInt(savedPosition);
+        setTimeout(() => {
+          if (window.innerWidth < 1024) {
+            window.scrollTo({ top: position, behavior: "smooth" });
+          } else {
+            const mainContent = document.querySelector('.overflow-y-auto');
+            if (mainContent) {
+              mainContent.scrollTo({ top: position, behavior: "smooth" });
+            }
+          }
+          // Clear the saved position after restoring
+          localStorage.removeItem('communityScrollPosition');
+        }, 100);
+      }
+    };
+
+    // Only restore scroll position if we're on the main community page
+    if (window.location.pathname === '/community') {
+      restoreScrollPosition();
+    }
+  }, []);
+
   return (
     <div className="px-4 lg:px-8 py-4 lg:py-6">
       <div className="lg:max-w-6xl lg:mx-auto space-y-4 lg:space-y-6">
@@ -319,8 +421,36 @@ export function CommunityFeed({ onPostClick }: CommunityFeedProps) {
         <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-4">
           <div>
             <h2 className="text-lg lg:text-2xl font-medium text-[#1A3E73]">Community Issues</h2>
-            <p className="text-sm lg:text-base text-muted-foreground">Report and track issues in your area</p>
+            <p className="text-sm lg:text-base text-muted-foreground">
+              Report and track issues in your area
+              {(filterSector !== "all" || filterStatus !== "all" || sortBy !== "trending") && (
+                <span className="text-[#1A3E73]">
+                  {" • "}
+                  {filteredPosts.length} result{filteredPosts.length !== 1 ? 's' : ''} 
+                  {filterSector !== "all" && ` in ${filterSector}`}
+                  {filterStatus !== "all" && ` with status: ${filterStatus.replace('_', ' ')}`}
+                </span>
+              )}
+            </p>
           </div>
+          
+          {/* Clear Filters Button */}
+          {(filterSector !== "all" || filterStatus !== "all" || sortBy !== "trending") && (
+            <Button
+              variant="outline"
+              size="sm"
+              onClick={() => {
+                setSortBy("trending");
+                setFilterSector("all");
+                setFilterStatus("all");
+                updateFiltersInURL("trending", "all", "all");
+              }}
+              className="text-[#1A3E73] border-[#1A3E73] hover:bg-[#1A3E73]/5"
+            >
+              Clear Filters
+            </Button>
+          )}
+
           <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen} className="">
             <DialogTrigger asChild>
               <Button className="bg-[#1A3E73] hover:bg-[#1A3E73]/90 text-white lg:px-6">
@@ -365,27 +495,112 @@ export function CommunityFeed({ onPostClick }: CommunityFeedProps) {
                     <MapPin className="w-4 h-4" />
                     Location
                   </label>
-                  <Input
-                    placeholder="City/Area"
-                    value={newPostData.location}
-                    onChange={(e) => setNewPostData(prev => ({...prev, location: e.target.value}))}
-                  />
+                  <Popover open={openLocationCombobox} onOpenChange={setOpenLocationCombobox}>
+                    <PopoverTrigger asChild>
+                      <Button
+                        variant="outline"
+                        role="combobox"
+                        aria-expanded={openLocationCombobox}
+                        className="w-full justify-between"
+                      >
+                        {newPostData.location
+                          ? allLocations.find((location) => location === newPostData.location)
+                          : "Select location..."}
+                        <ChevronsUpDown className="ml-2 h-4 w-4 shrink-0 opacity-50" />
+                      </Button>
+                    </PopoverTrigger>
+                    <PopoverContent className="w-full p-0">
+                      <Command>
+                        <CommandInput 
+                          placeholder="Search location..." 
+                          value={locationSearchTerm}
+                          onValueChange={handleLocationSearchChange}
+                        />
+                        <CommandEmpty>No location found.</CommandEmpty>
+                        <CommandList>
+                          <CommandGroup>
+                            {filteredLocations.map((location) => (
+                              <CommandItem
+                                key={location}
+                                value={location}
+                                onSelect={(currentValue) => {
+                                  setNewPostData(prev => ({...prev, location: currentValue === newPostData.location ? "" : currentValue}));
+                                  setOpenLocationCombobox(false);
+                                  setLocationSearchTerm("");
+                                  setDebouncedLocationSearch("");
+                                }}
+                              >
+                                <Check
+                                  className={cn(
+                                    "mr-2 h-4 w-4",
+                                    newPostData.location === location ? "opacity-100" : "opacity-0"
+                                  )}
+                                />
+                                {location}
+                              </CommandItem>
+                            ))}
+                          </CommandGroup>
+                        </CommandList>
+                      </Command>
+                    </PopoverContent>
+                  </Popover>
                 </div>
                 <div>
                   <label className="text-sm font-medium text-[#1A3E73] mb-2 block flex items-center gap-1.5">
                     <Tag className="w-4 h-4" />
                     Sector
                   </label>
-                  <Select onValueChange={(value) => setNewPostData(prev => ({...prev, category: value}))}>
-                    <SelectTrigger>
-                      <SelectValue placeholder="Select" />
-                    </SelectTrigger>
-                    <SelectContent>
-                      {categories.map(cat => (
-                        <SelectItem key={cat} value={cat}>{cat}</SelectItem>
-                      ))}
-                    </SelectContent>
-                  </Select>
+                  <Popover open={openSectorCombobox} onOpenChange={setOpenSectorCombobox}>
+                    <PopoverTrigger asChild>
+                      <Button
+                        variant="outline"
+                        role="combobox"
+                        aria-expanded={openSectorCombobox}
+                        className="w-full justify-between"
+                      >
+                        {newPostData.sector
+                          ? (
+                            <div className="flex items-center gap-2">
+                              {getSectorIconForDropdown(newPostData.sector)}
+                              <span>{newPostData.sector}</span>
+                            </div>
+                          )
+                          : "Select sector..."}
+                        <ChevronsUpDown className="ml-2 h-4 w-4 shrink-0 opacity-50" />
+                      </Button>
+                    </PopoverTrigger>
+                    <PopoverContent className="w-full p-0">
+                      <Command>
+                        <CommandInput placeholder="Search sector..." />
+                        <CommandEmpty>No sector found.</CommandEmpty>
+                        <CommandList>
+                          <CommandGroup>
+                            {sectors.map((sector) => (
+                              <CommandItem
+                                key={sector}
+                                value={sector}
+                                onSelect={(currentValue) => {
+                                  setNewPostData(prev => ({...prev, sector: currentValue === newPostData.sector ? "" : currentValue}));
+                                  setOpenSectorCombobox(false);
+                                }}
+                              >
+                                <Check
+                                  className={cn(
+                                    "mr-2 h-4 w-4",
+                                    newPostData.sector === sector ? "opacity-100" : "opacity-0"
+                                  )}
+                                />
+                                <div className="flex items-center gap-2">
+                                  {getSectorIconForDropdown(sector)}
+                                  <span>{sector}</span>
+                                </div>
+                              </CommandItem>
+                            ))}
+                          </CommandGroup>
+                        </CommandList>
+                        </Command>
+                      </PopoverContent>
+                    </Popover>
                 </div>
               </div>
               <div>
@@ -423,7 +638,7 @@ export function CommunityFeed({ onPostClick }: CommunityFeedProps) {
                           key={entity} 
                           className="bg-[#1A3E73] text-white pl-2 pr-1 py-1 flex items-center gap-2"
                         >
-                          {getCategoryIcon(entity)}
+                          {getSectorIcon(entity)}
                           <span className="text-xs">{entity}</span>
                           <Button
                             size="sm"
@@ -464,7 +679,7 @@ export function CommunityFeed({ onPostClick }: CommunityFeedProps) {
                             onClick={() => handleAddEntity(entity)}
                             className="w-full px-3 py-2 text-left hover:bg-gray-50 flex items-center gap-2 text-sm border-b border-gray-100 last:border-b-0"
                           >
-                            {getCategoryIcon(entity)}
+                            {getSectorIcon(entity)}
                             <span>{entity}</span>
                           </button>
                         ))}
@@ -573,7 +788,7 @@ export function CommunityFeed({ onPostClick }: CommunityFeedProps) {
               <Button 
                 onClick={handleSubmitPost}
                 className="w-full bg-[#1A3E73] hover:bg-[#1A3E73]/90 text-white"
-                disabled={!newPostData.title || !newPostData.description || !newPostData.location || !newPostData.category}
+                disabled={!newPostData.title || !newPostData.description || !newPostData.location || !newPostData.sector}
               >
                 Submit Report
               </Button>
@@ -584,90 +799,80 @@ export function CommunityFeed({ onPostClick }: CommunityFeedProps) {
 
         {/* Filters */}
         <Card className="p-3 sm:p-4">
-            {/* Mobile Layout */}
-            <div className="space-y-3 sm:space-y-0 sm:flex sm:items-center sm:justify-between sm:gap-4">
-              {/* Trending and Recent Filters*/}
-              <div className="flex items-center justify-center gap-2">
-                <Filter className="w-4 h-4 text-muted-foreground flex-shrink-0" />
-                <div className="flex gap-2">
-                  <Button
-                    variant={sortBy === "trending" ? "default" : "outline"}
-                    size="sm"
-                    onClick={() => setSortBy("trending")}
-                    className={sortBy === "trending" ? "bg-[#1A3E73] text-white" : ""}
-                  >
-                    <TrendingUp className="w-3 h-3 mr-1" />
-                    Trending
-                  </Button>
-                  <Button
-                    variant={sortBy === "recent" ? "default" : "outline"}
-                    size="sm"
-                    onClick={() => setSortBy("recent")}
-                    className={sortBy === "recent" ? "bg-[#1A3E73] text-white" : ""}
-                  >
-                    <Clock className="w-3 h-3 mr-1" />
-                    Recent
-                  </Button>
-                </div>
+          <div className="space-y-3 sm:space-y-0 sm:flex sm:items-center sm:justify-between sm:gap-4">
+            {/* Sort Filters*/}
+            <div className="flex items-center justify-center gap-2">
+              <Filter className="w-4 h-4 text-muted-foreground flex-shrink-0" />
+              <div className="flex gap-2">
+                <Button
+                  variant={sortBy === "trending" ? "default" : "outline"}
+                  size="sm"
+                  onClick={() => handleSortByChange("trending")}
+                  className={sortBy === "trending" ? "bg-[#1A3E73] text-white" : ""}
+                >
+                  <TrendingUp className="w-3 h-3 mr-1" />
+                  Trending
+                </Button>
+                <Button
+                  variant={sortBy === "recent" ? "default" : "outline"}
+                  size="sm"
+                  onClick={() => handleSortByChange("recent")}
+                  className={sortBy === "recent" ? "bg-[#1A3E73] text-white" : ""}
+                >
+                  <Clock className="w-3 h-3 mr-1" />
+                  Recent
+                </Button>
               </div>
-              {/* Sector and Status Filter*/}
-              <div className="grid grid-cols-2 gap-3">
-                <div className="sm:w-40 md:w-52 xl:w-60">
-                  <label className="text-xs text-muted-foreground block mb-1">Sector</label>
-                  <Select value={filterCategory} onValueChange={setFilterCategory}>
-                    <SelectTrigger className="w-full">
-                      <SelectValue placeholder="Select category" />
-                    </SelectTrigger>
-                    <SelectContent>
-                      <SelectItem value="all">All</SelectItem>
-                      {categories.map(cat => (
-                        <SelectItem key={cat} value={cat}>
-                          <div className="flex items-center gap-2">
-                            {getCategoryIconForDropdown(cat)}
-                            <span>{cat}</span>
-                          </div>
-                        </SelectItem>
-                      ))}
-                    </SelectContent>
-                  </Select>
-                </div>
-                
-                <div className="sm:w-40 md:w-52 xl:w-60">
-                  <label className="text-xs text-muted-foreground block mb-1">Status</label>
-                  <Select value={filterStatus} onValueChange={setFilterStatus}>
-                    <SelectTrigger className="w-full">
-                      <SelectValue placeholder="Select status" />
-                    </SelectTrigger>
-                    <SelectContent>
-                      <SelectItem value="all">All</SelectItem>
-                      <SelectItem value="pending">
+            </div>
+            
+            {/* Sector and Status Filter*/}
+            <div className="grid grid-cols-2 gap-3">
+              <div className="sm:w-40 md:w-52 xl:w-60">
+                <label className="text-xs text-muted-foreground block mb-1 flex items-center gap-1">
+                  <Building2 className="w-3 h-3" />
+                  Sector
+                </label>
+                <Select value={filterSector} onValueChange={handleFilterSectorChange}>
+                  <SelectTrigger className="w-full">
+                    <SelectValue placeholder="Select sector" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value="all">All Sectors</SelectItem>
+                    {sectors.map(cat => (
+                      <SelectItem key={cat} value={cat}>
                         <div className="flex items-center gap-2">
-                          <Hourglass className="w-3 h-3" />
-                          <span>Pending</span>
+                          {getSectorIconForDropdown(cat)}
+                          <span>{cat}</span>
                         </div>
                       </SelectItem>
-                      <SelectItem value="in_review">
-                        <div className="flex items-center gap-2">
-                          <Eye className="w-3 h-3" />
-                          <span>In Review</span>
-                        </div>
-                      </SelectItem>
-                      <SelectItem value="responded">
-                        <div className="flex items-center gap-2">
-                          <MessageCircle className="w-3 h-3" />
-                          <span>Responded</span>
-                        </div>
-                      </SelectItem>
-                      <SelectItem value="resolved">
-                        <div className="flex items-center gap-2">
-                          <CheckCircle className="w-3 h-3" />
-                          <span>Resolved</span>
-                        </div>
-                      </SelectItem>
-                    </SelectContent>
-                  </Select>
-                </div>
+                    ))}
+                  </SelectContent>
+                </Select>
               </div>
+              
+              <div className="sm:w-40 md:w-52 xl:w-60">
+                <label className="text-xs text-muted-foreground block mb-1 flex items-center gap-1">
+                  <Clock className="w-3 h-3" />
+                  Status
+                </label>
+                <Select value={filterStatus} onValueChange={handleFilterStatusChange}>
+                  <SelectTrigger className="w-full">
+                    <SelectValue placeholder="Select status" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value="all">All Statuses</SelectItem>
+                    {statusesData.statuses.filter(status => ["pending", "in_review", "responded", "resolved"].includes(status.id)).map((status) => (
+                      <SelectItem key={status.id} value={status.id}>
+                        <div className="flex items-center gap-2">
+                          {getStatusIcon(status.name)}
+                          <span>{status.name}</span>
+                        </div>
+                      </SelectItem>
+                    ))}
+                  </SelectContent>
+                </Select>
+              </div>
+            </div>
           </div>
         </Card>
 
@@ -677,14 +882,29 @@ export function CommunityFeed({ onPostClick }: CommunityFeedProps) {
             <CommunityPost 
               key={post.id} 
               post={post}
-              onPostClick={onPostClick}
+              onPostClick={handlePostClick}
             />
           ))}
         </div>
 
         {filteredPosts.length === 0 && (
           <div className="text-center py-8">
-            <p className="text-muted-foreground">No issues found for this category.</p>
+            <p className="text-muted-foreground">
+              No issues found for the selected filters.
+              <br />
+              <Button 
+                variant="link" 
+                className="text-[#1A3E73] p-0 h-auto"
+                onClick={() => {
+                  setSortBy("trending");
+                  setFilterSector("all");
+                  setFilterStatus("all");
+                  updateFiltersInURL("trending", "all", "all");
+                }}
+              >
+                Clear filters to see all issues
+              </Button>
+            </p>
           </div>
         )}
       </div>

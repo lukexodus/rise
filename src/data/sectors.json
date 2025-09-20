@@ -1,0 +1,89 @@
+{
+  "sectors": [
+    {
+      "id": "infrastructure",
+      "name": "Infrastructure",
+      "icon": "Construction"
+    },
+    {
+      "id": "safety-security",
+      "name": "Safety & Security", 
+      "icon": "Shield"
+    },
+    {
+      "id": "utilities",
+      "name": "Utilities",
+      "icon": "Zap"
+    },
+    {
+      "id": "environment",
+      "name": "Environment",
+      "icon": "TreePine"
+    },
+    {
+      "id": "healthcare",
+      "name": "Healthcare",
+      "icon": "Cross"
+    },
+    {
+      "id": "education",
+      "name": "Education",
+      "icon": "GraduationCap"
+    },
+    {
+      "id": "transportation",
+      "name": "Transportation",
+      "icon": "Car"
+    },
+    {
+      "id": "public-services",
+      "name": "Public Services",
+      "icon": "Users"
+    },
+    {
+      "id": "technology-digital",
+      "name": "Technology & Digital Services",
+      "icon": "Wifi"
+    },
+    {
+      "id": "economic-development",
+      "name": "Economic Development",
+      "icon": "Briefcase"
+    },
+    {
+      "id": "social-services",
+      "name": "Social Services",
+      "icon": "Users"
+    },
+    {
+      "id": "housing-urban-planning",
+      "name": "Housing & Urban Planning",
+      "icon": "Home"
+    },
+    {
+      "id": "food-safety-agriculture",
+      "name": "Food Safety & Agriculture",
+      "icon": "Utensils"
+    },
+    {
+      "id": "legal-justice",
+      "name": "Legal & Justice",
+      "icon": "Gavel"
+    },
+    {
+      "id": "emergency-services",
+      "name": "Emergency Services",
+      "icon": "Shield"
+    },
+    {
+      "id": "tourism-culture",
+      "name": "Tourism & Culture",
+      "icon": "Globe"
+    },
+    {
+      "id": "finance-budget",
+      "name": "Finance & Budget",
+      "icon": "Coins"
+    }
+  ]
+}

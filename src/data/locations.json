@@ -1,0 +1,235 @@
+{
+  "regions": [
+    {
+      "code": "NCR",
+      "name": "National Capital Region (NCR)",
+      "type": "region",
+      "provinces": ["Metro Manila"]
+    },
+    {
+      "code": "Region I",
+      "name": "Ilocos Region (Region I)",
+      "type": "region",
+      "provinces": ["Ilocos Norte", "Ilocos Sur", "La Union", "Pangasinan"]
+    },
+    {
+      "code": "Region II",
+      "name": "Cagayan Valley (Region II)",
+      "type": "region",
+      "provinces": ["Batanes", "Cagayan", "Isabela", "Nueva Vizcaya", "Quirino"]
+    },
+    {
+      "code": "Region III",
+      "name": "Central Luzon (Region III)",
+      "type": "region",
+      "provinces": ["Aurora", "Bataan", "Bulacan", "Nueva Ecija", "Pampanga", "Tarlac", "Zambales"]
+    },
+    {
+      "code": "Region IV-A",
+      "name": "CALABARZON (Region IV-A)",
+      "type": "region",
+      "provinces": ["Batangas", "Cavite", "Laguna", "Quezon", "Rizal"]
+    },
+    {
+      "code": "Region IV-B",
+      "name": "MIMAROPA (Region IV-B)",
+      "type": "region",
+      "provinces": ["Marinduque", "Occidental Mindoro", "Oriental Mindoro", "Palawan", "Romblon"]
+    },
+    {
+      "code": "Region V",
+      "name": "Bicol Region (Region V)",
+      "type": "region",
+      "provinces": ["Albay", "Camarines Norte", "Camarines Sur", "Catanduanes", "Masbate", "Sorsogon"]
+    },
+    {
+      "code": "CAR",
+      "name": "Cordillera Administrative Region (CAR)",
+      "type": "region",
+      "provinces": ["Abra", "Apayao", "Benguet", "Ifugao", "Kalinga", "Mountain Province"]
+    },
+    {
+      "code": "Region VI",
+      "name": "Western Visayas (Region VI)",
+      "type": "region",
+      "provinces": ["Aklan", "Antique", "Capiz", "Guimaras", "Iloilo", "Negros Occidental"]
+    },
+    {
+      "code": "Region VII",
+      "name": "Central Visayas (Region VII)",
+      "type": "region",
+      "provinces": ["Bohol", "Cebu", "Negros Oriental", "Siquijor"]
+    },
+    {
+      "code": "Region VIII",
+      "name": "Eastern Visayas (Region VIII)",
+      "type": "region",
+      "provinces": ["Biliran", "Eastern Samar", "Leyte", "Northern Samar", "Samar", "Southern Leyte"]
+    },
+    {
+      "code": "Region IX",
+      "name": "Zamboanga Peninsula (Region IX)",
+      "type": "region",
+      "provinces": ["Zamboanga del Norte", "Zamboanga del Sur", "Zamboanga Sibugay"]
+    },
+    {
+      "code": "Region X",
+      "name": "Northern Mindanao (Region X)",
+      "type": "region",
+      "provinces": ["Bukidnon", "Camiguin", "Lanao del Norte", "Misamis Occidental", "Misamis Oriental"]
+    },
+    {
+      "code": "Region XI",
+      "name": "Davao Region (Region XI)",
+      "type": "region",
+      "provinces": ["Davao de Oro", "Davao del Norte", "Davao del Sur", "Davao Occidental", "Davao Oriental"]
+    },
+    {
+      "code": "Region XII",
+      "name": "SOCCSKSARGEN (Region XII)",
+      "type": "region",
+      "provinces": ["Cotabato", "Sarangani", "South Cotabato", "Sultan Kudarat"]
+    },
+    {
+      "code": "Region XIII",
+      "name": "Caraga (Region XIII)",
+      "type": "region",
+      "provinces": ["Agusan del Norte", "Agusan del Sur", "Dinagat Islands", "Surigao del Norte", "Surigao del Sur"]
+    },
+    {
+      "code": "BARMM",
+      "name": "Bangsamoro Autonomous Region in Muslim Mindanao (BARMM)",
+      "type": "region",
+      "provinces": ["Basilan", "Lanao del Sur", "Maguindanao del Norte", "Maguindanao del Sur", "Sulu", "Tawi-Tawi"]
+    }
+  ],
+  "special": [
+    {
+      "code": "NATIONWIDE",
+      "name": "Nationwide",
+      "type": "national"
+    }
+  ],
+  "all_locations": [
+    "Nationwide",
+    "National Capital Region (NCR)",
+    "Metro Manila",
+    "Ilocos Region (Region I)",
+    "Ilocos Norte", "Ilocos Sur", "La Union", "Pangasinan",
+    "Cagayan Valley (Region II)",
+    "Batanes", "Cagayan", "Isabela", "Nueva Vizcaya", "Quirino",
+    "Central Luzon (Region III)",
+    "Aurora", "Bataan", "Bulacan", "Nueva Ecija", "Pampanga", "Tarlac", "Zambales",
+    "CALABARZON (Region IV-A)",
+    "Batangas", "Cavite", "Laguna", "Quezon", "Rizal",
+    "MIMAROPA (Region IV-B)",
+    "Marinduque", "Occidental Mindoro", "Oriental Mindoro", "Palawan", "Romblon",
+    "Bicol Region (Region V)",
+    "Albay", "Camarines Norte", "Camarines Sur", "Catanduanes", "Masbate", "Sorsogon",
+    "Cordillera Administrative Region (CAR)",
+    "Abra", "Apayao", "Benguet", "Ifugao", "Kalinga", "Mountain Province",
+    "Western Visayas (Region VI)",
+    "Aklan", "Antique", "Capiz", "Guimaras", "Iloilo", "Negros Occidental",
+    "Central Visayas (Region VII)",
+    "Bohol", "Cebu", "Negros Oriental", "Siquijor",
+    "Eastern Visayas (Region VIII)",
+    "Biliran", "Eastern Samar", "Leyte", "Northern Samar", "Samar", "Southern Leyte",
+    "Zamboanga Peninsula (Region IX)",
+    "Zamboanga del Norte", "Zamboanga del Sur", "Zamboanga Sibugay",
+    "Northern Mindanao (Region X)",
+    "Bukidnon", "Camiguin", "Lanao del Norte", "Misamis Occidental", "Misamis Oriental",
+    "Davao Region (Region XI)",
+    "Davao de Oro", "Davao del Norte", "Davao del Sur", "Davao Occidental", "Davao Oriental",
+    "SOCCSKSARGEN (Region XII)",
+    "Cotabato", "Sarangani", "South Cotabato", "Sultan Kudarat",
+    "Caraga (Region XIII)",
+    "Agusan del Norte", "Agusan del Sur", "Dinagat Islands", "Surigao del Norte", "Surigao del Sur",
+    "Bangsamoro Autonomous Region in Muslim Mindanao (BARMM)",
+    "Basilan", "Lanao del Sur", "Maguindanao del Norte", "Maguindanao del Sur", "Sulu", "Tawi-Tawi"
+  ],
+  "cities": [
+    "Manila", "Quezon City", "Makati", "Pasig", "Taguig", "Muntinlupa", "Parañaque", "Las Piñas",
+    "Caloocan", "Malabon", "Navotas", "Valenzuela", "Marikina", "Pasay", "Mandaluyong", "San Juan",
+    "Antipolo", "Cainta", "Taytay", "Angono", "Binangonan", "Cardona", "Baras", "Tanay", "Pililla",
+    "Jala-jala", "Rodriguez", "San Mateo", "Morong", "Teresa",
+    "Bacoor", "Cavite City", "Dasmariñas", "General Trias", "Imus", "Tagaytay", "Trece Martires",
+    "Carmona", "General Mariano Alvarez", "Kawit", "Noveleta", "Rosario", "Silang", "Tanza",
+    "Ternate", "Amadeo", "Alfonso", "General Emilio Aguinaldo", "Indang", "Magallanes", "Maragondon",
+    "Mendez", "Naic",
+    "Calamba", "Los Baños", "San Pedro", "Santa Rosa", "Biñan", "Cabuyao", "San Pablo",
+    "Alaminos", "Bay", "Calauan", "Cavinti", "Famy", "Kalayaan", "Liliw", "Luisiana",
+    "Lumban", "Mabitac", "Magdalena", "Majayjay", "Nagcarlan", "Paete", "Pagsanjan",
+    "Pakil", "Pangil", "Pila", "Rizal", "Santa Cruz", "Santa Maria", "Siniloan", "Victoria",
+    "Batangas City", "Lipa", "Tanauan", "Santo Tomas", "Taal", "Agoncillo", "Alitagtag",
+    "Balayan", "Balete", "Bataan", "Bauan", "Calaca", "Calatagan", "Cuenca", "Ibaan",
+    "Laurel", "Lemery", "Lian", "Lobo", "Mabini", "Malvar", "Mataas na Kahoy", "Nasugbu",
+    "Padre Garcia", "Rosario", "San Jose", "San Juan", "San Luis", "San Nicolas", "San Pascual",
+    "Santa Teresita", "Talisay", "Taysan", "Tingloy", "Tuy",
+    "Legazpi", "Ligao", "Tabaco", "Iriga", "Naga", "Masbate City", "Sorsogon City",
+    "Daet", "Jose Panganiban", "Vinzons", "Talisay", "Mercedes", "Camaligan",
+    "Canaman", "Magarao", "Bombon", "Calabanga", "Caramoan", "Del Gallego",
+    "Garchitorena", "Goa", "Lagonoy", "Libmanan", "Lupi", "Milaor", "Minalabac",
+    "Nabua", "Ocampo", "Pamplona", "Pasacao", "Pili", "Presentacion", "Ragay",
+    "Sagñay", "San Fernando", "San Jose", "Sipocot", "Siruma", "Tigaon", "Tinambac",
+    "Pateros", "Pateros Municipality",
+    "Adams", "Bacarra", "Badoc", "Bangui", "Banna", "Burgos", "Carasi", "Currimao",
+    "Dingras", "Dumalneg", "Marcos", "Nueva Era", "Pagudpud", "Paoay", "Pasuquin",
+    "Piddig", "Pinili", "San Nicolas", "Sarrat", "Solsona", "Vintar",
+    "Abulug", "Alcala", "Allacapan", "Amulung", "Aparri", "Baggao", "Ballesteros",
+    "Buguey", "Calayan", "Camalaniugan", "Claveria", "Enrile", "Gataran", "Gonzaga",
+    "Iguig", "Lal-lo", "Lasam", "Pamplona", "Peñablanca", "Piat", "Rizal", "Sanchez-Mira",
+    "Santa Ana", "Santa Praxedes", "Santa Teresita", "Santo Niño", "Solana", "Tuao",
+    "Aritao", "Bambang", "Bayombong", "Diadi", "Dupax del Norte", "Dupax del Sur",
+    "Kasibu", "Kayapa", "Quezon", "Santa Fe", "Solano", "Villaverde",
+    "Alaminos", "Burdeos", "General Nakar", "Infanta", "Jomalig", "Lopez", "Macalelon",
+    "Mauban", "Mulanay", "Padre Burgos", "Pagbilao", "Panukulan", "Patnanungan", "Perez",
+    "Pitogo", "Plaridel", "Polillo", "Real", "Sampaloc", "San Andres", "San Francisco",
+    "San Narciso", "Tagkawayan", "Unisan",
+    "Abra de Ilog", "Bulalacao", "Calintaan", "Looc", "Lubang", "Magsaysay", "Mamburao",
+    "Paluan", "Rizal", "Sablayan", "San Jose", "Santa Cruz", "Baco", "Bansud", "Bongabong",
+    "Bulalacao", "Gloria", "Mansalay", "Naujan", "Pinamalayan", "Pola", "Puerto Galera",
+    "Roxas", "San Teodoro", "Socorro", "Victoria",
+    "Bato", "Buhi", "Bula", "Cabusao", "Gainza", "Libmanan", "Magarao", "Milaor",
+    "Minalabac", "Nabua", "Ocampo", "Pamplona", "Pasacao", "Pili", "Presentacion",
+    "Ragay", "Sagñay", "San Fernando", "San Jose", "Sipocot", "Siruma", "Tigaon", "Tinambac",
+    "Bucloc", "Daguioman", "Danglas", "Dolores", "La Paz", "Lacub", "Lagangilang",
+    "Langiden", "Licuan-Baay", "Luba", "Malibcong", "Manabo", "Peñarrubia", "Pidigan",
+    "Pilar", "Sallapadan", "San Isidro", "San Juan", "San Quintin", "Tayum", "Tineg",
+    "Tubo", "Villaviciosa",
+    "Ajuy", "Altavas", "Anini-y", "Badiangan", "Balasan", "Banate", "Barotac Nuevo",
+    "Barotac Viejo", "Batad", "Bingawan", "Cabatuan", "Calinog", "Carles", "Concepcion",
+    "Dingle", "Dueñas", "Dumangas", "Estancia", "Guimbal", "Igbaras", "Janiuay", "Lambunao",
+    "Leganes", "Lemery", "Leon", "Maasin", "Miagao", "Mina", "New Lucena", "Oton",
+    "Pavia", "Pototan", "San Dionisio", "San Enrique", "San Joaquin", "San Miguel",
+    "San Rafael", "Santa Barbara", "Sara", "Tigbauan", "Tubungan", "Zarraga",
+    "Alcantara", "Alcoy", "Alegria", "Aloguinsan", "Argao", "Asturias", "Badian",
+    "Balamban", "Bantayan", "Barili", "Boljoon", "Borbon", "Carmen", "Catmon",
+    "Compostela", "Consolacion", "Cordova", "Daanbantayan", "Dalaguete", "Dumanjug",
+    "Ginatilan", "Liloan", "Madridejos", "Malabuyoc", "Medellin", "Minglanilla",
+    "Moalboal", "Oslob", "Pilar", "Pinamungajan", "Poro", "Ronda", "Samboan",
+    "San Fernando", "San Francisco", "San Remigio", "Santa Fe", "Santander", "Sibonga",
+    "Sogod", "Tabogon", "Tabuelan", "Tuburan", "Tudela",
+    "Abuyog", "Alangalang", "Albuera", "Babatngon", "Barugo", "Bato", "Baybay",
+    "Burauen", "Capoocan", "Carigara", "Dagami", "Dulag", "Hindang", "Inopacan",
+    "Isabel", "Jaro", "Javier", "Julita", "Kananga", "La Paz", "Leyte", "MacArthur",
+    "Mahaplag", "Matag-ob", "Matalom", "Mayorga", "Merida", "Palo", "Palompon",
+    "Pastrana", "San Isidro", "San Miguel", "Santa Fe", "Tabango", "Tabontabon",
+    "Tanauan", "Tolosa", "Tunga", "Villaba",
+    "Aurora", "Bayog", "Dimataling", "Dinas", "Dumalinao", "Dumingag", "Godod",
+    "Guipos", "Josefina", "Kumalarang", "Labangan", "Lapuyan", "Mahayag", "Margosatubig",
+    "Midsalip", "Molave", "Pitogo", "Ramon Magsaysay", "San Miguel", "San Pablo",
+    "Sominot", "Tabina", "Tambulig", "Tigbao", "Tukuran", "Vincenzo A. Sagun",
+    "Aloran", "Baliangao", "Bonifacio", "Calamba", "Clarin", "Concepcion", "Don Victoriano Chiongbian",
+    "Jimenez", "Lopez Jaena", "Panaon", "Plaridel", "Sapang Dalaga", "Sinacaban", "Tudela",
+    "Asuncion", "Bansalan", "Don Marcelino", "Hagonoy", "Jose Abad Santos", "Kiblawan",
+    "Magsaysay", "Malalag", "Malita", "Matanao", "Padada", "Santa Cruz", "Sulop",
+    "Bagumbayan", "Columbio", "Esperanza", "Isulan", "Kalamansig", "Lebak", "Lutayan",
+    "Mlang", "Palimbang", "President Quirino", "Senator Ninoy Aquino", "Surallah",
+    "Tampakan", "Tantangan", "T'boli",
+    "Buenavista", "Carmen", "Jabonga", "Kitcharao", "Las Nieves", "Magallanes", "Nasipit",
+    "Remedios T. Romualdez", "Santiago", "Tubay", "Bunawan", "Esperanza", "La Paz",
+    "Loreto", "Rosario", "San Francisco", "Santa Josefa", "Talacogon", "Trento", "Veruela",
+    "Akbar", "Al-Barka", "Hadji Mohammad Ajul", "Hadji Muhtamad", "Isabela", "Kalingalan Caluang",
+    "Lamitan", "Lantawan", "Maluso", "Sumisip", "Tipo-Tipo", "Tuburan", "Ungkaya Pukan"
+  ]
+}

@@ -11,6 +11,7 @@ import {
   CheckCircle, 
   AlertTriangle 
 } from "lucide-react";
+import { getSectorIcon } from "../utils/iconUtils";
 
 interface ProjectCardProps {
   id: number;
@@ -20,10 +21,11 @@ interface ProjectCardProps {
   status: "ongoing" | "completed" | "delayed";
   location: string;
   endDate: string;
+  sector?: string;
   onProjectClick?: (projectId: string) => void;
 }
 
-export function ProjectCard({ id, title, budget, progress, status, location, endDate, onProjectClick }: ProjectCardProps) {
+export function ProjectCard({ id, title, budget, progress, status, location, endDate, sector, onProjectClick }: ProjectCardProps) {
   const formatCurrency = (amount: number) => {
     return new Intl.NumberFormat('en-PH', {
       style: 'currency',
@@ -110,6 +112,13 @@ export function ProjectCard({ id, title, budget, progress, status, location, end
             <span>{location}</span>
           </div>
         </div>
+{/* 
+        {sector && (
+          <div className="flex items-center gap-1 text-xs text-muted-foreground">
+            {getSectorIcon(sector, "w-3 h-3")}
+            <span>Sector: {sector}</span>
+          </div>
+        )} */}
 
         <div className="space-y-2">
           <div className="flex justify-between items-center text-xs">

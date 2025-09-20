@@ -1,0 +1,39 @@
+{
+  "statuses": [
+    {
+      "id": "pending",
+      "name": "Pending",
+      "icon": "Hourglass"
+    },
+    {
+      "id": "in_review",
+      "name": "In Review", 
+      "icon": "Eye"
+    },
+    {
+      "id": "responded",
+      "name": "Responded",
+      "icon": "MessageCircle"
+    },
+    {
+      "id": "resolved",
+      "name": "Resolved",
+      "icon": "CheckCircle"
+    },
+    {
+      "id": "ongoing",
+      "name": "Ongoing",
+      "icon": "Clock"
+    },
+    {
+      "id": "completed",
+      "name": "Completed",
+      "icon": "CheckCircle"
+    },
+    {
+      "id": "delayed",
+      "name": "Delayed",
+      "icon": "AlertTriangle"
+    }
+  ]
+}
