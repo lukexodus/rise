@@ -5,96 +5,21 @@ import { Button } from "./ui/button";
 import { Badge } from "./ui/badge";
 import { MapPin, Search, Navigation, ZoomIn, ZoomOut, X, HelpCircle } from "lucide-react";
 
-const mockMapProjects = [
-  {
-    id: 1,
-    title: "Metro Manila Subway Project Phase 2",
-    location: "Metro Manila",
-    coordinates: { lat: 14.5995, lng: 121.0023 },
-    budget: 75000000000,
-    status: "ongoing" as const,
-    progress: 68,
-    category: "Transportation",
-    position: { top: "35%", left: "48%" }
-  },
-  {
-    id: 2,
-    title: "CALABARZON Water Supply System Expansion",
-    location: "CALABARZON",
-    coordinates: { lat: 14.2162, lng: 121.1467 },
-    budget: 8200000000,
-    status: "ongoing" as const,
-    progress: 85,
-    category: "Utilities",
-    position: { top: "40%", left: "50%" }
-  },
-  {
-    id: 3,
-    title: "National Broadband Infrastructure Program",
-    location: "Nationwide",
-    coordinates: { lat: 12.8797, lng: 121.7740 },
-    budget: 45000000000,
-    status: "delayed" as const,
-    progress: 42,
-    category: "Technology",
-    position: { top: "50%", left: "55%" }
-  },
-  {
-    id: 4,
-    title: "Cebu BRT System Implementation",
-    location: "Central Visayas",
-    coordinates: { lat: 10.3157, lng: 123.8854 },
-    budget: 16800000000,
-    status: "completed" as const,
-    progress: 100,
-    category: "Transportation",
-    position: { top: "55%", left: "62%" }
-  },
-  {
-    id: 5,
-    title: "Mindanao Rural Electrification Program",
-    location: "Mindanao",
-    coordinates: { lat: 8.9806, lng: 125.5444 },
-    budget: 12500000000,
-    status: "completed" as const,
-    progress: 100,
-    category: "Utilities",
-    position: { top: "75%", left: "68%" }
-  },
-  {
-    id: 6,
-    title: "Ilocos Norte Solar Farm Project",
-    location: "Ilocos Region",
-    coordinates: { lat: 18.1967, lng: 120.5931 },
-    budget: 8900000000,
-    status: "ongoing" as const,
-    progress: 36,
-    category: "Utilities",
-    position: { top: "15%", left: "40%" }
-  },
-  {
-    id: 7,
-    title: "Palawan Airport Modernization",
-    location: "MIMAROPA",
-    coordinates: { lat: 9.7417, lng: 118.7354 },
-    budget: 5600000000,
-    status: "delayed" as const,
-    progress: 25,
-    category: "Infrastructure",
-    position: { top: "65%", left: "30%" }
-  },
-  {
-    id: 8,
-    title: "Bicol Regional Medical Center Upgrade",
-    location: "Bicol Region",
-    coordinates: { lat: 13.1391, lng: 123.7437 },
-    budget: 3200000000,
-    status: "ongoing" as const,
-    progress: 84,
-    category: "Healthcare",
-    position: { top: "45%", left: "65%" }
-  }
-];
+// Import data from external JSON file
+import projectsData from "../data/projects.json";
+
+// Convert project data to map format
+const mockMapProjects = Object.values(projectsData).map(project => ({
+  id: parseInt(project.id.split('-')[2]),
+  title: project.title,
+  location: project.location,
+  coordinates: project.coordinates,
+  budget: project.budget.total,
+  status: project.status as "ongoing" | "completed" | "delayed",
+  progress: project.progress,
+  category: project.category,
+  position: project.position
+}));
 
 interface ProjectMapProps {
   onProjectClick?: (projectId: string) => void;
@@ -369,7 +294,7 @@ export function ProjectMap({ onProjectClick }: ProjectMapProps) {
 
         {/* Project Info Card */}
         {selectedProject && (
-          <div className="fixed bottom-4 left-4 right-4 bg-white rounded-lg shadow-xl p-4 z-20">
+          <div className="fixed bottom-4 left-4 right-4 bg-white rounded-lg shadow-xl p-4 z-20 md:max-w-xl">
             <div className="flex justify-between items-start mb-3">
               <h3 className="font-medium text-[#1A3E73] flex-1 pr-2">
                 {selectedProject.title}

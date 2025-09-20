@@ -21,155 +21,17 @@ import {
   X,
 } from "lucide-react";
 
+// Import data from external JSON file
+import notificationsData from "../data/notifications.json";
+
 interface NotificationsPanelProps {
   isOpen: boolean;
   onClose: () => void;
 }
 
-const mockNotifications = {
-  project_updates: [
-    {
-      id: 1,
-      type: "milestone",
-      title: "Metro Manila Subway Phase 2",
-      message: "Project reached 75% completion milestone",
-      timestamp: "2024-11-15T10:30:00Z",
-      read: false,
-      priority: "high",
-      projectId: "PROJ-2024-001",
-    },
-    {
-      id: 2,
-      type: "budget",
-      title: "CALABARZON Water Supply System",
-      message: "Budget increased by ₱2.1B due to material cost adjustments",
-      timestamp: "2024-11-14T14:15:00Z",
-      read: false,
-      priority: "medium",
-      projectId: "PROJ-2024-004",
-    },
-    {
-      id: 3,
-      type: "delay",
-      title: "Bataan Nuclear Power Plant Rehabilitation",
-      message: "Timeline extended by 6 months due to regulatory requirements",
-      timestamp: "2024-11-13T09:45:00Z",
-      read: true,
-      priority: "high",
-      projectId: "PROJ-2024-006",
-    },
-    {
-      id: 4,
-      type: "audit",
-      title: "National Broadband Infrastructure",
-      message: "COA flagged procurement irregularities - investigation ongoing",
-      timestamp: "2024-11-12T16:20:00Z",
-      read: false,
-      priority: "critical",
-      projectId: "PROJ-2024-003",
-    },
-  ],
-  report_feedback: [
-    {
-      id: 5,
-      type: "status_change",
-      title: "Report #RPT-2024-156",
-      message: "Status changed: Pending → Under Review",
-      timestamp: "2024-11-15T11:45:00Z",
-      read: false,
-      priority: "medium",
-      reportId: "RPT-2024-156",
-    },
-    {
-      id: 6,
-      type: "official_response",
-      title: "DPWH Response",
-      message: "Official response received for your road damage report",
-      timestamp: "2024-11-14T13:30:00Z",
-      read: false,
-      priority: "high",
-      reportId: "RPT-2024-142",
-    },
-    {
-      id: 7,
-      type: "peer_activity",
-      title: "Similar Reports Filed",
-      message: "15 other citizens reported similar issues in your area",
-      timestamp: "2024-11-13T08:15:00Z",
-      read: true,
-      priority: "low",
-      location: "Quezon City",
-    },
-  ],
-  engagement: [
-    {
-      id: 8,
-      type: "upvote",
-      title: "Your Post Gained Support",
-      message: "Your report about traffic light malfunction received 24 upvotes",
-      timestamp: "2024-11-15T12:00:00Z",
-      read: false,
-      priority: "low",
-      postId: "POST-2024-089",
-    },
-    {
-      id: 9,
-      type: "reply",
-      title: "New Reply",
-      message: "Juan Dela Cruz replied to your comment on subway construction",
-      timestamp: "2024-11-14T15:45:00Z",
-      read: false,
-      priority: "medium",
-      postId: "POST-2024-067",
-    },
-    {
-      id: 10,
-      type: "trending",
-      title: "Trending in Your Area",
-      message: "Most reported: Pothole issues in EDSA - 156 reports this week",
-      timestamp: "2024-11-13T07:30:00Z",
-      read: true,
-      priority: "low",
-      location: "Metro Manila",
-    },
-  ],
-  system_updates: [
-    {
-      id: 11,
-      type: "new_project",
-      title: "New Project Near You",
-      message: "Quezon City Bus Rapid Transit approved - ₱18.5B budget",
-      timestamp: "2024-11-14T10:00:00Z",
-      read: false,
-      priority: "medium",
-      location: "Quezon City",
-    },
-    {
-      id: 12,
-      type: "sector_highlight",
-      title: "Education Sector Update",
-      message: "12 new school buildings approved in your province - ₱4.2B allocation",
-      timestamp: "2024-11-13T14:20:00Z",
-      read: true,
-      priority: "medium",
-      sector: "Education",
-    },
-    {
-      id: 13,
-      type: "government_response",
-      title: "DOTr Public Statement",
-      message: "Official response to MRT maintenance concerns raised by citizens",
-      timestamp: "2024-11-12T11:15:00Z",
-      read: true,
-      priority: "high",
-      agency: "DOTr",
-    },
-  ],
-};
-
 export function NotificationsPanel({ isOpen, onClose }: NotificationsPanelProps) {
   const [activeTab, setActiveTab] = useState("all");
-  const [notifications, setNotifications] = useState(mockNotifications);
+  const [notifications, setNotifications] = useState(notificationsData);
 
   const formatTime = (timestamp: string) => {
     const date = new Date(timestamp);

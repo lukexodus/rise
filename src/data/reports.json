@@ -1,0 +1,195 @@
+[
+  {
+    "id": 1,
+    "projectId": "PROJ-2024-001",
+    "date": "2024-11-15",
+    "issue": "Construction noise during night hours violating city ordinance. Heavy machinery operating past 10 PM disturbing nearby residents.",
+    "status": "reviewed",
+    "response": "Thank you for your report. We've contacted the contractor to ensure compliance with noise ordinances. Night operations have been restricted to emergency situations only.",
+    "responseDate": "2024-11-16"
+  },
+  {
+    "id": 2,
+    "projectId": "PROJ-2024-001",
+    "date": "2024-11-10",
+    "issue": "Safety barriers damaged near station entrance creating pedestrian hazard.",
+    "status": "resolved",
+    "response": "Safety barriers have been repaired and reinforced. Additional safety inspections scheduled weekly.",
+    "responseDate": "2024-11-12"
+  },
+  {
+    "id": 3,
+    "projectId": "PROJ-2024-001",
+    "date": "2024-11-08",
+    "issue": "Water accumulation in excavation site causing mosquito breeding.",
+    "status": "pending"
+  },
+  {
+    "id": 4,
+    "projectId": "PROJ-2024-002",
+    "date": "2024-11-12",
+    "issue": "Water pressure inconsistent in our barangay. Some households receiving very low pressure during peak hours.",
+    "status": "reviewed",
+    "response": "We've identified a pressure regulation issue in your area. Additional pumping stations will be installed to improve water pressure consistency.",
+    "responseDate": "2024-11-14"
+  },
+  {
+    "id": 5,
+    "projectId": "PROJ-2024-002",
+    "date": "2024-11-08",
+    "issue": "Construction crew left pipes exposed after work, creating safety hazard for children.",
+    "status": "resolved",
+    "response": "Thank you for reporting this safety concern. The exposed pipes have been properly covered and safety protocols have been reinforced with the construction team.",
+    "responseDate": "2024-11-09"
+  },
+  {
+    "id": 6,
+    "projectId": "PROJ-2024-003",
+    "date": "2024-11-05",
+    "issue": "Fiber optic cables installation is behind schedule in our municipality. No updates provided to the community.",
+    "status": "pending"
+  },
+  {
+    "id": 7,
+    "projectId": "PROJ-2024-004",
+    "date": "2024-10-20",
+    "issue": "Bus frequency during rush hours is insufficient. Long waiting times at major stations.",
+    "status": "reviewed",
+    "response": "Thank you for your feedback. We're working on increasing bus frequency during peak hours and have ordered additional buses for the fleet.",
+    "responseDate": "2024-10-22"
+  },
+  {
+    "id": 8,
+    "projectId": "PROJ-2024-007",
+    "date": "2024-11-10",
+    "issue": "Construction delays affecting scheduled flights and tourist arrivals. Need better communication about timeline updates.",
+    "status": "reviewed",
+    "response": "We apologize for the delays. Weekly progress updates will now be shared with airlines and tourism operators. Expected completion moved to Q1 2025.",
+    "responseDate": "2024-11-12"
+  },
+  {
+    "id": 9,
+    "projectId": "PROJ-2024-009",
+    "date": "2024-11-14",
+    "issue": "IoT sensors installed on our street are causing interference with home WiFi networks. Multiple neighbors experiencing connectivity issues.",
+    "status": "pending"
+  },
+  {
+    "id": 10,
+    "projectId": "PROJ-2024-009",
+    "date": "2024-11-11",
+    "issue": "Traffic management system cameras installed without proper community consultation. Privacy concerns raised by residents.",
+    "status": "reviewed",
+    "response": "Thank you for raising this concern. Community consultation meetings will be scheduled and privacy protection measures will be implemented according to Data Privacy Act.",
+    "responseDate": "2024-11-13"
+  },
+  {
+    "id": 11,
+    "projectId": "PROJ-2024-010",
+    "date": "2024-11-09",
+    "issue": "Chemical fertilizers from research facility are affecting nearby water sources. Fish kills reported in local streams.",
+    "status": "reviewed",
+    "response": "Environmental impact assessment is being conducted. Temporary halt on certain research activities until water quality is restored.",
+    "responseDate": "2024-11-11"
+  },
+  {
+    "id": 12,
+    "projectId": "PROJ-2024-010",
+    "date": "2024-11-06",
+    "issue": "Local farmers not being included in training programs despite promises during project launch.",
+    "status": "resolved",
+    "response": "We've expanded the training program enrollment and contacted all farmers' cooperatives in the area. Registration process has been simplified.",
+    "responseDate": "2024-11-08"
+  },
+  {
+    "id": 13,
+    "projectId": "PROJ-2024-011",
+    "date": "2024-11-12",
+    "issue": "Emergency communication systems testing is disrupting radio frequencies used by local taxi operators.",
+    "status": "pending"
+  },
+  {
+    "id": 14,
+    "projectId": "PROJ-2024-012",
+    "date": "2024-11-15",
+    "issue": "Housing unit quality is below standards. Cracks appearing in walls and poor electrical wiring in Phase 1 units.",
+    "status": "reviewed",
+    "response": "Quality inspection team has been deployed. All Phase 1 units will be inspected and necessary repairs will be made at no cost to residents.",
+    "responseDate": "2024-11-16"
+  },
+  {
+    "id": 15,
+    "projectId": "PROJ-2024-012",
+    "date": "2024-11-10",
+    "issue": "Beneficiary selection process appears unfair. Some qualified families were rejected without clear explanation.",
+    "status": "pending"
+  },
+  {
+    "id": 16,
+    "projectId": "PROJ-2024-013",
+    "date": "2024-11-08",
+    "issue": "Marine cleanup activities are disturbing fishing areas. Local fishermen reporting reduced catch since operations began.",
+    "status": "reviewed",
+    "response": "Coordination meetings with fishing communities will be held weekly. Cleanup schedules will be adjusted to minimize impact on fishing activities.",
+    "responseDate": "2024-11-10"
+  },
+  {
+    "id": 17,
+    "projectId": "PROJ-2024-014",
+    "date": "2024-11-13",
+    "issue": "Vendor training programs are only conducted in English, excluding many local merchants who speak primarily Chavacano.",
+    "status": "resolved",
+    "response": "Training materials have been translated to Chavacano and Tagalog. Local language facilitators have been hired for all future sessions.",
+    "responseDate": "2024-11-14"
+  },
+  {
+    "id": 18,
+    "projectId": "PROJ-2024-015",
+    "date": "2024-11-07",
+    "issue": "Heavy rains causing landslides near construction areas. Road construction is making hillsides unstable.",
+    "status": "reviewed",
+    "response": "Geotechnical engineers are assessing slope stability. Additional retaining walls and drainage systems will be installed before resuming work.",
+    "responseDate": "2024-11-09"
+  },
+  {
+    "id": 19,
+    "projectId": "PROJ-2024-015",
+    "date": "2024-11-04",
+    "issue": "Bridge construction workers are not wearing proper safety equipment. Multiple near-miss incidents reported.",
+    "status": "resolved",
+    "response": "Safety audit conducted and additional safety officer assigned. All workers have been re-trained on safety protocols.",
+    "responseDate": "2024-11-05"
+  },
+  {
+    "id": 20,
+    "projectId": "PROJ-2024-016",
+    "date": "2024-11-11",
+    "issue": "Youth center opens too late in the day for working students. Current 2PM opening time excludes many potential beneficiaries.",
+    "status": "pending"
+  },
+  {
+    "id": 21,
+    "projectId": "PROJ-2024-017",
+    "date": "2024-11-09",
+    "issue": "Peace dialogue sessions are not inclusive of women and youth voices. Male elders dominating discussions.",
+    "status": "reviewed",
+    "response": "Separate consultation sessions for women and youth will be organized. Gender-sensitive facilitators have been engaged for future dialogues.",
+    "responseDate": "2024-11-11"
+  },
+  {
+    "id": 22,
+    "projectId": "PROJ-2024-018",
+    "date": "2024-11-12",
+    "issue": "Tourist influx to heritage sites is damaging historical structures. Need better crowd control and preservation measures.",
+    "status": "reviewed",
+    "response": "Visitor capacity limits have been implemented and additional security personnel deployed. Conservation specialists are assessing structural impacts.",
+    "responseDate": "2024-11-14"
+  },
+  {
+    "id": 23,
+    "projectId": "PROJ-2024-018",
+    "date": "2024-11-05",
+    "issue": "Local artisans being displaced by commercialization of heritage areas. Traditional craft workshops being replaced by souvenir shops.",
+    "status": "pending"
+  }
+]

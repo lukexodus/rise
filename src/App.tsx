@@ -26,119 +26,97 @@ export default function App() {
   const [showNotifications, setShowNotifications] =
     useState(false);
   const [showProfile, setShowProfile] = useState(false);
+  
+  // Add scroll position tracking
+  const [savedScrollPosition, setSavedScrollPosition] = useState<number>(0);
+  const [savedPostScrollPosition, setSavedPostScrollPosition] = useState<number>(0);
 
-  // Store scroll positions for each tab
-  const [scrollPositions, setScrollPositions] = useState<
-    Record<string, number>
-  >({
-    home: 0,
-    map: 0,
-    search: 0,
-    community: 0,
-    analytics: 0,
-  });
-
-  // Save and restore scroll positions
-  const saveScrollPosition = (tab: string) => {
-    const scrollY = window.scrollY;
-    setScrollPositions((prev) => ({
-      ...prev,
-      [tab]: scrollY,
-    }));
+  // Function to get current scroll position
+  const getCurrentScrollPosition = () => {
+    if (window.innerWidth < 1024) {
+      return window.scrollY;
+    } else {
+      const mainContent = document.querySelector('.overflow-y-auto');
+      return mainContent ? mainContent.scrollTop : 0;
+    }
   };
 
-  const restoreScrollPosition = (tab: string) => {
-    const savedPosition = scrollPositions[tab] || 0;
-    setTimeout(() => {
-      window.scrollTo({
-        top: savedPosition,
-        behavior: "smooth",
-      });
-    }, 50); // Small delay to ensure DOM is ready
+  // Function to restore scroll position
+  const restoreScrollPosition = (position: number) => {
+    if (window.innerWidth < 1024) {
+      window.scrollTo({ top: position, behavior: "smooth" });
+    } else {
+      const mainContent = document.querySelector('.overflow-y-auto');
+      if (mainContent) {
+        mainContent.scrollTo({ top: position, behavior: "smooth" });
+      }
+    }
   };
 
-  // Scroll to top when opening project detail
-  useEffect(() => {
-    if (selectedProjectId) {
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    }
-  }, [selectedProjectId]);
-
-  // Scroll to top when opening report post detail
-  useEffect(() => {
-    if (selectedPostId) {
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    }
-  }, [selectedPostId]);
-
-  // Scroll to top when opening notifications
-  useEffect(() => {
-    if (showNotifications) {
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    }
-  }, [showNotifications]);
-
-  // Scroll to top when opening profile
-  useEffect(() => {
-    if (showProfile) {
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    }
-  }, [showProfile]);
-
-  // Handle project clicks with scroll position saving
+  // Handle project clicks
   const handleProjectClick = (projectId: string) => {
-    // Save current scroll position for the active tab
-    saveScrollPosition(activeTab);
+    // Store current scroll position before navigating
+    const currentPosition = getCurrentScrollPosition();
+    setSavedScrollPosition(currentPosition);
+    
     setSelectedProjectId(projectId);
+    
+    // Reset scroll position when opening project detail
+    // For mobile, scroll the window
+    // For desktop, scroll the main content container
+    if (window.innerWidth < 1024) {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    } else {
+      // Find and scroll the main content container on desktop
+      const mainContent = document.querySelector('.overflow-y-auto');
+      if (mainContent) {
+        mainContent.scrollTo({ top: 0, behavior: "smooth" });
+      }
+    }
   };
 
-  // Handle project detail back with scroll restoration
+  // Handle project detail back
   const handleProjectBack = () => {
     setSelectedProjectId(null);
-    // Restore scroll position for the current tab
-    restoreScrollPosition(activeTab);
+    // Restore the saved scroll position
+    setTimeout(() => {
+      restoreScrollPosition(savedScrollPosition);
+    }, 100); // Small delay to ensure DOM is updated
   };
 
-  // Handle post clicks with scroll position saving
+  // Handle post clicks
   const handlePostClick = (postId: string) => {
-    // Save current scroll position for the active tab
-    saveScrollPosition(activeTab);
+    // Store current scroll position before navigating
+    const currentPosition = getCurrentScrollPosition();
+    setSavedPostScrollPosition(currentPosition);
+    
     setSelectedPostId(postId);
+    
+    // Reset scroll position when opening post detail
+    // For mobile, scroll the window
+    // For desktop, scroll the main content container
+    if (window.innerWidth < 1024) {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    } else {
+      // Find and scroll the main content container on desktop
+      const mainContent = document.querySelector('.overflow-y-auto');
+      if (mainContent) {
+        mainContent.scrollTo({ top: 0, behavior: "smooth" });
+      }
+    }
   };
 
-  // Handle post detail back with scroll restoration
+  // Handle post detail back
   const handlePostBack = () => {
     setSelectedPostId(null);
-    // Restore scroll position for the current tab
-    restoreScrollPosition(activeTab);
+    // Restore the saved scroll position
+    setTimeout(() => {
+      restoreScrollPosition(savedPostScrollPosition);
+    }, 100); // Small delay to ensure DOM is updated
   };
 
   // Handle tab changes and reset project/report states
   const handleTabChange = (newTab: string) => {
-    // If clicking the same tab, scroll to top
-    if (
-      newTab === activeTab &&
-      !selectedProjectId &&
-      !selectedPostId &&
-      !showReportIssue &&
-      !showNotifications &&
-      !showProfile
-    ) {
-      window.scrollTo({ top: 0, behavior: "smooth" });
-      return;
-    }
-
-    // Save current scroll position before switching tabs
-    if (
-      !selectedProjectId &&
-      !selectedPostId &&
-      !showReportIssue &&
-      !showNotifications &&
-      !showProfile
-    ) {
-      saveScrollPosition(activeTab);
-    }
-
     setActiveTab(newTab);
     setSelectedProjectId(null);
     setSelectedPostId(null);
@@ -146,11 +124,17 @@ export default function App() {
     setShowNotifications(false);
     setShowProfile(false);
 
-    // Restore scroll position for the new tab or scroll to top
-    if (scrollPositions[newTab] > 0) {
-      restoreScrollPosition(newTab);
-    } else {
+    // Always scroll to top when switching tabs
+    // For mobile, scroll the window
+    // For desktop, scroll the main content container
+    if (window.innerWidth < 1024) {
       window.scrollTo({ top: 0, behavior: "smooth" });
+    } else {
+      // Find and scroll the main content container on desktop
+      const mainContent = document.querySelector('.overflow-y-auto');
+      if (mainContent) {
+        mainContent.scrollTo({ top: 0, behavior: "smooth" });
+      }
     }
   };
 
@@ -356,7 +340,7 @@ export default function App() {
 
           {/* Main Content */}
           <div className="flex-1 overflow-hidden">
-            <div className="h-full overflow-y-auto bg-gray-50">
+            <div className="h-full overflow-y-auto bg-gray-50 pb-8">
               {renderContent()}
             </div>
           </div>

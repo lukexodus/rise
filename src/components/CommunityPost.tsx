@@ -1,7 +1,7 @@
 import { Card } from "./ui/card";
 import { Badge } from "./ui/badge";
 import { Button } from "./ui/button";
-import { ArrowUp, ArrowDown, MapPin, Clock, AlertTriangle } from "lucide-react";
+import { ArrowUp, ArrowDown, MapPin, Clock, AlertTriangle, Eye, MessageCircle, CheckCircle, Hourglass } from "lucide-react";
 import { useState } from "react";
 
 interface PostData {
@@ -99,6 +99,21 @@ export function CommunityPost({ post, onPostClick }: CommunityPostProps) {
     }
   };
 
+  const getStatusIcon = () => {
+    switch (status) {
+      case "pending":
+        return <Hourglass className="w-3 h-3" />;
+      case "in_review":
+        return <Eye className="w-3 h-3" />;
+      case "responded":
+        return <MessageCircle className="w-3 h-3" />;
+      case "resolved":
+        return <CheckCircle className="w-3 h-3" />;
+      default:
+        return <Hourglass className="w-3 h-3" />;
+    }
+  };
+
   const handlePostClick = () => {
     if (onPostClick) {
       onPostClick(id);
@@ -113,9 +128,9 @@ export function CommunityPost({ post, onPostClick }: CommunityPostProps) {
             {title}
           </h3>
           <div className="flex gap-1">
-            {priority === "high" && (
+            {/* {priority === "high" && (
               <AlertTriangle className="w-4 h-4 text-[#BF4226]" />
-            )}
+            )} */}
             <Badge className={`text-xs px-2 py-1 ${getPriorityColor()}`}>
               {priority.charAt(0).toUpperCase() + priority.slice(1)}
             </Badge>
@@ -148,7 +163,8 @@ export function CommunityPost({ post, onPostClick }: CommunityPostProps) {
 
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-2">
-            <Badge className={`text-xs px-2 py-1 ${getStatusColor()}`}>
+            <Badge className={`text-xs px-2 py-1 flex items-center gap-1 ${getStatusColor()}`}>
+              {getStatusIcon()}
               {status.replace("_", " ").charAt(0).toUpperCase() + status.replace("_", " ").slice(1)}
             </Badge>
           </div>

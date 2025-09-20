@@ -1,0 +1,1245 @@
+{
+  "1": {
+    "id": "1",
+    "title": "Poor road conditions on EDSA-Cubao intersection",
+    "description": "Large potholes causing traffic congestion and vehicle damage. This has been ongoing for 3 weeks now and affects thousands of commuters daily. The intersection becomes particularly dangerous during rainy weather when the potholes fill with water and are harder to see.",
+    "location": "Quezon City",
+    "category": "Infrastructure",
+    "priority": "high",
+    "upvotes": 234,
+    "downvotes": 12,
+    "status": "in_review",
+    "timeAgo": "2 hours ago",
+    "taggedEntities": [
+      "Department of Public Works and Highways (DPWH)",
+      "Metro Manila Development Authority (MMDA)",
+      "Quezon City Government"
+    ],
+    "hasUserVoted": null,
+    "images": [
+      "https://images.unsplash.com/photo-1647650299423-7d645ffe320f?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    ],
+    "documents": [
+      { "name": "Traffic_Survey_Report.pdf", "size": "2.4 MB" },
+      { "name": "Damage_Assessment.docx", "size": "1.8 MB" }
+    ],
+    "comments": [
+      {
+        "id": "1",
+        "author": "Juan Dela Cruz",
+        "timeAgo": "1 hour ago",
+        "content": "This is getting worse every day. Almost damaged my motorcycle wheel yesterday!",
+        "upvotes": 12
+      },
+      {
+        "id": "2",
+        "author": "DPWH Metro Manila",
+        "timeAgo": "45 minutes ago",
+        "content": "Thank you for the report. We have scheduled this for inspection next week and will begin repairs within 2 weeks.",
+        "upvotes": 8,
+        "isOfficial": true
+      },
+      {
+        "id": "3",
+        "author": "Juan Cruz",
+        "timeAgo": "30 minutes ago",
+        "content": "Finally! This has been a problem for months. Thank you for reporting.",
+        "upvotes": 6
+      },
+      {
+        "id": "4",
+        "author": "Anna Reyes",
+        "timeAgo": "25 minutes ago",
+        "content": "I reported this same issue last month but nothing happened. Hope this time gets more attention.",
+        "upvotes": 9
+      },
+      {
+        "id": "5",
+        "author": "Carlos Miranda",
+        "timeAgo": "20 minutes ago",
+        "content": "The traffic jam this causes during rush hour is insane. Please prioritize this!",
+        "upvotes": 15
+      },
+      {
+        "id": "6",
+        "author": "Quezon City Government",
+        "timeAgo": "15 minutes ago",
+        "content": "We are coordinating with DPWH for immediate action. Traffic rerouting will be implemented during repairs.",
+        "upvotes": 4,
+        "isOfficial": true
+      },
+      {
+        "id": "7",
+        "author": "Mike Santos",
+        "timeAgo": "10 minutes ago",
+        "content": "Thank you for the coordination. Please keep us updated on the timeline.",
+        "upvotes": 3
+      },
+      {
+        "id": "8",
+        "author": "Lisa Chen",
+        "timeAgo": "8 minutes ago",
+        "content": "I've seen at least 5 vehicles get damaged here this week. This is urgent!",
+        "upvotes": 7
+      },
+      {
+        "id": "9",
+        "author": "Roberto Silva",
+        "timeAgo": "5 minutes ago",
+        "content": "Exact location is right after the pedestrian overpass. The biggest pothole is on the rightmost lane.",
+        "upvotes": 2
+      },
+      {
+        "id": "10",
+        "author": "MMDA Official",
+        "timeAgo": "3 minutes ago",
+        "content": "Traffic management team has been notified. We will deploy personnel to assist during repair works.",
+        "upvotes": 6,
+        "isOfficial": true
+      }
+    ]
+  },
+  "2": {
+    "id": "2",
+    "title": "Incomplete sidewalk construction near schools",
+    "description": "Construction has been halted for 2 months, creating safety hazards for students and pedestrians. The incomplete sidewalk forces pedestrians to walk on the road, which is particularly dangerous during school hours when there's heavy foot traffic. Construction materials are left scattered, and there are no proper barriers or warning signs.",
+    "location": "Makati City",
+    "category": "Safety",
+    "priority": "high",
+    "upvotes": 189,
+    "downvotes": 8,
+    "status": "responded",
+    "timeAgo": "5 hours ago",
+    "taggedEntities": [
+      "Makati City Government",
+      "Department of Public Works and Highways (DPWH)",
+      "Department of Education (DepEd)"
+    ],
+    "hasUserVoted": "up",
+    "images": [
+      "https://images.unsplash.com/photo-1598104469673-048b8f2729ea?q=80&w=712&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    ],
+    "documents": [
+      { "name": "Safety_Assessment_Report.pdf", "size": "1.2 MB" },
+      { "name": "Construction_Timeline.xlsx", "size": "890 KB" }
+    ],
+    "comments": [
+      {
+        "id": "1",
+        "author": "Maria Santos",
+        "timeAgo": "3 hours ago",
+        "content": "My kids have to walk on the road every day to get to school. This is extremely dangerous!",
+        "upvotes": 24
+      },
+      {
+        "id": "2",
+        "author": "Makati City Government",
+        "timeAgo": "2 hours ago",
+        "content": "We acknowledge this safety concern. The contractor has been contacted and work will resume next Monday with proper safety measures in place.",
+        "upvotes": 18,
+        "isOfficial": true
+      },
+      {
+        "id": "3",
+        "author": "Pedro Gonzales",
+        "timeAgo": "1 hour ago",
+        "content": "Thank you for the quick response! Please ensure proper barriers are installed.",
+        "upvotes": 12
+      },
+      {
+        "id": "4",
+        "author": "Parent Teacher Association",
+        "timeAgo": "45 minutes ago",
+        "content": "We've been raising this concern for weeks. Glad to see action being taken.",
+        "upvotes": 15,
+        "isOfficial": true
+      },
+      {
+        "id": "5",
+        "author": "Safety Officer Rodriguez",
+        "timeAgo": "30 minutes ago",
+        "content": "Temporary walkways and proper signage will be installed by tomorrow morning.",
+        "upvotes": 8,
+        "isOfficial": true
+      }
+    ]
+  },
+  "3": {
+    "id": "3",
+    "title": "Water supply interruption in Subdivision",
+    "description": "No water supply for 3 days. Manila Water has not provided clear timeline for restoration. The entire subdivision of 200+ households has been without water supply since Tuesday. No advance notice was given, and the customer service hotline only provides automated responses. Some residents are buying water from delivery services, which is expensive.",
+    "location": "Marikina City",
+    "category": "Utilities",
+    "priority": "medium",
+    "upvotes": 325,
+    "downvotes": 23,
+    "status": "pending",
+    "timeAgo": "1 day ago",
+    "taggedEntities": [
+      "Manila Water Company",
+      "Marikina City Government",
+      "Metropolitan Waterworks and Sewerage System (MWSS)"
+    ],
+    "hasUserVoted": null,
+    "images": [
+      "https://plus.unsplash.com/premium_photo-1734029815125-58149f75742e?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    ],
+    "documents": [
+      { "name": "Water_Interruption_Notice.pdf", "size": "650 KB" },
+      { "name": "Subdivision_Map.pdf", "size": "1.1 MB" }
+    ],
+    "comments": [
+      {
+        "id": "1",
+        "author": "Rosa Martinez",
+        "timeAgo": "18 hours ago",
+        "content": "This is affecting our daily routine. We have elderly residents who need water for medication.",
+        "upvotes": 22
+      },
+      {
+        "id": "2",
+        "author": "Homeowners Association President",
+        "timeAgo": "15 hours ago",
+        "content": "We've contacted Manila Water multiple times but only get automated responses. This is unacceptable.",
+        "upvotes": 28,
+        "isOfficial": true
+      },
+      {
+        "id": "3",
+        "author": "James Lim",
+        "timeAgo": "12 hours ago",
+        "content": "Had to buy 20 gallons of water yesterday. This is getting expensive for families.",
+        "upvotes": 16
+      },
+      {
+        "id": "4",
+        "author": "Local Councilor",
+        "timeAgo": "8 hours ago",
+        "content": "I have escalated this to Manila Water management. Will update once I receive information.",
+        "upvotes": 19,
+        "isOfficial": true
+      },
+      {
+        "id": "5",
+        "author": "Emergency Response Team",
+        "timeAgo": "4 hours ago",
+        "content": "Water tanker will be deployed to the subdivision entrance at 2 PM today for emergency supply.",
+        "upvotes": 25,
+        "isOfficial": true
+      }
+    ]
+  },
+  "4": {
+    "id": "4",
+    "title": "Missing streetlights causing security concerns",
+    "description": "Several streetlights have been broken for months, making the area unsafe at night. The affected area spans 3 blocks and includes a main thoroughfare used by students and workers. There have been 2 reported incidents of theft in the past month, which residents attribute to poor lighting. The area becomes completely dark after sunset.",
+    "location": "Pasig City",
+    "category": "Safety",
+    "priority": "medium",
+    "upvotes": 478,
+    "downvotes": 2,
+    "status": "resolved",
+    "timeAgo": "3 days ago",
+    "taggedEntities": [
+      "Pasig City Government",
+      "Meralco (Manila Electric Company)",
+      "Philippine National Police (PNP)"
+    ],
+    "hasUserVoted": null,
+    "images": [
+      "https://images.unsplash.com/photo-1719036723449-37680727c0e0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxicm9rZW4lMjBzdHJlZXRsaWdodCUyMG5pZ2h0JTIwZGFya3xlbnwxfHx8fDE3NTc5NDM2MzB8MA"
+    ],
+    "documents": [
+      { "name": "Streetlight_Locations.pdf", "size": "800 KB" },
+      { "name": "Crime_Incident_Report.pdf", "size": "1.5 MB" }
+    ],
+    "comments": [
+      {
+        "id": "1",
+        "author": "Security Guard",
+        "timeAgo": "2 days ago",
+        "content": "I patrol this area and it's been very dark. Residents are afraid to walk here at night.",
+        "upvotes": 15
+      },
+      {
+        "id": "2",
+        "author": "Pasig City Government",
+        "timeAgo": "2 days ago",
+        "content": "Thank you for the report. Our public works team will inspect and replace the broken streetlights within 48 hours.",
+        "upvotes": 22,
+        "isOfficial": true
+      },
+      {
+        "id": "3",
+        "author": "Local Resident",
+        "timeAgo": "1 day ago",
+        "content": "Saw the repair crew yesterday evening. They were working on the lights!",
+        "upvotes": 18
+      },
+      {
+        "id": "4",
+        "author": "Barangay Captain",
+        "timeAgo": "1 day ago",
+        "content": "All streetlights have been repaired and tested. The area is now properly lit. Thank you for reporting this issue.",
+        "upvotes": 31,
+        "isOfficial": true
+      },
+      {
+        "id": "5",
+        "author": "Community Watch",
+        "timeAgo": "6 hours ago",
+        "content": "Confirmed - all lights are working now. The area feels much safer. Great job to the city government!",
+        "upvotes": 24,
+        "isOfficial": true
+      }
+    ]
+  },
+  "5": {
+    "id": "5",
+    "title": "Illegal dumping in vacant lot near residential area",
+    "description": "Large amounts of construction debris and household waste being dumped daily. Creating health hazards and attracting pests. The vacant lot has become a makeshift dumpsite with broken concrete blocks, old appliances, plastic bags, and rotting organic waste. Residents are concerned about potential disease outbreak and the smell is unbearable especially during hot weather.",
+    "location": "Taguig City",
+    "category": "Environment",
+    "priority": "high",
+    "upvotes": 142,
+    "downvotes": 3,
+    "status": "pending",
+    "timeAgo": "6 hours ago",
+    "taggedEntities": [
+      "Taguig City Government",
+      "Department of Environment and Natural Resources (DENR)",
+      "Taguig Environmental Management Office"
+    ],
+    "hasUserVoted": "up",
+    "images": [
+      "https://childrenofthedump.org.uk/wp-content/uploads/2025/05/20191125_101451-1024x768.jpg"
+    ],
+    "documents": [
+      { "name": "Dumping_Site_Photos.pdf", "size": "3.2 MB" },
+      { "name": "Health_Risk_Assessment.docx", "size": "1.5 MB" }
+    ],
+    "comments": [
+      {
+        "id": "1",
+        "author": "Concerned Resident",
+        "timeAgo": "4 hours ago",
+        "content": "This has been going on for weeks! My kids can't play outside because of the smell and flies.",
+        "upvotes": 18
+      },
+      {
+        "id": "2",
+        "author": "Barangay Health Worker",
+        "timeAgo": "3 hours ago",
+        "content": "We've documented several cases of respiratory issues in the area. This needs immediate attention.",
+        "upvotes": 22,
+        "isOfficial": true
+      },
+      {
+        "id": "3",
+        "author": "Environmental Activist",
+        "timeAgo": "2 hours ago",
+        "content": "I've seen trucks dumping here at night. We need surveillance cameras and proper enforcement.",
+        "upvotes": 16
+      }
+    ]
+  },
+  "6": {
+    "id": "6",
+    "title": "Public school lacks proper ventilation and maintenance",
+    "description": "Classrooms are overcrowded with broken windows and non-functional electric fans. Students are suffering in hot weather. The situation has worsened over the past school year with enrollment increasing but no improvements to infrastructure. Teachers report difficulty conducting classes due to extreme heat, and some students have fainted during class hours.",
+    "location": "Manila City",
+    "category": "Education",
+    "priority": "medium",
+    "upvotes": 987,
+    "downvotes": 34,
+    "status": "in_review",
+    "timeAgo": "8 hours ago",
+    "taggedEntities": [
+      "Department of Education (DepEd)",
+      "Manila City Government",
+      "Department of Public Works and Highways (DPWH)"
+    ],
+    "hasUserVoted": null,
+    "images": [
+      "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiFxh-sGbJiWVlaHO99JmVjw619X2JPfF0UDhWgzqmn1Q1-9A-STChJ8b-aO2XbLBO1EPZl9jt-YV0admfPiSCB54uWEjstcDVeZZm4FKklwmdlOi-Uu-mqls50L38mRs9zSZIw0QVBUWg/w1200-h630-p-k-no-nu/classroomshortage.png"
+    ],
+    "documents": [
+      { "name": "School_Inspection_Report.pdf", "size": "2.1 MB" },
+      { "name": "Student_Health_Incidents.xlsx", "size": "1.3 MB" }
+    ],
+    "comments": [
+      {
+        "id": "1",
+        "author": "Parent Association President",
+        "timeAgo": "6 hours ago",
+        "content": "Our children are suffering in these conditions. We need immediate action before someone gets seriously ill.",
+        "upvotes": 28,
+        "isOfficial": true
+      },
+      {
+        "id": "2",
+        "author": "Teacher Maria Cruz",
+        "timeAgo": "5 hours ago",
+        "content": "It's impossible to teach effectively when students are fainting from heat. We need proper ventilation urgently.",
+        "upvotes": 31
+      },
+      {
+        "id": "3",
+        "author": "DepEd Manila",
+        "timeAgo": "3 hours ago",
+        "content": "We have received the report and are coordinating with the city government for immediate repairs and installation of additional fans.",
+        "upvotes": 15,
+        "isOfficial": true
+      }
+    ]
+  },
+  "7": {
+    "id": "7",
+    "title": "Frequent power outages during peak hours",
+    "description": "Daily brownouts lasting 2-3 hours affecting businesses and residents. No advance notice from Meralco. The outages typically occur between 2-5 PM when electricity demand is highest. Local businesses are losing revenue, and residents with medical equipment at home are particularly affected. Food spoilage is also a major concern for households.",
+    "location": "Muntinlupa City",
+    "category": "Utilities",
+    "priority": "high",
+    "upvotes": 5203,
+    "downvotes": 278,
+    "status": "responded",
+    "timeAgo": "12 hours ago",
+    "taggedEntities": [
+      "Meralco (Manila Electric Company)",
+      "Department of Energy (DOE)",
+      "Muntinlupa City Government"
+    ],
+    "hasUserVoted": "up",
+    "images": [
+      "https://images.unsplash.com/photo-1743069625024-8fdf92a17724?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    ],
+    "documents": [
+      { "name": "Power_Outage_Log.xlsx", "size": "950 KB" },
+      { "name": "Business_Impact_Assessment.pdf", "size": "1.8 MB" }
+    ],
+    "comments": [
+      {
+        "id": "1",
+        "author": "Business Owner Carlos",
+        "timeAgo": "10 hours ago",
+        "content": "My restaurant loses P5,000 every day because of these outages. Food spoils and customers leave.",
+        "upvotes": 45
+      },
+      {
+        "id": "2",
+        "author": "Meralco Customer Service",
+        "timeAgo": "8 hours ago",
+        "content": "We apologize for the inconvenience. Emergency repairs are being conducted on the main distribution line. Service should be restored within 48 hours.",
+        "upvotes": 23,
+        "isOfficial": true
+      },
+      {
+        "id": "3",
+        "author": "Senior Citizen Elena",
+        "timeAgo": "6 hours ago",
+        "content": "My husband needs his oxygen concentrator. These outages are life-threatening for patients.",
+        "upvotes": 67
+      }
+    ]
+  },
+  "8": {
+    "id": "8",
+    "title": "Healthcare center understaffed and lacks medicine",
+    "description": "Only 1 doctor for entire barangay of 5000+ residents. Basic medicines out of stock for weeks. The health center operates only 3 days a week due to staff shortage. Patients have to travel to other cities for basic medical care, which is expensive and time-consuming. Emergency cases often have no immediate medical attention available.",
+    "location": "Caloocan City",
+    "category": "Healthcare",
+    "priority": "high",
+    "upvotes": 2178,
+    "downvotes": 67,
+    "status": "pending",
+    "timeAgo": "1 day ago",
+    "taggedEntities": [
+      "Department of Health (DOH)",
+      "Caloocan City Government",
+      "Philippine Health Insurance Corporation (PhilHealth)"
+    ],
+    "hasUserVoted": null,
+    "images": [
+      "https://plus.unsplash.com/premium_photo-1753205867821-b022fae68a0d?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    ],
+    "documents": [
+      { "name": "Health_Center_Assessment.pdf", "size": "2.3 MB" },
+      { "name": "Medicine_Inventory.xlsx", "size": "890 KB" }
+    ],
+    "comments": [
+      {
+        "id": "1",
+        "author": "Barangay Health Worker",
+        "timeAgo": "20 hours ago",
+        "content": "We've been requesting additional staff and medicine supplies for months. The situation is critical.",
+        "upvotes": 34,
+        "isOfficial": true
+      },
+      {
+        "id": "2",
+        "author": "Mother of 3",
+        "timeAgo": "15 hours ago",
+        "content": "My children can't get vaccinated because there's no doctor available. This is unacceptable.",
+        "upvotes": 29
+      },
+      {
+        "id": "3",
+        "author": "Caloocan Health Office",
+        "timeAgo": "8 hours ago",
+        "content": "We are working with DOH to deploy additional medical personnel and restock essential medicines by next week.",
+        "upvotes": 18,
+        "isOfficial": true
+      }
+    ]
+  },
+  "9": {
+    "id": "9",
+    "title": "Blocked drainage causing frequent flooding",
+    "description": "Main drainage system clogged with debris. Even light rain causes street flooding affecting 50+ houses. The drainage has been neglected for over a year, with plastic waste, construction debris, and sediment completely blocking water flow. Residents have to wade through knee-deep water to reach their homes during rainy season.",
+    "location": "Valenzuela City",
+    "category": "Infrastructure",
+    "priority": "high",
+    "upvotes": 3167,
+    "downvotes": 198,
+    "status": "in_review",
+    "timeAgo": "18 hours ago",
+    "taggedEntities": [
+      "Valenzuela City Government",
+      "Department of Public Works and Highways (DPWH)",
+      "Metro Manila Development Authority (MMDA)"
+    ],
+    "hasUserVoted": "up",
+    "images": [
+      "https://images.unsplash.com/photo-1741038579797-8560cc8b4d38?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    ],
+    "documents": [
+      { "name": "Drainage_Assessment.pdf", "size": "3.1 MB" },
+      { "name": "Flood_Damage_Report.docx", "size": "1.7 MB" }
+    ],
+    "comments": [
+      {
+        "id": "1",
+        "author": "Homeowner Association",
+        "timeAgo": "16 hours ago",
+        "content": "Our appliances and furniture are getting damaged every time it rains. We need immediate drainage cleaning.",
+        "upvotes": 41,
+        "isOfficial": true
+      },
+      {
+        "id": "2",
+        "author": "Valenzuela Public Works",
+        "timeAgo": "12 hours ago",
+        "content": "Drainage clearing operations will begin tomorrow. We apologize for the delay and will work to prevent future blockages.",
+        "upvotes": 26,
+        "isOfficial": true
+      }
+    ]
+  },
+  "10": {
+    "id": "10",
+    "title": "Air pollution from nearby factory affecting neighborhood",
+    "description": "Chemical plant releasing toxic fumes daily. Residents experiencing respiratory problems and bad odor. The factory operates 24/7 with visible smoke emissions that violate environmental standards. Children and elderly residents are particularly affected, with increased cases of asthma and other respiratory ailments reported in the area.",
+    "location": "Navotas City",
+    "category": "Environment",
+    "priority": "high",
+    "upvotes": 1834,
+    "downvotes": 245,
+    "status": "pending",
+    "timeAgo": "2 days ago",
+    "taggedEntities": [
+      "Department of Environment and Natural Resources (DENR)",
+      "Navotas City Government",
+      "Environmental Management Bureau (EMB)"
+    ],
+    "hasUserVoted": null,
+    "images": [
+      "https://images.unsplash.com/photo-1711553460847-172fea01f6e2?q=80&w=1633&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    ],
+    "documents": [
+      { "name": "Air_Quality_Test_Results.pdf", "size": "1.9 MB" },
+      { "name": "Health_Impact_Study.docx", "size": "2.4 MB" }
+    ],
+    "comments": [
+      {
+        "id": "1",
+        "author": "Environmental Activist",
+        "timeAgo": "1 day ago",
+        "content": "We've documented air quality violations. This factory must be held accountable for endangering public health.",
+        "upvotes": 38
+      },
+      {
+        "id": "2",
+        "author": "Local Doctor",
+        "timeAgo": "20 hours ago",
+        "content": "I've treated 15 children this month for respiratory issues. The correlation with the factory emissions is clear.",
+        "upvotes": 52
+      }
+    ]
+  },
+  "11": {
+    "id": "11",
+    "title": "Traffic signal malfunction at major intersection",
+    "description": "Traffic lights have been blinking yellow for 5 days. Creating dangerous conditions and traffic jams during rush hour. The intersection handles over 10,000 vehicles daily and the malfunction is causing significant delays and near-miss accidents. Traffic enforcers are manually directing traffic during peak hours but coverage is insufficient.",
+    "location": "Parañaque City",
+    "category": "Infrastructure",
+    "priority": "medium",
+    "upvotes": 876,
+    "downvotes": 45,
+    "status": "responded",
+    "timeAgo": "4 hours ago",
+    "taggedEntities": [
+      "Metro Manila Development Authority (MMDA)",
+      "Parañaque City Government",
+      "Department of Public Works and Highways (DPWH)"
+    ],
+    "hasUserVoted": null,
+    "images": [
+      "https://images.metronewscentral.net/XaCVy3bB80MMDA-22.jpg"
+    ],
+    "documents": [
+      { "name": "Traffic_Flow_Analysis.pdf", "size": "1.6 MB" },
+      { "name": "Signal_Repair_Request.docx", "size": "780 KB" }
+    ],
+    "comments": [
+      {
+        "id": "1",
+        "author": "Daily Commuter",
+        "timeAgo": "3 hours ago",
+        "content": "I'm late to work every day because of this. When will it be fixed?",
+        "upvotes": 19
+      },
+      {
+        "id": "2",
+        "author": "MMDA Traffic Unit",
+        "timeAgo": "2 hours ago",
+        "content": "Replacement parts have been ordered and installation is scheduled for this weekend. Thank you for your patience.",
+        "upvotes": 14,
+        "isOfficial": true
+      }
+    ]
+  },
+  "12": {
+    "id": "12",
+    "title": "Playground equipment broken and unsafe for children",
+    "description": "Swings have broken chains, slides have sharp edges. Multiple children have been injured but no repairs done. The playground has been deteriorating for over 8 months with rusted equipment and broken safety surfaces. Parents are afraid to let their children play here, forcing families to travel to other areas for recreation.",
+    "location": "Las Piñas City",
+    "category": "Safety",
+    "priority": "medium",
+    "upvotes": 1292,
+    "downvotes": 23,
+    "status": "resolved",
+    "timeAgo": "5 days ago",
+    "taggedEntities": [
+      "Las Piñas City Government",
+      "Department of Health (DOH)",
+      "Las Piñas Parks and Recreation"
+    ],
+    "hasUserVoted": "up",
+    "images": [
+      "https://images.unsplash.com/photo-1752157087934-ba84fa96afe5?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    ],
+    "documents": [
+      { "name": "Playground_Safety_Inspection.pdf", "size": "2.2 MB" },
+      { "name": "Injury_Reports.xlsx", "size": "1.1 MB" }
+    ],
+    "comments": [
+      {
+        "id": "1",
+        "author": "Concerned Parent",
+        "timeAgo": "4 days ago",
+        "content": "My daughter got a cut from the broken slide. This playground is a lawsuit waiting to happen.",
+        "upvotes": 26
+      },
+      {
+        "id": "2",
+        "author": "Las Piñas Parks Department",
+        "timeAgo": "3 days ago",
+        "content": "We have completed the safety assessment and new equipment installation. The playground is now safe for use.",
+        "upvotes": 31,
+        "isOfficial": true
+      }
+    ]
+  },
+  "13": {
+    "id": "13",
+    "title": "Internet connectivity issues in public WiFi zones",
+    "description": "Free WiFi in parks and plazas constantly disconnecting. Students can't access online classes. The public WiFi infrastructure is outdated and overloaded. During peak hours, connection speeds drop to unusable levels, affecting students who rely on these zones for their education and remote work needs.",
+    "location": "Malabon City",
+    "category": "Utilities",
+    "priority": "low",
+    "upvotes": 345,
+    "downvotes": 167,
+    "status": "pending",
+    "timeAgo": "3 days ago",
+    "taggedEntities": [
+      "Malabon City Government",
+      "Department of Information and Communications Technology (DICT)",
+      "National Telecommunications Commission (NTC)"
+    ],
+    "hasUserVoted": null,
+    "images": [
+      "https://media.philstar.com/photos/2020/03/05/wifi_2020-03-05_19-16-16738_thumbnail.jpg"
+    ],
+    "documents": [
+      { "name": "WiFi_Performance_Report.pdf", "size": "1.4 MB" }
+    ],
+    "comments": [
+      {
+        "id": "1",
+        "author": "College Student",
+        "timeAgo": "2 days ago",
+        "content": "I can't submit my assignments on time because the WiFi keeps cutting out.",
+        "upvotes": 18
+      },
+      {
+        "id": "2",
+        "author": "Remote Worker",
+        "timeAgo": "1 day ago",
+        "content": "The connection is too slow for video calls. This affects my livelihood.",
+        "upvotes": 12
+      }
+    ]
+  },
+  "14": {
+    "id": "14",
+    "title": "Stray dogs forming packs and threatening residents",
+    "description": "Groups of 8-10 aggressive stray dogs roaming the neighborhood. Several residents have been chased and bitten. The stray dog population has grown significantly over the past year. They have become territorial and aggressive, particularly around the local market and school areas. Several bite incidents have been reported but no systematic action has been taken.",
+    "location": "San Juan City",
+    "category": "Safety",
+    "priority": "high",
+    "upvotes": 2456,
+    "downvotes": 389,
+    "status": "in_review",
+    "timeAgo": "1 day ago",
+    "taggedEntities": [
+      "San Juan City Government",
+      "Department of Health (DOH)",
+      "Philippine Animal Welfare Society (PAWS)"
+    ],
+    "hasUserVoted": "up",
+    "images": [
+      "https://images.indianexpress.com/2016/09/stray-dogs-480.jpg?w=640?w=414"
+    ],
+    "documents": [
+      { "name": "Animal_Control_Plan.pdf", "size": "1.8 MB" },
+      { "name": "Bite_Incident_Reports.xlsx", "size": "920 KB" }
+    ],
+    "comments": [
+      {
+        "id": "1",
+        "author": "School Principal",
+        "timeAgo": "18 hours ago",
+        "content": "Students are afraid to walk to school. We need immediate animal control intervention.",
+        "upvotes": 42,
+        "isOfficial": true
+      },
+      {
+        "id": "2",
+        "author": "San Juan Animal Control",
+        "timeAgo": "12 hours ago",
+        "content": "We are coordinating with PAWS for a humane capture and spay/neuter program. Operations begin next week.",
+        "upvotes": 28,
+        "isOfficial": true
+      }
+    ]
+  },
+  "15": {
+    "id": "15",
+    "title": "Noise pollution from construction site during night hours",
+    "description": "Heavy machinery operating from 10PM to 6AM violating city ordinances. Affecting sleep of nearby residents. The construction company has been working around the clock without proper permits for night operations. Residents report sleep deprivation, stress, and health issues. Multiple noise complaints have been filed but enforcement has been inconsistent.",
+    "location": "Mandaluyong City",
+    "category": "Environment",
+    "priority": "medium",
+    "upvotes": 568,
+    "downvotes": 234,
+    "status": "responded",
+    "timeAgo": "6 days ago",
+    "taggedEntities": [
+      "Mandaluyong City Government",
+      "Department of Environment and Natural Resources (DENR)",
+      "Mandaluyong Building Office"
+    ],
+    "hasUserVoted": null,
+    "images": [
+      "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/ihMo6pbP7V4Y/v7/-1x-1.webp"
+    ],
+    "documents": [
+      { "name": "Noise_Level_Measurements.pdf", "size": "1.7 MB" },
+      { "name": "City_Ordinance_Violations.docx", "size": "890 KB" }
+    ],
+    "comments": [
+      {
+        "id": "1",
+        "author": "Nearby Resident",
+        "timeAgo": "5 days ago",
+        "content": "I haven't had a good night's sleep in weeks. This is affecting my work performance.",
+        "upvotes": 22
+      },
+      {
+        "id": "2",
+        "author": "Mandaluyong Building Office",
+        "timeAgo": "4 days ago",
+        "content": "Night construction permits have been revoked. Work hours are now restricted to 6AM-8PM only.",
+        "upvotes": 35,
+        "isOfficial": true
+      }
+    ]
+  },
+  "16": {
+    "id": "16",
+    "title": "Public basketball court needs repair and lighting",
+    "description": "The basketball court hoops are rusted and the court surface has multiple cracks. No lighting for evening games. The court serves hundreds of young people daily but has been neglected for years. The lack of lighting forces games to end at sunset, limiting recreational opportunities for working students and adults.",
+    "location": "Antipolo City",
+    "category": "Public Services",
+    "priority": "medium",
+    "upvotes": 1112,
+    "downvotes": 76,
+    "status": "pending",
+    "timeAgo": "4 hours ago",
+    "taggedEntities": [
+      "Antipolo City Government",
+      "Department of Education (DepEd)",
+      "Antipolo Sports Development Office"
+    ],
+    "hasUserVoted": null,
+    "images": [
+      "https://images.unsplash.com/photo-1546519638-68e109498ffc?q=80&w=1590&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    ],
+    "documents": [
+      { "name": "Court_Condition_Assessment.pdf", "size": "1.9 MB" },
+      { "name": "Community_Usage_Survey.xlsx", "size": "1.2 MB" }
+    ],
+    "comments": [
+      {
+        "id": "1",
+        "author": "Youth Basketball Coach",
+        "timeAgo": "3 hours ago",
+        "content": "Our training sessions are limited to daylight hours. The kids deserve better facilities.",
+        "upvotes": 24
+      },
+      {
+        "id": "2",
+        "author": "Local Player",
+        "timeAgo": "2 hours ago",
+        "content": "The rim is so bent that shots don't go in properly. It's frustrating to play here.",
+        "upvotes": 18
+      }
+    ]
+  },
+  "17": {
+    "id": "17",
+    "title": "Damaged public market roof causing leaks",
+    "description": "Heavy rains cause flooding inside the market. Vendors are losing products and customers avoid the area during bad weather. The roof has multiple holes and damaged sections that allow rainwater to pour directly onto vendor stalls. This creates unsanitary conditions and significant economic losses for small business owners who depend on daily sales.",
+    "location": "Rodriguez, Rizal",
+    "category": "Infrastructure",
+    "priority": "high",
+    "upvotes": 2798,
+    "downvotes": 134,
+    "status": "in_review",
+    "timeAgo": "7 hours ago",
+    "taggedEntities": [
+      "Rodriguez Municipal Government",
+      "Department of Public Works and Highways (DPWH)",
+      "Department of Trade and Industry (DTI)"
+    ],
+    "hasUserVoted": "up",
+    "images": [
+      "https://images.unsplash.com/photo-1578662996442-48f60103fc96?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    ],
+    "documents": [
+      { "name": "Market_Roof_Inspection.pdf", "size": "2.8 MB" },
+      { "name": "Vendor_Loss_Claims.xlsx", "size": "1.5 MB" }
+    ],
+    "comments": [
+      {
+        "id": "1",
+        "author": "Vendor Association President",
+        "timeAgo": "6 hours ago",
+        "content": "We lose thousands of pesos worth of goods every time it rains. Our families depend on this income.",
+        "upvotes": 38,
+        "isOfficial": true
+      },
+      {
+        "id": "2",
+        "author": "Rodriguez Municipal Engineer",
+        "timeAgo": "4 hours ago",
+        "content": "Emergency roof repairs will begin this week. We are sourcing materials and coordinating with contractors.",
+        "upvotes": 25,
+        "isOfficial": true
+      }
+    ]
+  },
+  "18": {
+    "id": "18",
+    "title": "Overcrowded public transportation during rush hours",
+    "description": "Jeepney and bus routes are insufficient for the growing population. Commuters wait 30+ minutes during peak hours. The transportation crisis has worsened as the area's population has doubled but public transport capacity hasn't increased. Workers often arrive late to jobs and students miss classes due to unreliable transport schedules.",
+    "location": "Cainta, Rizal",
+    "category": "Transportation",
+    "priority": "high",
+    "upvotes": 4267,
+    "downvotes": 418,
+    "status": "responded",
+    "timeAgo": "10 hours ago",
+    "taggedEntities": [
+      "Land Transportation Franchising and Regulatory Board (LTFRB)",
+      "Department of Transportation (DOTr)",
+      "Cainta Municipal Government"
+    ],
+    "hasUserVoted": null,
+    "images": [
+      "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?q=80&w=1469&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    ],
+    "documents": [
+      { "name": "Transportation_Demand_Study.pdf", "size": "3.4 MB" },
+      { "name": "Route_Optimization_Plan.xlsx", "size": "2.1 MB" }
+    ],
+    "comments": [
+      {
+        "id": "1",
+        "author": "Daily Commuter Miguel",
+        "timeAgo": "8 hours ago",
+        "content": "I wake up 2 hours early just to make sure I get to work on time. This is unsustainable.",
+        "upvotes": 56
+      },
+      {
+        "id": "2",
+        "author": "LTFRB Regional Office",
+        "timeAgo": "6 hours ago",
+        "content": "We are processing applications for additional jeepney franchises and exploring mini-bus routes to address the capacity shortage.",
+        "upvotes": 42,
+        "isOfficial": true
+      }
+    ]
+  },
+  "19": {
+    "id": "19",
+    "title": "Abandoned construction site becoming safety hazard",
+    "description": "Construction stopped 6 months ago. Open trenches and exposed rebar pose danger to children and pedestrians. The developer abandoned the project leaving dangerous construction materials and deep excavations. Local children have been seen playing in the area despite warnings, and there have been reports of people falling into uncovered holes.",
+    "location": "Taytay, Rizal",
+    "category": "Safety",
+    "priority": "high",
+    "upvotes": 1956,
+    "downvotes": 89,
+    "status": "pending",
+    "timeAgo": "14 hours ago",
+    "taggedEntities": [
+      "Taytay Municipal Government",
+      "Department of Public Works and Highways (DPWH)",
+      "Housing and Land Use Regulatory Board (HLURB)"
+    ],
+    "hasUserVoted": "up",
+    "images": [
+      "https://images.unsplash.com/photo-1581094271901-8022df4466f9?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    ],
+    "documents": [
+      { "name": "Safety_Hazard_Assessment.pdf", "size": "2.6 MB" },
+      { "name": "Developer_Violation_Report.docx", "size": "1.3 MB" }
+    ],
+    "comments": [
+      {
+        "id": "1",
+        "author": "Barangay Captain",
+        "timeAgo": "12 hours ago",
+        "content": "We've placed warning signs but children still find ways to enter. Someone will get seriously hurt if this isn't secured immediately.",
+        "upvotes": 47,
+        "isOfficial": true
+      },
+      {
+        "id": "2",
+        "author": "Concerned Parent",
+        "timeAgo": "8 hours ago",
+        "content": "My neighbor's child fell into one of the holes yesterday. Fortunately, it wasn't deep, but this is unacceptable.",
+        "upvotes": 33
+      }
+    ]
+  },
+  "20": {
+    "id": "20",
+    "title": "Public library lacks books and computers for students",
+    "description": "Most books are outdated, only 3 working computers for 500+ regular users. Internet connection is very slow. The library serves as the primary study space for students who don't have internet access at home. The computer shortage means students often wait hours for their turn, and the slow internet makes research nearly impossible.",
+    "location": "Binangonan, Rizal",
+    "category": "Education",
+    "priority": "medium",
+    "upvotes": 789,
+    "downvotes": 45,
+    "status": "in_review",
+    "timeAgo": "1 day ago",
+    "taggedEntities": [
+      "Department of Education (DepEd)",
+      "Binangonan Municipal Government",
+      "National Library of the Philippines"
+    ],
+    "hasUserVoted": null,
+    "images": [
+      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    ],
+    "documents": [
+      { "name": "Library_Resource_Assessment.pdf", "size": "1.8 MB" },
+      { "name": "Student_Usage_Statistics.xlsx", "size": "1.1 MB" }
+    ],
+    "comments": [
+      {
+        "id": "1",
+        "author": "High School Student",
+        "timeAgo": "18 hours ago",
+        "content": "I need to research for my thesis but the books are from the 1990s. The computers are always occupied.",
+        "upvotes": 21
+      },
+      {
+        "id": "2",
+        "author": "Municipal Librarian",
+        "timeAgo": "12 hours ago",
+        "content": "We have submitted a budget request for new computers and books. Working with DepEd for additional resources.",
+        "upvotes": 16,
+        "isOfficial": true
+      }
+    ]
+  },
+  "21": {
+    "id": "21",
+    "title": "Polluted river with plastic waste and dead fish",
+    "description": "Industrial waste and household garbage dumped directly into the river. Strong odor and fish kills reported weekly. The river ecosystem has been severely damaged with toxic runoff from nearby factories mixing with household sewage. Local fishing communities have lost their livelihood as fish populations have drastically declined. The water has turned dark brown and emits a foul smell that affects the entire neighborhood.",
+    "location": "San Mateo, Rizal",
+    "category": "Environment",
+    "priority": "high",
+    "upvotes": 3234,
+    "downvotes": 287,
+    "status": "responded",
+    "timeAgo": "1 day ago",
+    "taggedEntities": [
+      "Department of Environment and Natural Resources (DENR)",
+      "Environmental Management Bureau (EMB)",
+      "San Mateo Municipal Government"
+    ],
+    "hasUserVoted": "up",
+    "images": [
+      "https://images.unsplash.com/photo-1530587191325-3db32d826c18?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    ],
+    "documents": [
+      { "name": "Water_Quality_Test_Results.pdf", "size": "2.7 MB" },
+      { "name": "Environmental_Impact_Assessment.docx", "size": "3.1 MB" }
+    ],
+    "comments": [
+      {
+        "id": "1",
+        "author": "Local Fisherman",
+        "timeAgo": "18 hours ago",
+        "content": "I've been fishing here for 20 years. Now there are no fish left alive. Our families are starving.",
+        "upvotes": 45
+      },
+      {
+        "id": "2",
+        "author": "DENR Regional Office",
+        "timeAgo": "12 hours ago",
+        "content": "Water quality tests confirm severe contamination. We are issuing cease and desist orders to violating factories and implementing a river rehabilitation plan.",
+        "upvotes": 38,
+        "isOfficial": true
+      },
+      {
+        "id": "3",
+        "author": "Environmental Scientist",
+        "timeAgo": "8 hours ago",
+        "content": "The heavy metal contamination levels are 10x above safe limits. This poses serious health risks to communities downstream.",
+        "upvotes": 52
+      }
+    ]
+  },
+  "22": {
+    "id": "22",
+    "title": "Inadequate ambulance response time in remote barangays",
+    "description": "Emergency medical response takes 45+ minutes. Residents have to use private vehicles for medical emergencies. The mountainous terrain and poor road conditions make it difficult for ambulances to reach remote areas quickly. The nearest hospital is 30km away and there's only one ambulance serving 5 barangays with a combined population of 15,000 people.",
+    "location": "Montalban, Rizal",
+    "category": "Healthcare",
+    "priority": "high",
+    "upvotes": 2178,
+    "downvotes": 123,
+    "status": "pending",
+    "timeAgo": "2 days ago",
+    "taggedEntities": [
+      "Department of Health (DOH)",
+      "Montalban Municipal Government",
+      "Philippine Red Cross"
+    ],
+    "hasUserVoted": null,
+    "images": [
+      "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    ],
+    "documents": [
+      { "name": "Emergency_Response_Assessment.pdf", "size": "2.4 MB" },
+      { "name": "Ambulance_Coverage_Map.pdf", "size": "1.9 MB" }
+    ],
+    "comments": [
+      {
+        "id": "1",
+        "author": "Barangay Health Worker",
+        "timeAgo": "1 day ago",
+        "content": "We lost two patients last month because the ambulance couldn't reach them in time. This is a matter of life and death.",
+        "upvotes": 56,
+        "isOfficial": true
+      },
+      {
+        "id": "2",
+        "author": "Mountain Resident",
+        "timeAgo": "18 hours ago",
+        "content": "My wife had complications during childbirth. We had to use a motorcycle to rush her to the hospital. Almost lost her and the baby.",
+        "upvotes": 67
+      },
+      {
+        "id": "3",
+        "author": "Local Doctor",
+        "timeAgo": "12 hours ago",
+        "content": "We need at least 2 more ambulances and a health station in the upper barangays. The current setup is inadequate for the population.",
+        "upvotes": 43
+      }
+    ]
+  },
+  "23": {
+    "id": "23",
+    "title": "Poor internet connectivity affecting online classes",
+    "description": "Students miss classes due to unreliable internet. Telecommunications companies slow to address infrastructure gaps. The area has limited cell tower coverage and most homes rely on mobile data for internet access. During online classes, connections frequently drop, making it impossible for students to participate in remote learning. This digital divide is affecting educational outcomes.",
+    "location": "Teresa, Rizal",
+    "category": "Utilities",
+    "priority": "medium",
+    "upvotes": 1245,
+    "downvotes": 198,
+    "status": "in_review",
+    "timeAgo": "2 days ago",
+    "taggedEntities": [
+      "National Telecommunications Commission (NTC)",
+      "Department of Information and Communications Technology (DICT)",
+      "Globe Telecom",
+      "Smart Communications"
+    ],
+    "hasUserVoted": "up",
+    "images": [
+      "https://images.unsplash.com/photo-1581092160607-ee22621dd758?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    ],
+    "documents": [
+      { "name": "Internet_Speed_Test_Results.pdf", "size": "1.6 MB" },
+      { "name": "Student_Connectivity_Survey.xlsx", "size": "1.3 MB" }
+    ],
+    "comments": [
+      {
+        "id": "1",
+        "author": "High School Teacher",
+        "timeAgo": "1 day ago",
+        "content": "Half my students can't join online classes due to poor internet. Their grades are suffering because of connectivity issues.",
+        "upvotes": 34,
+        "isOfficial": true
+      },
+      {
+        "id": "2",
+        "author": "College Student",
+        "timeAgo": "18 hours ago",
+        "content": "I have to climb the nearest hill just to get signal for my classes. This is affecting my education.",
+        "upvotes": 41
+      },
+      {
+        "id": "3",
+        "author": "DICT Regional Office",
+        "timeAgo": "8 hours ago",
+        "content": "We are coordinating with telecom companies to expedite cell tower construction in underserved areas. Free WiFi zones will also be established.",
+        "upvotes": 28,
+        "isOfficial": true
+      }
+    ]
+  },
+  "24": {
+    "id": "24",
+    "title": "Inadequate parking spaces in commercial areas",
+    "description": "Limited parking causes traffic congestion as cars circle looking for spots. Illegal parking on sidewalks common. The commercial district has grown rapidly but parking infrastructure hasn't kept pace. Drivers spend 20-30 minutes looking for parking, causing traffic jams. Many resort to illegal parking on sidewalks, blocking pedestrian walkways and creating safety hazards.",
+    "location": "Angono, Rizal",
+    "category": "Transportation",
+    "priority": "medium",
+    "upvotes": 692,
+    "downvotes": 289,
+    "status": "responded",
+    "timeAgo": "3 days ago",
+    "taggedEntities": [
+      "Angono Municipal Government",
+      "Department of Public Works and Highways (DPWH)",
+      "Metro Manila Development Authority (MMDA)"
+    ],
+    "hasUserVoted": null,
+    "images": [
+      "https://images.unsplash.com/photo-1590674899484-d5640e854abe?q=80&w=1469&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    ],
+    "documents": [
+      { "name": "Parking_Demand_Study.pdf", "size": "2.2 MB" },
+      { "name": "Traffic_Flow_Analysis.xlsx", "size": "1.7 MB" }
+    ],
+    "comments": [
+      {
+        "id": "1",
+        "author": "Business Owner",
+        "timeAgo": "2 days ago",
+        "content": "Customers complain they can't find parking and go to other towns instead. This is hurting our sales.",
+        "upvotes": 23
+      },
+      {
+        "id": "2",
+        "author": "Angono Traffic Office",
+        "timeAgo": "1 day ago",
+        "content": "Multi-level parking facility construction will begin next month. Additional parking meters will be installed on main streets.",
+        "upvotes": 18,
+        "isOfficial": true
+      },
+      {
+        "id": "3",
+        "author": "Daily Commuter",
+        "timeAgo": "12 hours ago",
+        "content": "I avoid this area during weekends because finding parking is impossible. The traffic is terrible.",
+        "upvotes": 15
+      }
+    ]
+  },
+  "25": {
+    "id": "25",
+    "title": "Public cemetery lacks proper maintenance and security",
+    "description": "Overgrown grass, broken fences, and vandalism. Families feel unsafe visiting during evening hours. The cemetery has been neglected for years with tall grass obscuring graves, broken tombstones left unrepaired, and damaged perimeter fencing. There have been reports of vandalism and theft of memorial items. Poor lighting makes the area unsafe after dark.",
+    "location": "Pililla, Rizal",
+    "category": "Public Services",
+    "priority": "low",
+    "upvotes": 267,
+    "downvotes": 43,
+    "status": "pending",
+    "timeAgo": "4 days ago",
+    "taggedEntities": [
+      "Pililla Municipal Government",
+      "Philippine National Police (PNP)",
+      "Department of Public Works and Highways (DPWH)"
+    ],
+    "hasUserVoted": null,
+    "images": [
+      "https://images.unsplash.com/photo-1578593398213-c3bf0c5a1e5d?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    ],
+    "documents": [
+      { "name": "Cemetery_Condition_Report.pdf", "size": "1.8 MB" },
+      { "name": "Security_Incident_Log.xlsx", "size": "920 KB" }
+    ],
+    "comments": [
+      {
+        "id": "1",
+        "author": "Bereaved Family Member",
+        "timeAgo": "3 days ago",
+        "content": "We can't even find our loved one's grave because of the tall grass. This is disrespectful to the deceased.",
+        "upvotes": 19
+      },
+      {
+        "id": "2",
+        "author": "Cemetery Caretaker",
+        "timeAgo": "2 days ago",
+        "content": "We only have one groundskeeper for 5 hectares. Need more budget and personnel for proper maintenance.",
+        "upvotes": 14,
+        "isOfficial": true
+      },
+      {
+        "id": "3",
+        "author": "Local Resident",
+        "timeAgo": "1 day ago",
+        "content": "The broken fence allows stray animals to enter and disturb the graves. Someone needs to fix this.",
+        "upvotes": 12
+      }
+    ]
+  }
+}

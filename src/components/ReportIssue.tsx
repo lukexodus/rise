@@ -17,137 +17,14 @@ import {
   X,
 } from "lucide-react";
 
+// Import data from external JSON files
+import projectsData from "../data/projects.json";
+import reportsData from "../data/reports.json";
+
 interface ReportIssueProps {
   projectId: string;
   onBack: () => void;
 }
-
-// Mock project data - updated to match other components
-const mockProject = {
-  "PROJ-2024-001": {
-    title: "Metro Manila Subway Project Phase 2",
-    location: "Metro Manila",
-  },
-  "PROJ-2024-002": {
-    title: "CALABARZON Water Supply System Expansion",
-    location: "CALABARZON",
-  },
-  "PROJ-2024-003": {
-    title: "National Broadband Infrastructure Program",
-    location: "Nationwide",
-  },
-  "PROJ-2024-004": {
-    title: "Cebu BRT System Implementation",
-    location: "Central Visayas",
-  },
-  "PROJ-2024-005": {
-    title: "Mindanao Rural Electrification Program",
-    location: "Mindanao",
-  },
-  "PROJ-2024-006": {
-    title: "Ilocos Norte Solar Farm Project",
-    location: "Ilocos Region",
-  },
-  "PROJ-2024-007": {
-    title: "Palawan Airport Modernization",
-    location: "MIMAROPA",
-  },
-  "PROJ-2024-008": {
-    title: "Bicol Regional Medical Center Upgrade",
-    location: "Bicol Region",
-  },
-};
-
-// Mock user reports data - updated with correct project IDs
-const mockUserReports = [
-  // Metro Manila Subway Project Phase 2 reports
-  {
-    id: 1,
-    projectId: "PROJ-2024-001",
-    date: "2024-11-15",
-    issue:
-      "Construction noise during night hours violating city ordinance. Heavy machinery operating past 10 PM disturbing nearby residents.",
-    status: "reviewed" as const,
-    response:
-      "Thank you for your report. We've contacted the contractor to ensure compliance with noise ordinances. Night operations have been restricted to emergency situations only.",
-    responseDate: "2024-11-16",
-  },
-  {
-    id: 2,
-    projectId: "PROJ-2024-001",
-    date: "2024-11-10",
-    issue:
-      "Safety barriers damaged near station entrance creating pedestrian hazard.",
-    status: "resolved" as const,
-    response:
-      "Safety barriers have been repaired and reinforced. Additional safety inspections scheduled weekly.",
-    responseDate: "2024-11-12",
-  },
-  {
-    id: 3,
-    projectId: "PROJ-2024-001",
-    date: "2024-11-08",
-    issue:
-      "Water accumulation in excavation site causing mosquito breeding.",
-    status: "pending" as const,
-  },
-  // CALABARZON Water Supply System Expansion reports
-  {
-    id: 4,
-    projectId: "PROJ-2024-002",
-    date: "2024-11-12",
-    issue:
-      "Water pressure inconsistent in our barangay. Some households receiving very low pressure during peak hours.",
-    status: "reviewed" as const,
-    response:
-      "We've identified a pressure regulation issue in your area. Additional pumping stations will be installed to improve water pressure consistency.",
-    responseDate: "2024-11-14",
-  },
-  {
-    id: 5,
-    projectId: "PROJ-2024-002",
-    date: "2024-11-08",
-    issue:
-      "Construction crew left pipes exposed after work, creating safety hazard for children.",
-    status: "resolved" as const,
-    response:
-      "Thank you for reporting this safety concern. The exposed pipes have been properly covered and safety protocols have been reinforced with the construction team.",
-    responseDate: "2024-11-09",
-  },
-  // National Broadband Infrastructure Program reports
-  {
-    id: 6,
-    projectId: "PROJ-2024-003",
-    date: "2024-11-05",
-    issue:
-      "Fiber optic cables installation is behind schedule in our municipality. No updates provided to the community.",
-    status: "pending" as const,
-  },
-  // Cebu BRT System Implementation reports
-  {
-    id: 7,
-    projectId: "PROJ-2024-004",
-    date: "2024-10-20",
-    issue:
-      "Bus frequency during rush hours is insufficient. Long waiting times at major stations.",
-    status: "reviewed" as const,
-    response:
-      "Thank you for your feedback. We're working on increasing bus frequency during peak hours and have ordered additional buses for the fleet.",
-    responseDate: "2024-10-22",
-  },
-  // Palawan Airport Modernization reports
-  {
-    id: 8,
-    projectId: "PROJ-2024-007",
-    date: "2024-11-10",
-    issue:
-      "Construction delays affecting scheduled flights and tourist arrivals. Need better communication about timeline updates.",
-    status: "reviewed" as const,
-    response:
-      "We apologize for the delays. Weekly progress updates will now be shared with airlines and tourism operators. Expected completion moved to Q1 2025.",
-    responseDate: "2024-11-12",
-  },
-];
 
 export function ReportIssue({
   projectId,
@@ -163,16 +40,14 @@ export function ReportIssue({
   } | null>(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [showSuccess, setShowSuccess] = useState(false);
-  const [userReports, setUserReports] =
-    useState(mockUserReports);
+  const [userReports, setUserReports] = useState(reportsData);
 
   // Filter reports for current project
   const currentProjectReports = userReports.filter(
     (report) => report.projectId === projectId,
   );
 
-  const project =
-    mockProject[projectId as keyof typeof mockProject];
+  const project = projectsData[projectId as keyof typeof projectsData];
 
   const formatDate = (dateString: string) => {
     return new Date(dateString).toLocaleDateString("en-PH", {

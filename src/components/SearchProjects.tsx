@@ -3,142 +3,16 @@ import { Card } from "./ui/card";
 import { Input } from "./ui/input";
 import { Button } from "./ui/button";
 import { Badge } from "./ui/badge";
-import { Search, Filter, Calendar, MapPin, DollarSign, Check, ChevronsUpDown } from "lucide-react";
+import { Search, Filter, Calendar, MapPin, DollarSign, Check, ChevronsUpDown, X } from "lucide-react";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "./ui/select";
 import { Popover, PopoverContent, PopoverTrigger } from "./ui/popover";
 import { Command, CommandEmpty, CommandGroup, CommandInput, CommandItem } from "./ui/command";
 import { cn } from "@/lib/utils";
 
-const mockSearchResults = [
-  {
-    id: 1,
-    title: "Metro Manila Subway Project Phase 2",
-    description: "Underground rail system connecting key areas in Metro Manila",
-    budget: 75000000000,
-    allocated: 45000000000,
-    spent: 30600000000,
-    remaining: 44400000000,
-    status: "ongoing",
-    department: "Department of Transportation",
-    location: "Metro Manila",
-    startDate: "Jan 2023",
-    endDate: "Dec 2025",
-    contractor: "Sumitomo Mitsui Construction Co.",
-    category: "Transportation"
-  },
-  {
-    id: 2,
-    title: "CALABARZON Water Supply System Expansion",
-    description: "Water infrastructure improvement for CALABARZON region",
-    budget: 8200000000,
-    allocated: 8200000000,
-    spent: 6970000000,
-    remaining: 1230000000,
-    status: "ongoing",
-    department: "Department of Public Works and Highways",
-    location: "CALABARZON",
-    startDate: "Mar 2023",
-    endDate: "Sep 2024",
-    contractor: "Megawide Construction Corporation",
-    category: "Utilities"
-  },
-  {
-    id: 3,
-    title: "National Broadband Infrastructure Program",
-    description: "Nationwide fiber optic network expansion",
-    budget: 45000000000,
-    allocated: 45000000000,
-    spent: 18900000000,
-    remaining: 26100000000,
-    status: "delayed",
-    department: "Department of Information and Communications Technology",
-    location: "Nationwide",
-    startDate: "Jun 2022",
-    endDate: "Jun 2026",
-    contractor: "PLDT Inc. & Globe Telecom",
-    category: "Technology"
-  },
-  {
-    id: 4,
-    title: "Cebu BRT System Implementation",
-    description: "Bus Rapid Transit system for Cebu metropolitan area",
-    budget: 16800000000,
-    allocated: 16800000000,
-    spent: 16800000000,
-    remaining: 0,
-    status: "completed",
-    department: "Department of Transportation",
-    location: "Central Visayas",
-    startDate: "Jan 2022",
-    endDate: "Jan 2024",
-    contractor: "Asian Development Bank",
-    category: "Transportation"
-  },
-  {
-    id: 5,
-    title: "Mindanao Rural Electrification Program",
-    description: "Power grid expansion for rural communities in Mindanao",
-    budget: 12500000000,
-    allocated: 12500000000,
-    spent: 12500000000,
-    remaining: 0,
-    status: "completed",
-    department: "Department of Energy",
-    location: "Mindanao",
-    startDate: "Jun 2021",
-    endDate: "Mar 2024",
-    contractor: "National Grid Corporation",
-    category: "Utilities"
-  },
-  {
-    id: 6,
-    title: "Ilocos Norte Solar Farm Project",
-    description: "Large-scale solar power generation facility",
-    budget: 8900000000,
-    allocated: 8900000000,
-    spent: 3200000000,
-    remaining: 5700000000,
-    status: "ongoing",
-    department: "Department of Energy",
-    location: "Ilocos Region",
-    startDate: "Sep 2023",
-    endDate: "Dec 2025",
-    contractor: "Solar Philippines",
-    category: "Utilities"
-  },
-  {
-    id: 7,
-    title: "Palawan Airport Modernization",
-    description: "Upgrade and expansion of Puerto Princesa Airport",
-    budget: 5600000000,
-    allocated: 5600000000,
-    spent: 1400000000,
-    remaining: 4200000000,
-    status: "delayed",
-    department: "Department of Transportation",
-    location: "MIMAROPA",
-    startDate: "Apr 2023",
-    endDate: "Nov 2024",
-    contractor: "Filinvest Development Corp.",
-    category: "Infrastructure"
-  },
-  {
-    id: 8,
-    title: "Bicol Regional Medical Center Upgrade",
-    description: "Hospital expansion and equipment modernization",
-    budget: 3200000000,
-    allocated: 3200000000,
-    spent: 2700000000,
-    remaining: 500000000,
-    status: "ongoing",
-    department: "Department of Health",
-    location: "Bicol Region",
-    startDate: "Feb 2023",
-    endDate: "Aug 2024",
-    contractor: "D.M. Consunji Inc.",
-    category: "Healthcare"
-  }
-];
+// Import data from external JSON file
+import searchResultsData from "../data/searchResults.json";
+
+const mockSearchResults = searchResultsData;
 
 interface SearchProjectsProps {
   onProjectClick?: (projectId: string) => void;
@@ -217,7 +91,26 @@ export function SearchProjects({ onProjectClick }: SearchProjectsProps) {
     setResults(mockSearchResults);
   };
 
-  const categories = ["Transportation", "Utilities", "Technology", "Healthcare", "Education", "Infrastructure"];
+  const categories = [
+    "Infrastructure", 
+    "Safety & Security", 
+    "Utilities", 
+    "Environment", 
+    "Healthcare", 
+    "Education",
+    "Transportation",
+    "Public Services",
+    "Technology & Digital Services",
+    "Economic Development",
+    "Social Services",
+    "Housing & Urban Planning",
+    "Food Safety & Agriculture",
+    "Legal & Justice",
+    "Emergency Services",
+    "Tourism & Culture",
+    "Finance & Budget"
+  ];
+  
   const departments = [
     "Department of Transportation",
     "Department of Public Works and Highways", 
@@ -496,6 +389,7 @@ export function SearchProjects({ onProjectClick }: SearchProjectsProps) {
                 {results.length} projects found
               </span>
               <Button variant="outline" size="sm" onClick={clearFilters}>
+                <X className="w-4 h-4 mr-2" />
                 Clear Filters
               </Button>
             </div>

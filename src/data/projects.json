@@ -1,0 +1,868 @@
+{
+  "PROJ-2024-001": {
+    "id": "PROJ-2024-001",
+    "title": "Metro Manila Subway Project Phase 2",
+    "location": "Metro Manila",
+    "category": "Transportation",
+    "status": "ongoing",
+    "progress": 68,
+    "startDate": "2023-01-01",
+    "expectedCompletion": "2025-12-31",
+    "description": "Underground rail system connecting key areas in Metro Manila",
+    "budget": {
+      "total": 75000000000,
+      "allocated": 75000000000,
+      "spent": 51000000000,
+      "remaining": 24000000000
+    },
+    "milestones": [
+      { "id": 1, "title": "Site Preparation", "date": "2022-03-01", "status": "completed" },
+      { "id": 2, "title": "Foundation Work", "date": "2022-08-15", "status": "completed" },
+      { "id": 3, "title": "Tunnel Boring", "date": "2023-06-01", "status": "completed" },
+      { "id": 4, "title": "Station Construction", "date": "2024-01-01", "status": "ongoing" },
+      { "id": 5, "title": "Track Installation", "date": "2024-09-01", "status": "pending" },
+      { "id": 6, "title": "Systems Testing", "date": "2025-06-01", "status": "pending" },
+      { "id": 7, "title": "Commercial Operation", "date": "2025-12-31", "status": "pending" }
+    ],
+    "monthlySpending": [
+      { "month": "Jul", "amount": 2500000000 },
+      { "month": "Aug", "amount": 3200000000 },
+      { "month": "Sep", "amount": 2800000000 },
+      { "month": "Oct", "amount": 3500000000 },
+      { "month": "Nov", "amount": 2900000000 }
+    ],
+    "documents": [
+      { "id": 1, "name": "Environmental Impact Assessment", "type": "PDF", "size": "2.4 MB", "date": "2024-01-15" },
+      { "id": 2, "name": "Technical Specifications", "type": "PDF", "size": "5.1 MB", "date": "2024-02-20" },
+      { "id": 3, "name": "Progress Report Q3 2024", "type": "PDF", "size": "1.8 MB", "date": "2024-10-01" },
+      { "id": 4, "name": "Budget Breakdown 2024", "type": "XLSX", "size": "892 KB", "date": "2024-01-01" }
+    ],
+    "feedback": [
+      { "id": 1, "author": "Juan Dela Cruz", "date": "2024-11-10", "comment": "Great progress on the project! The reduced traffic in our area is already noticeable.", "upvotes": 24, "downvotes": 2, "userVote": "up" },
+      { "id": 2, "author": "Maria Santos", "date": "2024-11-08", "comment": "Construction noise has been disruptive, but understanding it's for long-term benefit.", "upvotes": 15, "downvotes": 8, "userVote": null },
+      { "id": 3, "author": "Ana Rodriguez", "date": "2024-11-05", "comment": "Looking forward to the completion. This will greatly improve commuting in Metro Manila.", "upvotes": 31, "downvotes": 1, "userVote": "up" }
+    ],
+    "coordinates": { "lat": 14.5995, "lng": 121.0023 },
+    "position": { "top": "35%", "left": "48%" },
+    "contractor": "Sumitomo Mitsui Construction Co.",
+    "department": "Department of Transportation",
+    "endDate": "Dec 2025"
+  },
+  "PROJ-2024-002": {
+    "id": "PROJ-2024-002",
+    "title": "CALABARZON Water Supply System Expansion",
+    "location": "CALABARZON",
+    "category": "Utilities",
+    "status": "ongoing",
+    "progress": 85,
+    "startDate": "2023-03-01",
+    "expectedCompletion": "2024-09-30",
+    "description": "Water infrastructure improvement for CALABARZON region",
+    "budget": {
+      "total": 8200000000,
+      "allocated": 8200000000,
+      "spent": 6970000000,
+      "remaining": 1230000000
+    },
+    "milestones": [
+      { "id": 1, "title": "Water Source Assessment", "date": "2023-03-15", "status": "completed" },
+      { "id": 2, "title": "Treatment Plant Construction", "date": "2023-06-01", "status": "completed" },
+      { "id": 3, "title": "Distribution Network", "date": "2023-12-01", "status": "completed" },
+      { "id": 4, "title": "Household Connections", "date": "2024-03-01", "status": "completed" },
+      { "id": 5, "title": "Quality Testing", "date": "2024-07-01", "status": "ongoing" },
+      { "id": 6, "title": "System Handover", "date": "2024-09-30", "status": "pending" }
+    ],
+    "monthlySpending": [
+      { "month": "Jul", "amount": 450000000 },
+      { "month": "Aug", "amount": 380000000 },
+      { "month": "Sep", "amount": 420000000 },
+      { "month": "Oct", "amount": 350000000 },
+      { "month": "Nov", "amount": 290000000 }
+    ],
+    "documents": [
+      { "id": 1, "name": "Water Quality Standards", "type": "PDF", "size": "1.8 MB", "date": "2024-01-10" },
+      { "id": 2, "name": "Distribution Map", "type": "PDF", "size": "5.2 MB", "date": "2024-07-20" },
+      { "id": 3, "name": "Quality Test Results", "type": "PDF", "size": "2.1 MB", "date": "2024-10-15" },
+      { "id": 4, "name": "Maintenance Schedule", "type": "PDF", "size": "1.5 MB", "date": "2024-08-01" }
+    ],
+    "feedback": [
+      { "id": 1, "author": "Community Leader", "date": "2024-11-10", "comment": "Water quality has improved dramatically. Very grateful for this essential service upgrade.", "upvotes": 92, "downvotes": 2, "userVote": "up" },
+      { "id": 2, "author": "Local Resident", "date": "2024-11-07", "comment": "Construction was well-managed with minimal disruption to daily life. Thank you!", "upvotes": 67, "downvotes": 4, "userVote": "up" },
+      { "id": 3, "author": "Health Worker", "date": "2024-11-05", "comment": "This will significantly reduce waterborne diseases in our communities. Excellent project!", "upvotes": 78, "downvotes": 1, "userVote": null }
+    ],
+    "coordinates": { "lat": 14.2162, "lng": 121.1467 },
+    "position": { "top": "40%", "left": "50%" },
+    "contractor": "Megawide Construction Corporation",
+    "department": "Department of Public Works and Highways",
+    "endDate": "Sep 2024"
+  },
+  "PROJ-2024-003": {
+    "id": "PROJ-2024-003",
+    "title": "National Broadband Infrastructure Program",
+    "location": "Nationwide",
+    "category": "Technology",
+    "status": "delayed",
+    "progress": 42,
+    "startDate": "2022-06-01",
+    "expectedCompletion": "2026-06-30",
+    "description": "Nationwide fiber optic network expansion",
+    "budget": {
+      "total": 45000000000,
+      "allocated": 45000000000,
+      "spent": 18900000000,
+      "remaining": 26100000000
+    },
+    "milestones": [
+      { "id": 1, "title": "Network Design", "date": "2023-08-01", "status": "completed" },
+      { "id": 2, "title": "Procurement Phase", "date": "2023-12-01", "status": "completed" },
+      { "id": 3, "title": "Metro Manila Rollout", "date": "2024-03-01", "status": "completed" },
+      { "id": 4, "title": "Luzon Coverage", "date": "2024-12-01", "status": "ongoing" },
+      { "id": 5, "title": "Visayas Expansion", "date": "2025-06-01", "status": "pending" },
+      { "id": 6, "title": "Mindanao Integration", "date": "2025-12-01", "status": "pending" },
+      { "id": 7, "title": "Full National Coverage", "date": "2026-06-30", "status": "pending" }
+    ],
+    "monthlySpending": [
+      { "month": "Jul", "amount": 1800000000 },
+      { "month": "Aug", "amount": 2100000000 },
+      { "month": "Sep", "amount": 1900000000 },
+      { "month": "Oct", "amount": 1600000000 },
+      { "month": "Nov", "amount": 1400000000 }
+    ],
+    "documents": [
+      { "id": 1, "name": "Network Architecture Plan", "type": "PDF", "size": "8.7 MB", "date": "2023-07-15" },
+      { "id": 2, "name": "Delay Analysis Report", "type": "PDF", "size": "2.8 MB", "date": "2024-09-10" },
+      { "id": 3, "name": "Phase 1 Completion Report", "type": "PDF", "size": "4.3 MB", "date": "2024-08-01" },
+      { "id": 4, "name": "Revised Timeline", "type": "PDF", "size": "1.9 MB", "date": "2024-10-15" }
+    ],
+    "feedback": [
+      { "id": 1, "author": "Tech Entrepreneur", "date": "2024-11-12", "comment": "The delay is concerning for our digital economy. Hope to see faster progress in Q1 2025.", "upvotes": 67, "downvotes": 8, "userVote": null },
+      { "id": 2, "author": "Rural Teacher", "date": "2024-11-08", "comment": "Looking forward to better internet in our province. Online learning has been challenging.", "upvotes": 54, "downvotes": 3, "userVote": "up" },
+      { "id": 3, "author": "Business Owner", "date": "2024-11-05", "comment": "Metro Manila rollout was excellent. Hoping other regions get the same quality implementation.", "upvotes": 43, "downvotes": 5, "userVote": "up" }
+    ],
+    "coordinates": { "lat": 12.8797, "lng": 121.7740 },
+    "position": { "top": "50%", "left": "55%" },
+    "contractor": "PLDT Inc. & Globe Telecom",
+    "department": "Department of Information and Communications Technology",
+    "endDate": "Jun 2026"
+  },
+  "PROJ-2024-004": {
+    "id": "PROJ-2024-004",
+    "title": "Cebu BRT System Implementation",
+    "location": "Central Visayas",
+    "category": "Transportation",
+    "status": "completed",
+    "progress": 100,
+    "startDate": "2022-01-01",
+    "expectedCompletion": "2024-01-31",
+    "description": "Bus Rapid Transit system for Cebu metropolitan area",
+    "budget": {
+      "total": 16800000000,
+      "allocated": 16800000000,
+      "spent": 16800000000,
+      "remaining": 0
+    },
+    "milestones": [
+      { "id": 1, "title": "Route Planning", "date": "2020-07-01", "status": "completed" },
+      { "id": 2, "title": "Lane Construction", "date": "2021-03-01", "status": "completed" },
+      { "id": 3, "title": "Station Development", "date": "2022-01-01", "status": "completed" },
+      { "id": 4, "title": "Fleet Procurement", "date": "2022-09-01", "status": "completed" },
+      { "id": 5, "title": "System Testing", "date": "2023-09-01", "status": "completed" },
+      { "id": 6, "title": "Commercial Launch", "date": "2024-01-31", "status": "completed" }
+    ],
+    "monthlySpending": [
+      { "month": "Sep 23", "amount": 800000000 },
+      { "month": "Oct 23", "amount": 900000000 },
+      { "month": "Nov 23", "amount": 750000000 },
+      { "month": "Dec 23", "amount": 650000000 },
+      { "month": "Jan 24", "amount": 400000000 }
+    ],
+    "documents": [
+      { "id": 1, "name": "Route Optimization Study", "type": "PDF", "size": "4.1 MB", "date": "2024-02-01" },
+      { "id": 2, "name": "Operations Manual", "type": "PDF", "size": "6.5 MB", "date": "2024-01-20" },
+      { "id": 3, "name": "Performance Metrics", "type": "PDF", "size": "2.8 MB", "date": "2024-10-01" },
+      { "id": 4, "name": "Passenger Survey Results", "type": "PDF", "size": "3.2 MB", "date": "2024-09-15" }
+    ],
+    "feedback": [
+      { "id": 1, "author": "Daily Commuter", "date": "2024-11-08", "comment": "BRT has cut my commute time in half! Much more reliable than previous options.", "upvotes": 156, "downvotes": 8, "userVote": "up" },
+      { "id": 2, "author": "Business Owner", "date": "2024-11-05", "comment": "Great for business - easier for customers and employees to reach our location.", "upvotes": 89, "downvotes": 3, "userVote": "up" },
+      { "id": 3, "author": "Tourist", "date": "2024-11-02", "comment": "Impressed with the modern system! Makes getting around Cebu much easier.", "upvotes": 67, "downvotes": 2, "userVote": null }
+    ],
+    "coordinates": { "lat": 10.3157, "lng": 123.8854 },
+    "position": { "top": "55%", "left": "62%" },
+    "contractor": "Asian Development Bank",
+    "department": "Department of Transportation",
+    "endDate": "Jan 2024"
+  },
+  "PROJ-2024-005": {
+    "id": "PROJ-2024-005",
+    "title": "Mindanao Rural Electrification Program",
+    "location": "Mindanao",
+    "category": "Utilities",
+    "status": "completed",
+    "progress": 100,
+    "startDate": "2021-06-01",
+    "expectedCompletion": "2024-03-31",
+    "description": "Power grid expansion for rural communities in Mindanao",
+    "budget": {
+      "total": 12500000000,
+      "allocated": 12500000000,
+      "spent": 12500000000,
+      "remaining": 0
+    },
+    "milestones": [
+      { "id": 1, "title": "Community Assessment", "date": "2020-04-01", "status": "completed" },
+      { "id": 2, "title": "Grid Planning", "date": "2020-08-01", "status": "completed" },
+      { "id": 3, "title": "Power Line Installation", "date": "2021-01-01", "status": "completed" },
+      { "id": 4, "title": "Transformer Setup", "date": "2022-06-01", "status": "completed" },
+      { "id": 5, "title": "Connection Testing", "date": "2023-09-01", "status": "completed" },
+      { "id": 6, "title": "Final Handover", "date": "2024-03-31", "status": "completed" }
+    ],
+    "monthlySpending": [
+      { "month": "Nov 23", "amount": 800000000 },
+      { "month": "Dec 23", "amount": 900000000 },
+      { "month": "Jan 24", "amount": 750000000 },
+      { "month": "Feb 24", "amount": 650000000 },
+      { "month": "Mar 24", "amount": 400000000 }
+    ],
+    "documents": [
+      { "id": 1, "name": "Community Impact Report", "type": "PDF", "size": "3.2 MB", "date": "2024-04-01" },
+      { "id": 2, "name": "Final Engineering Report", "type": "PDF", "size": "6.8 MB", "date": "2024-03-25" },
+      { "id": 3, "name": "Completion Certificate", "type": "PDF", "size": "1.1 MB", "date": "2024-03-31" },
+      { "id": 4, "name": "Maintenance Guidelines", "type": "PDF", "size": "2.5 MB", "date": "2024-04-05" }
+    ],
+    "feedback": [
+      { "id": 1, "author": "Roberto Fernandez", "date": "2024-04-10", "comment": "This project has transformed our community! Our children can now study at night and local businesses are thriving.", "upvotes": 89, "downvotes": 3, "userVote": "up" },
+      { "id": 2, "author": "Luz Mercado", "date": "2024-04-08", "comment": "Finally reliable electricity! Thank you to everyone involved in making this happen.", "upvotes": 76, "downvotes": 1, "userVote": "up" },
+      { "id": 3, "author": "Carlos Reyes", "date": "2024-04-05", "comment": "Excellent work by the implementation team. The installation was done professionally and efficiently.", "upvotes": 45, "downvotes": 2, "userVote": null }
+    ],
+    "coordinates": { "lat": 8.9806, "lng": 125.5444 },
+    "position": { "top": "75%", "left": "68%" },
+    "contractor": "National Grid Corporation",
+    "department": "Department of Energy",
+    "endDate": "Mar 2024"
+  },
+  "PROJ-2024-006": {
+    "id": "PROJ-2024-006",
+    "title": "Ilocos Norte Solar Farm Project",
+    "location": "Ilocos Region",
+    "category": "Utilities",
+    "status": "ongoing",
+    "progress": 36,
+    "startDate": "2023-09-01",
+    "expectedCompletion": "2025-12-31",
+    "description": "Large-scale solar power generation facility",
+    "budget": {
+      "total": 8900000000,
+      "allocated": 8900000000,
+      "spent": 3200000000,
+      "remaining": 5700000000
+    },
+    "milestones": [
+      { "id": 1, "title": "Site Preparation", "date": "2023-10-01", "status": "completed" },
+      { "id": 2, "title": "Environmental Clearance", "date": "2023-12-01", "status": "completed" },
+      { "id": 3, "title": "Solar Panel Installation", "date": "2024-03-01", "status": "completed" },
+      { "id": 4, "title": "Grid Connection Setup", "date": "2024-08-01", "status": "ongoing" },
+      { "id": 5, "title": "Power Testing", "date": "2025-03-01", "status": "pending" },
+      { "id": 6, "title": "Commercial Operation", "date": "2025-12-31", "status": "pending" }
+    ],
+    "monthlySpending": [
+      { "month": "Jul", "amount": 420000000 },
+      { "month": "Aug", "amount": 380000000 },
+      { "month": "Sep", "amount": 450000000 },
+      { "month": "Oct", "amount": 390000000 },
+      { "month": "Nov", "amount": 350000000 }
+    ],
+    "documents": [
+      { "id": 1, "name": "Environmental Impact Assessment", "type": "PDF", "size": "4.2 MB", "date": "2023-11-10" },
+      { "id": 2, "name": "Solar Panel Specifications", "type": "PDF", "size": "6.8 MB", "date": "2024-02-15" },
+      { "id": 3, "name": "Grid Integration Plan", "type": "PDF", "size": "3.1 MB", "date": "2024-07-20" },
+      { "id": 4, "name": "Progress Report Q3 2024", "type": "PDF", "size": "2.4 MB", "date": "2024-10-01" }
+    ],
+    "feedback": [
+      { "id": 1, "author": "Environmental Advocate", "date": "2024-11-08", "comment": "Excellent renewable energy initiative! This will significantly reduce our carbon footprint.", "upvotes": 89, "downvotes": 4, "userVote": "up" },
+      { "id": 2, "author": "Local Farmer", "date": "2024-11-05", "comment": "Good project but hope it doesn't affect our agricultural land usage in the long term.", "upvotes": 45, "downvotes": 12, "userVote": null },
+      { "id": 3, "author": "Energy Professional", "date": "2024-11-03", "comment": "Great investment in renewable energy. Will help stabilize power supply in Northern Luzon.", "upvotes": 67, "downvotes": 3, "userVote": "up" }
+    ],
+    "coordinates": { "lat": 18.1967, "lng": 120.5931 },
+    "position": { "top": "15%", "left": "40%" },
+    "contractor": "Solar Philippines",
+    "department": "Department of Energy",
+    "endDate": "Dec 2025"
+  },
+  "PROJ-2024-007": {
+    "id": "PROJ-2024-007",
+    "title": "Palawan Airport Modernization",
+    "location": "MIMAROPA",
+    "category": "Infrastructure",
+    "status": "delayed",
+    "progress": 25,
+    "startDate": "2023-04-01",
+    "expectedCompletion": "2024-11-30",
+    "description": "Upgrade and expansion of Puerto Princesa Airport",
+    "budget": {
+      "total": 5600000000,
+      "allocated": 5600000000,
+      "spent": 1400000000,
+      "remaining": 4200000000
+    },
+    "milestones": [
+      { "id": 1, "title": "Design and Planning", "date": "2023-06-01", "status": "completed" },
+      { "id": 2, "title": "Terminal Expansion", "date": "2023-10-01", "status": "completed" },
+      { "id": 3, "title": "Runway Improvements", "date": "2024-02-01", "status": "ongoing" },
+      { "id": 4, "title": "Baggage System Upgrade", "date": "2024-06-01", "status": "pending" },
+      { "id": 5, "title": "Security System Installation", "date": "2024-09-01", "status": "pending" },
+      { "id": 6, "title": "Final Testing and Handover", "date": "2024-11-30", "status": "pending" }
+    ],
+    "monthlySpending": [
+      { "month": "Jul", "amount": 180000000 },
+      { "month": "Aug", "amount": 150000000 },
+      { "month": "Sep", "amount": 120000000 },
+      { "month": "Oct", "amount": 100000000 },
+      { "month": "Nov", "amount": 95000000 }
+    ],
+    "documents": [
+      { "id": 1, "name": "Airport Master Plan", "type": "PDF", "size": "8.7 MB", "date": "2023-05-15" },
+      { "id": 2, "name": "Delay Analysis Report", "type": "PDF", "size": "2.1 MB", "date": "2024-08-20" },
+      { "id": 3, "name": "Terminal Design Blueprints", "type": "PDF", "size": "12.4 MB", "date": "2023-09-10" },
+      { "id": 4, "name": "Environmental Compliance Report", "type": "PDF", "size": "3.8 MB", "date": "2024-01-15" }
+    ],
+    "feedback": [
+      { "id": 1, "author": "Tourism Operator", "date": "2024-11-09", "comment": "The delays are affecting tourism bookings. Hope to see completion soon for the holiday season.", "upvotes": 78, "downvotes": 15, "userVote": "up" },
+      { "id": 2, "author": "Local Resident", "date": "2024-11-06", "comment": "Construction noise has been disruptive but we understand the long-term benefits for Palawan.", "upvotes": 54, "downvotes": 8, "userVote": null },
+      { "id": 3, "author": "Business Owner", "date": "2024-11-04", "comment": "Looking forward to better airport facilities. This will boost business and tourism in our area.", "upvotes": 62, "downvotes": 3, "userVote": "up" }
+    ],
+    "coordinates": { "lat": 9.7417, "lng": 118.7354 },
+    "position": { "top": "65%", "left": "30%" },
+    "contractor": "Filinvest Development Corp.",
+    "department": "Department of Transportation",
+    "endDate": "Nov 2024"
+  },
+  "PROJ-2024-008": {
+    "id": "PROJ-2024-008",
+    "title": "Bicol Regional Medical Center Upgrade",
+    "location": "Bicol Region",
+    "category": "Healthcare",
+    "status": "ongoing",
+    "progress": 84,
+    "startDate": "2023-02-01",
+    "expectedCompletion": "2024-08-31",
+    "description": "Hospital expansion and equipment modernization",
+    "budget": {
+      "total": 3200000000,
+      "allocated": 3200000000,
+      "spent": 2700000000,
+      "remaining": 500000000
+    },
+    "milestones": [
+      { "id": 1, "title": "Building Expansion", "date": "2023-04-01", "status": "completed" },
+      { "id": 2, "title": "Medical Equipment Procurement", "date": "2023-08-01", "status": "completed" },
+      { "id": 3, "title": "ICU Upgrade", "date": "2023-12-01", "status": "completed" },
+      { "id": 4, "title": "Emergency Department Expansion", "date": "2024-03-01", "status": "completed" },
+      { "id": 5, "title": "Staff Training Programs", "date": "2024-06-01", "status": "ongoing" },
+      { "id": 6, "title": "Final Certification", "date": "2024-08-31", "status": "pending" }
+    ],
+    "monthlySpending": [
+      { "month": "Jul", "amount": 120000000 },
+      { "month": "Aug", "amount": 98000000 },
+      { "month": "Sep", "amount": 85000000 },
+      { "month": "Oct", "amount": 75000000 },
+      { "month": "Nov", "amount": 65000000 }
+    ],
+    "documents": [
+      { "id": 1, "name": "Medical Equipment Inventory", "type": "PDF", "size": "3.4 MB", "date": "2024-01-20" },
+      { "id": 2, "name": "Staff Training Manual", "type": "PDF", "size": "5.7 MB", "date": "2024-06-15" },
+      { "id": 3, "name": "Safety Protocols Update", "type": "PDF", "size": "2.8 MB", "date": "2024-08-10" },
+      { "id": 4, "name": "Progress Report Q3 2024", "type": "PDF", "size": "1.9 MB", "date": "2024-10-01" }
+    ],
+    "feedback": [
+      { "id": 1, "author": "Healthcare Worker", "date": "2024-11-10", "comment": "The new equipment and facilities have greatly improved our ability to serve patients. Thank you!", "upvotes": 156, "downvotes": 2, "userVote": "up" },
+      { "id": 2, "author": "Patient Family", "date": "2024-11-07", "comment": "Much better facilities now. The new emergency department saved our father's life last month.", "upvotes": 203, "downvotes": 1, "userVote": "up" },
+      { "id": 3, "author": "Community Leader", "date": "2024-11-05", "comment": "Excellent investment in our region's healthcare infrastructure. Well-managed project execution.", "upvotes": 98, "downvotes": 5, "userVote": "up" }
+    ],
+    "coordinates": { "lat": 13.1391, "lng": 123.7437 },
+    "position": { "top": "45%", "left": "65%" },
+    "contractor": "D.M. Consunji Inc.",
+    "department": "Department of Health",
+    "endDate": "Aug 2024"
+  },
+  "PROJ-2024-009": {
+    "id": "PROJ-2024-009",
+    "title": "Davao Smart City Initiative",
+    "location": "Davao Region",
+    "category": "Technology & Digital Services",
+    "status": "ongoing",
+    "progress": 42,
+    "startDate": "2023-08-01",
+    "expectedCompletion": "2026-03-31",
+    "description": "Comprehensive digital transformation of Davao City infrastructure",
+    "budget": {
+      "total": 15200000000,
+      "allocated": 15200000000,
+      "spent": 6384000000,
+      "remaining": 8816000000
+    },
+    "milestones": [
+      { "id": 1, "title": "Digital Planning", "date": "2023-10-01", "status": "completed" },
+      { "id": 2, "title": "IoT Sensor Installation", "date": "2024-02-01", "status": "completed" },
+      { "id": 3, "title": "Traffic Management System", "date": "2024-08-01", "status": "ongoing" },
+      { "id": 4, "title": "E-Government Platform", "date": "2025-01-01", "status": "pending" },
+      { "id": 5, "title": "Public WiFi Network", "date": "2025-08-01", "status": "pending" },
+      { "id": 6, "title": "Full System Integration", "date": "2026-03-31", "status": "pending" }
+    ],
+    "monthlySpending": [
+      { "month": "Jul", "amount": 780000000 },
+      { "month": "Aug", "amount": 650000000 },
+      { "month": "Sep", "amount": 720000000 },
+      { "month": "Oct", "amount": 580000000 },
+      { "month": "Nov", "amount": 490000000 }
+    ],
+    "documents": [
+      { "id": 1, "name": "Smart City Master Plan", "type": "PDF", "size": "12.3 MB", "date": "2023-09-15" },
+      { "id": 2, "name": "IoT Implementation Guide", "type": "PDF", "size": "5.8 MB", "date": "2024-01-20" },
+      { "id": 3, "name": "Privacy and Security Framework", "type": "PDF", "size": "3.4 MB", "date": "2024-06-10" },
+      { "id": 4, "name": "Progress Report Q3 2024", "type": "PDF", "size": "2.7 MB", "date": "2024-10-01" }
+    ],
+    "feedback": [
+      { "id": 1, "author": "Tech Professional", "date": "2024-11-12", "comment": "Great to see Davao leading in smart city development. The traffic improvements are already noticeable.", "upvotes": 94, "downvotes": 6, "userVote": "up" },
+      { "id": 2, "author": "Business Owner", "date": "2024-11-08", "comment": "The digital permits system has made business registration much faster. Excellent progress!", "upvotes": 78, "downvotes": 3, "userVote": "up" },
+      { "id": 3, "author": "Student", "date": "2024-11-05", "comment": "Looking forward to the public WiFi rollout. This will help students with online learning.", "upvotes": 56, "downvotes": 2, "userVote": null }
+    ],
+    "coordinates": { "lat": 7.1907, "lng": 125.4553 },
+    "position": { "top": "78%", "left": "72%" },
+    "contractor": "Smart Cities Philippines Inc.",
+    "department": "Department of Information and Communications Technology",
+    "endDate": "Mar 2026"
+  },
+  "PROJ-2024-010": {
+    "id": "PROJ-2024-010",
+    "title": "Northern Luzon Agricultural Research Center",
+    "location": "Cagayan Valley",
+    "category": "Food Safety & Agriculture",
+    "status": "ongoing",
+    "progress": 65,
+    "startDate": "2023-01-15",
+    "expectedCompletion": "2024-12-31",
+    "description": "Advanced agricultural research facility for crop development and food security",
+    "budget": {
+      "total": 4800000000,
+      "allocated": 4800000000,
+      "spent": 3120000000,
+      "remaining": 1680000000
+    },
+    "milestones": [
+      { "id": 1, "title": "Site Development", "date": "2023-03-01", "status": "completed" },
+      { "id": 2, "title": "Laboratory Construction", "date": "2023-08-01", "status": "completed" },
+      { "id": 3, "title": "Equipment Installation", "date": "2024-02-01", "status": "completed" },
+      { "id": 4, "title": "Research Program Launch", "date": "2024-06-01", "status": "ongoing" },
+      { "id": 5, "title": "Community Outreach Programs", "date": "2024-10-01", "status": "ongoing" },
+      { "id": 6, "title": "Full Operations", "date": "2024-12-31", "status": "pending" }
+    ],
+    "monthlySpending": [
+      { "month": "Jul", "amount": 320000000 },
+      { "month": "Aug", "amount": 280000000 },
+      { "month": "Sep", "amount": 250000000 },
+      { "month": "Oct", "amount": 220000000 },
+      { "month": "Nov", "amount": 190000000 }
+    ],
+    "documents": [
+      { "id": 1, "name": "Research Facility Design", "type": "PDF", "size": "8.9 MB", "date": "2023-02-10" },
+      { "id": 2, "name": "Equipment Specifications", "type": "PDF", "size": "6.2 MB", "date": "2024-01-15" },
+      { "id": 3, "name": "Farmer Training Manual", "type": "PDF", "size": "4.1 MB", "date": "2024-08-20" },
+      { "id": 4, "name": "Research Progress Report", "type": "PDF", "size": "3.5 MB", "date": "2024-10-15" }
+    ],
+    "feedback": [
+      { "id": 1, "author": "Local Farmer", "date": "2024-11-10", "comment": "The training programs have already helped improve our crop yields. Very valuable project for our community.", "upvotes": 87, "downvotes": 2, "userVote": "up" },
+      { "id": 2, "author": "Agricultural Expert", "date": "2024-11-07", "comment": "State-of-the-art facilities will put Philippines at the forefront of agricultural research in Southeast Asia.", "upvotes": 65, "downvotes": 1, "userVote": "up" },
+      { "id": 3, "author": "Cooperative Leader", "date": "2024-11-04", "comment": "Great collaboration with local farming cooperatives. This will benefit thousands of farmers in the region.", "upvotes": 72, "downvotes": 3, "userVote": "up" }
+    ],
+    "coordinates": { "lat": 17.6132, "lng": 121.7270 },
+    "position": { "top": "20%", "left": "58%" },
+    "contractor": "Philippine Agriculture Development Corp.",
+    "department": "Department of Agriculture",
+    "endDate": "Dec 2024"
+  },
+  "PROJ-2024-011": {
+    "id": "PROJ-2024-011",
+    "title": "Baguio Disaster Preparedness Center",
+    "location": "Cordillera Administrative Region",
+    "category": "Emergency Services",
+    "status": "ongoing",
+    "progress": 78,
+    "startDate": "2023-05-01",
+    "expectedCompletion": "2024-11-30",
+    "description": "Regional emergency response and disaster management facility",
+    "budget": {
+      "total": 2800000000,
+      "allocated": 2800000000,
+      "spent": 2184000000,
+      "remaining": 616000000
+    },
+    "milestones": [
+      { "id": 1, "title": "Command Center Construction", "date": "2023-07-01", "status": "completed" },
+      { "id": 2, "title": "Communication Systems", "date": "2023-11-01", "status": "completed" },
+      { "id": 3, "title": "Equipment Procurement", "date": "2024-03-01", "status": "completed" },
+      { "id": 4, "title": "Staff Training", "date": "2024-07-01", "status": "completed" },
+      { "id": 5, "title": "System Integration Testing", "date": "2024-10-01", "status": "ongoing" },
+      { "id": 6, "title": "Operational Handover", "date": "2024-11-30", "status": "pending" }
+    ],
+    "monthlySpending": [
+      { "month": "Jul", "amount": 180000000 },
+      { "month": "Aug", "amount": 140000000 },
+      { "month": "Sep", "amount": 120000000 },
+      { "month": "Oct", "amount": 95000000 },
+      { "month": "Nov", "amount": 75000000 }
+    ],
+    "documents": [
+      { "id": 1, "name": "Emergency Response Protocols", "type": "PDF", "size": "4.6 MB", "date": "2024-06-15" },
+      { "id": 2, "name": "Communication Network Plan", "type": "PDF", "size": "3.8 MB", "date": "2023-10-20" },
+      { "id": 3, "name": "Training Certification Program", "type": "PDF", "size": "2.9 MB", "date": "2024-08-10" },
+      { "id": 4, "name": "Equipment Inventory", "type": "PDF", "size": "5.2 MB", "date": "2024-09-25" }
+    ],
+    "feedback": [
+      { "id": 1, "author": "Emergency Responder", "date": "2024-11-11", "comment": "The new facility will significantly improve our response time during disasters. Well-designed and equipped.", "upvotes": 103, "downvotes": 1, "userVote": "up" },
+      { "id": 2, "author": "Local Official", "date": "2024-11-08", "comment": "Excellent project for disaster-prone areas like ours. The training programs are very comprehensive.", "upvotes": 89, "downvotes": 3, "userVote": "up" },
+      { "id": 3, "author": "Community Leader", "date": "2024-11-05", "comment": "This gives us peace of mind knowing we have proper disaster response capabilities in our region.", "upvotes": 76, "downvotes": 2, "userVote": "up" }
+    ],
+    "coordinates": { "lat": 16.4023, "lng": 120.5960 },
+    "position": { "top": "18%", "left": "45%" },
+    "contractor": "Hazard Mitigation Solutions Inc.",
+    "department": "Department of National Defense",
+    "endDate": "Nov 2024"
+  },
+  "PROJ-2024-012": {
+    "id": "PROJ-2024-012",
+    "title": "Western Visayas Affordable Housing Program",
+    "location": "Western Visayas",
+    "category": "Housing & Urban Planning",
+    "status": "ongoing",
+    "progress": 55,
+    "startDate": "2023-04-01",
+    "expectedCompletion": "2025-10-31",
+    "description": "Mass housing development for low-income families in Western Visayas",
+    "budget": {
+      "total": 18500000000,
+      "allocated": 18500000000,
+      "spent": 10175000000,
+      "remaining": 8325000000
+    },
+    "milestones": [
+      { "id": 1, "title": "Site Acquisition", "date": "2023-06-01", "status": "completed" },
+      { "id": 2, "title": "Master Planning", "date": "2023-09-01", "status": "completed" },
+      { "id": 3, "title": "Phase 1 Construction", "date": "2024-01-01", "status": "completed" },
+      { "id": 4, "title": "Phase 2 Construction", "date": "2024-08-01", "status": "ongoing" },
+      { "id": 5, "title": "Infrastructure Development", "date": "2025-03-01", "status": "pending" },
+      { "id": 6, "title": "Community Handover", "date": "2025-10-31", "status": "pending" }
+    ],
+    "monthlySpending": [
+      { "month": "Jul", "amount": 920000000 },
+      { "month": "Aug", "amount": 850000000 },
+      { "month": "Sep", "amount": 780000000 },
+      { "month": "Oct", "amount": 710000000 },
+      { "month": "Nov", "amount": 680000000 }
+    ],
+    "documents": [
+      { "id": 1, "name": "Housing Development Plan", "type": "PDF", "size": "15.2 MB", "date": "2023-08-15" },
+      { "id": 2, "name": "Beneficiary Selection Criteria", "type": "PDF", "size": "2.8 MB", "date": "2023-10-10" },
+      { "id": 3, "name": "Community Amenities Design", "type": "PDF", "size": "8.7 MB", "date": "2024-02-20" },
+      { "id": 4, "name": "Progress Report Q3 2024", "type": "PDF", "size": "4.1 MB", "date": "2024-10-01" }
+    ],
+    "feedback": [
+      { "id": 1, "author": "Housing Beneficiary", "date": "2024-11-12", "comment": "Finally have a chance to own a home for my family. The quality is better than expected for the price.", "upvotes": 145, "downvotes": 5, "userVote": "up" },
+      { "id": 2, "author": "Social Worker", "date": "2024-11-09", "comment": "This program is addressing the urgent housing needs in our region. Good selection process for beneficiaries.", "upvotes": 98, "downvotes": 8, "userVote": "up" },
+      { "id": 3, "author": "Local Business Owner", "date": "2024-11-06", "comment": "The project is bringing economic activity to our area. New residents are supporting local businesses.", "upvotes": 67, "downvotes": 4, "userVote": "up" }
+    ],
+    "coordinates": { "lat": 10.7202, "lng": 122.5621 },
+    "position": { "top": "58%", "left": "35%" },
+    "contractor": "National Housing Authority",
+    "department": "Department of Human Settlements and Urban Development",
+    "endDate": "Oct 2025"
+  },
+  "PROJ-2024-013": {
+    "id": "PROJ-2024-013",
+    "title": "Bataan Environmental Restoration Project",
+    "location": "Central Luzon",
+    "category": "Environment",
+    "status": "ongoing",
+    "progress": 38,
+    "startDate": "2023-07-01",
+    "expectedCompletion": "2026-06-30",
+    "description": "Comprehensive environmental cleanup and restoration of Bataan coastline",
+    "budget": {
+      "total": 12300000000,
+      "allocated": 12300000000,
+      "spent": 4674000000,
+      "remaining": 7626000000
+    },
+    "milestones": [
+      { "id": 1, "title": "Environmental Assessment", "date": "2023-09-01", "status": "completed" },
+      { "id": 2, "title": "Cleanup Phase 1", "date": "2024-01-01", "status": "completed" },
+      { "id": 3, "title": "Marine Habitat Restoration", "date": "2024-06-01", "status": "ongoing" },
+      { "id": 4, "title": "Mangrove Replanting", "date": "2025-01-01", "status": "pending" },
+      { "id": 5, "title": "Community Education Programs", "date": "2025-08-01", "status": "pending" },
+      { "id": 6, "title": "Long-term Monitoring Setup", "date": "2026-06-30", "status": "pending" }
+    ],
+    "monthlySpending": [
+      { "month": "Jul", "amount": 420000000 },
+      { "month": "Aug", "amount": 380000000 },
+      { "month": "Sep", "amount": 350000000 },
+      { "month": "Oct", "amount": 320000000 },
+      { "month": "Nov", "amount": 290000000 }
+    ],
+    "documents": [
+      { "id": 1, "name": "Environmental Impact Study", "type": "PDF", "size": "18.4 MB", "date": "2023-08-20" },
+      { "id": 2, "name": "Marine Restoration Plan", "type": "PDF", "size": "9.6 MB", "date": "2024-05-15" },
+      { "id": 3, "name": "Community Engagement Strategy", "type": "PDF", "size": "3.7 MB", "date": "2024-03-10" },
+      { "id": 4, "name": "Quarterly Progress Report", "type": "PDF", "size": "5.8 MB", "date": "2024-10-01" }
+    ],
+    "feedback": [
+      { "id": 1, "author": "Environmental Scientist", "date": "2024-11-11", "comment": "Excellent scientific approach to restoration. The marine ecosystem is already showing signs of recovery.", "upvotes": 112, "downvotes": 3, "userVote": "up" },
+      { "id": 2, "author": "Fisherman", "date": "2024-11-08", "comment": "Fish catch has improved in restored areas. Hope the project continues with the same quality.", "upvotes": 89, "downvotes": 7, "userVote": "up" },
+      { "id": 3, "author": "Tourism Operator", "date": "2024-11-05", "comment": "The coastline is looking much better. This will help revive eco-tourism in our area.", "upvotes": 76, "downvotes": 4, "userVote": "up" }
+    ],
+    "coordinates": { "lat": 14.6417, "lng": 120.4818 },
+    "position": { "top": "32%", "left": "42%" },
+    "contractor": "Environmental Solutions Corp.",
+    "department": "Department of Environment and Natural Resources",
+    "endDate": "Jun 2026"
+  },
+  "PROJ-2024-014": {
+    "id": "PROJ-2024-014",
+    "title": "Zamboanga Peninsula Trade Center",
+    "location": "Zamboanga Peninsula",
+    "category": "Economic Development",
+    "status": "ongoing",
+    "progress": 62,
+    "startDate": "2023-02-01",
+    "expectedCompletion": "2024-12-31",
+    "description": "Regional trade and commerce center to boost economic activity",
+    "budget": {
+      "total": 8700000000,
+      "allocated": 8700000000,
+      "spent": 5394000000,
+      "remaining": 3306000000
+    },
+    "milestones": [
+      { "id": 1, "title": "Site Preparation", "date": "2023-04-01", "status": "completed" },
+      { "id": 2, "title": "Building Construction", "date": "2023-08-01", "status": "completed" },
+      { "id": 3, "title": "Market Facilities", "date": "2024-02-01", "status": "completed" },
+      { "id": 4, "title": "Technology Infrastructure", "date": "2024-06-01", "status": "ongoing" },
+      { "id": 5, "title": "Vendor Setup and Training", "date": "2024-10-01", "status": "ongoing" },
+      { "id": 6, "title": "Grand Opening", "date": "2024-12-31", "status": "pending" }
+    ],
+    "monthlySpending": [
+      { "month": "Jul", "amount": 450000000 },
+      { "month": "Aug", "amount": 420000000 },
+      { "month": "Sep", "amount": 380000000 },
+      { "month": "Oct", "amount": 340000000 },
+      { "month": "Nov", "amount": 310000000 }
+    ],
+    "documents": [
+      { "id": 1, "name": "Trade Center Business Plan", "type": "PDF", "size": "7.3 MB", "date": "2023-01-15" },
+      { "id": 2, "name": "Vendor Application Guidelines", "type": "PDF", "size": "2.4 MB", "date": "2024-07-20" },
+      { "id": 3, "name": "Technology Systems Manual", "type": "PDF", "size": "4.8 MB", "date": "2024-08-15" },
+      { "id": 4, "name": "Economic Impact Assessment", "type": "PDF", "size": "6.1 MB", "date": "2024-09-30" }
+    ],
+    "feedback": [
+      { "id": 1, "author": "Local Merchant", "date": "2024-11-10", "comment": "This will revolutionize trade in our region. The facilities are modern and well-planned.", "upvotes": 94, "downvotes": 6, "userVote": "up" },
+      { "id": 2, "author": "Business Association", "date": "2024-11-07", "comment": "Excellent support for SMEs. The training programs are helping businesses modernize operations.", "upvotes": 78, "downvotes": 4, "userVote": "up" },
+      { "id": 3, "author": "Economic Analyst", "date": "2024-11-04", "comment": "Strategic location and good design. This should boost regional GDP significantly.", "upvotes": 65, "downvotes": 3, "userVote": "up" }
+    ],
+    "coordinates": { "lat": 6.9214, "lng": 122.0790 },
+    "position": { "top": "82%", "left": "25%" },
+    "contractor": "Commercial Development Inc.",
+    "department": "Department of Trade and Industry",
+    "endDate": "Dec 2024"
+  },
+  "PROJ-2024-015": {
+    "id": "PROJ-2024-015",
+    "title": "Eastern Samar Coastal Road Network",
+    "location": "Eastern Visayas",
+    "category": "Infrastructure",
+    "status": "delayed",
+    "progress": 28,
+    "startDate": "2023-03-01",
+    "expectedCompletion": "2025-08-31",
+    "description": "Coastal road network connecting remote barangays to main highways",
+    "budget": {
+      "total": 14200000000,
+      "allocated": 14200000000,
+      "spent": 3976000000,
+      "remaining": 10224000000
+    },
+    "milestones": [
+      { "id": 1, "title": "Route Survey", "date": "2023-05-01", "status": "completed" },
+      { "id": 2, "title": "Environmental Clearance", "date": "2023-08-01", "status": "completed" },
+      { "id": 3, "title": "Bridge Construction", "date": "2024-01-01", "status": "ongoing" },
+      { "id": 4, "title": "Main Road Construction", "date": "2024-08-01", "status": "pending" },
+      { "id": 5, "title": "Secondary Road Connections", "date": "2025-02-01", "status": "pending" },
+      { "id": 6, "title": "Project Completion", "date": "2025-08-31", "status": "pending" }
+    ],
+    "monthlySpending": [
+      { "month": "Jul", "amount": 280000000 },
+      { "month": "Aug", "amount": 240000000 },
+      { "month": "Sep", "amount": 210000000 },
+      { "month": "Oct", "amount": 180000000 },
+      { "month": "Nov", "amount": 150000000 }
+    ],
+    "documents": [
+      { "id": 1, "name": "Coastal Road Master Plan", "type": "PDF", "size": "11.7 MB", "date": "2023-04-20" },
+      { "id": 2, "name": "Bridge Engineering Design", "type": "PDF", "size": "8.9 MB", "date": "2023-12-15" },
+      { "id": 3, "name": "Environmental Compliance Report", "type": "PDF", "size": "5.3 MB", "date": "2024-07-10" },
+      { "id": 4, "name": "Weather Delay Analysis", "type": "PDF", "size": "3.6 MB", "date": "2024-09-25" }
+    ],
+    "feedback": [
+      { "id": 1, "author": "Barangay Captain", "date": "2024-11-09", "comment": "Despite delays, this road will transform access to our remote communities. Much needed project.", "upvotes": 87, "downvotes": 12, "userVote": "up" },
+      { "id": 2, "author": "Local Farmer", "date": "2024-11-06", "comment": "Will make it much easier to transport crops to market. Hope construction speeds up.", "upvotes": 74, "downvotes": 8, "userVote": "up" },
+      { "id": 3, "author": "Tourism Operator", "date": "2024-11-03", "comment": "Concerned about delays affecting tourism season. Need better weather contingency planning.", "upvotes": 56, "downvotes": 15, "userVote": null }
+    ],
+    "coordinates": { "lat": 11.5549, "lng": 125.7550 },
+    "position": { "top": "50%", "left": "75%" },
+    "contractor": "Philippine Infrastructure Corp.",
+    "department": "Department of Public Works and Highways",
+    "endDate": "Aug 2025"
+  },
+  "PROJ-2024-016": {
+    "id": "PROJ-2024-016",
+    "title": "Pampanga Youth Development Complex",
+    "location": "Central Luzon",
+    "category": "Social Services",
+    "status": "ongoing",
+    "progress": 71,
+    "startDate": "2023-01-01",
+    "expectedCompletion": "2024-09-30",
+    "description": "Multi-purpose facility for youth programs, sports, and education",
+    "budget": {
+      "total": 3600000000,
+      "allocated": 3600000000,
+      "spent": 2556000000,
+      "remaining": 1044000000
+    },
+    "milestones": [
+      { "id": 1, "title": "Facility Design", "date": "2023-03-01", "status": "completed" },
+      { "id": 2, "title": "Main Building Construction", "date": "2023-07-01", "status": "completed" },
+      { "id": 3, "title": "Sports Facilities", "date": "2023-12-01", "status": "completed" },
+      { "id": 4, "title": "Equipment Installation", "date": "2024-04-01", "status": "completed" },
+      { "id": 5, "title": "Program Development", "date": "2024-07-01", "status": "ongoing" },
+      { "id": 6, "title": "Official Opening", "date": "2024-09-30", "status": "pending" }
+    ],
+    "monthlySpending": [
+      { "month": "Jul", "amount": 240000000 },
+      { "month": "Aug", "amount": 210000000 },
+      { "month": "Sep", "amount": 180000000 },
+      { "month": "Oct", "amount": 150000000 },
+      { "month": "Nov", "amount": 120000000 }
+    ],
+    "documents": [
+      { "id": 1, "name": "Youth Programs Curriculum", "type": "PDF", "size": "4.2 MB", "date": "2024-06-15" },
+      { "id": 2, "name": "Sports Facility Guidelines", "type": "PDF", "size": "3.8 MB", "date": "2024-01-20" },
+      { "id": 3, "name": "Community Partnership Plan", "type": "PDF", "size": "2.9 MB", "date": "2024-05-10" },
+      { "id": 4, "name": "Safety and Security Protocols", "type": "PDF", "size": "1.7 MB", "date": "2024-08-25" }
+    ],
+    "feedback": [
+      { "id": 1, "author": "Youth Leader", "date": "2024-11-11", "comment": "Finally a proper venue for youth activities! The facilities are excellent and well-maintained.", "upvotes": 126, "downvotes": 3, "userVote": "up" },
+      { "id": 2, "author": "Parent", "date": "2024-11-08", "comment": "My children love the programs here. Great alternative to keep them engaged and learning.", "upvotes": 98, "downvotes": 2, "userVote": "up" },
+      { "id": 3, "author": "Sports Coach", "date": "2024-11-05", "comment": "Top-notch sports facilities. This will help develop athletic talent in our province.", "upvotes": 84, "downvotes": 1, "userVote": "up" }
+    ],
+    "coordinates": { "lat": 15.0794, "lng": 120.6200 },
+    "position": { "top": "28%", "left": "45%" },
+    "contractor": "Community Development Builders",
+    "department": "Department of Social Welfare and Development",
+    "endDate": "Sep 2024"
+  },
+  "PROJ-2024-017": {
+    "id": "PROJ-2024-017",
+    "title": "Sulu Peace and Security Center",
+    "location": "Bangsamoro Autonomous Region in Muslim Mindanao",
+    "category": "Safety & Security",
+    "status": "ongoing",
+    "progress": 45,
+    "startDate": "2023-06-01",
+    "expectedCompletion": "2025-03-31",
+    "description": "Integrated security operations center for peace-building and conflict resolution",
+    "budget": {
+      "total": 6200000000,
+      "allocated": 6200000000,
+      "spent": 2790000000,
+      "remaining": 3410000000
+    },
+    "milestones": [
+      { "id": 1, "title": "Security Assessment", "date": "2023-08-01", "status": "completed" },
+      { "id": 2, "title": "Facility Construction", "date": "2023-12-01", "status": "completed" },
+      { "id": 3, "title": "Communication Systems", "date": "2024-04-01", "status": "ongoing" },
+      { "id": 4, "title": "Peace Program Development", "date": "2024-09-01", "status": "ongoing" },
+      { "id": 5, "title": "Community Outreach", "date": "2024-12-01", "status": "pending" },
+      { "id": 6, "title": "Full Operations", "date": "2025-03-31", "status": "pending" }
+    ],
+    "monthlySpending": [
+      { "month": "Jul", "amount": 320000000 },
+      { "month": "Aug", "amount": 280000000 },
+      { "month": "Sep", "amount": 250000000 },
+      { "month": "Oct", "amount": 220000000 },
+      { "month": "Nov", "amount": 190000000 }
+    ],
+    "documents": [
+      { "id": 1, "name": "Peace-building Strategy", "type": "PDF", "size": "6.4 MB", "date": "2023-07-20" },
+      { "id": 2, "name": "Security Operations Manual", "type": "PDF", "size": "8.1 MB", "date": "2024-03-15" },
+      { "id": 3, "name": "Community Engagement Plan", "type": "PDF", "size": "4.7 MB", "date": "2024-07-30" },
+      { "id": 4, "name": "Progress Assessment Report", "type": "PDF", "size": "3.2 MB", "date": "2024-10-15" }
+    ],
+    "feedback": [
+      { "id": 1, "author": "Community Elder", "date": "2024-11-10", "comment": "This center represents hope for lasting peace in our region. The approach is respectful and inclusive.", "upvotes": 89, "downvotes": 6, "userVote": "up" },
+      { "id": 2, "author": "Peace Advocate", "date": "2024-11-07", "comment": "Good progress on building trust between communities. The dialogue programs are very effective.", "upvotes": 76, "downvotes": 4, "userVote": "up" },
+      { "id": 3, "author": "Local Leader", "date": "2024-11-04", "comment": "Impressed with the cultural sensitivity shown in the project implementation. Well done.", "upvotes": 68, "downvotes": 7, "userVote": "up" }
+    ],
+    "coordinates": { "lat": 6.0569, "lng": 121.0144 },
+    "position": { "top": "85%", "left": "35%" },
+    "contractor": "Peace and Security Solutions Inc.",
+    "department": "Office of the Presidential Adviser on Peace Process",
+    "endDate": "Mar 2025"
+  },
+  "PROJ-2024-018": {
+    "id": "PROJ-2024-018",
+    "title": "Bohol Heritage Tourism Circuit",
+    "location": "Central Visayas",
+    "category": "Tourism & Culture",
+    "status": "ongoing",
+    "progress": 52,
+    "startDate": "2023-04-01",
+    "expectedCompletion": "2025-06-30",
+    "description": "Cultural tourism infrastructure development showcasing Bohol's heritage sites",
+    "budget": {
+      "total": 7400000000,
+      "allocated": 7400000000,
+      "spent": 3848000000,
+      "remaining": 3552000000
+    },
+    "milestones": [
+      { "id": 1, "title": "Heritage Site Assessment", "date": "2023-06-01", "status": "completed" },
+      { "id": 2, "title": "Tourism Infrastructure", "date": "2023-11-01", "status": "completed" },
+      { "id": 3, "title": "Visitor Center Construction", "date": "2024-03-01", "status": "completed" },
+      { "id": 4, "title": "Cultural Programs Development", "date": "2024-08-01", "status": "ongoing" },
+      { "id": 5, "title": "Marketing and Promotion", "date": "2025-01-01", "status": "pending" },
+      { "id": 6, "title": "Grand Launch", "date": "2025-06-30", "status": "pending" }
+    ],
+    "monthlySpending": [
+      { "month": "Jul", "amount": 380000000 },
+      { "month": "Aug", "amount": 340000000 },
+      { "month": "Sep", "amount": 310000000 },
+      { "month": "Oct", "amount": 280000000 },
+      { "month": "Nov", "amount": 250000000 }
+    ],
+    "documents": [
+      { "id": 1, "name": "Heritage Conservation Plan", "type": "PDF", "size": "9.8 MB", "date": "2023-05-20" },
+      { "id": 2, "name": "Tourism Circuit Map", "type": "PDF", "size": "7.2 MB", "date": "2024-02-15" },
+      { "id": 3, "name": "Cultural Programs Guide", "type": "PDF", "size": "5.6 MB", "date": "2024-07-25" },
+      { "id": 4, "name": "Economic Impact Study", "type": "PDF", "size": "4.3 MB", "date": "2024-09-20" }
+    ],
+    "feedback": [
+      { "id": 1, "author": "Tourism Operator", "date": "2024-11-09", "comment": "Excellent way to showcase our rich cultural heritage. The visitor facilities are world-class.", "upvotes": 102, "downvotes": 4, "userVote": "up" },
+      { "id": 2, "author": "Cultural Historian", "date": "2024-11-06", "comment": "Great balance between preservation and accessibility. The interpretation programs are excellent.", "upvotes": 87, "downvotes": 2, "userVote": "up" },
+      { "id": 3, "author": "Local Artisan", "date": "2024-11-03", "comment": "This project is creating opportunities for local artists and craftspeople. Very supportive of community.", "upvotes": 79, "downvotes": 3, "userVote": "up" }
+    ],
+    "coordinates": { "lat": 9.8349, "lng": 124.1438 },
+    "position": { "top": "62%", "left": "68%" },
+    "contractor": "Heritage Tourism Development Corp.",
+    "department": "Department of Tourism",
+    "endDate": "Jun 2025"
+  }
+}

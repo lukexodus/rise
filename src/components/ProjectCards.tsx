@@ -2,62 +2,19 @@ import React from "react";
 import { ProjectCard } from "./ProjectCard";
 import { Button } from "./ui/button";
 
-const mockProjects = [
-  {
-    id: 1,
-    title: "Metro Manila Subway Project Phase 2",
-    budget: 75000000000,
-    progress: 68,
-    status: "ongoing" as const,
-    location: "Metro Manila",
-    endDate: "Dec 2025"
-  },
-  {
-    id: 5,
-    title: "Mindanao Rural Electrification Program",
-    budget: 12500000000,
-    progress: 100,
-    status: "completed" as const,
-    location: "Mindanao",
-    endDate: "Mar 2024"
-  },
-  {
-    id: 3,
-    title: "National Broadband Infrastructure Program",
-    budget: 45000000000,
-    progress: 42,
-    status: "delayed" as const,
-    location: "Nationwide",
-    endDate: "Jun 2026"
-  },
-  {
-    id: 2,
-    title: "CALABARZON Water Supply System Expansion",
-    budget: 8200000000,
-    progress: 85,
-    status: "ongoing" as const,
-    location: "CALABARZON",
-    endDate: "Sep 2024"
-  },
-  {
-    id: 4,
-    title: "Cebu BRT System Implementation",
-    budget: 16800000000,
-    progress: 100,
-    status: "completed" as const,
-    location: "Central Visayas",
-    endDate: "Jan 2024"
-  },
-  {
-    id: 7,
-    title: "Palawan Airport Modernization",
-    budget: 5600000000,
-    progress: 25,
-    status: "delayed" as const,
-    location: "MIMAROPA",
-    endDate: "Nov 2024"
-  }
-];
+// Import data from external JSON file
+import projectsData from "../data/projects.json";
+
+// Convert the projects data to the format expected by ProjectCard
+const mockProjects = Object.values(projectsData).map(project => ({
+  id: parseInt(project.id.split('-')[2]),
+  title: project.title,
+  budget: project.budget.total,
+  progress: project.progress,
+  status: project.status as "ongoing" | "completed" | "delayed",
+  location: project.location,
+  endDate: project.endDate
+}));
 
 interface ProjectCardsProps {
   onProjectClick?: (projectId: string) => void;
