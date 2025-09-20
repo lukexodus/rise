@@ -261,12 +261,24 @@ export default function App() {
           {/* Sidebar Navigation */}
           <div className="w-64 bg-white border-r border-gray-200 flex flex-col">
             <div className="p-6 border-b border-gray-200">
-              <h1 className="text-xl font-heading font-semibold text-[#1A3E73]">
-                RISE
-              </h1>
-              <p className="text-sm font-body text-muted-foreground mt-1">
-              Every Peso. Every Voice.<br/>Accounted For.
-              </p>
+              <div className="flex items-center gap-2">
+                {/* RISE Logo */}
+                <div className="w-10 h-10 rounded-full bg-white border-2 border-[#1A3E73] flex items-center justify-center overflow-hidden">
+                  <img 
+                    src="/src/assets/rise.png" 
+                    alt="RISE Logo" 
+                    className="w-[2.45rem] h-[2.45rem] object-cover" 
+                  />
+                </div>
+                
+                {/* Tagline */}
+                <div>
+                  <p className="text-xs text-[#1A3E73] font-body font-light italic leading-tight">
+                    Every Peso. Every Voice.<br/>
+                    Accounted For.
+                  </p>
+                </div>
+              </div>
             </div>
 
             <nav className="flex-1 p-4">

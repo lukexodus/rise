@@ -4,7 +4,6 @@ import { Button } from "./ui/button";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuSeparator, DropdownMenuTrigger } from "./ui/dropdown-menu";
 import { Avatar, AvatarFallback } from "./ui/avatar";
 
-
 interface HeaderProps {
   onNotificationsClick?: () => void;
   onProfileClick?: () => void;
@@ -14,22 +13,24 @@ export function Header({ onNotificationsClick, onProfileClick }: HeaderProps) {
   const [showProfileMenu, setShowProfileMenu] = useState(false);
 
   return (
-    <div className="bg-[#1A3E73] text-white px-4 py-3">
+    <header className="bg-gradient-to-r from-[#1A3E73] to-[#2A4E83] text-white p-4 sticky top-0 z-50">
       <div className="flex items-center justify-between">
-        {/* Logo and App Name */}
-        <div className="flex items-center gap-3">
-          {/* Philippine Flag Circle Logo */}
+        <div className="flex items-center gap-2">
+          {/* RISE Logo */}
           <div className="w-10 h-10 rounded-full bg-white flex items-center justify-center overflow-hidden">
             <img 
-              src="/src/assets/ph.png" 
-              alt="Philippine Flag" 
-              className="w-[2.45rem] h-[2.45rem] object-cover" />
+              src="/src/assets/rise.png" 
+              alt="RISE Logo" 
+              className="w-[2.45rem] h-[2.45rem] object-cover" 
+            />
           </div>
           
-          {/* App Name */}
+          {/* Tagline */}
           <div>
-            <h1 className="text-lg font-semibold">RISE</h1>
-            <p className="text-xs text-blue-100">Every Peso, Every Voice — Accounted For.</p>
+            <p className="text-[0.8rem] text-blue-100 font-body font-light italic leading-tight">
+              Every Peso. Every Voice.<br/>
+              Accounted For.
+            </p>
           </div>
         </div>
 
@@ -113,7 +114,6 @@ export function Header({ onNotificationsClick, onProfileClick }: HeaderProps) {
           </DropdownMenu>
         </div>
       </div>
-
-    </div>
+    </header>
   );
 }
