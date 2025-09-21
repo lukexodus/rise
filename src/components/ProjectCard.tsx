@@ -14,11 +14,11 @@ import {
 import { getSectorIcon } from "../utils/iconUtils";
 
 interface ProjectCardProps {
-  id: number;
+  id: string;
   title: string;
   budget: number;
   progress: number;
-  status: "ongoing" | "completed" | "delayed";
+  status: "ongoing" | "completed" | "delayed" | "suspended";
   location: string;
   endDate: string;
   sector?: string;
@@ -77,11 +77,11 @@ export function ProjectCard({ id, title, budget, progress, status, location, end
   const handleClick = () => {
     if (onProjectClick) {
       // Map home page project IDs to the correct project detail IDs
-      let projectId = `PROJ-2024-${id.toString().padStart(3, '0')}`;
-      // Special mapping for Bataan Nuclear Plant (ID 6 on home page -> PROJ-2024-009)
-      if (id === 6) {
-        projectId = 'PROJ-2024-009';
-      }
+      let projectId = id.toString();
+      // // Special mapping for Bataan Nuclear Plant (ID 6 on home page -> PROJ-2024-009)
+      // if (id === 6) {
+      //   projectId = 'PROJ-2024-009';
+      // }
       onProjectClick(projectId);
     }
   };

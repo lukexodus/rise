@@ -21,14 +21,30 @@ import { Command, CommandEmpty, CommandGroup, CommandInput, CommandItem } from "
 import { cn } from "@/lib/utils";
 
 // Import data from external JSON files
-import searchResultsData from "../data/searchResults.json";
+import projectsData from "../data/projects.json";
 import locationsData from "../data/locations.json";
 import sectorsData from "../data/sectors.json";
 import statusesData from "../data/statuses.json";
 import departmentsData from "../data/departments.json";
 import { getSectorIcon, getIcon } from "../utils/iconUtils";
 
-const mockSearchResults = searchResultsData;
+// Transform projects data to search results format
+const mockSearchResults = Object.values(projectsData).map(project => ({
+  id: project.id,
+  title: project.title,
+  description: project.description,
+  budget: project.budget.total,
+  allocated: project.budget.allocated,
+  spent: project.budget.spent,
+  remaining: project.budget.remaining,
+  status: project.status,
+  department: project.department,
+  location: project.location,
+  startDate: new Date(project.startDate).toLocaleDateString('en-US', { month: 'short', year: 'numeric' }),
+  endDate: project.endDate,
+  contractor: project.contractor,
+  sector: project.sector
+}));
 
 interface SearchProjectsProps {
   onProjectClick?: (projectId: string) => void;
@@ -521,7 +537,7 @@ export function SearchProjects({ onProjectClick }: SearchProjectsProps) {
                       className="w-full mt-3 bg-[#1A3E73] hover:bg-[#1A3E73]/90 text-white"
                       onClick={(e) => {
                         e.stopPropagation();
-                        handleProjectClick(`PROJ-2024-${project.id.toString().padStart(3, '0')}`);
+                        handleProjectClick(project.id.toString());
                       }}
                     >
                       View Details

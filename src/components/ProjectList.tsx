@@ -10,7 +10,6 @@ import locationsData from "../data/locations.json";
 // Convert the projects data to the format expected by ProjectCard
 const mockProjects = Object.values(projectsData).map((project, index) => ({
   id: project.id, // Use the full project ID instead of parsing
-  uniqueKey: `${project.id}-${index}`, // Add unique key for React
   title: project.title,
   budget: project.budget.total,
   progress: project.progress,
@@ -203,8 +202,8 @@ export function ProjectList({ category, onBack, onProjectClick }: ProjectListPro
             <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
               {sortedProjects.map(project => (
                 <ProjectCard 
-                  key={project.uniqueKey} 
-                  id={parseInt(project.id.split('-')[2]) || 0}
+                  key={project.id}
+                  id={project.id}
                   title={project.title}
                   budget={project.budget}
                   progress={project.progress}

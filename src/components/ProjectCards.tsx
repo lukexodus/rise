@@ -8,7 +8,7 @@ import projectsData from "../data/projects.json";
 
 // Convert the projects data to the format expected by ProjectCard
 const mockProjects = Object.values(projectsData).map(project => ({
-  id: parseInt(project.id.split('-')[2]),
+  id: project.id,
   title: project.title,
   budget: project.budget.total,
   progress: project.progress,
