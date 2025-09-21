@@ -124,32 +124,32 @@ export function Analytics() {
       {/* Header */}
       <div className="bg-gradient-to-br from-[#1A3E73] to-[#2A4E83] text-white p-4 lg:py-6 lg:px-20 xl:p-12 flex flex-col space-y-0">
         <h1 className="text-2xl lg:text-3xl xl:text-4xl font-semibold mb-0.5 lg:mb-1 pl-2">Analytics & Trends</h1>
-        <p className="text-base lg:text-lg xl:text-xl opacity-90 pl-2">Government spending insights and project performance</p>
+        <p className="text-base leading-snug lg:text-lg xl:text-xl opacity-90 pl-2">Government spending insights and project performance</p>
       </div>
 
       {/* Key Metrics */}
       <div className="p-4 lg:p-8 xl:p-10 space-y-4 lg:space-y-8 xl:space-y-10">
         {/* Key Metrics Grid - Hidden on lg+ screens */}
-        <div className="grid grid-cols-2 gap-3 lg:hidden">
-          <Card className="p-4">
-            <div className="flex items-center gap-3 mb-3">
+        <div className="grid grid-cols-2 gap-3 lg:hidden h-auto">
+          <Card className="p-4 h-auto flex flex-col space-y-1 items-start justify-between">
+            <div className="flex items-center gap-3">
               <TrendingUp className="w-5 h-5 text-green-600" />
-              <span className="text-sm font-medium text-muted-foreground">Monthly Spending</span>
+              <span className="text-[0.8rem] leading-tight font-medium text-muted-foreground">Monthly Spending</span>
             </div>
-            <div className="text-xl font-semibold text-[#1A3E73] mb-2">₱575B</div>
-            <div className="flex items-center gap-1 text-sm">
+            <div className="text-[1.4rem] font-extrabold text-[#1A3E73] -mt-[0.8rem]">₱575B</div>
+            <div className="flex items-center gap-1 text-xs -mt-[0.8rem]">
               <span className="text-green-600 font-medium">+{spendingChange}%</span>
               <span className="text-muted-foreground">vs last month</span>
             </div>
           </Card>
 
-          <Card className="p-4">
-            <div className="flex items-center gap-3 mb-3">
+          <Card className="p-4 h-auto flex flex-col space-y-1 items-start justify-between">
+            <div className="flex items-center gap-3">
               <Clock className="w-5 h-5 text-orange-600" />
-              <span className="text-sm font-medium text-muted-foreground">Avg Delay</span>
+              <span className="text-[0.8rem] leading-tight font-medium text-muted-foreground">Avg Delay</span>
             </div>
-            <div className="text-xl font-semibold text-[#1A3E73] mb-2">{avgDelay} mo</div>
-            <div className="text-sm text-muted-foreground">5 delayed projects</div>
+            <div className="text-[1.4rem] font-extrabold text-[#1A3E73] -mt-[0.8rem]">{avgDelay} mo</div>
+            <div className="text-xs text-muted-foreground -mt-[0.8rem]">5 delayed projects</div>
           </Card>
         </div>
 
