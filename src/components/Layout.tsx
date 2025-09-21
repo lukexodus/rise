@@ -33,7 +33,7 @@ export function Layout() {
     <div className="min-h-screen bg-gray-50">
       {/* Mobile Layout */}
       <div className="lg:hidden">
-        <div className="mx-auto bg-white min-h-screen relative">
+        <div className="mx-auto bg-gray-50 min-h-screen relative">
           {/* Header - only show on home page */}
           {showHeader && (
             <Header
@@ -54,7 +54,7 @@ export function Layout() {
 
       {/* Desktop/Tablet Layout */}
       <div className="hidden lg:block">
-        <div className="flex h-screen">
+        <div className="flex h-screen bg-gray-50">
           {/* Sidebar Navigation */}
           <div className="w-64 bg-white border-r border-gray-200 flex flex-col">
             <div className="p-6 border-b border-gray-200">

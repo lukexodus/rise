@@ -473,8 +473,9 @@ export function SearchProjects({ onProjectClick }: SearchProjectsProps) {
                     <Calendar className="w-3 h-3" />
                     <span>{project.startDate} - {project.endDate}</span>
                   </div>
-                  <div className="text-muted-foreground">
-                    Sector: {project.sector}
+                  <div className="flex items-center gap-1 text-muted-foreground">
+                    {getSectorIcon(project.sector)}
+                    <span>{project.sector}</span>
                   </div>
                 </div>
 

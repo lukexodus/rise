@@ -19,7 +19,8 @@ import {
   MessageCircle,
   CheckCircle,
   Clock,
-  AlertTriangle
+  AlertTriangle,
+  Building
 } from "lucide-react";
 
 const iconMap = {
@@ -40,10 +41,10 @@ const iconMap = {
   Coins,
   Hourglass,
   Eye,
-  MessageCircle,
   CheckCircle,
   Clock,
-  AlertTriangle
+  AlertTriangle,
+  Building
 };
 
 export const getIcon = (iconName: string, className: string = "w-4 h-4") => {
@@ -82,7 +83,8 @@ const getSectorIconName = (sectorName: string): string => {
     "Legal & Justice": "Gavel",
     "Emergency Services": "Shield",
     "Tourism & Culture": "Globe",
-    "Finance & Budget": "Coins"
+    "Finance & Budget": "Coins",
+    "Interior & Local Government": "Building"
   };
   return iconMap[sectorName] || "Users";
 };

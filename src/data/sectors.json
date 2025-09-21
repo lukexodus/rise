@@ -84,6 +84,11 @@
       "id": "finance-budget",
       "name": "Finance & Budget",
       "icon": "Coins"
+    },
+    {
+      "id": "interior-local-government",
+      "name": "Interior & Local Government",
+      "icon": "Building"
     }
   ]
 }

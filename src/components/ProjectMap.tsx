@@ -294,7 +294,7 @@ export function ProjectMap({ onProjectClick }: ProjectMapProps) {
 
         {/* Project Info Card */}
         {selectedProject && (
-          <div className="fixed bottom-4 left-4 right-4 z-30 md:bottom-4 md:left-0 md:right-0 md:flex md:justify-center pointer-events-none">
+          <div className="fixed bottom-[4.5rem] left-4 right-4 z-30 lg:bottom-4 md:left-0 md:right-0 md:flex md:justify-center pointer-events-none">
             <div className="bg-white rounded-lg shadow-xl p-4 pointer-events-auto md:max-w-lg md:w-full md:mx-4">
               <div className="flex justify-between items-start mb-3">
                 <h3 className="font-medium text-[#1A3E73] flex-1 pr-2">

@@ -415,7 +415,7 @@ export function CommunityFeed({ onPostClick }: CommunityFeedProps) {
   }, []);
 
   return (
-    <div className="px-4 lg:px-8 py-4 lg:py-6">
+    <div className="min-h-screen bg-gray-50 px-4 lg:px-8 py-4 lg:py-6 pb-24 lg:pb-6">
       <div className="lg:max-w-7xl lg:mx-auto space-y-4 lg:space-y-6">
         {/* Header */}
         <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-4">

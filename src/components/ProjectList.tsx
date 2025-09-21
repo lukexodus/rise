@@ -8,12 +8,13 @@ import projectsData from "../data/projects.json";
 import locationsData from "../data/locations.json";
 
 // Convert the projects data to the format expected by ProjectCard
-const mockProjects = Object.values(projectsData).map(project => ({
-  id: parseInt(project.id.split('-')[2]),
+const mockProjects = Object.values(projectsData).map((project, index) => ({
+  id: project.id, // Use the full project ID instead of parsing
+  uniqueKey: `${project.id}-${index}`, // Add unique key for React
   title: project.title,
   budget: project.budget.total,
   progress: project.progress,
-  status: project.status as "ongoing" | "completed" | "delayed",
+  status: project.status as "ongoing" | "completed" | "delayed" | "suspended",
   location: project.location,
   endDate: project.endDate,
   sector: project.sector
@@ -34,11 +35,18 @@ export function ProjectList({ category, onBack, onProjectClick }: ProjectListPro
     onBack();
   };
 
-  // Filter projects by category
-  const categoryProjects = mockProjects.filter(p => p.status === category);
+  // Filter projects by category - include suspended as delayed
+  const categoryProjects = mockProjects.filter(p => {
+    if (category === "delayed") {
+      return p.status === "delayed" || p.status === "suspended";
+    }
+    return p.status === category;
+  });
 
   // Get unique locations for filter dropdown from actual project data
-  const projectLocations = Array.from(new Set(categoryProjects.map(p => p.location))).sort();
+  const projectLocations = Array.from(new Set(categoryProjects.map(p => p.location)))
+    .filter(location => location && location.trim() !== "")
+    .sort();
 
   // Apply filters and search
   const filteredProjects = categoryProjects.filter(project => {
@@ -194,7 +202,18 @@ export function ProjectList({ category, onBack, onProjectClick }: ProjectListPro
           ) : (
             <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
               {sortedProjects.map(project => (
-                <ProjectCard key={project.id} {...project} onProjectClick={onProjectClick} />
+                <ProjectCard 
+                  key={project.uniqueKey} 
+                  id={parseInt(project.id.split('-')[2]) || 0}
+                  title={project.title}
+                  budget={project.budget}
+                  progress={project.progress}
+                  status={project.status}
+                  location={project.location}
+                  endDate={project.endDate}
+                  sector={project.sector}
+                  onProjectClick={onProjectClick} 
+                />
               ))}
             </div>
           )}
