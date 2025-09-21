@@ -2668,10 +2668,10 @@
     "expectedCompletion": "2028-12-31",
     "description": "Railway extension from Metro Manila to Batangas and Laguna provinces",
     "budget": {
-      "total": 580000000000,
-      "allocated": 580000000000,
-      "spent": 87000000000,
-      "remaining": 493000000000
+      "total": 2200000000000,
+      "allocated": 2200000000000,
+      "spent": 330000000000,
+      "remaining": 1870000000000
     },
     "milestones": [
       {
@@ -2714,23 +2714,23 @@
     "monthlySpending": [
       {
         "month": "Jul",
-        "amount": 12500000000
+        "amount": 47400000000
       },
       {
         "month": "Aug",
-        "amount": 18700000000
+        "amount": 71000000000
       },
       {
         "month": "Sep",
-        "amount": 22300000000
+        "amount": 84700000000
       },
       {
         "month": "Oct",
-        "amount": 16800000000
+        "amount": 63800000000
       },
       {
         "month": "Nov",
-        "amount": 14200000000
+        "amount": 53900000000
       }
     ],
     "documents": [
@@ -2815,10 +2815,10 @@
     "expectedCompletion": "2027-12-31",
     "description": "Integrated renewable energy grid system across Mindanao",
     "budget": {
-      "total": 420000000000,
-      "allocated": 420000000000,
-      "spent": 92400000000,
-      "remaining": 327600000000
+      "total": 1600000000000,
+      "allocated": 1600000000000,
+      "spent": 352000000000,
+      "remaining": 1248000000000
     },
     "milestones": [
       {
@@ -2861,23 +2861,23 @@
     "monthlySpending": [
       {
         "month": "Jul",
-        "amount": 15600000000
+        "amount": 59400000000
       },
       {
         "month": "Aug",
-        "amount": 18900000000
+        "amount": 72000000000
       },
       {
         "month": "Sep",
-        "amount": 21700000000
+        "amount": 82600000000
       },
       {
         "month": "Oct",
-        "amount": 17800000000
+        "amount": 67800000000
       },
       {
         "month": "Nov",
-        "amount": 16200000000
+        "amount": 61600000000
       }
     ],
     "documents": [
@@ -3099,7 +3099,7 @@
     "endDate": "Jan 2025"
   },
   "PROJ-2025-004": {
-    "id": "PROJ-2025-004",
+    "id": "PROJ-2025-004", 
     "title": "Luzon Industrial Corridor Development",
     "location": "Central Luzon (Region III)",
     "sector": "Economic Development",
@@ -3109,10 +3109,10 @@
     "expectedCompletion": "2026-12-31",
     "description": "Development of integrated industrial parks along Central Luzon corridor",
     "budget": {
-      "total": 285000000000,
-      "allocated": 285000000000,
-      "spent": 88350000000,
-      "remaining": 196650000000
+      "total": 1080000000000,
+      "allocated": 1080000000000,
+      "spent": 334800000000,
+      "remaining": 745200000000
     },
     "milestones": [
       {
@@ -3123,14 +3123,14 @@
       },
       {
         "id": 2,
-        "title": "Infrastructure Development",
+        "title": "Infrastructure Development", 
         "date": "2024-08-01",
         "status": "ongoing"
       },
       {
         "id": 3,
         "title": "Utility Connections",
-        "date": "2025-02-01",
+        "date": "2025-02-01", 
         "status": "pending"
       },
       {
@@ -3155,23 +3155,23 @@
     "monthlySpending": [
       {
         "month": "Jul",
-        "amount": 12800000000
+        "amount": 48500000000
       },
       {
         "month": "Aug",
-        "amount": 14600000000
+        "amount": 55300000000  
       },
       {
         "month": "Sep",
-        "amount": 11900000000
+        "amount": 45100000000
       },
       {
         "month": "Oct",
-        "amount": 10200000000
+        "amount": 38600000000
       },
       {
         "month": "Nov",
-        "amount": 9500000000
+        "amount": 36000000000
       }
     ],
     "documents": [
@@ -7655,964 +7655,3664 @@
     "department": "Department of Agriculture",
     "endDate": "Feb 2027"
   },
-    "PROJ-2025-035": {
-      "id": "PROJ-2025-035",
-      "title": "Bataan Solar Energy Storage System",
-      "location": "Central Luzon (Region III)",
-      "sector": "Utilities",
-      "status": "completed",
-      "progress": 100,
-      "startDate": "2022-09-01",
-      "expectedCompletion": "2024-06-30",
-      "description": "Large-scale battery storage system integrated with solar power generation",
-      "budget": {
-        "total": 8900000000,
-        "allocated": 8900000000,
-        "spent": 8900000000,
-        "remaining": 0
-      },
-      "milestones": [
-        { "id": 1, "title": "Energy Storage Design", "date": "2022-11-01", "status": "completed" },
-        { "id": 2, "title": "Battery System Installation", "date": "2023-03-01", "status": "completed" },
-        { "id": 3, "title": "Solar Panel Integration", "date": "2023-08-01", "status": "completed" },
-        { "id": 4, "title": "Grid Synchronization", "date": "2024-01-01", "status": "completed" },
-        { "id": 5, "title": "Performance Testing", "date": "2024-04-01", "status": "completed" },
-        { "id": 6, "title": "Commercial Operations", "date": "2024-06-30", "status": "completed" }
-      ],
-      "monthlySpending": [
-        { "month": "Feb", "amount": 650000000 },
-        { "month": "Mar", "amount": 720000000 },
-        { "month": "Apr", "amount": 580000000 },
-        { "month": "May", "amount": 490000000 },
-        { "month": "Jun", "amount": 320000000 }
-      ],
-      "documents": [
-        { "id": 1, "name": "Energy Storage Technology Specifications", "type": "PDF", "size": "54.8 MB", "date": "2022-10-15" },
-        { "id": 2, "name": "Grid Integration Plan", "type": "PDF", "size": "38.7 MB", "date": "2023-07-20" },
-        { "id": 3, "name": "Performance Analysis Report", "type": "PDF", "size": "32.4 MB", "date": "2024-05-10" },
-        { "id": 4, "name": "Project Completion Certificate", "type": "PDF", "size": "12.3 MB", "date": "2024-06-30" }
-      ],
-      "feedback": [
-        { "id": 1, "author": "Energy Systems Engineer", "date": "2024-11-22", "comment": "Revolutionary energy storage capacity that stabilizes the regional power grid. Excellent reliability during peak demand.", "upvotes": 267, "downvotes": 8, "userVote": "up" },
-        { "id": 2, "author": "Local Business Owner", "date": "2024-11-19", "comment": "Stable power supply has improved our operations significantly. No more blackouts during critical hours.", "upvotes": 234, "downvotes": 5, "userVote": "up" },
-        { "id": 3, "author": "Environmental Advocate", "date": "2024-11-16", "comment": "Clean energy storage that reduces reliance on fossil fuels. Great model for sustainable power systems.", "upvotes": 198, "downvotes": 3, "userVote": "up" }
-      ],
-      "coordinates": { "lat": 14.6417, "lng": 120.4818 },
-      "position": { "top": "32%", "left": "42%" },
-      "contractor": "Philippine Energy Storage Solutions",
-      "department": "Department of Energy",
-      "endDate": "Jun 2024"
+  "PROJ-2025-035": {
+    "id": "PROJ-2025-035",
+    "title": "Bataan Solar Energy Storage System",
+    "location": "Central Luzon (Region III)",
+    "sector": "Utilities",
+    "status": "completed",
+    "progress": 100,
+    "startDate": "2022-09-01",
+    "expectedCompletion": "2024-06-30",
+    "description": "Large-scale battery storage system integrated with solar power generation",
+    "budget": {
+      "total": 8900000000,
+      "allocated": 8900000000,
+      "spent": 8900000000,
+      "remaining": 0
     },
-    "PROJ-2025-036": {
-      "id": "PROJ-2025-036",
-      "title": "Sagada Cultural Preservation and Tourism Center",
-      "location": "Cordillera Administrative Region (CAR)",
-      "sector": "Tourism & Culture",
-      "status": "completed",
-      "progress": 100,
-      "startDate": "2022-05-01",
-      "expectedCompletion": "2024-04-30",
-      "description": "Heritage center preserving Igorot culture while promoting sustainable tourism",
-      "budget": {
-        "total": 2400000000,
-        "allocated": 2400000000,
-        "spent": 2400000000,
-        "remaining": 0
+    "milestones": [
+      {
+        "id": 1,
+        "title": "Energy Storage Design",
+        "date": "2022-11-01",
+        "status": "completed"
       },
-      "milestones": [
-        { "id": 1, "title": "Cultural Documentation", "date": "2022-08-01", "status": "completed" },
-        { "id": 2, "title": "Center Design and Planning", "date": "2022-12-01", "status": "completed" },
-        { "id": 3, "title": "Construction Phase", "date": "2023-06-01", "status": "completed" },
-        { "id": 4, "title": "Exhibit Setup", "date": "2023-12-01", "status": "completed" },
-        { "id": 5, "title": "Community Training Programs", "date": "2024-02-01", "status": "completed" },
-        { "id": 6, "title": "Center Opening", "date": "2024-04-30", "status": "completed" }
-      ],
-      "monthlySpending": [
-        { "month": "Dec 23", "amount": 320000000 },
-        { "month": "Jan 24", "amount": 280000000 },
-        { "month": "Feb 24", "amount": 240000000 },
-        { "month": "Mar 24", "amount": 190000000 },
-        { "month": "Apr 24", "amount": 150000000 }
-      ],
-      "documents": [
-        { "id": 1, "name": "Igorot Cultural Heritage Study", "type": "PDF", "size": "98.7 MB", "date": "2022-09-20" },
-        { "id": 2, "name": "Sustainable Tourism Framework", "type": "PDF", "size": "45.3 MB", "date": "2023-05-15" },
-        { "id": 3, "name": "Community Engagement Report", "type": "PDF", "size": "32.8 MB", "date": "2024-01-25" },
-        { "id": 4, "name": "Tourism Impact Assessment", "type": "PDF", "size": "28.4 MB", "date": "2024-04-15" }
-      ],
-      "feedback": [
-        { "id": 1, "author": "Cultural Anthropologist", "date": "2024-11-21", "comment": "Exceptional preservation of indigenous heritage. Respectful and authentic representation of Igorot culture.", "upvotes": 287, "downvotes": 6, "userVote": "up" },
-        { "id": 2, "author": "Sagada Elder", "date": "2024-11-18", "comment": "Proud to see our traditions properly honored and shared with visitors. Our youth are learning about their heritage.", "upvotes": 256, "downvotes": 2, "userVote": "up" },
-        { "id": 3, "author": "Tourism Guide", "date": "2024-11-15", "comment": "Beautiful facility that educates visitors about our rich culture. Increasing cultural awareness and respect.", "upvotes": 189, "downvotes": 4, "userVote": "up" }
-      ],
-      "coordinates": { "lat": 17.0760, "lng": 120.9018 },
-      "position": { "top": "16%", "left": "46%" },
-      "contractor": "Mountain Heritage Builders Corp.",
-      "department": "Department of Tourism",
-      "endDate": "Apr 2024"
-    },
-    "PROJ-2025-037": {
-      "id": "PROJ-2025-037",
-      "title": "Bukidnon Integrated Livestock Development Center",
-      "location": "Northern Mindanao (Region X)",
-      "sector": "Food Safety & Agriculture",
-      "status": "completed",
-      "progress": 100,
-      "startDate": "2022-03-01",
-      "expectedCompletion": "2024-09-30",
-      "description": "Modern livestock breeding and research facility with sustainable farming practices",
-      "budget": {
-        "total": 6800000000,
-        "allocated": 6800000000,
-        "spent": 6800000000,
-        "remaining": 0
+      {
+        "id": 2,
+        "title": "Battery System Installation",
+        "date": "2023-03-01",
+        "status": "completed"
       },
-      "milestones": [
-        { "id": 1, "title": "Facility Planning and Design", "date": "2022-05-01", "status": "completed" },
-        { "id": 2, "title": "Breeding Facility Construction", "date": "2022-11-01", "status": "completed" },
-        { "id": 3, "title": "Research Laboratory Setup", "date": "2023-04-01", "status": "completed" },
-        { "id": 4, "title": "Livestock Import and Breeding", "date": "2023-10-01", "status": "completed" },
-        { "id": 5, "title": "Training Program Launch", "date": "2024-03-01", "status": "completed" },
-        { "id": 6, "title": "Full Operations", "date": "2024-09-30", "status": "completed" }
-      ],
-      "monthlySpending": [
-        { "month": "May 24", "amount": 480000000 },
-        { "month": "Jun 24", "amount": 520000000 },
-        { "month": "Jul 24", "amount": 450000000 },
-        { "month": "Aug 24", "amount": 380000000 },
-        { "month": "Sep 24", "amount": 290000000 }
-      ],
-      "documents": [
-        { "id": 1, "name": "Livestock Development Master Plan", "type": "PDF", "size": "67.4 MB", "date": "2022-04-20" },
-        { "id": 2, "name": "Breeding Program Guidelines", "type": "PDF", "size": "45.8 MB", "date": "2023-09-15" },
-        { "id": 3, "name": "Sustainable Farming Practices Manual", "type": "PDF", "size": "38.7 MB", "date": "2024-02-10" },
-        { "id": 4, "name": "Economic Impact Study", "type": "PDF", "size": "32.6 MB", "date": "2024-08-25" }
-      ],
-      "feedback": [
-        { "id": 1, "author": "Livestock Veterinarian", "date": "2024-11-20", "comment": "World-class breeding facilities with excellent animal welfare standards. Significantly improving livestock quality in Mindanao.", "upvotes": 234, "downvotes": 7, "userVote": "up" },
-        { "id": 2, "author": "Cattle Rancher", "date": "2024-11-17", "comment": "Training programs have improved our breeding techniques. Higher quality cattle and better income for our families.", "upvotes": 198, "downvotes": 5, "userVote": "up" },
-        { "id": 3, "author": "Agriculture Extension Worker", "date": "2024-11-14", "comment": "Excellent resource for farmers in the region. Technology transfer is helping small livestock farmers succeed.", "upvotes": 167, "downvotes": 3, "userVote": "up" }
-      ],
-      "coordinates": { "lat": 8.1379, "lng": 125.1288 },
-      "position": { "top": "75%", "left": "69%" },
-      "contractor": "Mindanao Livestock Development Inc.",
-      "department": "Department of Agriculture",
-      "endDate": "Sep 2024"
-    },
-    "PROJ-2025-038": {
-      "id": "PROJ-2025-038",
-      "title": "Catanduanes Resilient Infrastructure Network",
-      "location": "Bicol Region (Region V)",
-      "sector": "Infrastructure",
-      "status": "completed",
-      "progress": 100,
-      "startDate": "2021-11-01",
-      "expectedCompletion": "2024-05-31",
-      "description": "Typhoon-resistant infrastructure including roads, bridges, and communication towers",
-      "budget": {
-        "total": 15600000000,
-        "allocated": 15600000000,
-        "spent": 15600000000,
-        "remaining": 0
+      {
+        "id": 3,
+        "title": "Solar Panel Integration",
+        "date": "2023-08-01",
+        "status": "completed"
       },
-      "milestones": [
-        { "id": 1, "title": "Vulnerability Assessment", "date": "2022-01-01", "status": "completed" },
-        { "id": 2, "title": "Resilient Design Phase", "date": "2022-05-01", "status": "completed" },
-        { "id": 3, "title": "Road and Bridge Construction", "date": "2023-02-01", "status": "completed" },
-        { "id": 4, "title": "Communication Infrastructure", "date": "2023-10-01", "status": "completed" },
-        { "id": 5, "title": "Emergency Response Systems", "date": "2024-02-01", "status": "completed" },
-        { "id": 6, "title": "Infrastructure Handover", "date": "2024-05-31", "status": "completed" }
-      ],
-      "monthlySpending": [
-        { "month": "Jan 24", "amount": 980000000 },
-        { "month": "Feb 24", "amount": 850000000 },
-        { "month": "Mar 24", "amount": 720000000 },
-        { "month": "Apr 24", "amount": 580000000 },
-        { "month": "May 24", "amount": 420000000 }
-      ],
-      "documents": [
-        { "id": 1, "name": "Climate Resilience Engineering Study", "type": "PDF", "size": "89.7 MB", "date": "2022-04-15" },
-        { "id": 2, "name": "Typhoon-Resistant Design Standards", "type": "PDF", "size": "67.8 MB", "date": "2022-12-20" },
-        { "id": 3, "name": "Emergency Response Protocol", "type": "PDF", "size": "45.3 MB", "date": "2024-01-25" },
-        { "id": 4, "name": "Infrastructure Resilience Assessment", "type": "PDF", "size": "38.4 MB", "date": "2024-05-20" }
-      ],
-      "feedback": [
-        { "id": 1, "author": "Disaster Risk Engineer", "date": "2024-11-19", "comment": "Outstanding typhoon-resistant infrastructure. Survived multiple strong typhoons with minimal damage.", "upvotes": 345, "downvotes": 4, "userVote": "up" },
-        { "id": 2, "author": "Local Government Official", "date": "2024-11-16", "comment": "These resilient roads and bridges keep our communities connected even during severe weather. Lives saved.", "upvotes": 298, "downvotes": 6, "userVote": "up" },
-        { "id": 3, "author": "Emergency Responder", "date": "2024-11-13", "comment": "Communication systems remain operational during typhoons. Critical for coordinating rescue operations.", "upvotes": 234, "downvotes": 3, "userVote": "up" }
-      ],
-      "coordinates": { "lat": 13.5822, "lng": 124.3975 },
-      "position": { "top": "44%", "left": "69%" },
-      "contractor": "Climate Resilient Infrastructure Corp.",
-      "department": "Department of Public Works and Highways",
-      "endDate": "May 2024"
-    },
-    "PROJ-2025-039": {
-      "id": "PROJ-2025-039",
-      "title": "Bohol Bee Conservation and Honey Production Center",
-      "location": "Central Visayas (Region VII)",
-      "sector": "Food Safety & Agriculture",
-      "status": "completed",
-      "progress": 100,
-      "startDate": "2022-06-01",
-      "expectedCompletion": "2024-08-31",
-      "description": "Bee conservation facility with honey processing and pollinator research programs",
-      "budget": {
-        "total": 1800000000,
-        "allocated": 1800000000,
-        "spent": 1800000000,
-        "remaining": 0
+      {
+        "id": 4,
+        "title": "Grid Synchronization",
+        "date": "2024-01-01",
+        "status": "completed"
       },
-      "milestones": [
-        { "id": 1, "title": "Bee Research Facility Setup", "date": "2022-08-01", "status": "completed" },
-        { "id": 2, "title": "Apiary Construction", "date": "2022-12-01", "status": "completed" },
-        { "id": 3, "title": "Honey Processing Plant", "date": "2023-05-01", "status": "completed" },
-        { "id": 4, "title": "Beekeeper Training Program", "date": "2023-11-01", "status": "completed" },
-        { "id": 5, "title": "Conservation Research Launch", "date": "2024-03-01", "status": "completed" },
-        { "id": 6, "title": "Commercial Operations", "date": "2024-08-31", "status": "completed" }
-      ],
-      "monthlySpending": [
-        { "month": "Apr 24", "amount": 180000000 },
-        { "month": "May 24", "amount": 160000000 },
-        { "month": "Jun 24", "amount": 140000000 },
-        { "month": "Jul 24", "amount": 120000000 },
-        { "month": "Aug 24", "amount": 95000000 }
-      ],
-      "documents": [
-        { "id": 1, "name": "Bee Conservation Strategy", "type": "PDF", "size": "34.7 MB", "date": "2022-07-20" },
-        { "id": 2, "name": "Honey Quality Standards", "type": "PDF", "size": "24.8 MB", "date": "2023-04-15" },
-        { "id": 3, "name": "Pollinator Research Program", "type": "PDF", "size": "28.6 MB", "date": "2024-02-10" },
-        { "id": 4, "name": "Economic Benefits Analysis", "type": "PDF", "size": "18.9 MB", "date": "2024-07-25" }
-      ],
-      "feedback": [
-        { "id": 1, "author": "Entomologist", "date": "2024-11-18", "comment": "Vital conservation work protecting native bee species. Research findings are helping pollinator conservation nationwide.", "upvotes": 189, "downvotes": 5, "userVote": "up" },
-        { "id": 2, "author": "Local Beekeeper", "date": "2024-11-15", "comment": "Training programs improved our honey production significantly. Quality standards help us access premium markets.", "upvotes": 156, "downvotes": 3, "userVote": "up" },
-        { "id": 3, "author": "Organic Farmer", "date": "2024-11-12", "comment": "Bee pollination services have increased our crop yields. Essential partnership for sustainable agriculture.", "upvotes": 134, "downvotes": 2, "userVote": "up" }
-      ],
-      "coordinates": { "lat": 9.8349, "lng": 124.1438 },
-      "position": { "top": "62%", "left": "68%" },
-      "contractor": "Pollinator Conservation Philippines",
-      "department": "Department of Agriculture",
-      "endDate": "Aug 2024"
+      {
+        "id": 5,
+        "title": "Performance Testing",
+        "date": "2024-04-01",
+        "status": "completed"
+      },
+      {
+        "id": 6,
+        "title": "Commercial Operations",
+        "date": "2024-06-30",
+        "status": "completed"
+      }
+    ],
+    "monthlySpending": [
+      {
+        "month": "Feb",
+        "amount": 650000000
+      },
+      {
+        "month": "Mar",
+        "amount": 720000000
+      },
+      {
+        "month": "Apr",
+        "amount": 580000000
+      },
+      {
+        "month": "May",
+        "amount": 490000000
+      },
+      {
+        "month": "Jun",
+        "amount": 320000000
+      }
+    ],
+    "documents": [
+      {
+        "id": 1,
+        "name": "Energy Storage Technology Specifications",
+        "type": "PDF",
+        "size": "54.8 MB",
+        "date": "2022-10-15"
+      },
+      {
+        "id": 2,
+        "name": "Grid Integration Plan",
+        "type": "PDF",
+        "size": "38.7 MB",
+        "date": "2023-07-20"
+      },
+      {
+        "id": 3,
+        "name": "Performance Analysis Report",
+        "type": "PDF",
+        "size": "32.4 MB",
+        "date": "2024-05-10"
+      },
+      {
+        "id": 4,
+        "name": "Project Completion Certificate",
+        "type": "PDF",
+        "size": "12.3 MB",
+        "date": "2024-06-30"
+      }
+    ],
+    "feedback": [
+      {
+        "id": 1,
+        "author": "Energy Systems Engineer",
+        "date": "2024-11-22",
+        "comment": "Revolutionary energy storage capacity that stabilizes the regional power grid. Excellent reliability during peak demand.",
+        "upvotes": 267,
+        "downvotes": 8,
+        "userVote": "up"
+      },
+      {
+        "id": 2,
+        "author": "Local Business Owner",
+        "date": "2024-11-19",
+        "comment": "Stable power supply has improved our operations significantly. No more blackouts during critical hours.",
+        "upvotes": 234,
+        "downvotes": 5,
+        "userVote": "up"
+      },
+      {
+        "id": 3,
+        "author": "Environmental Advocate",
+        "date": "2024-11-16",
+        "comment": "Clean energy storage that reduces reliance on fossil fuels. Great model for sustainable power systems.",
+        "upvotes": 198,
+        "downvotes": 3,
+        "userVote": "up"
+      }
+    ],
+    "coordinates": {
+      "lat": 14.6417,
+      "lng": 120.4818
     },
-    "PROJ-2025-040": {
-      "id": "PROJ-2025-040",
-      "title": "Sorsogon Geothermal District Heating System",
-      "location": "Bicol Region (Region V)",
-      "sector": "Utilities",
+    "position": {
+      "top": "32%",
+      "left": "42%"
+    },
+    "contractor": "Philippine Energy Storage Solutions",
+    "department": "Department of Energy",
+    "endDate": "Jun 2024"
+  },
+  "PROJ-2025-036": {
+    "id": "PROJ-2025-036",
+    "title": "Sagada Cultural Preservation and Tourism Center",
+    "location": "Cordillera Administrative Region (CAR)",
+    "sector": "Tourism & Culture",
+    "status": "completed",
+    "progress": 100,
+    "startDate": "2022-05-01",
+    "expectedCompletion": "2024-04-30",
+    "description": "Heritage center preserving Igorot culture while promoting sustainable tourism",
+    "budget": {
+      "total": 2400000000,
+      "allocated": 2400000000,
+      "spent": 2400000000,
+      "remaining": 0
+    },
+    "milestones": [
+      {
+        "id": 1,
+        "title": "Cultural Documentation",
+        "date": "2022-08-01",
+        "status": "completed"
+      },
+      {
+        "id": 2,
+        "title": "Center Design and Planning",
+        "date": "2022-12-01",
+        "status": "completed"
+      },
+      {
+        "id": 3,
+        "title": "Construction Phase",
+        "date": "2023-06-01",
+        "status": "completed"
+      },
+      {
+        "id": 4,
+        "title": "Exhibit Setup",
+        "date": "2023-12-01",
+        "status": "completed"
+      },
+      {
+        "id": 5,
+        "title": "Community Training Programs",
+        "date": "2024-02-01",
+        "status": "completed"
+      },
+      {
+        "id": 6,
+        "title": "Center Opening",
+        "date": "2024-04-30",
+        "status": "completed"
+      }
+    ],
+    "monthlySpending": [
+      {
+        "month": "Dec 23",
+        "amount": 320000000
+      },
+      {
+        "month": "Jan 24",
+        "amount": 280000000
+      },
+      {
+        "month": "Feb 24",
+        "amount": 240000000
+      },
+      {
+        "month": "Mar 24",
+        "amount": 190000000
+      },
+      {
+        "month": "Apr 24",
+        "amount": 150000000
+      }
+    ],
+    "documents": [
+      {
+        "id": 1,
+        "name": "Igorot Cultural Heritage Study",
+        "type": "PDF",
+        "size": "98.7 MB",
+        "date": "2022-09-20"
+      },
+      {
+        "id": 2,
+        "name": "Sustainable Tourism Framework",
+        "type": "PDF",
+        "size": "45.3 MB",
+        "date": "2023-05-15"
+      },
+      {
+        "id": 3,
+        "name": "Community Engagement Report",
+        "type": "PDF",
+        "size": "32.8 MB",
+        "date": "2024-01-25"
+      },
+      {
+        "id": 4,
+        "name": "Tourism Impact Assessment",
+        "type": "PDF",
+        "size": "28.4 MB",
+        "date": "2024-04-15"
+      }
+    ],
+    "feedback": [
+      {
+        "id": 1,
+        "author": "Cultural Anthropologist",
+        "date": "2024-11-21",
+        "comment": "Exceptional preservation of indigenous heritage. Respectful and authentic representation of Igorot culture.",
+        "upvotes": 287,
+        "downvotes": 6,
+        "userVote": "up"
+      },
+      {
+        "id": 2,
+        "author": "Sagada Elder",
+        "date": "2024-11-18",
+        "comment": "Proud to see our traditions properly honored and shared with visitors. Our youth are learning about their heritage.",
+        "upvotes": 256,
+        "downvotes": 2,
+        "userVote": "up"
+      },
+      {
+        "id": 3,
+        "author": "Tourism Guide",
+        "date": "2024-11-15",
+        "comment": "Beautiful facility that educates visitors about our rich culture. Increasing cultural awareness and respect.",
+        "upvotes": 189,
+        "downvotes": 4,
+        "userVote": "up"
+      }
+    ],
+    "coordinates": {
+      "lat": 17.0760,
+      "lng": 120.9018
+    },
+    "position": {
+      "top": "16%",
+      "left": "46%"
+    },
+    "contractor": "Mountain Heritage Builders Corp.",
+    "department": "Department of Tourism",
+    "endDate": "Apr 2024"
+  },
+  "PROJ-2025-037": {
+    "id": "PROJ-2025-037",
+    "title": "Bukidnon Integrated Livestock Development Center",
+    "location": "Northern Mindanao (Region X)",
+    "sector": "Food Safety & Agriculture",
+    "status": "completed",
+    "progress": 100,
+    "startDate": "2022-03-01",
+    "expectedCompletion": "2024-09-30",
+    "description": "Modern livestock breeding and research facility with sustainable farming practices",
+    "budget": {
+      "total": 6800000000,
+      "allocated": 6800000000,
+      "spent": 6800000000,
+      "remaining": 0
+    },
+    "milestones": [
+      {
+        "id": 1,
+        "title": "Facility Planning and Design",
+        "date": "2022-05-01",
+        "status": "completed"
+      },
+      {
+        "id": 2,
+        "title": "Breeding Facility Construction",
+        "date": "2022-11-01",
+        "status": "completed"
+      },
+      {
+        "id": 3,
+        "title": "Research Laboratory Setup",
+        "date": "2023-04-01",
+        "status": "completed"
+      },
+      {
+        "id": 4,
+        "title": "Livestock Import and Breeding",
+        "date": "2023-10-01",
+        "status": "completed"
+      },
+      {
+        "id": 5,
+        "title": "Training Program Launch",
+        "date": "2024-03-01",
+        "status": "completed"
+      },
+      {
+        "id": 6,
+        "title": "Full Operations",
+        "date": "2024-09-30",
+        "status": "completed"
+      }
+    ],
+    "monthlySpending": [
+      {
+        "month": "May 24",
+        "amount": 480000000
+      },
+      {
+        "month": "Jun 24",
+        "amount": 520000000
+      },
+      {
+        "month": "Jul 24",
+        "amount": 450000000
+      },
+      {
+        "month": "Aug 24",
+        "amount": 380000000
+      },
+      {
+        "month": "Sep 24",
+        "amount": 290000000
+      }
+    ],
+    "documents": [
+      {
+        "id": 1,
+        "name": "Livestock Development Master Plan",
+        "type": "PDF",
+        "size": "67.4 MB",
+        "date": "2022-04-20"
+      },
+      {
+        "id": 2,
+        "name": "Breeding Program Guidelines",
+        "type": "PDF",
+        "size": "45.8 MB",
+        "date": "2023-09-15"
+      },
+      {
+        "id": 3,
+        "name": "Sustainable Farming Practices Manual",
+        "type": "PDF",
+        "size": "38.7 MB",
+        "date": "2024-02-10"
+      },
+      {
+        "id": 4,
+        "name": "Economic Impact Study",
+        "type": "PDF",
+        "size": "32.6 MB",
+        "date": "2024-08-25"
+      }
+    ],
+    "feedback": [
+      {
+        "id": 1,
+        "author": "Livestock Veterinarian",
+        "date": "2024-11-20",
+        "comment": "World-class breeding facilities with excellent animal welfare standards. Significantly improving livestock quality in Mindanao.",
+        "upvotes": 234,
+        "downvotes": 7,
+        "userVote": "up"
+      },
+      {
+        "id": 2,
+        "author": "Cattle Rancher",
+        "date": "2024-11-17",
+        "comment": "Training programs have improved our breeding techniques. Higher quality cattle and better income for our families.",
+        "upvotes": 198,
+        "downvotes": 5,
+        "userVote": "up"
+      },
+      {
+        "id": 3,
+        "author": "Agriculture Extension Worker",
+        "date": "2024-11-14",
+        "comment": "Excellent resource for farmers in the region. Technology transfer is helping small livestock farmers succeed.",
+        "upvotes": 167,
+        "downvotes": 3,
+        "userVote": "up"
+      }
+    ],
+    "coordinates": {
+      "lat": 8.1379,
+      "lng": 125.1288
+    },
+    "position": {
+      "top": "75%",
+      "left": "69%"
+    },
+    "contractor": "Mindanao Livestock Development Inc.",
+    "department": "Department of Agriculture",
+    "endDate": "Sep 2024"
+  },
+  "PROJ-2025-038": {
+    "id": "PROJ-2025-038",
+    "title": "Catanduanes Resilient Infrastructure Network",
+    "location": "Bicol Region (Region V)",
+    "sector": "Infrastructure",
+    "status": "completed",
+    "progress": 100,
+    "startDate": "2021-11-01",
+    "expectedCompletion": "2024-05-31",
+    "description": "Typhoon-resistant infrastructure including roads, bridges, and communication towers",
+    "budget": {
+      "total": 15600000000,
+      "allocated": 15600000000,
+      "spent": 15600000000,
+      "remaining": 0
+    },
+    "milestones": [
+      {
+        "id": 1,
+        "title": "Vulnerability Assessment",
+        "date": "2022-01-01",
+        "status": "completed"
+      },
+      {
+        "id": 2,
+        "title": "Resilient Design Phase",
+        "date": "2022-05-01",
+        "status": "completed"
+      },
+      {
+        "id": 3,
+        "title": "Road and Bridge Construction",
+        "date": "2023-02-01",
+        "status": "completed"
+      },
+      {
+        "id": 4,
+        "title": "Communication Infrastructure",
+        "date": "2023-10-01",
+        "status": "completed"
+      },
+      {
+        "id": 5,
+        "title": "Emergency Response Systems",
+        "date": "2024-02-01",
+        "status": "completed"
+      },
+      {
+        "id": 6,
+        "title": "Infrastructure Handover",
+        "date": "2024-05-31",
+        "status": "completed"
+      }
+    ],
+    "monthlySpending": [
+      {
+        "month": "Jan 24",
+        "amount": 980000000
+      },
+      {
+        "month": "Feb 24",
+        "amount": 850000000
+      },
+      {
+        "month": "Mar 24",
+        "amount": 720000000
+      },
+      {
+        "month": "Apr 24",
+        "amount": 580000000
+      },
+      {
+        "month": "May 24",
+        "amount": 420000000
+      }
+    ],
+    "documents": [
+      {
+        "id": 1,
+        "name": "Climate Resilience Engineering Study",
+        "type": "PDF",
+        "size": "89.7 MB",
+        "date": "2022-04-15"
+      },
+      {
+        "id": 2,
+        "name": "Typhoon-Resistant Design Standards",
+        "type": "PDF",
+        "size": "67.8 MB",
+        "date": "2022-12-20"
+      },
+      {
+        "id": 3,
+        "name": "Emergency Response Protocol",
+        "type": "PDF",
+        "size": "45.3 MB",
+        "date": "2024-01-25"
+      },
+      {
+        "id": 4,
+        "name": "Infrastructure Resilience Assessment",
+        "type": "PDF",
+        "size": "38.4 MB",
+        "date": "2024-05-20"
+      }
+    ],
+    "feedback": [
+      {
+        "id": 1,
+        "author": "Disaster Risk Engineer",
+        "date": "2024-11-19",
+        "comment": "Outstanding typhoon-resistant infrastructure. Survived multiple strong typhoons with minimal damage.",
+        "upvotes": 345,
+        "downvotes": 4,
+        "userVote": "up"
+      },
+      {
+        "id": 2,
+        "author": "Local Government Official",
+        "date": "2024-11-16",
+        "comment": "These resilient roads and bridges keep our communities connected even during severe weather. Lives saved.",
+        "upvotes": 298,
+        "downvotes": 6,
+        "userVote": "up"
+      },
+      {
+        "id": 3,
+        "author": "Emergency Responder",
+        "date": "2024-11-13",
+        "comment": "Communication systems remain operational during typhoons. Critical for coordinating rescue operations.",
+        "upvotes": 234,
+        "downvotes": 3,
+        "userVote": "up"
+      }
+    ],
+    "coordinates": {
+      "lat": 13.5822,
+      "lng": 124.3975
+    },
+    "position": {
+      "top": "44%",
+      "left": "69%"
+    },
+    "contractor": "Climate Resilient Infrastructure Corp.",
+    "department": "Department of Public Works and Highways",
+    "endDate": "May 2024"
+  },
+  "PROJ-2025-039": {
+    "id": "PROJ-2025-039",
+    "title": "Bohol Bee Conservation and Honey Production Center",
+    "location": "Central Visayas (Region VII)",
+    "sector": "Food Safety & Agriculture",
+    "status": "completed",
+    "progress": 100,
+    "startDate": "2022-06-01",
+    "expectedCompletion": "2024-08-31",
+    "description": "Bee conservation facility with honey processing and pollinator research programs",
+    "budget": {
+      "total": 1800000000,
+      "allocated": 1800000000,
+      "spent": 1800000000,
+      "remaining": 0
+    },
+    "milestones": [
+      {
+        "id": 1,
+        "title": "Bee Research Facility Setup",
+        "date": "2022-08-01",
+        "status": "completed"
+      },
+      {
+        "id": 2,
+        "title": "Apiary Construction",
+        "date": "2022-12-01",
+        "status": "completed"
+      },
+      {
+        "id": 3,
+        "title": "Honey Processing Plant",
+        "date": "2023-05-01",
+        "status": "completed"
+      },
+      {
+        "id": 4,
+        "title": "Beekeeper Training Program",
+        "date": "2023-11-01",
+        "status": "completed"
+      },
+      {
+        "id": 5,
+        "title": "Conservation Research Launch",
+        "date": "2024-03-01",
+        "status": "completed"
+      },
+      {
+        "id": 6,
+        "title": "Commercial Operations",
+        "date": "2024-08-31",
+        "status": "completed"
+      }
+    ],
+    "monthlySpending": [
+      {
+        "month": "Apr 24",
+        "amount": 180000000
+      },
+      {
+        "month": "May 24",
+        "amount": 160000000
+      },
+      {
+        "month": "Jun 24",
+        "amount": 140000000
+      },
+      {
+        "month": "Jul 24",
+        "amount": 120000000
+      },
+      {
+        "month": "Aug 24",
+        "amount": 95000000
+      }
+    ],
+    "documents": [
+      {
+        "id": 1,
+        "name": "Bee Conservation Strategy",
+        "type": "PDF",
+        "size": "34.7 MB",
+        "date": "2022-07-20"
+      },
+      {
+        "id": 2,
+        "name": "Honey Quality Standards",
+        "type": "PDF",
+        "size": "24.8 MB",
+        "date": "2023-04-15"
+      },
+      {
+        "id": 3,
+        "name": "Pollinator Research Program",
+        "type": "PDF",
+        "size": "28.6 MB",
+        "date": "2024-02-10"
+      },
+      {
+        "id": 4,
+        "name": "Economic Benefits Analysis",
+        "type": "PDF",
+        "size": "18.9 MB",
+        "date": "2024-07-25"
+      }
+    ],
+    "feedback": [
+      {
+        "id": 1,
+        "author": "Entomologist",
+        "date": "2024-11-18",
+        "comment": "Vital conservation work protecting native bee species. Research findings are helping pollinator conservation nationwide.",
+        "upvotes": 189,
+        "downvotes": 5,
+        "userVote": "up"
+      },
+      {
+        "id": 2,
+        "author": "Local Beekeeper",
+        "date": "2024-11-15",
+        "comment": "Training programs improved our honey production significantly. Quality standards help us access premium markets.",
+        "upvotes": 156,
+        "downvotes": 3,
+        "userVote": "up"
+      },
+      {
+        "id": 3,
+        "author": "Organic Farmer",
+        "date": "2024-11-12",
+        "comment": "Bee pollination services have increased our crop yields. Essential partnership for sustainable agriculture.",
+        "upvotes": 134,
+        "downvotes": 2,
+        "userVote": "up"
+      }
+    ],
+    "coordinates": {
+      "lat": 9.8349,
+      "lng": 124.1438
+    },
+    "position": {
+      "top": "62%",
+      "left": "68%"
+    },
+    "contractor": "Pollinator Conservation Philippines",
+    "department": "Department of Agriculture",
+    "endDate": "Aug 2024"
+  },
+  "PROJ-2025-040": {
+    "id": "PROJ-2025-040",
+    "title": "Sorsogon Geothermal District Heating System",
+    "location": "Bicol Region (Region V)",
+    "sector": "Utilities",
+    "status": "ongoing",
+    "progress": 48,
+    "startDate": "2023-07-01",
+    "expectedCompletion": "2025-12-31",
+    "description": "Geothermal energy system providing heating and hot water for residential and commercial areas",
+    "budget": {
+      "total": 12400000000,
+      "allocated": 12400000000,
+      "spent": 5952000000,
+      "remaining": 6448000000
+    },
+    "milestones": [
+      {
+        "id": 1,
+        "title": "Geothermal Resource Mapping",
+        "date": "2023-09-01",
+        "status": "completed"
+      },
+      {
+        "id": 2,
+        "title": "Well Drilling and Testing",
+        "date": "2024-02-01",
+        "status": "completed"
+      },
+      {
+        "id": 3,
+        "title": "Distribution Network Construction",
+        "date": "2024-08-01",
+        "status": "ongoing"
+      },
+      {
+        "id": 4,
+        "title": "Residential Connection Phase",
+        "date": "2025-03-01",
+        "status": "pending"
+      },
+      {
+        "id": 5,
+        "title": "Commercial System Integration",
+        "date": "2025-08-01",
+        "status": "pending"
+      },
+      {
+        "id": 6,
+        "title": "Full System Operations",
+        "date": "2025-12-31",
+        "status": "pending"
+      }
+    ],
+    "monthlySpending": [
+      {
+        "month": "Jul",
+        "amount": 580000000
+      },
+      {
+        "month": "Aug",
+        "amount": 650000000
+      },
+      {
+        "month": "Sep",
+        "amount": 520000000
+      },
+      {
+        "month": "Oct",
+        "amount": 480000000
+      },
+      {
+        "month": "Nov",
+        "amount": 420000000
+      }
+    ],
+    "documents": [
+      {
+        "id": 1,
+        "name": "Geothermal Heating System Design",
+        "type": "PDF",
+        "size": "56.8 MB",
+        "date": "2023-08-15"
+      },
+      {
+        "id": 2,
+        "name": "Distribution Network Plan",
+        "type": "PDF",
+        "size": "42.3 MB",
+        "date": "2024-01-20"
+      },
+      {
+        "id": 3,
+        "name": "Energy Efficiency Analysis",
+        "type": "PDF",
+        "size": "34.7 MB",
+        "date": "2024-07-10"
+      },
+      {
+        "id": 4,
+        "name": "Environmental Impact Assessment",
+        "type": "PDF",
+        "size": "28.9 MB",
+        "date": "2024-10-05"
+      }
+    ],
+    "feedback": [
+      {
+        "id": 1,
+        "author": "Renewable Energy Specialist",
+        "date": "2024-11-21",
+        "comment": "Innovative use of geothermal energy for district heating. Will significantly reduce energy costs for residents.",
+        "upvotes": 234,
+        "downvotes": 12,
+        "userVote": "up"
+      },
+      {
+        "id": 2,
+        "author": "Local Resident",
+        "date": "2024-11-18",
+        "comment": "Looking forward to affordable heating and hot water. This will improve our quality of life significantly.",
+        "upvotes": 198,
+        "downvotes": 8,
+        "userVote": "up"
+      },
+      {
+        "id": 3,
+        "author": "Environmental Engineer",
+        "date": "2024-11-15",
+        "comment": "Clean energy solution that reduces carbon footprint. Great model for sustainable community heating.",
+        "upvotes": 167,
+        "downvotes": 6,
+        "userVote": "up"
+      }
+    ],
+    "coordinates": {
+      "lat": 12.9697,
+      "lng": 124.0060
+    },
+    "position": {
+      "top": "48%",
+      "left": "68%"
+    },
+    "contractor": "Geothermal Systems Philippines Inc.",
+    "department": "Department of Energy",
+    "endDate": "Dec 2025"
+  },
+  "PROJ-2025-041": {
+    "id": "PROJ-2025-041",
+    "title": "Aurora Province Eco-Tourism Coastal Trail",
+    "location": "Central Luzon (Region III)",
+    "sector": "Tourism & Culture",
+    "status": "ongoing",
+    "progress": 42,
+    "startDate": "2024-01-01",
+    "expectedCompletion": "2025-10-31",
+    "description": "Sustainable coastal trail system connecting beaches, forests, and cultural sites",
+    "budget": {
+      "total": 4900000000,
+      "allocated": 4900000000,
+      "spent": 2058000000,
+      "remaining": 2842000000
+    },
+    "milestones": [
+      {
+        "id": 1,
+        "title": "Environmental Impact Study",
+        "date": "2024-03-01",
+        "status": "completed"
+      },
+      {
+        "id": 2,
+        "title": "Trail Design and Planning",
+        "date": "2024-06-01",
+        "status": "completed"
+      },
+      {
+        "id": 3,
+        "title": "Coastal Trail Construction Phase 1",
+        "date": "2024-10-01",
+        "status": "ongoing"
+      },
+      {
+        "id": 4,
+        "title": "Visitor Facilities Development",
+        "date": "2025-02-01",
+        "status": "pending"
+      },
+      {
+        "id": 5,
+        "title": "Cultural Site Integration",
+        "date": "2025-06-01",
+        "status": "pending"
+      },
+      {
+        "id": 6,
+        "title": "Trail Network Opening",
+        "date": "2025-10-31",
+        "status": "pending"
+      }
+    ],
+    "monthlySpending": [
+      {
+        "month": "Jul",
+        "amount": 280000000
+      },
+      {
+        "month": "Aug",
+        "amount": 320000000
+      },
+      {
+        "month": "Sep",
+        "amount": 290000000
+      },
+      {
+        "month": "Oct",
+        "amount": 250000000
+      },
+      {
+        "month": "Nov",
+        "amount": 220000000
+      }
+    ],
+    "documents": [
+      {
+        "id": 1,
+        "name": "Eco-Tourism Trail Master Plan",
+        "type": "PDF",
+        "size": "45.7 MB",
+        "date": "2024-02-20"
+      },
+      {
+        "id": 2,
+        "name": "Biodiversity Conservation Strategy",
+        "type": "PDF",
+        "size": "38.4 MB",
+        "date": "2024-05-15"
+      },
+      {
+        "id": 3,
+        "name": "Community Tourism Guidelines",
+        "type": "PDF",
+        "size": "28.6 MB",
+        "date": "2024-08-10"
+      },
+      {
+        "id": 4,
+        "name": "Trail Construction Progress Report",
+        "type": "PDF",
+        "size": "22.8 MB",
+        "date": "2024-11-05"
+      }
+    ],
+    "feedback": [
+      {
+        "id": 1,
+        "author": "Eco-Tourism Expert",
+        "date": "2024-11-20",
+        "comment": "Excellent balance between tourism development and environmental protection. Model for sustainable coastal tourism.",
+        "upvotes": 189,
+        "downvotes": 8,
+        "userVote": "up"
+      },
+      {
+        "id": 2,
+        "author": "Local Tourism Operator",
+        "date": "2024-11-17",
+        "comment": "This will put Aurora on the tourism map. Beautiful coastal areas that deserve to be showcased responsibly.",
+        "upvotes": 156,
+        "downvotes": 5,
+        "userVote": "up"
+      },
+      {
+        "id": 3,
+        "author": "Environmental Scientist",
+        "date": "2024-11-14",
+        "comment": "Good environmental safeguards in place. Trail design minimizes impact on sensitive coastal ecosystems.",
+        "upvotes": 134,
+        "downvotes": 7,
+        "userVote": "up"
+      }
+    ],
+    "coordinates": {
+      "lat": 15.7536,
+      "lng": 121.5650
+    },
+    "position": {
+      "top": "24%",
+      "left": "56%"
+    },
+    "contractor": "Sustainable Tourism Development Inc.",
+    "department": "Department of Tourism",
+    "endDate": "Oct 2025"
+  },
+  "PROJ-2025-042": {
+    "id": "PROJ-2025-042",
+    "title": "Marinduque Mining Rehabilitation and Restoration",
+    "location": "MIMAROPA (Region IV-B)",
+    "sector": "Environment",
+    "status": "ongoing",
+    "progress": 35,
+    "startDate": "2024-05-01",
+    "expectedCompletion": "2027-04-30",
+    "description": "Comprehensive rehabilitation of abandoned mining sites with ecosystem restoration",
+    "budget": {
+      "total": 18700000000,
+      "allocated": 18700000000,
+      "spent": 6545000000,
+      "remaining": 12155000000
+    },
+    "milestones": [
+      {
+        "id": 1,
+        "title": "Mining Site Assessment",
+        "date": "2024-07-01",
+        "status": "completed"
+      },
+      {
+        "id": 2,
+        "title": "Soil Contamination Testing",
+        "date": "2024-09-01",
+        "status": "completed"
+      },
+      {
+        "id": 3,
+        "title": "Remediation Phase 1",
+        "date": "2025-01-01",
+        "status": "ongoing"
+      },
+      {
+        "id": 4,
+        "title": "Reforestation Program",
+        "date": "2025-08-01",
+        "status": "pending"
+      },
+      {
+        "id": 5,
+        "title": "Water System Restoration",
+        "date": "2026-04-01",
+        "status": "pending"
+      },
+      {
+        "id": 6,
+        "title": "Ecosystem Monitoring Setup",
+        "date": "2027-04-30",
+        "status": "pending"
+      }
+    ],
+    "monthlySpending": [
+      {
+        "month": "Jul",
+        "amount": 780000000
+      },
+      {
+        "month": "Aug",
+        "amount": 850000000
+      },
+      {
+        "month": "Sep",
+        "amount": 720000000
+      },
+      {
+        "month": "Oct",
+        "amount": 650000000
+      },
+      {
+        "month": "Nov",
+        "amount": 580000000
+      }
+    ],
+    "documents": [
+      {
+        "id": 1,
+        "name": "Mining Impact Assessment Report",
+        "type": "PDF",
+        "size": "98.7 MB",
+        "date": "2024-06-20"
+      },
+      {
+        "id": 2,
+        "name": "Soil Remediation Strategy",
+        "type": "PDF",
+        "size": "67.8 MB",
+        "date": "2024-08-15"
+      },
+      {
+        "id": 3,
+        "name": "Ecosystem Restoration Plan",
+        "type": "PDF",
+        "size": "54.3 MB",
+        "date": "2024-10-10"
+      },
+      {
+        "id": 4,
+        "name": "Community Health Protection Protocol",
+        "type": "PDF",
+        "size": "42.6 MB",
+        "date": "2024-11-12"
+      }
+    ],
+    "feedback": [
+      {
+        "id": 1,
+        "author": "Environmental Scientist",
+        "date": "2024-11-19",
+        "comment": "Critical work addressing decades of environmental damage. Comprehensive approach to ecosystem restoration.",
+        "upvotes": 267,
+        "downvotes": 18,
+        "userVote": "up"
+      },
+      {
+        "id": 2,
+        "author": "Local Community Leader",
+        "date": "2024-11-16",
+        "comment": "Finally addressing the environmental legacy of mining. This will improve health and livelihood opportunities.",
+        "upvotes": 234,
+        "downvotes": 12,
+        "userVote": "up"
+      },
+      {
+        "id": 3,
+        "author": "Public Health Specialist",
+        "date": "2024-11-13",
+        "comment": "Important for community health protection. Soil and water remediation will reduce exposure to contaminants.",
+        "upvotes": 198,
+        "downvotes": 15,
+        "userVote": "up"
+      }
+    ],
+    "coordinates": {
+      "lat": 13.4775,
+      "lng": 121.8456
+    },
+    "position": {
+      "top": "44%",
+      "left": "54%"
+    },
+    "contractor": "Environmental Restoration Solutions Corp.",
+    "department": "Department of Environment and Natural Resources",
+    "endDate": "Apr 2027"
+  },
+  "PROJ-2025-043": {
+    "id": "PROJ-2025-043",
+    "title": "Camiguin Island Renewable Energy Microgrid",
+    "location": "Northern Mindanao (Region X)",
+    "sector": "Utilities",
+    "status": "delayed",
+    "progress": 28,
+    "startDate": "2024-03-01",
+    "expectedCompletion": "2026-01-31",
+    "description": "Island-wide microgrid combining solar, wind, and battery storage for energy independence",
+    "budget": {
+      "total": 8900000000,
+      "allocated": 8900000000,
+      "spent": 2492000000,
+      "remaining": 6408000000
+    },
+    "milestones": [
+      {
+        "id": 1,
+        "title": "Energy Assessment and Planning",
+        "date": "2024-05-01",
+        "status": "completed"
+      },
+      {
+        "id": 2,
+        "title": "Solar Panel Installation",
+        "date": "2024-09-01",
+        "status": "ongoing"
+      },
+      {
+        "id": 3,
+        "title": "Wind Turbine Setup",
+        "date": "2025-01-01",
+        "status": "pending"
+      },
+      {
+        "id": 4,
+        "title": "Battery Storage System",
+        "date": "2025-06-01",
+        "status": "pending"
+      },
+      {
+        "id": 5,
+        "title": "Grid Integration and Testing",
+        "date": "2025-10-01",
+        "status": "pending"
+      },
+      {
+        "id": 6,
+        "title": "Full Microgrid Operations",
+        "date": "2026-01-31",
+        "status": "pending"
+      }
+    ],
+    "monthlySpending": [
+      {
+        "month": "Jul",
+        "amount": 420000000
+      },
+      {
+        "month": "Aug",
+        "amount": 380000000
+      },
+      {
+        "month": "Sep",
+        "amount": 320000000
+      },
+      {
+        "month": "Oct",
+        "amount": 280000000
+      },
+      {
+        "month": "Nov",
+        "amount": 240000000
+      }
+    ],
+    "documents": [
+      {
+        "id": 1,
+        "name": "Island Microgrid Design",
+        "type": "PDF",
+        "size": "56.7 MB",
+        "date": "2024-04-15"
+      },
+      {
+        "id": 2,
+        "name": "Renewable Energy Resource Study",
+        "type": "PDF",
+        "size": "42.8 MB",
+        "date": "2024-07-20"
+      },
+      {
+        "id": 3,
+        "name": "Project Delay Analysis",
+        "type": "PDF",
+        "size": "28.4 MB",
+        "date": "2024-10-25"
+      },
+      {
+        "id": 4,
+        "name": "Revised Implementation Timeline",
+        "type": "PDF",
+        "size": "22.6 MB",
+        "date": "2024-11-15"
+      }
+    ],
+    "feedback": [
+      {
+        "id": 1,
+        "author": "Island Resident",
+        "date": "2024-11-18",
+        "comment": "Disappointed by delays but understand the technical challenges. Hope for stable electricity soon.",
+        "upvotes": 156,
+        "downvotes": 23,
+        "userVote": "up"
+      },
+      {
+        "id": 2,
+        "author": "Renewable Energy Engineer",
+        "date": "2024-11-15",
+        "comment": "Complex island microgrid project. Weather delays and supply chain issues are understandable challenges.",
+        "upvotes": 134,
+        "downvotes": 18,
+        "userVote": "up"
+      },
+      {
+        "id": 3,
+        "author": "Tourism Business Owner",
+        "date": "2024-11-12",
+        "comment": "Reliable renewable energy crucial for our tourism industry. Need faster progress to support business growth.",
+        "upvotes": 98,
+        "downvotes": 12,
+        "userVote": "up"
+      }
+    ],
+    "coordinates": {
+      "lat": 9.1703,
+      "lng": 124.6762
+    },
+    "position": {
+      "top": "71%",
+      "left": "70%"
+    },
+    "contractor": "Island Energy Solutions Philippines",
+    "department": "Department of Energy",
+    "endDate": "Jan 2026"
+  },
+  "PROJ-2025-044": {
+    "id": "PROJ-2025-044",
+    "title": "Laguna Innovation Technology Park",
+    "location": "CALABARZON (Region IV-A)",
+    "sector": "Technology & Digital Services",
+    "status": "ongoing",
+    "progress": 56,
+    "startDate": "2023-04-01",
+    "expectedCompletion": "2025-06-30",
+    "description": "High-tech business park focusing on IT, biotechnology, and digital innovation companies",
+    "budget": {
+      "total": 24500000000,
+      "allocated": 24500000000,
+      "spent": 13720000000,
+      "remaining": 10780000000
+    },
+    "milestones": [
+      {
+        "id": 1,
+        "title": "Master Planning and Design",
+        "date": "2023-07-01",
+        "status": "completed"
+      },
+      {
+        "id": 2,
+        "title": "Infrastructure Development",
+        "date": "2023-12-01",
+        "status": "completed"
+      },
+      {
+        "id": 3,
+        "title": "Technology Buildings Phase 1",
+        "date": "2024-06-01",
+        "status": "completed"
+      },
+      {
+        "id": 4,
+        "title": "Innovation Centers Construction",
+        "date": "2024-12-01",
+        "status": "ongoing"
+      },
+      {
+        "id": 5,
+        "title": "Tenant Fit-out and Setup",
+        "date": "2025-03-01",
+        "status": "pending"
+      },
+      {
+        "id": 6,
+        "title": "Park Opening and Operations",
+        "date": "2025-06-30",
+        "status": "pending"
+      }
+    ],
+    "monthlySpending": [
+      {
+        "month": "Jul",
+        "amount": 980000000
+      },
+      {
+        "month": "Aug",
+        "amount": 1120000000
+      },
+      {
+        "month": "Sep",
+        "amount": 950000000
+      },
+      {
+        "month": "Oct",
+        "amount": 850000000
+      },
+      {
+        "month": "Nov",
+        "amount": 780000000
+      }
+    ],
+    "documents": [
+      {
+        "id": 1,
+        "name": "Technology Park Master Plan",
+        "type": "PDF",
+        "size": "78.4 MB",
+        "date": "2023-06-20"
+      },
+      {
+        "id": 2,
+        "name": "Innovation Ecosystem Strategy",
+        "type": "PDF",
+        "size": "54.7 MB",
+        "date": "2024-01-15"
+      },
+      {
+        "id": 3,
+        "name": "Digital Infrastructure Specifications",
+        "type": "PDF",
+        "size": "67.3 MB",
+        "date": "2024-05-10"
+      },
+      {
+        "id": 4,
+        "name": "Tenant Attraction and Retention Plan",
+        "type": "PDF",
+        "size": "42.8 MB",
+        "date": "2024-10-20"
+      }
+    ],
+    "feedback": [
+      {
+        "id": 1,
+        "author": "Tech Industry Executive",
+        "date": "2024-11-21",
+        "comment": "World-class facilities that will attract top technology companies. Great location with excellent infrastructure.",
+        "upvotes": 287,
+        "downvotes": 15,
+        "userVote": "up"
+      },
+      {
+        "id": 2,
+        "author": "Startup Founder",
+        "date": "2024-11-18",
+        "comment": "Perfect environment for innovation and collaboration. Looking forward to moving our company here.",
+        "upvotes": 234,
+        "downvotes": 8,
+        "userVote": "up"
+      },
+      {
+        "id": 3,
+        "author": "Local University Professor",
+        "date": "2024-11-15",
+        "comment": "Excellent opportunity for university-industry collaboration. Will boost technology education and research.",
+        "upvotes": 198,
+        "downvotes": 12,
+        "userVote": "up"
+      }
+    ],
+    "coordinates": {
+      "lat": 14.2162,
+      "lng": 121.1467
+    },
+    "position": {
+      "top": "40%",
+      "left": "50%"
+    },
+    "contractor": "Philippine Technology Park Developers",
+    "department": "Department of Science and Technology",
+    "endDate": "Jun 2025"
+  },
+  "PROJ-2025-045": {
+    "id": "PROJ-2025-045",
+    "title": "National Skills Training and Employment Program",
+    "location": "Nationwide",
+    "sector": "Social Services",
+    "status": "ongoing",
+    "progress": 63,
+    "startDate": "2023-07-01",
+    "expectedCompletion": "2025-06-30",
+    "description": "Comprehensive skills training program for unemployed and underemployed Filipinos",
+    "budget": {
+      "total": 28500000000,
+      "allocated": 28500000000,
+      "spent": 17955000000,
+      "remaining": 10545000000
+    },
+    "milestones": [
+      {
+        "id": 1,
+        "title": "Training Center Establishment",
+        "date": "2023-10-01",
+        "status": "completed"
+      },
+      {
+        "id": 2,
+        "title": "Curriculum Development",
+        "date": "2024-01-01",
+        "status": "completed"
+      },
+      {
+        "id": 3,
+        "title": "Trainer Certification",
+        "date": "2024-04-01",
+        "status": "completed"
+      },
+      {
+        "id": 4,
+        "title": "Mass Training Rollout",
+        "date": "2024-07-01",
+        "status": "completed"
+      },
+      {
+        "id": 5,
+        "title": "Job Placement Program",
+        "date": "2024-11-01",
+        "status": "ongoing"
+      },
+      {
+        "id": 6,
+        "title": "Impact Assessment",
+        "date": "2025-06-30",
+        "status": "pending"
+      }
+    ],
+    "monthlySpending": [
+      {
+        "month": "Jul",
+        "amount": 1850000000
+      },
+      {
+        "month": "Aug",
+        "amount": 1920000000
+      },
+      {
+        "month": "Sep",
+        "amount": 1780000000
+      },
+      {
+        "month": "Oct",
+        "amount": 1650000000
+      },
+      {
+        "month": "Nov",
+        "amount": 1580000000
+      }
+    ],
+    "documents": [
+      {
+        "id": 1,
+        "name": "National Skills Training Strategy",
+        "type": "PDF",
+        "size": "67.8 MB",
+        "date": "2023-08-15"
+      },
+      {
+        "id": 2,
+        "name": "Industry Partnership Framework",
+        "type": "PDF",
+        "size": "45.3 MB",
+        "date": "2024-02-20"
+      },
+      {
+        "id": 3,
+        "name": "Employment Outcomes Report",
+        "type": "PDF",
+        "size": "38.7 MB",
+        "date": "2024-09-10"
+      },
+      {
+        "id": 4,
+        "name": "Training Quality Standards",
+        "type": "PDF",
+        "size": "32.4 MB",
+        "date": "2024-11-05"
+      }
+    ],
+    "feedback": [
+      {
+        "id": 1,
+        "author": "Program Graduate",
+        "date": "2024-11-22",
+        "comment": "The welding certification program changed my life. Now I have stable employment with good pay.",
+        "upvotes": 289,
+        "downvotes": 8,
+        "userVote": "up"
+      },
+      {
+        "id": 2,
+        "author": "HR Manager",
+        "date": "2024-11-19",
+        "comment": "Graduates from this program are well-prepared and skilled. We've hired many trainees successfully.",
+        "upvotes": 234,
+        "downvotes": 12,
+        "userVote": "up"
+      },
+      {
+        "id": 3,
+        "author": "Training Center Director",
+        "date": "2024-11-16",
+        "comment": "Excellent curriculum and support from government. High job placement rates across all programs.",
+        "upvotes": 198,
+        "downvotes": 5,
+        "userVote": "up"
+      }
+    ],
+    "coordinates": {
+      "lat": 12.8797,
+      "lng": 121.7740
+    },
+    "position": {
+      "top": "50%",
+      "left": "55%"
+    },
+    "contractor": "Technical Education and Skills Development Authority",
+    "department": "Department of Labor and Employment",
+    "endDate": "Jun 2025"
+  },
+  "PROJ-2025-046": {
+    "id": "PROJ-2025-046",
+    "title": "Mindanao Special Economic Zone Development",
+    "location": "Davao Region (Region XI)",
+    "sector": "Economic Development",
+    "status": "ongoing",
+    "progress": 41,
+    "startDate": "2024-01-01",
+    "expectedCompletion": "2027-03-31",
+    "description": "Large-scale economic zone with manufacturing, logistics, and business process outsourcing facilities",
+    "budget": {
+      "total": 94600000000,
+      "allocated": 94600000000,
+      "spent": 38786000000,
+      "remaining": 55814000000
+    },
+    "milestones": [
+      {
+        "id": 1,
+        "title": "Master Planning and Design",
+        "date": "2024-04-01",
+        "status": "completed"
+      },
+      {
+        "id": 2,
+        "title": "Infrastructure Phase 1",
+        "date": "2024-09-01",
+        "status": "completed"
+      },
+      {
+        "id": 3,
+        "title": "Manufacturing Zone Development",
+        "date": "2025-03-01",
+        "status": "ongoing"
+      },
+      {
+        "id": 4,
+        "title": "BPO Complex Construction",
+        "date": "2025-10-01",
+        "status": "pending"
+      },
+      {
+        "id": 5,
+        "title": "Logistics Hub Development",
+        "date": "2026-06-01",
+        "status": "pending"
+      },
+      {
+        "id": 6,
+        "title": "Full Operations Launch",
+        "date": "2027-03-31",
+        "status": "pending"
+      }
+    ],
+    "monthlySpending": [
+      {
+        "month": "Jul",
+        "amount": 3850000000
+      },
+      {
+        "month": "Aug",
+        "amount": 4200000000
+      },
+      {
+        "month": "Sep",
+        "amount": 3650000000
+      },
+      {
+        "month": "Oct",
+        "amount": 3280000000
+      },
+      {
+        "month": "Nov",
+        "amount": 2950000000
+      }
+    ],
+    "documents": [
+      {
+        "id": 1,
+        "name": "Economic Zone Master Plan",
+        "type": "PDF",
+        "size": "89.4 MB",
+        "date": "2024-03-20"
+      },
+      {
+        "id": 2,
+        "name": "Investor Incentives Package",
+        "type": "PDF",
+        "size": "54.7 MB",
+        "date": "2024-06-15"
+      },
+      {
+        "id": 3,
+        "name": "Infrastructure Development Strategy",
+        "type": "PDF",
+        "size": "67.8 MB",
+        "date": "2024-08-10"
+      },
+      {
+        "id": 4,
+        "name": "Employment Generation Study",
+        "type": "PDF",
+        "size": "42.3 MB",
+        "date": "2024-11-08"
+      }
+    ],
+    "feedback": [
+      {
+        "id": 1,
+        "author": "International Investor",
+        "date": "2024-11-21",
+        "comment": "Excellent investment climate and strategic location. This will be a major economic hub for Southeast Asia.",
+        "upvotes": 267,
+        "downvotes": 23,
+        "userVote": "up"
+      },
+      {
+        "id": 2,
+        "author": "Local Business Leader",
+        "date": "2024-11-18",
+        "comment": "Game-changer for Mindanao's economy. Will create thousands of jobs and attract more businesses.",
+        "upvotes": 234,
+        "downvotes": 18,
+        "userVote": "up"
+      },
+      {
+        "id": 3,
+        "author": "Economic Analyst",
+        "date": "2024-11-15",
+        "comment": "Strategic development that will boost regional GDP significantly. Good government-private sector collaboration.",
+        "upvotes": 189,
+        "downvotes": 15,
+        "userVote": "up"
+      }
+    ],
+    "coordinates": {
+      "lat": 7.1907,
+      "lng": 125.4553
+    },
+    "position": {
+      "top": "78%",
+      "left": "72%"
+    },
+    "contractor": "Mindanao Economic Development Consortium",
+    "department": "Department of Trade and Industry",
+    "endDate": "Mar 2027"
+  },
+  "PROJ-2025-047": {
+    "id": "PROJ-2025-047",
+    "title": "National Digital Government Services Platform",
+    "location": "Nationwide",
+    "sector": "Public Services",
+    "status": "ongoing",
+    "progress": 52,
+    "startDate": "2023-11-01",
+    "expectedCompletion": "2025-08-31",
+    "description": "Unified digital platform for all government services and transactions",
+    "budget": {
+      "total": 15700000000,
+      "allocated": 15700000000,
+      "spent": 8164000000,
+      "remaining": 7536000000
+    },
+    "milestones": [
+      {
+        "id": 1,
+        "title": "Platform Architecture Design",
+        "date": "2024-02-01",
+        "status": "completed"
+      },
+      {
+        "id": 2,
+        "title": "Core Systems Development",
+        "date": "2024-06-01",
+        "status": "completed"
+      },
+      {
+        "id": 3,
+        "title": "Pilot Testing with Key Agencies",
+        "date": "2024-10-01",
+        "status": "completed"
+      },
+      {
+        "id": 4,
+        "title": "Multi-Agency Integration",
+        "date": "2025-02-01",
+        "status": "ongoing"
+      },
+      {
+        "id": 5,
+        "title": "Public Launch",
+        "date": "2025-05-01",
+        "status": "pending"
+      },
+      {
+        "id": 6,
+        "title": "Full Nationwide Deployment",
+        "date": "2025-08-31",
+        "status": "pending"
+      }
+    ],
+    "monthlySpending": [
+      {
+        "month": "Jul",
+        "amount": 780000000
+      },
+      {
+        "month": "Aug",
+        "amount": 850000000
+      },
+      {
+        "month": "Sep",
+        "amount": 720000000
+      },
+      {
+        "month": "Oct",
+        "amount": 680000000
+      },
+      {
+        "month": "Nov",
+        "amount": 620000000
+      }
+    ],
+    "documents": [
+      {
+        "id": 1,
+        "name": "Digital Government Transformation Strategy",
+        "type": "PDF",
+        "size": "56.8 MB",
+        "date": "2023-12-15"
+      },
+      {
+        "id": 2,
+        "name": "Cybersecurity Framework",
+        "type": "PDF",
+        "size": "42.3 MB",
+        "date": "2024-04-20"
+      },
+      {
+        "id": 3,
+        "name": "User Experience Design Guidelines",
+        "type": "PDF",
+        "size": "34.7 MB",
+        "date": "2024-08-10"
+      },
+      {
+        "id": 4,
+        "name": "Data Privacy and Protection Protocol",
+        "type": "PDF",
+        "size": "28.9 MB",
+        "date": "2024-11-05"
+      }
+    ],
+    "feedback": [
+      {
+        "id": 1,
+        "author": "Government Employee",
+        "date": "2024-11-20",
+        "comment": "Streamlined processes are making our work more efficient. Citizens are getting faster service delivery.",
+        "upvotes": 198,
+        "downvotes": 12,
+        "userVote": "up"
+      },
+      {
+        "id": 2,
+        "author": "Business Owner",
+        "date": "2024-11-17",
+        "comment": "Finally can do business permits online! Saves time and reduces bureaucratic hassles significantly.",
+        "upvotes": 267,
+        "downvotes": 8,
+        "userVote": "up"
+      },
+      {
+        "id": 3,
+        "author": "IT Professional",
+        "date": "2024-11-14",
+        "comment": "Well-designed system with good security measures. Modern approach to digital government services.",
+        "upvotes": 156,
+        "downvotes": 15,
+        "userVote": "up"
+      }
+    ],
+    "coordinates": {
+      "lat": 14.5995,
+      "lng": 121.0023
+    },
+    "position": {
+      "top": "35%",
+      "left": "48%"
+    },
+    "contractor": "Philippine Digital Government Solutions Consortium",
+    "department": "Department of Information and Communications Technology",
+    "endDate": "Aug 2025"
+  },
+  "PROJ-2025-048": {
+    "id": "PROJ-2025-048",
+    "title": "Armed Forces Modernization Program Phase III",
+    "location": "Nationwide",
+    "sector": "Safety & Security",
+    "status": "ongoing",
+    "progress": 34,
+    "startDate": "2024-05-01",
+    "expectedCompletion": "2028-04-30",
+    "description": "Military equipment modernization and capability enhancement program",
+    "budget": {
+      "total": 175000000000,
+      "allocated": 175000000000,
+      "spent": 59500000000,
+      "remaining": 115500000000
+    },
+    "milestones": [
+      {
+        "id": 1,
+        "title": "Equipment Procurement Planning",
+        "date": "2024-08-01",
+        "status": "completed"
+      },
+      {
+        "id": 2,
+        "title": "Naval Assets Acquisition",
+        "date": "2025-03-01",
+        "status": "ongoing"
+      },
+      {
+        "id": 3,
+        "title": "Air Force Modernization",
+        "date": "2025-12-01",
+        "status": "pending"
+      },
+      {
+        "id": 4,
+        "title": "Army Equipment Upgrade",
+        "date": "2026-08-01",
+        "status": "pending"
+      },
+      {
+        "id": 5,
+        "title": "Training and Integration",
+        "date": "2027-06-01",
+        "status": "pending"
+      },
+      {
+        "id": 6,
+        "title": "Full Operational Capability",
+        "date": "2028-04-30",
+        "status": "pending"
+      }
+    ],
+    "monthlySpending": [
+      {
+        "month": "Jul",
+        "amount": 5800000000
+      },
+      {
+        "month": "Aug",
+        "amount": 6200000000
+      },
+      {
+        "month": "Sep",
+        "amount": 5400000000
+      },
+      {
+        "month": "Oct",
+        "amount": 4900000000
+      },
+      {
+        "month": "Nov",
+        "amount": 4600000000
+      }
+    ],
+    "documents": [
+      {
+        "id": 1,
+        "name": "AFP Modernization Master Plan",
+        "type": "PDF",
+        "size": "134.7 MB",
+        "date": "2024-06-20"
+      },
+      {
+        "id": 2,
+        "name": "Defense Capability Requirements",
+        "type": "PDF",
+        "size": "89.4 MB",
+        "date": "2024-09-15"
+      },
+      {
+        "id": 3,
+        "name": "Equipment Acquisition Timeline",
+        "type": "PDF",
+        "size": "67.8 MB",
+        "date": "2024-10-25"
+      },
+      {
+        "id": 4,
+        "name": "Training and Doctrine Updates",
+        "type": "PDF",
+        "size": "54.3 MB",
+        "date": "2024-11-12"
+      }
+    ],
+    "feedback": [
+      {
+        "id": 1,
+        "author": "Military Analyst",
+        "date": "2024-11-21",
+        "comment": "Essential modernization for national defense. New equipment will significantly enhance AFP capabilities.",
+        "upvotes": 234,
+        "downvotes": 45,
+        "userVote": "up"
+      },
+      {
+        "id": 2,
+        "author": "Defense Industry Expert",
+        "date": "2024-11-18",
+        "comment": "Well-planned procurement process. Good balance between foreign and domestic defense manufacturing.",
+        "upvotes": 189,
+        "downvotes": 32,
+        "userVote": "up"
+      },
+      {
+        "id": 3,
+        "author": "Security Specialist",
+        "date": "2024-11-15",
+        "comment": "Necessary investment for territorial defense and security. Modern threats require modern capabilities.",
+        "upvotes": 167,
+        "downvotes": 28,
+        "userVote": "up"
+      }
+    ],
+    "coordinates": {
+      "lat": 14.5995,
+      "lng": 121.0023
+    },
+    "position": {
+      "top": "35%",
+      "left": "48%"
+    },
+    "contractor": "Defense Systems Technologies Philippines",
+    "department": "Department of National Defense",
+    "endDate": "Apr 2028"
+  },
+  "PROJ-2025-049": {
+    "id": "PROJ-2025-049",
+    "title": "Comprehensive Basic Education Infrastructure Program",
+    "location": "Nationwide",
+    "sector": "Education",
+    "status": "ongoing",
+    "progress": 58,
+    "startDate": "2023-06-01",
+    "expectedCompletion": "2025-12-31",
+    "description": "Construction and renovation of public schools nationwide with modern learning facilities",
+    "budget": {
+      "total": 67500000000,
+      "allocated": 67500000000,
+      "spent": 39150000000,
+      "remaining": 28350000000
+    },
+    "milestones": [
+      {
+        "id": 1,
+        "title": "School Site Assessment",
+        "date": "2023-09-01",
+        "status": "completed"
+      },
+      {
+        "id": 2,
+        "title": "Construction Phase 1 (Elementary)",
+        "date": "2024-03-01",
+        "status": "completed"
+      },
+      {
+        "id": 3,
+        "title": "Construction Phase 2 (Secondary)",
+        "date": "2024-09-01",
+        "status": "completed"
+      },
+      {
+        "id": 4,
+        "title": "Technology Integration",
+        "date": "2025-03-01",
+        "status": "ongoing"
+      },
+      {
+        "id": 5,
+        "title": "Teacher Training Programs",
+        "date": "2025-08-01",
+        "status": "pending"
+      },
+      {
+        "id": 6,
+        "title": "Full Operations",
+        "date": "2025-12-31",
+        "status": "pending"
+      }
+    ],
+    "monthlySpending": [
+      {
+        "month": "Jul",
+        "amount": 2850000000
+      },
+      {
+        "month": "Aug",
+        "amount": 3100000000
+      },
+      {
+        "month": "Sep",
+        "amount": 2750000000
+      },
+      {
+        "month": "Oct",
+        "amount": 2450000000
+      },
+      {
+        "month": "Nov",
+        "amount": 2200000000
+      }
+    ],
+    "documents": [
+      {
+        "id": 1,
+        "name": "School Infrastructure Master Plan",
+        "type": "PDF",
+        "size": "78.4 MB",
+        "date": "2023-07-20"
+      },
+      {
+        "id": 2,
+        "name": "Modern Learning Facility Standards",
+        "type": "PDF",
+        "size": "54.7 MB",
+        "date": "2024-01-15"
+      },
+      {
+        "id": 3,
+        "name": "Technology Integration Guidelines",
+        "type": "PDF",
+        "size": "45.3 MB",
+        "date": "2024-08-10"
+      },
+      {
+        "id": 4,
+        "name": "Regional Progress Assessment",
+        "type": "PDF",
+        "size": "38.7 MB",
+        "date": "2024-11-05"
+      }
+    ],
+    "feedback": [
+      {
+        "id": 1,
+        "author": "Elementary School Principal",
+        "date": "2024-11-22",
+        "comment": "New classrooms are bright, spacious and well-equipped. Students are more engaged in learning.",
+        "upvotes": 298,
+        "downvotes": 6,
+        "userVote": "up"
+      },
+      {
+        "id": 2,
+        "author": "Parent",
+        "date": "2024-11-19",
+        "comment": "Happy to see my children learning in modern facilities. Big improvement from old overcrowded classrooms.",
+        "upvotes": 267,
+        "downvotes": 4,
+        "userVote": "up"
+      },
+      {
+        "id": 3,
+        "author": "Public School Teacher",
+        "date": "2024-11-16",
+        "comment": "Teaching is more effective with proper facilities and technology. Thank you for investing in education.",
+        "upvotes": 234,
+        "downvotes": 8,
+        "userVote": "up"
+      }
+    ],
+    "coordinates": {
+      "lat": 12.8797,
+      "lng": 121.7740
+    },
+    "position": {
+      "top": "50%",
+      "left": "55%"
+    },
+    "contractor": "Philippine School Building Program Consortium",
+    "department": "Department of Education",
+    "endDate": "Dec 2025"
+  },
+  "PROJ-2025-050": {
+    "id": "PROJ-2025-050",
+    "title": "Local Government Unit Digitalization Program",
+    "location": "Nationwide",
+    "sector": "Interior & Local Government",
+    "status": "ongoing",
+    "progress": 47,
+    "startDate": "2024-02-01",
+    "expectedCompletion": "2026-01-31",
+    "description": "Digital transformation of all LGUs with modern systems and e-governance capabilities",
+    "budget": {
+      "total": 22800000000,
+      "allocated": 22800000000,
+      "spent": 10716000000,
+      "remaining": 12084000000
+    },
+    "milestones": [
+      {
+        "id": 1,
+        "title": "LGU Assessment and Planning",
+        "date": "2024-05-01",
+        "status": "completed"
+      },
+      {
+        "id": 2,
+        "title": "Metro Manila LGUs Phase",
+        "date": "2024-09-01",
+        "status": "completed"
+      },
+      {
+        "id": 3,
+        "title": "Regional Centers Digitalization",
+        "date": "2025-01-01",
+        "status": "ongoing"
+      },
+      {
+        "id": 4,
+        "title": "Provincial LGUs Implementation",
+        "date": "2025-06-01",
+        "status": "pending"
+      },
+      {
+        "id": 5,
+        "title": "Municipal and City LGUs",
+        "date": "2025-10-01",
+        "status": "pending"
+      },
+      {
+        "id": 6,
+        "title": "Nationwide Integration",
+        "date": "2026-01-31",
+        "status": "pending"
+      }
+    ],
+    "monthlySpending": [
+      {
+        "month": "Jul",
+        "amount": 1280000000
+      },
+      {
+        "month": "Aug",
+        "amount": 1420000000
+      },
+      {
+        "month": "Sep",
+        "amount": 1150000000
+      },
+      {
+        "month": "Oct",
+        "amount": 980000000
+      },
+      {
+        "month": "Nov",
+        "amount": 850000000
+      }
+    ],
+    "documents": [
+      {
+        "id": 1,
+        "name": "LGU Digital Transformation Framework",
+        "type": "PDF",
+        "size": "67.8 MB",
+        "date": "2024-03-20"
+      },
+      {
+        "id": 2,
+        "name": "E-Governance Implementation Guide",
+        "type": "PDF",
+        "size": "45.3 MB",
+        "date": "2024-07-15"
+      },
+      {
+        "id": 3,
+        "name": "Digital Services Standards",
+        "type": "PDF",
+        "size": "38.7 MB",
+        "date": "2024-10-10"
+      },
+      {
+        "id": 4,
+        "name": "Citizen Satisfaction Survey Results",
+        "type": "PDF",
+        "size": "32.4 MB",
+        "date": "2024-11-08"
+      }
+    ],
+    "feedback": [
+      {
+        "id": 1,
+        "author": "City Mayor",
+        "date": "2024-11-21",
+        "comment": "Digital systems have improved our service delivery significantly. Citizens appreciate faster processing times.",
+        "upvotes": 234,
+        "downvotes": 18,
+        "userVote": "up"
+      },
+      {
+        "id": 2,
+        "author": "Municipal Administrator",
+        "date": "2024-11-18",
+        "comment": "Excellent training and support from DILG. Our staff are adapting well to new digital processes.",
+        "upvotes": 189,
+        "downvotes": 12,
+        "userVote": "up"
+      },
+      {
+        "id": 3,
+        "author": "Citizen Advocate",
+        "date": "2024-11-15",
+        "comment": "Transparency and accountability improved with digital systems. Easier to track government services.",
+        "upvotes": 167,
+        "downvotes": 8,
+        "userVote": "up"
+      }
+    ],
+    "coordinates": {
+      "lat": 12.8797,
+      "lng": 121.7740
+    },
+    "position": {
+      "top": "50%",
+      "left": "55%"
+    },
+    "contractor": "Local Government Digital Solutions Inc.",
+    "department": "Department of the Interior and Local Government",
+    "endDate": "Jan 2026"
+  },
+  "PROJ-2025-051": {
+    "id": "PROJ-2025-051",
+    "title": "Senior Citizens Comprehensive Care Program",
+    "location": "Nationwide",
+    "sector": "Social Services",
+    "status": "ongoing",
+    "progress": 69,
+    "startDate": "2023-04-01",
+    "expectedCompletion": "2025-03-31",
+    "description": "Nationwide program providing healthcare, social services, and livelihood support for senior citizens",
+    "budget": {
+      "total": 18900000000,
+      "allocated": 18900000000,
+      "spent": 13041000000,
+      "remaining": 5859000000
+    },
+    "milestones": [
+      {
+        "id": 1,
+        "title": "Senior Care Centers Establishment",
+        "date": "2023-08-01",
+        "status": "completed"
+      },
+      {
+        "id": 2,
+        "title": "Healthcare Services Rollout",
+        "date": "2024-01-01",
+        "status": "completed"
+      },
+      {
+        "id": 3,
+        "title": "Social Services Integration",
+        "date": "2024-06-01",
+        "status": "completed"
+      },
+      {
+        "id": 4,
+        "title": "Livelihood Programs Launch",
+        "date": "2024-10-01",
+        "status": "completed"
+      },
+      {
+        "id": 5,
+        "title": "Community Outreach Expansion",
+        "date": "2025-01-01",
+        "status": "ongoing"
+      },
+      {
+        "id": 6,
+        "title": "Program Evaluation",
+        "date": "2025-03-31",
+        "status": "pending"
+      }
+    ],
+    "monthlySpending": [
+      {
+        "month": "Jul",
+        "amount": 1120000000
+      },
+      {
+        "month": "Aug",
+        "amount": 1050000000
+      },
+      {
+        "month": "Sep",
+        "amount": 980000000
+      },
+      {
+        "month": "Oct",
+        "amount": 920000000
+      },
+      {
+        "month": "Nov",
+        "amount": 850000000
+      }
+    ],
+    "documents": [
+      {
+        "id": 1,
+        "name": "Senior Citizens Care Strategy",
+        "type": "PDF",
+        "size": "45.7 MB",
+        "date": "2023-05-20"
+      },
+      {
+        "id": 2,
+        "name": "Healthcare Services Manual",
+        "type": "PDF",
+        "size": "38.4 MB",
+        "date": "2024-02-15"
+      },
+      {
+        "id": 3,
+        "name": "Livelihood Program Guidelines",
+        "type": "PDF",
+        "size": "32.8 MB",
+        "date": "2024-09-10"
+      },
+      {
+        "id": 4,
+        "name": "Community Impact Assessment",
+        "type": "PDF",
+        "size": "28.6 MB",
+        "date": "2024-11-12"
+      }
+    ],
+    "feedback": [
+      {
+        "id": 1,
+        "author": "Senior Citizen Beneficiary",
+        "date": "2024-11-20",
+        "comment": "The healthcare and social support has improved my quality of life significantly. Very grateful for this program.",
+        "upvotes": 267,
+        "downvotes": 3,
+        "userVote": "up"
+      },
+      {
+        "id": 2,
+        "author": "Family Caregiver",
+        "date": "2024-11-17",
+        "comment": "Great support for elderly family members. The care centers provide excellent services and activities.",
+        "upvotes": 234,
+        "downvotes": 5,
+        "userVote": "up"
+      },
+      {
+        "id": 3,
+        "author": "Social Worker",
+        "date": "2024-11-14",
+        "comment": "Comprehensive program that addresses multiple needs of senior citizens. Well-coordinated service delivery.",
+        "upvotes": 189,
+        "downvotes": 8,
+        "userVote": "up"
+      }
+    ],
+    "coordinates": {
+      "lat": 12.8797,
+      "lng": 121.7740
+    },
+    "position": {
+      "top": "50%",
+      "left": "55%"
+    },
+    "contractor": "Philippine Senior Care Services Consortium",
+    "department": "Department of Social Welfare and Development",
+    "endDate": "Mar 2025"
+  },
+  "PROJ-2025-052": {
+    "id": "PROJ-2025-052",
+    "title": "Metro Cebu Business Process Outsourcing Complex",
+    "location": "Central Visayas (Region VII)",
+    "sector": "Economic Development",
+    "status": "ongoing",
+    "progress": 38,
+    "startDate": "2024-03-01",
+    "expectedCompletion": "2026-08-31",
+    "description": "Large-scale BPO complex with modern facilities and supporting infrastructure",
+    "budget": {
+      "total": 32400000000,
+      "allocated": 32400000000,
+      "spent": 12312000000,
+      "remaining": 20088000000
+    },
+    "milestones": [
+      {
+        "id": 1,
+        "title": "Master Planning and Design",
+        "date": "2024-06-01",
+        "status": "completed"
+      },
+      {
+        "id": 2,
+        "title": "Infrastructure Development",
+        "date": "2024-11-01",
+        "status": "ongoing"
+      },
+      {
+        "id": 3,
+        "title": "BPO Buildings Construction",
+        "date": "2025-04-01",
+        "status": "pending"
+      },
+      {
+        "id": 4,
+        "title": "Technology Infrastructure",
+        "date": "2025-11-01",
+        "status": "pending"
+      },
+      {
+        "id": 5,
+        "title": "Tenant Fit-out",
+        "date": "2026-05-01",
+        "status": "pending"
+      },
+      {
+        "id": 6,
+        "title": "Commercial Operations",
+        "date": "2026-08-31",
+        "status": "pending"
+      }
+    ],
+    "monthlySpending": [
+      {
+        "month": "Jul",
+        "amount": 1450000000
+      },
+      {
+        "month": "Aug",
+        "amount": 1620000000
+      },
+      {
+        "month": "Sep",
+        "amount": 1380000000
+      },
+      {
+        "month": "Oct",
+        "amount": 1250000000
+      },
+      {
+        "month": "Nov",
+        "amount": 1120000000
+      }
+    ],
+    "documents": [
+      {
+        "id": 1,
+        "name": "BPO Complex Master Plan",
+        "type": "PDF",
+        "size": "78.4 MB",
+        "date": "2024-05-20"
+      },
+      {
+        "id": 2,
+        "name": "Technology Infrastructure Design",
+        "type": "PDF",
+        "size": "54.7 MB",
+        "date": "2024-08-15"
+      },
+      {
+        "id": 3,
+        "name": "Investor Attraction Strategy",
+        "type": "PDF",
+        "size": "42.3 MB",
+        "date": "2024-10-10"
+      },
+      {
+        "id": 4,
+        "name": "Employment Generation Projections",
+        "type": "PDF",
+        "size": "34.8 MB",
+        "date": "2024-11-05"
+      }
+    ],
+    "feedback": [
+      {
+        "id": 1,
+        "author": "BPO Industry Executive",
+        "date": "2024-11-21",
+        "comment": "Strategic location with excellent infrastructure. This will position Cebu as a major BPO destination.",
+        "upvotes": 234,
+        "downvotes": 18,
+        "userVote": "up"
+      },
+      {
+        "id": 2,
+        "author": "IT Professional",
+        "date": "2024-11-18",
+        "comment": "Modern facilities with world-class technology infrastructure. Great opportunity for IT careers in Cebu.",
+        "upvotes": 198,
+        "downvotes": 12,
+        "userVote": "up"
+      },
+      {
+        "id": 3,
+        "author": "Economic Development Officer",
+        "date": "2024-11-15",
+        "comment": "This will create thousands of jobs and boost the regional economy significantly. Excellent investment.",
+        "upvotes": 167,
+        "downvotes": 8,
+        "userVote": "up"
+      }
+    ],
+    "coordinates": {
+      "lat": 10.3157,
+      "lng": 123.8854
+    },
+    "position": {
+      "top": "55%",
+      "left": "62%"
+    },
+    "contractor": "Cebu Business District Developers Inc.",
+    "department": "Department of Trade and Industry",
+    "endDate": "Aug 2026"
+  },
+  "PROJ-2025-053": {
+    "id": "PROJ-2025-053",
+    "title": "National Government Center Administrative Complex",
+    "location": "National Capital Region (NCR)",
+    "sector": "Public Services",
+    "status": "ongoing",
+    "progress": 33,
+    "startDate": "2024-06-01",
+    "expectedCompletion": "2027-05-31",
+    "description": "Centralized government complex with modern offices and citizen service centers",
+    "budget": {
+      "total": 48700000000,
+      "allocated": 48700000000,
+      "spent": 16071000000,
+      "remaining": 32629000000
+    },
+    "milestones": [
+      {
+        "id": 1,
+        "title": "Architectural Design",
+        "date": "2024-09-01",
+        "status": "completed"
+      },
+      {
+        "id": 2,
+        "title": "Site Preparation",
+        "date": "2024-12-01",
+        "status": "ongoing"
+      },
+      {
+        "id": 3,
+        "title": "Foundation and Structure",
+        "date": "2025-06-01",
+        "status": "pending"
+      },
+      {
+        "id": 4,
+        "title": "Building Systems Installation",
+        "date": "2026-03-01",
+        "status": "pending"
+      },
+      {
+        "id": 5,
+        "title": "Interior Fit-out",
+        "date": "2026-12-01",
+        "status": "pending"
+      },
+      {
+        "id": 6,
+        "title": "Operations Handover",
+        "date": "2027-05-31",
+        "status": "pending"
+      }
+    ],
+    "monthlySpending": [
+      {
+        "month": "Jul",
+        "amount": 1850000000
+      },
+      {
+        "month": "Aug",
+        "amount": 2100000000
+      },
+      {
+        "month": "Sep",
+        "amount": 1920000000
+      },
+      {
+        "month": "Oct",
+        "amount": 1650000000
+      },
+      {
+        "month": "Nov",
+        "amount": 1480000000
+      }
+    ],
+    "documents": [
+      {
+        "id": 1,
+        "name": "Government Complex Master Plan",
+        "type": "PDF",
+        "size": "89.4 MB",
+        "date": "2024-08-20"
+      },
+      {
+        "id": 2,
+        "name": "Sustainable Building Design Standards",
+        "type": "PDF",
+        "size": "67.8 MB",
+        "date": "2024-10-15"
+      },
+      {
+        "id": 3,
+        "name": "Citizen Service Integration Plan",
+        "type": "PDF",
+        "size": "45.3 MB",
+        "date": "2024-11-10"
+      },
+      {
+        "id": 4,
+        "name": "Government Operations Efficiency Study",
+        "type": "PDF",
+        "size": "38.7 MB",
+        "date": "2024-11-18"
+      }
+    ],
+    "feedback": [
+      {
+        "id": 1,
+        "author": "Government Employee",
+        "date": "2024-11-20",
+        "comment": "Modern workspace will improve productivity and inter-agency coordination. Looking forward to the move.",
+        "upvotes": 167,
+        "downvotes": 23,
+        "userVote": "up"
+      },
+      {
+        "id": 2,
+        "author": "Public Administration Expert",
+        "date": "2024-11-17",
+        "comment": "Centralized location will improve government efficiency and citizen access to services.",
+        "upvotes": 134,
+        "downvotes": 18,
+        "userVote": "up"
+      },
+      {
+        "id": 3,
+        "author": "Urban Planner",
+        "date": "2024-11-14",
+        "comment": "Good integration with existing infrastructure. Sustainable design features are commendable.",
+        "upvotes": 98,
+        "downvotes": 12,
+        "userVote": "up"
+      }
+    ],
+    "coordinates": {
+      "lat": 14.5995,
+      "lng": 121.0023
+    },
+    "position": {
+      "top": "35%",
+      "left": "48%"
+    },
+    "contractor": "Government Infrastructure Builders Corp.",
+    "department": "Department of Public Works and Highways",
+    "endDate": "May 2027"
+  },
+  "PROJ-2025-054": {
+    "id": "PROJ-2025-054",
+    "title": "National Higher Education Research University",
+    "location": "CALABARZON (Region IV-A)",
+    "sector": "Education",
+    "status": "ongoing",
+    "progress": 29,
+    "startDate": "2024-08-01",
+    "expectedCompletion": "2027-07-31",
+    "description": "World-class research university with advanced laboratories and international partnerships",
+    "budget": {
+      "total": 56800000000,
+      "allocated": 56800000000,
+      "spent": 16472000000,
+      "remaining": 40328000000
+    },
+    "milestones": [
+      {
+        "id": 1,
+        "title": "University Master Planning",
+        "date": "2024-11-01",
+        "status": "completed"
+      },
+      {
+        "id": 2,
+        "title": "Campus Development Phase 1",
+        "date": "2025-06-01",
+        "status": "ongoing"
+      },
+      {
+        "id": 3,
+        "title": "Research Facilities Construction",
+        "date": "2026-01-01",
+        "status": "pending"
+      },
+      {
+        "id": 4,
+        "title": "Academic Buildings",
+        "date": "2026-08-01",
+        "status": "pending"
+      },
+      {
+        "id": 5,
+        "title": "Faculty Recruitment",
+        "date": "2027-03-01",
+        "status": "pending"
+      },
+      {
+        "id": 6,
+        "title": "University Opening",
+        "date": "2027-07-31",
+        "status": "pending"
+      }
+    ],
+    "monthlySpending": [
+      {
+        "month": "Jul",
+        "amount": 1980000000
+      },
+      {
+        "month": "Aug",
+        "amount": 2250000000
+      },
+      {
+        "month": "Sep",
+        "amount": 1850000000
+      },
+      {
+        "month": "Oct",
+        "amount": 1620000000
+      },
+      {
+        "month": "Nov",
+        "amount": 1450000000
+      }
+    ],
+    "documents": [
+      {
+        "id": 1,
+        "name": "Research University Development Plan",
+        "type": "PDF",
+        "size": "134.7 MB",
+        "date": "2024-10-20"
+      },
+      {
+        "id": 2,
+        "name": "International Partnership Framework",
+        "type": "PDF",
+        "size": "78.4 MB",
+        "date": "2024-11-08"
+      },
+      {
+        "id": 3,
+        "name": "Advanced Laboratory Design",
+        "type": "PDF",
+        "size": "89.7 MB",
+        "date": "2024-11-15"
+      },
+      {
+        "id": 4,
+        "name": "Faculty Excellence Program",
+        "type": "PDF",
+        "size": "54.3 MB",
+        "date": "2024-11-22"
+      }
+    ],
+    "feedback": [
+      {
+        "id": 1,
+        "author": "University Professor",
+        "date": "2024-11-22",
+        "comment": "Exciting opportunity to establish a world-class research institution. Will boost Philippines' academic reputation globally.",
+        "upvotes": 287,
+        "downvotes": 15,
+        "userVote": "up"
+      },
+      {
+        "id": 2,
+        "author": "Graduate Student",
+        "date": "2024-11-19",
+        "comment": "Can't wait to pursue advanced research here. The facilities and international partnerships are impressive.",
+        "upvotes": 234,
+        "downvotes": 8,
+        "userVote": "up"
+      },
+      {
+        "id": 3,
+        "author": "Science and Technology Expert",
+        "date": "2024-11-16",
+        "comment": "This will accelerate research and innovation in the Philippines. Great investment in knowledge economy.",
+        "upvotes": 198,
+        "downvotes": 12,
+        "userVote": "up"
+      }
+    ],
+    "coordinates": {
+      "lat": 14.2162,
+      "lng": 121.1467
+    },
+    "position": {
+      "top": "40%",
+      "left": "50%"
+    },
+    "contractor": "Philippine Research University Consortium",
+    "department": "Commission on Higher Education",
+    "endDate": "Jul 2027"
+  },
+    "PROJ-2025-055": {
+      "id": "PROJ-2025-055",
+      "title": "National Disaster Resilience Infrastructure Program",
+      "location": "Nationwide",
+      "sector": "Safety & Security",
       "status": "ongoing",
-      "progress": 48,
-      "startDate": "2023-07-01",
-      "expectedCompletion": "2025-12-31",
-      "description": "Geothermal energy system providing heating and hot water for residential and commercial areas",
+      "progress": 45,
+      "startDate": "2023-10-01",
+      "expectedCompletion": "2026-09-30",
+      "description": "Comprehensive disaster-resistant infrastructure including evacuation centers, early warning systems, and emergency response facilities",
       "budget": {
-        "total": 12400000000,
-        "allocated": 12400000000,
-        "spent": 5952000000,
-        "remaining": 6448000000
+        "total": 89400000000,
+        "allocated": 89400000000,
+        "spent": 40230000000,
+        "remaining": 49170000000
       },
       "milestones": [
-        { "id": 1, "title": "Geothermal Resource Mapping", "date": "2023-09-01", "status": "completed" },
-        { "id": 2, "title": "Well Drilling and Testing", "date": "2024-02-01", "status": "completed" },
-        { "id": 3, "title": "Distribution Network Construction", "date": "2024-08-01", "status": "ongoing" },
-        { "id": 4, "title": "Residential Connection Phase", "date": "2025-03-01", "status": "pending" },
-        { "id": 5, "title": "Commercial System Integration", "date": "2025-08-01", "status": "pending" },
-        { "id": 6, "title": "Full System Operations", "date": "2025-12-31", "status": "pending" }
+        { "id": 1, "title": "Risk Assessment and Mapping", "date": "2024-01-01", "status": "completed" },
+        { "id": 2, "title": "Evacuation Centers Phase 1", "date": "2024-06-01", "status": "completed" },
+        { "id": 3, "title": "Early Warning Systems", "date": "2024-12-01", "status": "ongoing" },
+        { "id": 4, "title": "Emergency Response Facilities", "date": "2025-06-01", "status": "pending" },
+        { "id": 5, "title": "Community Preparedness Training", "date": "2026-03-01", "status": "pending" },
+        { "id": 6, "title": "Full System Integration", "date": "2026-09-30", "status": "pending" }
       ],
       "monthlySpending": [
-        { "month": "Jul", "amount": 580000000 },
-        { "month": "Aug", "amount": 650000000 },
-        { "month": "Sep", "amount": 520000000 },
-        { "month": "Oct", "amount": 480000000 },
-        { "month": "Nov", "amount": 420000000 }
+        { "month": "Jul", "amount": 3850000000 },
+        { "month": "Aug", "amount": 4200000000 },
+        { "month": "Sep", "amount": 3650000000 },
+        { "month": "Oct", "amount": 3280000000 },
+        { "month": "Nov", "amount": 2950000000 }
       ],
       "documents": [
-        { "id": 1, "name": "Geothermal Heating System Design", "type": "PDF", "size": "56.8 MB", "date": "2023-08-15" },
-        { "id": 2, "name": "Distribution Network Plan", "type": "PDF", "size": "42.3 MB", "date": "2024-01-20" },
-        { "id": 3, "name": "Energy Efficiency Analysis", "type": "PDF", "size": "34.7 MB", "date": "2024-07-10" },
-        { "id": 4, "name": "Environmental Impact Assessment", "type": "PDF", "size": "28.9 MB", "date": "2024-10-05" }
+        { "id": 1, "name": "National Disaster Risk Assessment", "type": "PDF", "size": "156.8 MB", "date": "2023-12-15" },
+        { "id": 2, "name": "Evacuation Center Design Standards", "type": "PDF", "size": "89.7 MB", "date": "2024-03-20" },
+        { "id": 3, "name": "Early Warning System Specifications", "type": "PDF", "size": "67.4 MB", "date": "2024-08-10" },
+        { "id": 4, "name": "Community Preparedness Protocol", "type": "PDF", "size": "45.8 MB", "date": "2024-11-05" }
       ],
       "feedback": [
-        { "id": 1, "author": "Renewable Energy Specialist", "date": "2024-11-21", "comment": "Innovative use of geothermal energy for district heating. Will significantly reduce energy costs for residents.", "upvotes": 234, "downvotes": 12, "userVote": "up" },
-        { "id": 2, "author": "Local Resident", "date": "2024-11-18", "comment": "Looking forward to affordable heating and hot water. This will improve our quality of life significantly.", "upvotes": 198, "downvotes": 8, "userVote": "up" },
-        { "id": 3, "author": "Environmental Engineer", "date": "2024-11-15", "comment": "Clean energy solution that reduces carbon footprint. Great model for sustainable community heating.", "upvotes": 167, "downvotes": 6, "userVote": "up" }
+        { "id": 1, "author": "Disaster Risk Management Expert", "date": "2024-11-22", "comment": "Critical infrastructure for saving lives during disasters. Modern evacuation centers are well-designed and strategically located.", "upvotes": 345, "downvotes": 12, "userVote": "up" },
+        { "id": 2, "author": "Barangay Captain", "date": "2024-11-19", "comment": "Finally have proper evacuation facilities for our community. Early warning systems help us prepare better for typhoons.", "upvotes": 289, "downvotes": 8, "userVote": "up" },
+        { "id": 3, "author": "Emergency Responder", "date": "2024-11-16", "comment": "Excellent coordination centers and equipment. Response times have improved significantly with new facilities.", "upvotes": 234, "downvotes": 6, "userVote": "up" }
       ],
-      "coordinates": { "lat": 12.9697, "lng": 124.0060 },
-      "position": { "top": "48%", "left": "68%" },
-      "contractor": "Geothermal Systems Philippines Inc.",
-      "department": "Department of Energy",
-      "endDate": "Dec 2025"
+      "coordinates": { "lat": 12.8797, "lng": 121.7740 },
+      "position": { "top": "50%", "left": "55%" },
+      "contractor": "National Disaster Resilience Consortium",
+      "department": "Department of National Defense",
+      "endDate": "Sep 2026"
     },
-    "PROJ-2025-041": {
-      "id": "PROJ-2025-041",
-      "title": "Aurora Province Eco-Tourism Coastal Trail",
-      "location": "Central Luzon (Region III)",
-      "sector": "Tourism & Culture",
+    "PROJ-2025-056": {
+      "id": "PROJ-2025-056",
+      "title": "Nationwide Universal Healthcare Facilities Upgrade",
+      "location": "Nationwide",
+      "sector": "Healthcare",
       "status": "ongoing",
-      "progress": 42,
-      "startDate": "2024-01-01",
-      "expectedCompletion": "2025-10-31",
-      "description": "Sustainable coastal trail system connecting beaches, forests, and cultural sites",
+      "progress": 62,
+      "startDate": "2023-05-01",
+      "expectedCompletion": "2025-04-30",
+      "description": "Comprehensive upgrade of hospitals, health centers, and medical equipment across the Philippines",
       "budget": {
-        "total": 4900000000,
-        "allocated": 4900000000,
-        "spent": 2058000000,
-        "remaining": 2842000000
+        "total": 78900000000,
+        "allocated": 78900000000,
+        "spent": 48918000000,
+        "remaining": 29982000000
       },
       "milestones": [
-        { "id": 1, "title": "Environmental Impact Study", "date": "2024-03-01", "status": "completed" },
-        { "id": 2, "title": "Trail Design and Planning", "date": "2024-06-01", "status": "completed" },
-        { "id": 3, "title": "Coastal Trail Construction Phase 1", "date": "2024-10-01", "status": "ongoing" },
-        { "id": 4, "title": "Visitor Facilities Development", "date": "2025-02-01", "status": "pending" },
-        { "id": 5, "title": "Cultural Site Integration", "date": "2025-06-01", "status": "pending" },
-        { "id": 6, "title": "Trail Network Opening", "date": "2025-10-31", "status": "pending" }
+        { "id": 1, "title": "Healthcare Facility Assessment", "date": "2023-08-01", "status": "completed" },
+        { "id": 2, "title": "Regional Medical Centers", "date": "2024-01-01", "status": "completed" },
+        { "id": 3, "title": "Provincial Hospital Upgrades", "date": "2024-07-01", "status": "completed" },
+        { "id": 4, "title": "Rural Health Unit Modernization", "date": "2024-12-01", "status": "ongoing" },
+        { "id": 5, "title": "Medical Equipment Installation", "date": "2025-02-01", "status": "pending" },
+        { "id": 6, "title": "Staff Training and Certification", "date": "2025-04-30", "status": "pending" }
       ],
       "monthlySpending": [
-        { "month": "Jul", "amount": 280000000 },
-        { "month": "Aug", "amount": 320000000 },
-        { "month": "Sep", "amount": 290000000 },
-        { "month": "Oct", "amount": 250000000 },
-        { "month": "Nov", "amount": 220000000 }
+        { "month": "Jul", "amount": 3450000000 },
+        { "month": "Aug", "amount": 3780000000 },
+        { "month": "Sep", "amount": 3250000000 },
+        { "month": "Oct", "amount": 2890000000 },
+        { "month": "Nov", "amount": 2650000000 }
       ],
       "documents": [
-        { "id": 1, "name": "Eco-Tourism Trail Master Plan", "type": "PDF", "size": "45.7 MB", "date": "2024-02-20" },
-        { "id": 2, "name": "Biodiversity Conservation Strategy", "type": "PDF", "size": "38.4 MB", "date": "2024-05-15" },
-        { "id": 3, "name": "Community Tourism Guidelines", "type": "PDF", "size": "28.6 MB", "date": "2024-08-10" },
-        { "id": 4, "name": "Trail Construction Progress Report", "type": "PDF", "size": "22.8 MB", "date": "2024-11-05" }
+        { "id": 1, "name": "Universal Healthcare Infrastructure Plan", "type": "PDF", "size": "123.7 MB", "date": "2023-06-20" },
+        { "id": 2, "name": "Medical Equipment Standards", "type": "PDF", "size": "89.4 MB", "date": "2024-02-15" },
+        { "id": 3, "name": "Healthcare Quality Assurance Protocol", "type": "PDF", "size": "67.8 MB", "date": "2024-09-10" },
+        { "id": 4, "name": "Rural Health Services Improvement", "type": "PDF", "size": "54.3 MB", "date": "2024-11-08" }
       ],
       "feedback": [
-        { "id": 1, "author": "Eco-Tourism Expert", "date": "2024-11-20", "comment": "Excellent balance between tourism development and environmental protection. Model for sustainable coastal tourism.", "upvotes": 189, "downvotes": 8, "userVote": "up" },
-        { "id": 2, "author": "Local Tourism Operator", "date": "2024-11-17", "comment": "This will put Aurora on the tourism map. Beautiful coastal areas that deserve to be showcased responsibly.", "upvotes": 156, "downvotes": 5, "userVote": "up" },
-        { "id": 3, "author": "Environmental Scientist", "date": "2024-11-14", "comment": "Good environmental safeguards in place. Trail design minimizes impact on sensitive coastal ecosystems.", "upvotes": 134, "downvotes": 7, "userVote": "up" }
+        { "id": 1, "author": "Medical Doctor", "date": "2024-11-21", "comment": "Significant improvement in healthcare facilities. Modern equipment allows us to provide better patient care.", "upvotes": 378, "downvotes": 9, "userVote": "up" },
+        { "id": 2, "author": "Nurse", "date": "2024-11-18", "comment": "Working conditions have improved dramatically. New facilities make our job more efficient and safer.", "upvotes": 289, "downvotes": 5, "userVote": "up" },
+        { "id": 3, "author": "Patient", "date": "2024-11-15", "comment": "Healthcare services are much better now. Shorter waiting times and modern facilities in our local health center.", "upvotes": 234, "downvotes": 7, "userVote": "up" }
       ],
-      "coordinates": { "lat": 15.7536, "lng": 121.5650 },
-      "position": { "top": "24%", "left": "56%" },
-      "contractor": "Sustainable Tourism Development Inc.",
-      "department": "Department of Tourism",
-      "endDate": "Oct 2025"
+      "coordinates": { "lat": 12.8797, "lng": 121.7740 },
+      "position": { "top": "50%", "left": "55%" },
+      "contractor": "Philippine Healthcare Infrastructure Alliance",
+      "department": "Department of Health",
+      "endDate": "Apr 2025"
     },
-    "PROJ-2025-042": {
-      "id": "PROJ-2025-042",
-      "title": "Marinduque Mining Rehabilitation and Restoration",
-      "location": "MIMAROPA (Region IV-B)",
-      "sector": "Environment",
-      "status": "ongoing",
-      "progress": 35,
-      "startDate": "2024-05-01",
-      "expectedCompletion": "2027-04-30",
-      "description": "Comprehensive rehabilitation of abandoned mining sites with ecosystem restoration",
-      "budget": {
-        "total": 18700000000,
-        "allocated": 18700000000,
-        "spent": 6545000000,
-        "remaining": 12155000000
-      },
-      "milestones": [
-        { "id": 1, "title": "Mining Site Assessment", "date": "2024-07-01", "status": "completed" },
-        { "id": 2, "title": "Soil Contamination Testing", "date": "2024-09-01", "status": "completed" },
-        { "id": 3, "title": "Remediation Phase 1", "date": "2025-01-01", "status": "ongoing" },
-        { "id": 4, "title": "Reforestation Program", "date": "2025-08-01", "status": "pending" },
-        { "id": 5, "title": "Water System Restoration", "date": "2026-04-01", "status": "pending" },
-        { "id": 6, "title": "Ecosystem Monitoring Setup", "date": "2027-04-30", "status": "pending" }
-      ],
-      "monthlySpending": [
-        { "month": "Jul", "amount": 780000000 },
-        { "month": "Aug", "amount": 850000000 },
-        { "month": "Sep", "amount": 720000000 },
-        { "month": "Oct", "amount": 650000000 },
-        { "month": "Nov", "amount": 580000000 }
-      ],
-      "documents": [
-        { "id": 1, "name": "Mining Impact Assessment Report", "type": "PDF", "size": "98.7 MB", "date": "2024-06-20" },
-        { "id": 2, "name": "Soil Remediation Strategy", "type": "PDF", "size": "67.8 MB", "date": "2024-08-15" },
-        { "id": 3, "name": "Ecosystem Restoration Plan", "type": "PDF", "size": "54.3 MB", "date": "2024-10-10" },
-        { "id": 4, "name": "Community Health Protection Protocol", "type": "PDF", "size": "42.6 MB", "date": "2024-11-12" }
-      ],
-      "feedback": [
-        { "id": 1, "author": "Environmental Scientist", "date": "2024-11-19", "comment": "Critical work addressing decades of environmental damage. Comprehensive approach to ecosystem restoration.", "upvotes": 267, "downvotes": 18, "userVote": "up" },
-        { "id": 2, "author": "Local Community Leader", "date": "2024-11-16", "comment": "Finally addressing the environmental legacy of mining. This will improve health and livelihood opportunities.", "upvotes": 234, "downvotes": 12, "userVote": "up" },
-        { "id": 3, "author": "Public Health Specialist", "date": "2024-11-13", "comment": "Important for community health protection. Soil and water remediation will reduce exposure to contaminants.", "upvotes": 198, "downvotes": 15, "userVote": "up" }
-      ],
-      "coordinates": { "lat": 13.4775, "lng": 121.8456 },
-      "position": { "top": "44%", "left": "54%" },
-      "contractor": "Environmental Restoration Solutions Corp.",
-      "department": "Department of Environment and Natural Resources",
-      "endDate": "Apr 2027"
-    },
-    "PROJ-2025-043": {
-      "id": "PROJ-2025-043",
-      "title": "Camiguin Island Renewable Energy Microgrid",
-      "location": "Northern Mindanao (Region X)",
-      "sector": "Utilities",
-      "status": "delayed",
-      "progress": 28,
-      "startDate": "2024-03-01",
-      "expectedCompletion": "2026-01-31",
-      "description": "Island-wide microgrid combining solar, wind, and battery storage for energy independence",
-      "budget": {
-        "total": 8900000000,
-        "allocated": 8900000000,
-        "spent": 2492000000,
-        "remaining": 6408000000
-      },
-      "milestones": [
-        { "id": 1, "title": "Energy Assessment and Planning", "date": "2024-05-01", "status": "completed" },
-        { "id": 2, "title": "Solar Panel Installation", "date": "2024-09-01", "status": "ongoing" },
-        { "id": 3, "title": "Wind Turbine Setup", "date": "2025-01-01", "status": "pending" },
-        { "id": 4, "title": "Battery Storage System", "date": "2025-06-01", "status": "pending" },
-        { "id": 5, "title": "Grid Integration and Testing", "date": "2025-10-01", "status": "pending" },
-        { "id": 6, "title": "Full Microgrid Operations", "date": "2026-01-31", "status": "pending" }
-      ],
-      "monthlySpending": [
-        { "month": "Jul", "amount": 420000000 },
-        { "month": "Aug", "amount": 380000000 },
-        { "month": "Sep", "amount": 320000000 },
-        { "month": "Oct", "amount": 280000000 },
-        { "month": "Nov", "amount": 240000000 }
-      ],
-      "documents": [
-        { "id": 1, "name": "Island Microgrid Design", "type": "PDF", "size": "56.7 MB", "date": "2024-04-15" },
-        { "id": 2, "name": "Renewable Energy Resource Study", "type": "PDF", "size": "42.8 MB", "date": "2024-07-20" },
-        { "id": 3, "name": "Project Delay Analysis", "type": "PDF", "size": "28.4 MB", "date": "2024-10-25" },
-        { "id": 4, "name": "Revised Implementation Timeline", "type": "PDF", "size": "22.6 MB", "date": "2024-11-15" }
-      ],
-      "feedback": [
-        { "id": 1, "author": "Island Resident", "date": "2024-11-18", "comment": "Disappointed by delays but understand the technical challenges. Hope for stable electricity soon.", "upvotes": 156, "downvotes": 23, "userVote": "up" },
-        { "id": 2, "author": "Renewable Energy Engineer", "date": "2024-11-15", "comment": "Complex island microgrid project. Weather delays and supply chain issues are understandable challenges.", "upvotes": 134, "downvotes": 18, "userVote": "up" },
-        { "id": 3, "author": "Tourism Business Owner", "date": "2024-11-12", "comment": "Reliable renewable energy crucial for our tourism industry. Need faster progress to support business growth.", "upvotes": 98, "downvotes": 12, "userVote": "up" }
-      ],
-      "coordinates": { "lat": 9.1703, "lng": 124.6762 },
-      "position": { "top": "71%", "left": "70%" },
-      "contractor": "Island Energy Solutions Philippines",
-      "department": "Department of Energy",
-      "endDate": "Jan 2026"
-    },
-    "PROJ-2025-044": {
-      "id": "PROJ-2025-044",
-      "title": "Laguna Innovation Technology Park",
-      "location": "CALABARZON (Region IV-A)",
+    "PROJ-2025-057": {
+      "id": "PROJ-2025-057",
+      "title": "National Broadband Infrastructure Expansion",
+      "location": "Nationwide",
       "sector": "Technology & Digital Services",
       "status": "ongoing",
-      "progress": 56,
-      "startDate": "2023-04-01",
-      "expectedCompletion": "2025-06-30",
-      "description": "High-tech business park focusing on IT, biotechnology, and digital innovation companies",
+      "progress": 54,
+      "startDate": "2023-08-01",
+      "expectedCompletion": "2025-07-31",
+      "description": "High-speed fiber optic network expansion to connect all municipalities and barangays",
       "budget": {
-        "total": 24500000000,
-        "allocated": 24500000000,
-        "spent": 13720000000,
-        "remaining": 10780000000
+        "total": 125600000000,
+        "allocated": 125600000000,
+        "spent": 67824000000,
+        "remaining": 57776000000
       },
       "milestones": [
-        { "id": 1, "title": "Master Planning and Design", "date": "2023-07-01", "status": "completed" },
-        { "id": 2, "title": "Infrastructure Development", "date": "2023-12-01", "status": "completed" },
-        { "id": 3, "title": "Technology Buildings Phase 1", "date": "2024-06-01", "status": "completed" },
-        { "id": 4, "title": "Innovation Centers Construction", "date": "2024-12-01", "status": "ongoing" },
-        { "id": 5, "title": "Tenant Fit-out and Setup", "date": "2025-03-01", "status": "pending" },
-        { "id": 6, "title": "Park Opening and Operations", "date": "2025-06-30", "status": "pending" }
+        { "id": 1, "title": "Network Planning and Design", "date": "2023-11-01", "status": "completed" },
+        { "id": 2, "title": "Urban Areas Phase 1", "date": "2024-03-01", "status": "completed" },
+        { "id": 3, "title": "Provincial Connectivity", "date": "2024-08-01", "status": "completed" },
+        { "id": 4, "title": "Rural Areas Expansion", "date": "2025-01-01", "status": "ongoing" },
+        { "id": 5, "title": "Island Connectivity", "date": "2025-04-01", "status": "pending" },
+        { "id": 6, "title": "Full Network Integration", "date": "2025-07-31", "status": "pending" }
       ],
       "monthlySpending": [
-        { "month": "Jul", "amount": 980000000 },
-        { "month": "Aug", "amount": 1120000000 },
-        { "month": "Sep", "amount": 950000000 },
-        { "month": "Oct", "amount": 850000000 },
-        { "month": "Nov", "amount": 780000000 }
+        { "month": "Jul", "amount": 6280000000 },
+        { "month": "Aug", "amount": 6850000000 },
+        { "month": "Sep", "amount": 5940000000 },
+        { "month": "Oct", "amount": 5320000000 },
+        { "month": "Nov", "amount": 4780000000 }
       ],
       "documents": [
-        { "id": 1, "name": "Technology Park Master Plan", "type": "PDF", "size": "78.4 MB", "date": "2023-06-20" },
-        { "id": 2, "name": "Innovation Ecosystem Strategy", "type": "PDF", "size": "54.7 MB", "date": "2024-01-15" },
-        { "id": 3, "name": "Digital Infrastructure Specifications", "type": "PDF", "size": "67.3 MB", "date": "2024-05-10" },
-        { "id": 4, "name": "Tenant Attraction and Retention Plan", "type": "PDF", "size": "42.8 MB", "date": "2024-10-20" }
+        { "id": 1, "name": "National Broadband Master Plan", "type": "PDF", "size": "134.7 MB", "date": "2023-09-20" },
+        { "id": 2, "name": "Fiber Optic Network Specifications", "type": "PDF", "size": "89.4 MB", "date": "2024-01-15" },
+        { "id": 3, "name": "Rural Connectivity Strategy", "type": "PDF", "size": "67.8 MB", "date": "2024-06-10" },
+        { "id": 4, "name": "Digital Divide Assessment", "type": "PDF", "size": "54.3 MB", "date": "2024-10-25" }
       ],
       "feedback": [
-        { "id": 1, "author": "Tech Industry Executive", "date": "2024-11-21", "comment": "World-class facilities that will attract top technology companies. Great location with excellent infrastructure.", "upvotes": 287, "downvotes": 15, "userVote": "up" },
-        { "id": 2, "author": "Startup Founder", "date": "2024-11-18", "comment": "Perfect environment for innovation and collaboration. Looking forward to moving our company here.", "upvotes": 234, "downvotes": 8, "userVote": "up" },
-        { "id": 3, "author": "Local University Professor", "date": "2024-11-15", "comment": "Excellent opportunity for university-industry collaboration. Will boost technology education and research.", "upvotes": 198, "downvotes": 12, "userVote": "up" }
+        { "id": 1, "author": "IT Business Owner", "date": "2024-11-22", "comment": "High-speed internet has transformed our business operations. Finally reliable connectivity in rural areas.", "upvotes": 456, "downvotes": 23, "userVote": "up" },
+        { "id": 2, "author": "Student", "date": "2024-11-19", "comment": "Online learning is now possible in our province. Fast internet helps with research and virtual classes.", "upvotes": 367, "downvotes": 15, "userVote": "up" },
+        { "id": 3, "author": "Remote Worker", "date": "2024-11-16", "comment": "Can now work from my hometown with reliable internet. Game-changer for work-life balance.", "upvotes": 289, "downvotes": 12, "userVote": "up" }
       ],
-      "coordinates": { "lat": 14.2162, "lng": 121.1467 },
-      "position": { "top": "40%", "left": "50%" },
-      "contractor": "Philippine Technology Park Developers",
-      "department": "Department of Science and Technology",
-      "endDate": "Jun 2025"
+      "coordinates": { "lat": 12.8797, "lng": 121.7740 },
+      "position": { "top": "50%", "left": "55%" },
+      "contractor": "Philippine Digital Infrastructure Corp.",
+      "department": "Department of Information and Communications Technology",
+      "endDate": "Jul 2025"
     },
-      "PROJ-2025-045": {
-        "id": "PROJ-2025-045",
-        "title": "National Skills Training and Employment Program",
-        "location": "Nationwide",
-        "sector": "Social Services",
-        "status": "ongoing",
-        "progress": 63,
-        "startDate": "2023-07-01",
-        "expectedCompletion": "2025-06-30",
-        "description": "Comprehensive skills training program for unemployed and underemployed Filipinos",
-        "budget": {
-          "total": 28500000000,
-          "allocated": 28500000000,
-          "spent": 17955000000,
-          "remaining": 10545000000
-        },
-        "milestones": [
-          { "id": 1, "title": "Training Center Establishment", "date": "2023-10-01", "status": "completed" },
-          { "id": 2, "title": "Curriculum Development", "date": "2024-01-01", "status": "completed" },
-          { "id": 3, "title": "Trainer Certification", "date": "2024-04-01", "status": "completed" },
-          { "id": 4, "title": "Mass Training Rollout", "date": "2024-07-01", "status": "completed" },
-          { "id": 5, "title": "Job Placement Program", "date": "2024-11-01", "status": "ongoing" },
-          { "id": 6, "title": "Impact Assessment", "date": "2025-06-30", "status": "pending" }
-        ],
-        "monthlySpending": [
-          { "month": "Jul", "amount": 1850000000 },
-          { "month": "Aug", "amount": 1920000000 },
-          { "month": "Sep", "amount": 1780000000 },
-          { "month": "Oct", "amount": 1650000000 },
-          { "month": "Nov", "amount": 1580000000 }
-        ],
-        "documents": [
-          { "id": 1, "name": "National Skills Training Strategy", "type": "PDF", "size": "67.8 MB", "date": "2023-08-15" },
-          { "id": 2, "name": "Industry Partnership Framework", "type": "PDF", "size": "45.3 MB", "date": "2024-02-20" },
-          { "id": 3, "name": "Employment Outcomes Report", "type": "PDF", "size": "38.7 MB", "date": "2024-09-10" },
-          { "id": 4, "name": "Training Quality Standards", "type": "PDF", "size": "32.4 MB", "date": "2024-11-05" }
-        ],
-        "feedback": [
-          { "id": 1, "author": "Program Graduate", "date": "2024-11-22", "comment": "The welding certification program changed my life. Now I have stable employment with good pay.", "upvotes": 289, "downvotes": 8, "userVote": "up" },
-          { "id": 2, "author": "HR Manager", "date": "2024-11-19", "comment": "Graduates from this program are well-prepared and skilled. We've hired many trainees successfully.", "upvotes": 234, "downvotes": 12, "userVote": "up" },
-          { "id": 3, "author": "Training Center Director", "date": "2024-11-16", "comment": "Excellent curriculum and support from government. High job placement rates across all programs.", "upvotes": 198, "downvotes": 5, "userVote": "up" }
-        ],
-        "coordinates": { "lat": 12.8797, "lng": 121.7740 },
-        "position": { "top": "50%", "left": "55%" },
-        "contractor": "Technical Education and Skills Development Authority",
-        "department": "Department of Labor and Employment",
-        "endDate": "Jun 2025"
+    "PROJ-2025-058": {
+      "id": "PROJ-2025-058", 
+      "title": "Comprehensive Affordable Housing Program",
+      "location": "Nationwide",
+      "sector": "Housing & Urban Planning",
+      "status": "ongoing",
+      "progress": 41,
+      "startDate": "2024-01-01",
+      "expectedCompletion": "2027-12-31",
+      "description": "Large-scale affordable housing development for low and middle-income families",
+      "budget": {
+        "total": 600000000000,
+        "allocated": 600000000000,
+        "spent": 246000000000,
+        "remaining": 354000000000
       },
-      "PROJ-2025-046": {
-        "id": "PROJ-2025-046",
-        "title": "Mindanao Special Economic Zone Development",
-        "location": "Davao Region (Region XI)",
-        "sector": "Economic Development",
-        "status": "ongoing",
-        "progress": 41,
-        "startDate": "2024-01-01",
-        "expectedCompletion": "2027-03-31",
-        "description": "Large-scale economic zone with manufacturing, logistics, and business process outsourcing facilities",
-        "budget": {
-          "total": 94600000000,
-          "allocated": 94600000000,
-          "spent": 38786000000,
-          "remaining": 55814000000
-        },
-        "milestones": [
-          { "id": 1, "title": "Master Planning and Design", "date": "2024-04-01", "status": "completed" },
-          { "id": 2, "title": "Infrastructure Phase 1", "date": "2024-09-01", "status": "completed" },
-          { "id": 3, "title": "Manufacturing Zone Development", "date": "2025-03-01", "status": "ongoing" },
-          { "id": 4, "title": "BPO Complex Construction", "date": "2025-10-01", "status": "pending" },
-          { "id": 5, "title": "Logistics Hub Development", "date": "2026-06-01", "status": "pending" },
-          { "id": 6, "title": "Full Operations Launch", "date": "2027-03-31", "status": "pending" }
-        ],
-        "monthlySpending": [
-          { "month": "Jul", "amount": 3850000000 },
-          { "month": "Aug", "amount": 4200000000 },
-          { "month": "Sep", "amount": 3650000000 },
-          { "month": "Oct", "amount": 3280000000 },
-          { "month": "Nov", "amount": 2950000000 }
-        ],
-        "documents": [
-          { "id": 1, "name": "Economic Zone Master Plan", "type": "PDF", "size": "89.4 MB", "date": "2024-03-20" },
-          { "id": 2, "name": "Investor Incentives Package", "type": "PDF", "size": "54.7 MB", "date": "2024-06-15" },
-          { "id": 3, "name": "Infrastructure Development Strategy", "type": "PDF", "size": "67.8 MB", "date": "2024-08-10" },
-          { "id": 4, "name": "Employment Generation Study", "type": "PDF", "size": "42.3 MB", "date": "2024-11-08" }
-        ],
-        "feedback": [
-          { "id": 1, "author": "International Investor", "date": "2024-11-21", "comment": "Excellent investment climate and strategic location. This will be a major economic hub for Southeast Asia.", "upvotes": 267, "downvotes": 23, "userVote": "up" },
-          { "id": 2, "author": "Local Business Leader", "date": "2024-11-18", "comment": "Game-changer for Mindanao's economy. Will create thousands of jobs and attract more businesses.", "upvotes": 234, "downvotes": 18, "userVote": "up" },
-          { "id": 3, "author": "Economic Analyst", "date": "2024-11-15", "comment": "Strategic development that will boost regional GDP significantly. Good government-private sector collaboration.", "upvotes": 189, "downvotes": 15, "userVote": "up" }
-        ],
-        "coordinates": { "lat": 7.1907, "lng": 125.4553 },
-        "position": { "top": "78%", "left": "72%" },
-        "contractor": "Mindanao Economic Development Consortium",
-        "department": "Department of Trade and Industry",
-        "endDate": "Mar 2027"
+      "milestones": [
+        { "id": 1, "title": "Housing Site Development", "date": "2024-06-01", "status": "completed" },
+        { "id": 2, "title": "Infrastructure Phase 1", "date": "2024-12-01", "status": "ongoing" },
+        { "id": 3, "title": "Residential Construction Phase 1", "date": "2025-06-01", "status": "pending" },
+        { "id": 4, "title": "Community Facilities", "date": "2026-03-01", "status": "pending" },
+        { "id": 5, "title": "Phase 2 Expansion", "date": "2026-12-01", "status": "pending" },
+        { "id": 6, "title": "Full Community Handover", "date": "2027-12-31", "status": "pending" }
+      ],
+      "monthlySpending": [
+        { "month": "Jul", "amount": 30000000000 },
+        { "month": "Aug", "amount": 32700000000 },
+        { "month": "Sep", "amount": 27700000000 },
+        { "month": "Oct", "amount": 24600000000 },
+        { "month": "Nov", "amount": 22300000000 }
+      ],
+      "documents": [
+        { "id": 1, "name": "Affordable Housing Master Plan", "type": "PDF", "size": "167.8 MB", "date": "2024-02-20" },
+        { "id": 2, "name": "Community Development Guidelines", "type": "PDF", "size": "89.4 MB", "date": "2024-05-15" },
+        { "id": 3, "name": "Housing Quality Standards", "type": "PDF", "size": "67.8 MB", "date": "2024-09-10" },
+        { "id": 4, "name": "Financing and Payment Schemes", "type": "PDF", "size": "54.3 MB", "date": "2024-11-05" }
+      ],
+      "feedback": [
+        { "id": 1, "author": "Beneficiary Family", "date": "2024-11-21", "comment": "Finally have a chance to own our home. Quality construction and affordable payment terms.", "upvotes": 456, "downvotes": 18, "userVote": "up" },
+        { "id": 2, "author": "Urban Planner", "date": "2024-11-18", "comment": "Well-planned communities with proper amenities. Good integration of housing with infrastructure.", "upvotes": 289, "downvotes": 12, "userVote": "up" },
+        { "id": 3, "author": "Social Worker", "date": "2024-11-15", "comment": "Addresses the housing crisis effectively. Communities are designed with families' needs in mind.", "upvotes": 234, "downvotes": 8, "userVote": "up" }
+      ],
+      "coordinates": { "lat": 12.8797, "lng": 121.7740 },
+      "position": { "top": "50%", "left": "55%" },
+      "contractor": "National Housing Development Alliance",
+      "department": "Department of Human Settlements and Urban Development", 
+      "endDate": "Dec 2027"
+    },
+    "PROJ-2025-059": {
+      "id": "PROJ-2025-059", 
+      "title": "Integrated Transport System for Greater Manila",
+      "location": "National Capital Region (NCR)",
+      "sector": "Transportation",
+      "status": "ongoing",
+      "progress": 36,
+      "startDate": "2024-04-01",
+      "expectedCompletion": "2028-03-31",
+      "description": "Comprehensive public transport system including MRT expansion, bus rapid transit, and integrated terminals",
+      "budget": {
+        "total": 890000000000,
+        "allocated": 890000000000,
+        "spent": 320400000000,
+        "remaining": 569600000000
       },
-      "PROJ-2025-047": {
-        "id": "PROJ-2025-047",
-        "title": "National Digital Government Services Platform",
-        "location": "Nationwide",
-        "sector": "Public Services",
-        "status": "ongoing",
-        "progress": 52,
-        "startDate": "2023-11-01",
-        "expectedCompletion": "2025-08-31",
-        "description": "Unified digital platform for all government services and transactions",
-        "budget": {
-          "total": 15700000000,
-          "allocated": 15700000000,
-          "spent": 8164000000,
-          "remaining": 7536000000
-        },
-        "milestones": [
-          { "id": 1, "title": "Platform Architecture Design", "date": "2024-02-01", "status": "completed" },
-          { "id": 2, "title": "Core Systems Development", "date": "2024-06-01", "status": "completed" },
-          { "id": 3, "title": "Pilot Testing with Key Agencies", "date": "2024-10-01", "status": "completed" },
-          { "id": 4, "title": "Multi-Agency Integration", "date": "2025-02-01", "status": "ongoing" },
-          { "id": 5, "title": "Public Launch", "date": "2025-05-01", "status": "pending" },
-          { "id": 6, "title": "Full Nationwide Deployment", "date": "2025-08-31", "status": "pending" }
-        ],
-        "monthlySpending": [
-          { "month": "Jul", "amount": 780000000 },
-          { "month": "Aug", "amount": 850000000 },
-          { "month": "Sep", "amount": 720000000 },
-          { "month": "Oct", "amount": 680000000 },
-          { "month": "Nov", "amount": 620000000 }
-        ],
-        "documents": [
-          { "id": 1, "name": "Digital Government Transformation Strategy", "type": "PDF", "size": "56.8 MB", "date": "2023-12-15" },
-          { "id": 2, "name": "Cybersecurity Framework", "type": "PDF", "size": "42.3 MB", "date": "2024-04-20" },
-          { "id": 3, "name": "User Experience Design Guidelines", "type": "PDF", "size": "34.7 MB", "date": "2024-08-10" },
-          { "id": 4, "name": "Data Privacy and Protection Protocol", "type": "PDF", "size": "28.9 MB", "date": "2024-11-05" }
-        ],
-        "feedback": [
-          { "id": 1, "author": "Government Employee", "date": "2024-11-20", "comment": "Streamlined processes are making our work more efficient. Citizens are getting faster service delivery.", "upvotes": 198, "downvotes": 12, "userVote": "up" },
-          { "id": 2, "author": "Business Owner", "date": "2024-11-17", "comment": "Finally can do business permits online! Saves time and reduces bureaucratic hassles significantly.", "upvotes": 267, "downvotes": 8, "userVote": "up" },
-          { "id": 3, "author": "IT Professional", "date": "2024-11-14", "comment": "Well-designed system with good security measures. Modern approach to digital government services.", "upvotes": 156, "downvotes": 15, "userVote": "up" }
-        ],
-        "coordinates": { "lat": 14.5995, "lng": 121.0023 },
-        "position": { "top": "35%", "left": "48%" },
-        "contractor": "Philippine Digital Government Solutions Consortium",
-        "department": "Department of Information and Communications Technology",
-        "endDate": "Aug 2025"
+      "milestones": [
+        { "id": 1, "title": "Transport System Design", "date": "2024-08-01", "status": "completed" },
+        { "id": 2, "title": "MRT Extension Phase 1", "date": "2025-02-01", "status": "ongoing" },
+        { "id": 3, "title": "BRT System Construction", "date": "2025-10-01", "status": "pending" },
+        { "id": 4, "title": "Integrated Terminal Development", "date": "2026-06-01", "status": "pending" },
+        { "id": 5, "title": "System Integration Testing", "date": "2027-08-01", "status": "pending" },
+        { "id": 6, "title": "Full Operations Launch", "date": "2028-03-31", "status": "pending" }
+      ],
+      "monthlySpending": [
+        { "month": "Jul", "amount": 37400000000 },
+        { "month": "Aug", "amount": 41000000000 },
+        { "month": "Sep", "amount": 34900000000 },
+        { "month": "Oct", "amount": 31500000000 },
+        { "month": "Nov", "amount": 28300000000 }
+      ],
+      "documents": [
+        { "id": 1, "name": "Integrated Transport Master Plan", "type": "PDF", "size": "234.7 MB", "date": "2024-07-20" },
+        { "id": 2, "name": "MRT Extension Engineering Design", "type": "PDF", "size": "156.8 MB", "date": "2024-10-15" },
+        { "id": 3, "name": "BRT System Specifications", "type": "PDF", "size": "89.4 MB", "date": "2024-11-10" },
+        { "id": 4, "name": "Traffic Impact Assessment", "type": "PDF", "size": "67.8 MB", "date": "2024-11-18" }
+      ],
+      "feedback": [
+        { "id": 1, "author": "Daily Commuter", "date": "2024-11-22", "comment": "Much needed transport solution for Metro Manila. Hope construction doesn't cause too much traffic disruption.", "upvotes": 567, "downvotes": 89, "userVote": "up" },
+        { "id": 2, "author": "Transport Engineer", "date": "2024-11-19", "comment": "Comprehensive design that addresses multiple transport challenges. Good integration between different modes.", "upvotes": 345, "downvotes": 34, "userVote": "up" },
+        { "id": 3, "author": "Environmental Advocate", "date": "2024-11-16", "comment": "Public transport expansion will reduce air pollution and traffic congestion. Long-term benefits outweigh costs.", "upvotes": 289, "downvotes": 45, "userVote": "up" }
+      ],
+      "coordinates": { "lat": 14.5995, "lng": 121.0023 },
+      "position": { "top": "35%", "left": "48%" },
+      "contractor": "Metro Manila Transport Consortium",
+      "department": "Department of Transportation", 
+      "endDate": "Mar 2028"
+    },
+    "PROJ-2025-060": {
+      "id": "PROJ-2025-060",
+      "title": "National Food Security and Agricultural Modernization",
+      "location": "Nationwide",
+      "sector": "Food Safety & Agriculture",
+      "status": "ongoing",
+      "progress": 58,
+      "startDate": "2023-03-01",
+      "expectedCompletion": "2025-08-31",
+      "description": "Comprehensive agricultural modernization with irrigation systems, post-harvest facilities, and farmer support programs",
+      "budget": {
+        "total": 98700000000,
+        "allocated": 98700000000,
+        "spent": 57246000000,
+        "remaining": 41454000000
       },
-      "PROJ-2025-048": {
-        "id": "PROJ-2025-048",
-        "title": "Armed Forces Modernization Program Phase III",
-        "location": "Nationwide",
-        "sector": "Safety & Security",
-        "status": "ongoing",
-        "progress": 34,
-        "startDate": "2024-05-01",
-        "expectedCompletion": "2028-04-30",
-        "description": "Military equipment modernization and capability enhancement program",
-        "budget": {
-          "total": 175000000000,
-          "allocated": 175000000000,
-          "spent": 59500000000,
-          "remaining": 115500000000
-        },
-        "milestones": [
-          { "id": 1, "title": "Equipment Procurement Planning", "date": "2024-08-01", "status": "completed" },
-          { "id": 2, "title": "Naval Assets Acquisition", "date": "2025-03-01", "status": "ongoing" },
-          { "id": 3, "title": "Air Force Modernization", "date": "2025-12-01", "status": "pending" },
-          { "id": 4, "title": "Army Equipment Upgrade", "date": "2026-08-01", "status": "pending" },
-          { "id": 5, "title": "Training and Integration", "date": "2027-06-01", "status": "pending" },
-          { "id": 6, "title": "Full Operational Capability", "date": "2028-04-30", "status": "pending" }
-        ],
-        "monthlySpending": [
-          { "month": "Jul", "amount": 5800000000 },
-          { "month": "Aug", "amount": 6200000000 },
-          { "month": "Sep", "amount": 5400000000 },
-          { "month": "Oct", "amount": 4900000000 },
-          { "month": "Nov", "amount": 4600000000 }
-        ],
-        "documents": [
-          { "id": 1, "name": "AFP Modernization Master Plan", "type": "PDF", "size": "134.7 MB", "date": "2024-06-20" },
-          { "id": 2, "name": "Defense Capability Requirements", "type": "PDF", "size": "89.4 MB", "date": "2024-09-15" },
-          { "id": 3, "name": "Equipment Acquisition Timeline", "type": "PDF", "size": "67.8 MB", "date": "2024-10-25" },
-          { "id": 4, "name": "Training and Doctrine Updates", "type": "PDF", "size": "54.3 MB", "date": "2024-11-12" }
-        ],
-        "feedback": [
-          { "id": 1, "author": "Military Analyst", "date": "2024-11-21", "comment": "Essential modernization for national defense. New equipment will significantly enhance AFP capabilities.", "upvotes": 234, "downvotes": 45, "userVote": "up" },
-          { "id": 2, "author": "Defense Industry Expert", "date": "2024-11-18", "comment": "Well-planned procurement process. Good balance between foreign and domestic defense manufacturing.", "upvotes": 189, "downvotes": 32, "userVote": "up" },
-          { "id": 3, "author": "Security Specialist", "date": "2024-11-15", "comment": "Necessary investment for territorial defense and security. Modern threats require modern capabilities.", "upvotes": 167, "downvotes": 28, "userVote": "up" }
-        ],
-        "coordinates": { "lat": 14.5995, "lng": 121.0023 },
-        "position": { "top": "35%", "left": "48%" },
-        "contractor": "Defense Systems Technologies Philippines",
-        "department": "Department of National Defense",
-        "endDate": "Apr 2028"
+      "milestones": [
+        { "id": 1, "title": "Agricultural Assessment", "date": "2023-06-01", "status": "completed" },
+        { "id": 2, "title": "Irrigation Infrastructure", "date": "2024-01-01", "status": "completed" },
+        { "id": 3, "title": "Post-Harvest Facilities", "date": "2024-06-01", "status": "completed" },
+        { "id": 4, "title": "Farmer Training Programs", "date": "2024-12-01", "status": "ongoing" },
+        { "id": 5, "title": "Technology Integration", "date": "2025-04-01", "status": "pending" },
+        { "id": 6, "title": "Market Linkage Systems", "date": "2025-08-31", "status": "pending" }
+      ],
+      "monthlySpending": [
+        { "month": "Jul", "amount": 4350000000 },
+        { "month": "Aug", "amount": 4780000000 },
+        { "month": "Sep", "amount": 4100000000 },
+        { "month": "Oct", "amount": 3650000000 },
+        { "month": "Nov", "amount": 3280000000 }
+      ],
+      "documents": [
+        { "id": 1, "name": "Agricultural Modernization Strategy", "type": "PDF", "size": "134.7 MB", "date": "2023-04-20" },
+        { "id": 2, "name": "Irrigation System Master Plan", "type": "PDF", "size": "89.4 MB", "date": "2023-12-15" },
+        { "id": 3, "name": "Post-Harvest Technology Guidelines", "type": "PDF", "size": "67.8 MB", "date": "2024-05-10" },
+        { "id": 4, "name": "Farmer Support Program Manual", "type": "PDF", "size": "54.3 MB", "date": "2024-10-25" }
+      ],
+      "feedback": [
+        { "id": 1, "author": "Rice Farmer", "date": "2024-11-21", "comment": "New irrigation system doubled our harvest. Post-harvest facilities prevent grain spoilage during rainy season.", "upvotes": 456, "downvotes": 12, "userVote": "up" },
+        { "id": 2, "author": "Agricultural Technician", "date": "2024-11-18", "comment": "Modern equipment and training programs are helping farmers increase productivity significantly.", "upvotes": 345, "downvotes": 8, "userVote": "up" },
+        { "id": 3, "author": "Cooperative Leader", "date": "2024-11-15", "comment": "Market linkage programs connect farmers directly to buyers. Better prices and reduced middleman costs.", "upvotes": 289, "downvotes": 15, "userVote": "up" }
+      ],
+      "coordinates": { "lat": 12.8797, "lng": 121.7740 },
+      "position": { "top": "50%", "left": "55%" },
+      "contractor": "Philippine Agricultural Development Consortium",
+      "department": "Department of Agriculture",
+      "endDate": "Aug 2025"
+    },
+    "PROJ-2025-061": {
+      "id": "PROJ-2025-061",
+      "title": "National Renewable Energy Grid Integration",
+      "location": "Nationwide",
+      "sector": "Utilities",
+      "status": "ongoing",
+      "progress": 43,
+      "startDate": "2024-02-01",
+      "expectedCompletion": "2027-01-31",
+      "description": "Smart grid infrastructure for renewable energy integration and distribution across the Philippines",
+      "budget": {
+        "total": 167300000000,
+        "allocated": 167300000000,
+        "spent": 71939000000,
+        "remaining": 95361000000
       },
-      "PROJ-2025-049": {
-        "id": "PROJ-2025-049",
-        "title": "Comprehensive Basic Education Infrastructure Program",
-        "location": "Nationwide",
-        "sector": "Education",
-        "status": "ongoing",
-        "progress": 58,
-        "startDate": "2023-06-01",
-        "expectedCompletion": "2025-12-31",
-        "description": "Construction and renovation of public schools nationwide with modern learning facilities",
-        "budget": {
-          "total": 67500000000,
-          "allocated": 67500000000,
-          "spent": 39150000000,
-          "remaining": 28350000000
-        },
-        "milestones": [
-          { "id": 1, "title": "School Site Assessment", "date": "2023-09-01", "status": "completed" },
-          { "id": 2, "title": "Construction Phase 1 (Elementary)", "date": "2024-03-01", "status": "completed" },
-          { "id": 3, "title": "Construction Phase 2 (Secondary)", "date": "2024-09-01", "status": "completed" },
-          { "id": 4, "title": "Technology Integration", "date": "2025-03-01", "status": "ongoing" },
-          { "id": 5, "title": "Teacher Training Programs", "date": "2025-08-01", "status": "pending" },
-          { "id": 6, "title": "Full Operations", "date": "2025-12-31", "status": "pending" }
-        ],
-        "monthlySpending": [
-          { "month": "Jul", "amount": 2850000000 },
-          { "month": "Aug", "amount": 3100000000 },
-          { "month": "Sep", "amount": 2750000000 },
-          { "month": "Oct", "amount": 2450000000 },
-          { "month": "Nov", "amount": 2200000000 }
-        ],
-        "documents": [
-          { "id": 1, "name": "School Infrastructure Master Plan", "type": "PDF", "size": "78.4 MB", "date": "2023-07-20" },
-          { "id": 2, "name": "Modern Learning Facility Standards", "type": "PDF", "size": "54.7 MB", "date": "2024-01-15" },
-          { "id": 3, "name": "Technology Integration Guidelines", "type": "PDF", "size": "45.3 MB", "date": "2024-08-10" },
-          { "id": 4, "name": "Regional Progress Assessment", "type": "PDF", "size": "38.7 MB", "date": "2024-11-05" }
-        ],
-        "feedback": [
-          { "id": 1, "author": "Elementary School Principal", "date": "2024-11-22", "comment": "New classrooms are bright, spacious and well-equipped. Students are more engaged in learning.", "upvotes": 298, "downvotes": 6, "userVote": "up" },
-          { "id": 2, "author": "Parent", "date": "2024-11-19", "comment": "Happy to see my children learning in modern facilities. Big improvement from old overcrowded classrooms.", "upvotes": 267, "downvotes": 4, "userVote": "up" },
-          { "id": 3, "author": "Public School Teacher", "date": "2024-11-16", "comment": "Teaching is more effective with proper facilities and technology. Thank you for investing in education.", "upvotes": 234, "downvotes": 8, "userVote": "up" }
-        ],
-        "coordinates": { "lat": 12.8797, "lng": 121.7740 },
-        "position": { "top": "50%", "left": "55%" },
-        "contractor": "Philippine School Building Program Consortium",
-        "department": "Department of Education",
-        "endDate": "Dec 2025"
+      "milestones": [
+        { "id": 1, "title": "Grid Assessment and Planning", "date": "2024-05-01", "status": "completed" },
+        { "id": 2, "title": "Smart Grid Infrastructure Phase 1", "date": "2024-11-01", "status": "ongoing" },
+        { "id": 3, "title": "Renewable Energy Integration", "date": "2025-05-01", "status": "pending" },
+        { "id": 4, "title": "Distribution Network Upgrade", "date": "2026-01-01", "status": "pending" },
+        { "id": 5, "title": "System Testing and Optimization", "date": "2026-08-01", "status": "pending" },
+        { "id": 6, "title": "Full Grid Operations", "date": "2027-01-31", "status": "pending" }
+      ],
+      "monthlySpending": [
+        { "month": "Jul", "amount": 6950000000 },
+        { "month": "Aug", "amount": 7600000000 },
+        { "month": "Sep", "amount": 6450000000 },
+        { "month": "Oct", "amount": 5800000000 },
+        { "month": "Nov", "amount": 5200000000 }
+      ],
+      "documents": [
+        { "id": 1, "name": "National Smart Grid Master Plan", "type": "PDF", "size": "189.4 MB", "date": "2024-04-20" },
+        { "id": 2, "name": "Renewable Energy Integration Strategy", "type": "PDF", "size": "134.7 MB", "date": "2024-08-15" },
+        { "id": 3, "name": "Grid Modernization Standards", "type": "PDF", "size": "89.4 MB", "date": "2024-10-10" },
+        { "id": 4, "name": "Energy Storage System Design", "type": "PDF", "size": "67.8 MB", "date": "2024-11-12" }
+      ],
+      "feedback": [
+        { "id": 1, "author": "Energy Systems Engineer", "date": "2024-11-21", "comment": "Critical infrastructure for renewable energy transition. Smart grid will improve reliability and efficiency.", "upvotes": 378, "downvotes": 34, "userVote": "up" },
+        { "id": 2, "author": "Environmental Scientist", "date": "2024-11-18", "comment": "Essential for achieving carbon neutrality goals. Will reduce dependence on fossil fuels significantly.", "upvotes": 289, "downvotes": 23, "userVote": "up" },
+        { "id": 3, "author": "Power Plant Operator", "date": "2024-11-15", "comment": "Modern grid technology makes renewable energy integration more feasible and stable.", "upvotes": 234, "downvotes": 18, "userVote": "up" }
+      ],
+      "coordinates": { "lat": 12.8797, "lng": 121.7740 },
+      "position": { "top": "50%", "left": "55%" },
+      "contractor": "Philippine Smart Grid Solutions Inc.",
+      "department": "Department of Energy",
+      "endDate": "Jan 2027"
+    },
+    "PROJ-2025-062": {
+      "id": "PROJ-2025-062",
+      "title": "National Solid Waste Management and Recycling Program",
+      "location": "Nationwide",
+      "sector": "Environment",
+      "status": "ongoing",
+      "progress": 51,
+      "startDate": "2023-09-01",
+      "expectedCompletion": "2025-12-31",
+      "description": "Comprehensive waste management system with recycling facilities and waste-to-energy plants",
+      "budget": {
+        "total": 67800000000,
+        "allocated": 67800000000,
+        "spent": 34578000000,
+        "remaining": 33222000000
       },
-      "PROJ-2025-050": {
-        "id": "PROJ-2025-050",
-        "title": "Local Government Unit Digitalization Program",
-        "location": "Nationwide",
-        "sector": "Interior & Local Government",
-        "status": "ongoing",
-        "progress": 47,
-        "startDate": "2024-02-01",
-        "expectedCompletion": "2026-01-31",
-        "description": "Digital transformation of all LGUs with modern systems and e-governance capabilities",
-        "budget": {
-          "total": 22800000000,
-          "allocated": 22800000000,
-          "spent": 10716000000,
-          "remaining": 12084000000
-        },
-        "milestones": [
-          { "id": 1, "title": "LGU Assessment and Planning", "date": "2024-05-01", "status": "completed" },
-          { "id": 2, "title": "Metro Manila LGUs Phase", "date": "2024-09-01", "status": "completed" },
-          { "id": 3, "title": "Regional Centers Digitalization", "date": "2025-01-01", "status": "ongoing" },
-          { "id": 4, "title": "Provincial LGUs Implementation", "date": "2025-06-01", "status": "pending" },
-          { "id": 5, "title": "Municipal and City LGUs", "date": "2025-10-01", "status": "pending" },
-          { "id": 6, "title": "Nationwide Integration", "date": "2026-01-31", "status": "pending" }
-        ],
-        "monthlySpending": [
-          { "month": "Jul", "amount": 1280000000 },
-          { "month": "Aug", "amount": 1420000000 },
-          { "month": "Sep", "amount": 1150000000 },
-          { "month": "Oct", "amount": 980000000 },
-          { "month": "Nov", "amount": 850000000 }
-        ],
-        "documents": [
-          { "id": 1, "name": "LGU Digital Transformation Framework", "type": "PDF", "size": "67.8 MB", "date": "2024-03-20" },
-          { "id": 2, "name": "E-Governance Implementation Guide", "type": "PDF", "size": "45.3 MB", "date": "2024-07-15" },
-          { "id": 3, "name": "Digital Services Standards", "type": "PDF", "size": "38.7 MB", "date": "2024-10-10" },
-          { "id": 4, "name": "Citizen Satisfaction Survey Results", "type": "PDF", "size": "32.4 MB", "date": "2024-11-08" }
-        ],
-        "feedback": [
-          { "id": 1, "author": "City Mayor", "date": "2024-11-21", "comment": "Digital systems have improved our service delivery significantly. Citizens appreciate faster processing times.", "upvotes": 234, "downvotes": 18, "userVote": "up" },
-          { "id": 2, "author": "Municipal Administrator", "date": "2024-11-18", "comment": "Excellent training and support from DILG. Our staff are adapting well to new digital processes.", "upvotes": 189, "downvotes": 12, "userVote": "up" },
-          { "id": 3, "author": "Citizen Advocate", "date": "2024-11-15", "comment": "Transparency and accountability improved with digital systems. Easier to track government services.", "upvotes": 167, "downvotes": 8, "userVote": "up" }
-        ],
-        "coordinates": { "lat": 12.8797, "lng": 121.7740 },
-        "position": { "top": "50%", "left": "55%" },
-        "contractor": "Local Government Digital Solutions Inc.",
-        "department": "Department of the Interior and Local Government",
-        "endDate": "Jan 2026"
+      "milestones": [
+        { "id": 1, "title": "Waste Management Planning", "date": "2023-12-01", "status": "completed" },
+        { "id": 2, "title": "Recycling Facilities Construction", "date": "2024-04-01", "status": "completed" },
+        { "id": 3, "title": "Waste-to-Energy Plants", "date": "2024-10-01", "status": "completed" },
+        { "id": 4, "title": "Collection System Upgrade", "date": "2025-03-01", "status": "ongoing" },
+        { "id": 5, "title": "Public Education Campaign", "date": "2025-08-01", "status": "pending" },
+        { "id": 6, "title": "Full System Integration", "date": "2025-12-31", "status": "pending" }
+      ],
+      "monthlySpending": [
+        { "month": "Jul", "amount": 2850000000 },
+        { "month": "Aug", "amount": 3120000000 },
+        { "month": "Sep", "amount": 2680000000 },
+        { "month": "Oct", "amount": 2400000000 },
+        { "month": "Nov", "amount": 2180000000 }
+      ],
+      "documents": [
+        { "id": 1, "name": "National Waste Management Strategy", "type": "PDF", "size": "89.4 MB", "date": "2023-10-20" },
+        { "id": 2, "name": "Recycling Technology Standards", "type": "PDF", "size": "67.8 MB", "date": "2024-03-15" },
+        { "id": 3, "name": "Waste-to-Energy Plant Design", "type": "PDF", "size": "78.4 MB", "date": "2024-07-10" },
+        { "id": 4, "name": "Community Engagement Protocol", "type": "PDF", "size": "45.3 MB", "date": "2024-11-05" }
+      ],
+      "feedback": [
+        { "id": 1, "author": "Environmental Engineer", "date": "2024-11-20", "comment": "Excellent approach to waste management. Recycling facilities are state-of-the-art and environmentally sound.", "upvotes": 345, "downvotes": 18, "userVote": "up" },
+        { "id": 2, "author": "Local Government Official", "date": "2024-11-17", "comment": "Waste collection and processing have improved dramatically. Cleaner communities and reduced landfill usage.", "upvotes": 289, "downvotes": 12, "userVote": "up" },
+        { "id": 3, "author": "Community Resident", "date": "2024-11-14", "comment": "Waste segregation programs are working well. Happy to see garbage properly processed instead of dumped.", "upvotes": 234, "downvotes": 8, "userVote": "up" }
+      ],
+      "coordinates": { "lat": 12.8797, "lng": 121.7740 },
+      "position": { "top": "50%", "left": "55%" },
+      "contractor": "Philippine Waste Management Solutions Corp.",
+      "department": "Department of Environment and Natural Resources",
+      "endDate": "Dec 2025"
+    },
+    "PROJ-2025-063": {
+      "id": "PROJ-2025-063",
+      "title": "National Maritime Safety and Port Development",
+      "location": "Nationwide",
+      "sector": "Transportation",
+      "status": "ongoing",
+      "progress": 39,
+      "startDate": "2024-05-01",
+      "expectedCompletion": "2027-04-30",
+      "description": "Comprehensive port modernization and maritime safety infrastructure for inter-island connectivity",
+      "budget": {
+        "total": 143200000000,
+        "allocated": 143200000000,
+        "spent": 55848000000,
+        "remaining": 87352000000
       },
-      "PROJ-2025-051": {
-        "id": "PROJ-2025-051",
-        "title": "Senior Citizens Comprehensive Care Program",
-        "location": "Nationwide",
-        "sector": "Social Services",
-        "status": "ongoing",
-        "progress": 69,
-        "startDate": "2023-04-01",
-        "expectedCompletion": "2025-03-31",
-        "description": "Nationwide program providing healthcare, social services, and livelihood support for senior citizens",
-        "budget": {
-          "total": 18900000000,
-          "allocated": 18900000000,
-          "spent": 13041000000,
-          "remaining": 5859000000
-        },
-        "milestones": [
-          { "id": 1, "title": "Senior Care Centers Establishment", "date": "2023-08-01", "status": "completed" },
-          { "id": 2, "title": "Healthcare Services Rollout", "date": "2024-01-01", "status": "completed" },
-          { "id": 3, "title": "Social Services Integration", "date": "2024-06-01", "status": "completed" },
-          { "id": 4, "title": "Livelihood Programs Launch", "date": "2024-10-01", "status": "completed" },
-          { "id": 5, "title": "Community Outreach Expansion", "date": "2025-01-01", "status": "ongoing" },
-          { "id": 6, "title": "Program Evaluation", "date": "2025-03-31", "status": "pending" }
-        ],
-        "monthlySpending": [
-          { "month": "Jul", "amount": 1120000000 },
-          { "month": "Aug", "amount": 1050000000 },
-          { "month": "Sep", "amount": 980000000 },
-          { "month": "Oct", "amount": 920000000 },
-          { "month": "Nov", "amount": 850000000 }
-        ],
-        "documents": [
-          { "id": 1, "name": "Senior Citizens Care Strategy", "type": "PDF", "size": "45.7 MB", "date": "2023-05-20" },
-          { "id": 2, "name": "Healthcare Services Manual", "type": "PDF", "size": "38.4 MB", "date": "2024-02-15" },
-          { "id": 3, "name": "Livelihood Program Guidelines", "type": "PDF", "size": "32.8 MB", "date": "2024-09-10" },
-          { "id": 4, "name": "Community Impact Assessment", "type": "PDF", "size": "28.6 MB", "date": "2024-11-12" }
-        ],
-        "feedback": [
-          { "id": 1, "author": "Senior Citizen Beneficiary", "date": "2024-11-20", "comment": "The healthcare and social support has improved my quality of life significantly. Very grateful for this program.", "upvotes": 267, "downvotes": 3, "userVote": "up" },
-          { "id": 2, "author": "Family Caregiver", "date": "2024-11-17", "comment": "Great support for elderly family members. The care centers provide excellent services and activities.", "upvotes": 234, "downvotes": 5, "userVote": "up" },
-          { "id": 3, "author": "Social Worker", "date": "2024-11-14", "comment": "Comprehensive program that addresses multiple needs of senior citizens. Well-coordinated service delivery.", "upvotes": 189, "downvotes": 8, "userVote": "up" }
-        ],
-        "coordinates": { "lat": 12.8797, "lng": 121.7740 },
-        "position": { "top": "50%", "left": "55%" },
-        "contractor": "Philippine Senior Care Services Consortium",
-        "department": "Department of Social Welfare and Development",
-        "endDate": "Mar 2025"
+      "milestones": [
+        { "id": 1, "title": "Port Assessment and Planning", "date": "2024-08-01", "status": "completed" },
+        { "id": 2, "title": "Major Port Upgrades Phase 1", "date": "2025-01-01", "status": "ongoing" },
+        { "id": 3, "title": "Maritime Safety Systems", "date": "2025-08-01", "status": "pending" },
+        { "id": 4, "title": "Regional Port Development", "date": "2026-03-01", "status": "pending" },
+        { "id": 5, "title": "Navigation Infrastructure", "date": "2026-10-01", "status": "pending" },
+        { "id": 6, "title": "Full Operations Integration", "date": "2027-04-30", "status": "pending" }
+      ],
+      "monthlySpending": [
+        { "month": "Jul", "amount": 5850000000 },
+        { "month": "Aug", "amount": 6400000000 },
+        { "month": "Sep", "amount": 5450000000 },
+        { "month": "Oct", "amount": 4900000000 },
+        { "month": "Nov", "amount": 4400000000 }
+      ],
+      "documents": [
+        { "id": 1, "name": "Maritime Infrastructure Master Plan", "type": "PDF", "size": "167.8 MB", "date": "2024-07-20" },
+        { "id": 2, "name": "Port Modernization Standards", "type": "PDF", "size": "89.4 MB", "date": "2024-10-15" },
+        { "id": 3, "name": "Maritime Safety Protocol", "type": "PDF", "size": "67.8 MB", "date": "2024-11-10" },
+        { "id": 4, "name": "Inter-Island Connectivity Study", "type": "PDF", "size": "54.3 MB", "date": "2024-11-18" }
+      ],
+      "feedback": [
+        { "id": 1, "author": "Ship Captain", "date": "2024-11-21", "comment": "Port improvements are making operations safer and more efficient. Modern facilities reduce turnaround time.", "upvotes": 234, "downvotes": 18, "userVote": "up" },
+        { "id": 2, "author": "Maritime Industry Executive", "date": "2024-11-18", "comment": "Essential infrastructure for island nation connectivity. Will boost inter-island trade and tourism.", "upvotes": 189, "downvotes": 12, "userVote": "up" },
+        { "id": 3, "author": "Passenger", "date": "2024-11-15", "comment": "Travel between islands is becoming safer and more comfortable. Better terminals and facilities.", "upvotes": 167, "downvotes": 8, "userVote": "up" }
+      ],
+      "coordinates": { "lat": 12.8797, "lng": 121.7740 },
+      "position": { "top": "50%", "left": "55%" },
+      "contractor": "Philippine Maritime Development Consortium",
+      "department": "Department of Transportation",
+      "endDate": "Apr 2027"
+    },
+    "PROJ-2025-064": {
+      "id": "PROJ-2025-064",
+      "title": "National Tourism Infrastructure Development Program",
+      "location": "Nationwide",
+      "sector": "Tourism & Culture",
+      "status": "ongoing",
+      "progress": 47,
+      "startDate": "2023-11-01",
+      "expectedCompletion": "2026-10-31",
+      "description": "Tourism infrastructure development including airports, resorts, cultural centers, and eco-tourism facilities",
+      "budget": {
+        "total": 89500000000,
+        "allocated": 89500000000,
+        "spent": 42065000000,
+        "remaining": 47435000000
       },
-      "PROJ-2025-052": {
-        "id": "PROJ-2025-052",
-        "title": "Metro Cebu Business Process Outsourcing Complex",
-        "location": "Central Visayas (Region VII)",
-        "sector": "Economic Development",
-        "status": "ongoing",
-        "progress": 38,
-        "startDate": "2024-03-01",
-        "expectedCompletion": "2026-08-31",
-        "description": "Large-scale BPO complex with modern facilities and supporting infrastructure",
-        "budget": {
-          "total": 32400000000,
-          "allocated": 32400000000,
-          "spent": 12312000000,
-          "remaining": 20088000000
-        },
-        "milestones": [
-          { "id": 1, "title": "Master Planning and Design", "date": "2024-06-01", "status": "completed" },
-          { "id": 2, "title": "Infrastructure Development", "date": "2024-11-01", "status": "ongoing" },
-          { "id": 3, "title": "BPO Buildings Construction", "date": "2025-04-01", "status": "pending" },
-          { "id": 4, "title": "Technology Infrastructure", "date": "2025-11-01", "status": "pending" },
-          { "id": 5, "title": "Tenant Fit-out", "date": "2026-05-01", "status": "pending" },
-          { "id": 6, "title": "Commercial Operations", "date": "2026-08-31", "status": "pending" }
-        ],
-        "monthlySpending": [
-          { "month": "Jul", "amount": 1450000000 },
-          { "month": "Aug", "amount": 1620000000 },
-          { "month": "Sep", "amount": 1380000000 },
-          { "month": "Oct", "amount": 1250000000 },
-          { "month": "Nov", "amount": 1120000000 }
-        ],
-        "documents": [
-          { "id": 1, "name": "BPO Complex Master Plan", "type": "PDF", "size": "78.4 MB", "date": "2024-05-20" },
-          { "id": 2, "name": "Technology Infrastructure Design", "type": "PDF", "size": "54.7 MB", "date": "2024-08-15" },
-          { "id": 3, "name": "Investor Attraction Strategy", "type": "PDF", "size": "42.3 MB", "date": "2024-10-10" },
-          { "id": 4, "name": "Employment Generation Projections", "type": "PDF", "size": "34.8 MB", "date": "2024-11-05" }
-        ],
-        "feedback": [
-          { "id": 1, "author": "BPO Industry Executive", "date": "2024-11-21", "comment": "Strategic location with excellent infrastructure. This will position Cebu as a major BPO destination.", "upvotes": 234, "downvotes": 18, "userVote": "up" },
-          { "id": 2, "author": "IT Professional", "date": "2024-11-18", "comment": "Modern facilities with world-class technology infrastructure. Great opportunity for IT careers in Cebu.", "upvotes": 198, "downvotes": 12, "userVote": "up" },
-          { "id": 3, "author": "Economic Development Officer", "date": "2024-11-15", "comment": "This will create thousands of jobs and boost the regional economy significantly. Excellent investment.", "upvotes": 167, "downvotes": 8, "userVote": "up" }
-        ],
-        "coordinates": { "lat": 10.3157, "lng": 123.8854 },
-        "position": { "top": "55%", "left": "62%" },
-        "contractor": "Cebu Business District Developers Inc.",
-        "department": "Department of Trade and Industry",
-        "endDate": "Aug 2026"
+      "milestones": [
+        { "id": 1, "title": "Tourism Master Planning", "date": "2024-02-01", "status": "completed" },
+        { "id": 2, "title": "Airport and Access Infrastructure", "date": "2024-08-01", "status": "completed" },
+        { "id": 3, "title": "Cultural Heritage Sites Development", "date": "2025-02-01", "status": "ongoing" },
+        { "id": 4, "title": "Eco-Tourism Facilities", "date": "2025-08-01", "status": "pending" },
+        { "id": 5, "title": "Tourism Support Services", "date": "2026-04-01", "status": "pending" },
+        { "id": 6, "title": "Marketing and Promotion Launch", "date": "2026-10-31", "status": "pending" }
+      ],
+      "monthlySpending": [
+        { "month": "Jul", "amount": 3850000000 },
+        { "month": "Aug", "amount": 4200000000 },
+        { "month": "Sep", "amount": 3650000000 },
+        { "month": "Oct", "amount": 3280000000 },
+        { "month": "Nov", "amount": 2950000000 }
+      ],
+      "documents": [
+        { "id": 1, "name": "National Tourism Development Strategy", "type": "PDF", "size": "134.7 MB", "date": "2024-01-20" },
+        { "id": 2, "name": "Cultural Heritage Preservation Plan", "type": "PDF", "size": "89.4 MB", "date": "2024-06-15" },
+        { "id": 3, "name": "Eco-Tourism Sustainability Guidelines", "type": "PDF", "size": "67.8 MB", "date": "2024-09-10" },
+        { "id": 4, "name": "Tourism Infrastructure Standards", "type": "PDF", "size": "54.3 MB", "date": "2024-11-05" }
+      ],
+      "feedback": [
+        { "id": 1, "author": "Tourism Business Owner", "date": "2024-11-21", "comment": "Infrastructure improvements are attracting more visitors. Better access roads and facilities boost business.", "upvotes": 345, "downvotes": 23, "userVote": "up" },
+        { "id": 2, "author": "Foreign Tourist", "date": "2024-11-18", "comment": "Amazing cultural sites and improved accessibility. Philippines is becoming a top travel destination.", "upvotes": 289, "downvotes": 15, "userVote": "up" },
+        { "id": 3, "author": "Local Tour Guide", "date": "2024-11-15", "comment": "Tourism facilities are world-class now. Proud to showcase our heritage to international visitors.", "upvotes": 234, "downvotes": 12, "userVote": "up" }
+      ],
+      "coordinates": { "lat": 12.8797, "lng": 121.7740 },
+      "position": { "top": "50%", "left": "55%" },
+      "contractor": "Philippine Tourism Infrastructure Alliance",
+      "department": "Department of Tourism",
+      "endDate": "Oct 2026"
+    },
+    "PROJ-2025-065": {
+      "id": "PROJ-2025-065",
+      "title": "National Water Security and Management Program",
+      "location": "Nationwide",
+      "sector": "Utilities",
+      "status": "ongoing",
+      "progress": 44,
+      "startDate": "2024-01-01",
+      "expectedCompletion": "2026-12-31",
+      "description": "Comprehensive water infrastructure including treatment plants, distribution systems, and conservation programs",
+      "budget": {
+        "total": 134700000000,
+        "allocated": 134700000000,
+        "spent": 59268000000,
+        "remaining": 75432000000
       },
-      "PROJ-2025-053": {
-        "id": "PROJ-2025-053",
-        "title": "National Government Center Administrative Complex",
-        "location": "National Capital Region (NCR)",
-        "sector": "Public Services",
-        "status": "ongoing",
-        "progress": 33,
-        "startDate": "2024-06-01",
-        "expectedCompletion": "2027-05-31",
-        "description": "Centralized government complex with modern offices and citizen service centers",
-        "budget": {
-          "total": 48700000000,
-          "allocated": 48700000000,
-          "spent": 16071000000,
-          "remaining": 32629000000
-        },
-        "milestones": [
-          { "id": 1, "title": "Architectural Design", "date": "2024-09-01", "status": "completed" },
-          { "id": 2, "title": "Site Preparation", "date": "2024-12-01", "status": "ongoing" },
-          { "id": 3, "title": "Foundation and Structure", "date": "2025-06-01", "status": "pending" },
-          { "id": 4, "title": "Building Systems Installation", "date": "2026-03-01", "status": "pending" },
-          { "id": 5, "title": "Interior Fit-out", "date": "2026-12-01", "status": "pending" },
-          { "id": 6, "title": "Operations Handover", "date": "2027-05-31", "status": "pending" }
-        ],
-        "monthlySpending": [
-          { "month": "Jul", "amount": 1850000000 },
-          { "month": "Aug", "amount": 2100000000 },
-          { "month": "Sep", "amount": 1920000000 },
-          { "month": "Oct", "amount": 1650000000 },
-          { "month": "Nov", "amount": 1480000000 }
-        ],
-        "documents": [
-          { "id": 1, "name": "Government Complex Master Plan", "type": "PDF", "size": "89.4 MB", "date": "2024-08-20" },
-          { "id": 2, "name": "Sustainable Building Design Standards", "type": "PDF", "size": "67.8 MB", "date": "2024-10-15" },
-          { "id": 3, "name": "Citizen Service Integration Plan", "type": "PDF", "size": "45.3 MB", "date": "2024-11-10" },
-          { "id": 4, "name": "Government Operations Efficiency Study", "type": "PDF", "size": "38.7 MB", "date": "2024-11-18" }
-        ],
-        "feedback": [
-          { "id": 1, "author": "Government Employee", "date": "2024-11-20", "comment": "Modern workspace will improve productivity and inter-agency coordination. Looking forward to the move.", "upvotes": 167, "downvotes": 23, "userVote": "up" },
-          { "id": 2, "author": "Public Administration Expert", "date": "2024-11-17", "comment": "Centralized location will improve government efficiency and citizen access to services.", "upvotes": 134, "downvotes": 18, "userVote": "up" },
-          { "id": 3, "author": "Urban Planner", "date": "2024-11-14", "comment": "Good integration with existing infrastructure. Sustainable design features are commendable.", "upvotes": 98, "downvotes": 12, "userVote": "up" }
-        ],
-        "coordinates": { "lat": 14.5995, "lng": 121.0023 },
-        "position": { "top": "35%", "left": "48%" },
-        "contractor": "Government Infrastructure Builders Corp.",
-        "department": "Department of Public Works and Highways",
-        "endDate": "May 2027"
+      "milestones": [
+        { "id": 1, "title": "Water Resource Assessment", "date": "2024-04-01", "status": "completed" },
+        { "id": 2, "title": "Treatment Plant Construction", "date": "2024-10-01", "status": "ongoing" },
+        { "id": 3, "title": "Distribution Network Expansion", "date": "2025-04-01", "status": "pending" },
+        { "id": 4, "title": "Water Conservation Systems", "date": "2025-10-01", "status": "pending" },
+        { "id": 5, "title": "Quality Monitoring Network", "date": "2026-06-01", "status": "pending" },
+        { "id": 6, "title": "Full System Operations", "date": "2026-12-31", "status": "pending" }
+      ],
+      "monthlySpending": [
+        { "month": "Jul", "amount": 5950000000 },
+        { "month": "Aug", "amount": 6500000000 },
+        { "month": "Sep", "amount": 5550000000 },
+        { "month": "Oct", "amount": 4980000000 },
+        { "month": "Nov", "amount": 4480000000 }
+      ],
+      "documents": [
+        { "id": 1, "name": "National Water Security Master Plan", "type": "PDF", "size": "156.8 MB", "date": "2024-03-20" },
+        { "id": 2, "name": "Water Treatment Technology Standards", "type": "PDF", "size": "89.4 MB", "date": "2024-07-15" },
+        { "id": 3, "name": "Distribution Network Design", "type": "PDF", "size": "67.8 MB", "date": "2024-10-10" },
+        { "id": 4, "name": "Water Conservation Strategy", "type": "PDF", "size": "54.3 MB", "date": "2024-11-12" }
+      ],
+      "feedback": [
+        { "id": 1, "author": "Community Resident", "date": "2024-11-20", "comment": "Clean, reliable water supply has improved our quality of life. No more water shortages during dry season.", "upvotes": 456, "downvotes": 12, "userVote": "up" },
+        { "id": 2, "author": "Public Health Officer", "date": "2024-11-17", "comment": "Water quality improvements are reducing waterborne diseases significantly. Critical public health investment.", "upvotes": 345, "downvotes": 8, "userVote": "up" },
+        { "id": 3, "author": "Water Systems Engineer", "date": "2024-11-14", "comment": "Modern treatment facilities and distribution networks meet international standards. Excellent infrastructure.", "upvotes": 234, "downvotes": 15, "userVote": "up" }
+      ],
+      "coordinates": { "lat": 12.8797, "lng": 121.7740 },
+      "position": { "top": "50%", "left": "55%" },
+      "contractor": "Philippine Water Infrastructure Corp.",
+      "department": "Department of Public Works and Highways",
+      "endDate": "Dec 2026"
+    },
+    "PROJ-2025-066": {
+      "id": "PROJ-2025-066",
+      "title": "National Justice System Modernization Program",
+      "location": "Nationwide",
+      "sector": "Legal & Justice",
+      "status": "ongoing",
+      "progress": 35,
+      "startDate": "2024-07-01",
+      "expectedCompletion": "2027-06-30",
+      "description": "Comprehensive modernization of courts, prosecutor offices, and justice system infrastructure",
+      "budget": {
+        "total": 45600000000,
+        "allocated": 45600000000,
+        "spent": 15960000000,
+        "remaining": 29640000000
       },
-      "PROJ-2025-054": {
-        "id": "PROJ-2025-054",
-        "title": "National Higher Education Research University",
-        "location": "CALABARZON (Region IV-A)",
-        "sector": "Education",
-        "status": "ongoing",
-        "progress": 29,
-        "startDate": "2024-08-01",
-        "expectedCompletion": "2027-07-31",
-        "description": "World-class research university with advanced laboratories and international partnerships",
-        "budget": {
-          "total": 56800000000,
-          "allocated": 56800000000,
-          "spent": 16472000000,
-          "remaining": 40328000000
-        },
-        "milestones": [
-          { "id": 1, "title": "University Master Planning", "date": "2024-11-01", "status": "completed" },
-          { "id": 2, "title": "Campus Development Phase 1", "date": "2025-06-01", "status": "ongoing" },
-          { "id": 3, "title": "Research Facilities Construction", "date": "2026-01-01", "status": "pending" },
-          { "id": 4, "title": "Academic Buildings", "date": "2026-08-01", "status": "pending" },
-          { "id": 5, "title": "Faculty Recruitment", "date": "2027-03-01", "status": "pending" },
-          { "id": 6, "title": "University Opening", "date": "2027-07-31", "status": "pending" }
-        ],
-        "monthlySpending": [
-          { "month": "Jul", "amount": 1980000000 },
-          { "month": "Aug", "amount": 2250000000 },
-          { "month": "Sep", "amount": 1850000000 },
-          { "month": "Oct", "amount": 1620000000 },
-          { "month": "Nov", "amount": 1450000000 }
-        ],
-        "documents": [
-          { "id": 1, "name": "Research University Development Plan", "type": "PDF", "size": "134.7 MB", "date": "2024-10-20" },
-          { "id": 2, "name": "International Partnership Framework", "type": "PDF", "size": "78.4 MB", "date": "2024-11-08" },
-          { "id": 3, "name": "Advanced Laboratory Design", "type": "PDF", "size": "89.7 MB", "date": "2024-11-15" },
-          { "id": 4, "name": "Faculty Excellence Program", "type": "PDF", "size": "54.3 MB", "date": "2024-11-22" }
-        ],
-        "feedback": [
-          { "id": 1, "author": "University Professor", "date": "2024-11-22", "comment": "Exciting opportunity to establish a world-class research institution. Will boost Philippines' academic reputation globally.", "upvotes": 287, "downvotes": 15, "userVote": "up" },
-          { "id": 2, "author": "Graduate Student", "date": "2024-11-19", "comment": "Can't wait to pursue advanced research here. The facilities and international partnerships are impressive.", "upvotes": 234, "downvotes": 8, "userVote": "up" },
-          { "id": 3, "author": "Science and Technology Expert", "date": "2024-11-16", "comment": "This will accelerate research and innovation in the Philippines. Great investment in knowledge economy.", "upvotes": 198, "downvotes": 12, "userVote": "up" }
-        ],
-        "coordinates": { "lat": 14.2162, "lng": 121.1467 },
-        "position": { "top": "40%", "left": "50%" },
-        "contractor": "Philippine Research University Consortium",
-        "department": "Commission on Higher Education",
-        "endDate": "Jul 2027"
-      }
+      "milestones": [
+        { "id": 1, "title": "Justice System Assessment", "date": "2024-10-01", "status": "completed" },
+        { "id": 2, "title": "Court Infrastructure Phase 1", "date": "2025-03-01", "status": "ongoing" },
+        { "id": 3, "title": "Digital Case Management System", "date": "2025-09-01", "status": "pending" },
+        { "id": 4, "title": "Prosecutor Office Upgrades", "date": "2026-03-01", "status": "pending" },
+        { "id": 5, "title": "Training and Capacity Building", "date": "2026-12-01", "status": "pending" },
+        { "id": 6, "title": "Full System Integration", "date": "2027-06-30", "status": "pending" }
+      ],
+      "monthlySpending": [
+        { "month": "Jul", "amount": 1850000000 },
+        { "month": "Aug", "amount": 2000000000 },
+        { "month": "Sep", "amount": 1750000000 },
+        { "month": "Oct", "amount": 1580000000 },
+        { "month": "Nov", "amount": 1420000000 }
+      ],
+      "documents": [
+        { "id": 1, "name": "Justice System Modernization Plan", "type": "PDF", "size": "89.4 MB", "date": "2024-08-20" },
+        { "id": 2, "name": "Court Infrastructure Standards", "type": "PDF", "size": "67.8 MB", "date": "2024-11-15" },
+        { "id": 3, "name": "Digital Case Management Specifications", "type": "PDF", "size": "54.3 MB", "date": "2024-11-10" },
+        { "id": 4, "name": "Judicial Training Framework", "type": "PDF", "size": "42.7 MB", "date": "2024-11-18" }
+      ],
+      "feedback": [
+        { "id": 1, "author": "Judge", "date": "2024-11-21", "comment": "Modern court facilities improve the administration of justice. Better infrastructure supports efficient case handling.", "upvotes": 189, "downvotes": 23, "userVote": "up" },
+        { "id": 2, "author": "Lawyer", "date": "2024-11-18", "comment": "Digital case management will speed up legal processes. Good investment in justice system efficiency.", "upvotes": 156, "downvotes": 18, "userVote": "up" },
+        { "id": 3, "author": "Legal Aid Worker", "date": "2024-11-15", "comment": "Improved access to justice with better facilities. Citizens can expect faster resolution of legal matters.", "upvotes": 134, "downvotes": 12, "userVote": "up" }
+      ],
+      "coordinates": { "lat": 12.8797, "lng": 121.7740 },
+      "position": { "top": "50%", "left": "55%" },
+      "contractor": "Justice Infrastructure Development Corp.",
+      "department": "Department of Justice",
+      "endDate": "Jun 2027"
+    },
+    "PROJ-2025-067": {
+      "id": "PROJ-2025-067",
+      "title": "National Emergency Medical Services Network",
+      "location": "Nationwide",
+      "sector": "Healthcare",
+      "status": "ongoing",
+      "progress": 49,
+      "startDate": "2023-12-01",
+      "expectedCompletion": "2025-11-30",
+      "description": "Comprehensive emergency medical response system with ambulances, trauma centers, and air medical services",
+      "budget": {
+        "total": 56800000000,
+        "allocated": 56800000000,
+        "spent": 27832000000,
+        "remaining": 28968000000
+      },
+      "milestones": [
+        { "id": 1, "title": "Emergency Response Planning", "date": "2024-03-01", "status": "completed" },
+        { "id": 2, "title": "Ambulance Fleet Deployment", "date": "2024-07-01", "status": "completed" },
+        { "id": 3, "title": "Trauma Center Development", "date": "2024-12-01", "status": "ongoing" },
+        { "id": 4, "title": "Air Medical Services", "date": "2025-05-01", "status": "pending" },
+        { "id": 5, "title": "Training and Certification", "date": "2025-08-01", "status": "pending" },
+        { "id": 6, "title": "24/7 Operations Launch", "date": "2025-11-30", "status": "pending" }
+      ],
+      "monthlySpending": [
+        { "month": "Jul", "amount": 2380000000 },
+        { "month": "Aug", "amount": 2600000000 },
+        { "month": "Sep", "amount": 2250000000 },
+        { "month": "Oct", "amount": 2020000000 },
+        { "month": "Nov", "amount": 1820000000 }
+      ],
+      "documents": [
+        { "id": 1, "name": "Emergency Medical Services Master Plan", "type": "PDF", "size": "89.4 MB", "date": "2024-02-20" },
+        { "id": 2, "name": "Trauma Center Design Standards", "type": "PDF", "size": "67.8 MB", "date": "2024-06-15" },
+        { "id": 3, "name": "Air Medical Services Protocol", "type": "PDF", "size": "54.3 MB", "date": "2024-10-10" },
+        { "id": 4, "name": "Emergency Response Training Manual", "type": "PDF", "size": "42.7 MB", "date": "2024-11-05" }
+      ],
+      "feedback": [
+        { "id": 1, "author": "Emergency Medical Technician", "date": "2024-11-21", "comment": "New ambulances and equipment are saving more lives. Response times have improved dramatically.", "upvotes": 367, "downvotes": 8, "userVote": "up" },
+        { "id": 2, "author": "Trauma Surgeon", "date": "2024-11-18", "comment": "Trauma centers are equipped with state-of-the-art facilities. Critical care capabilities have expanded significantly.", "upvotes": 289, "downvotes": 5, "userVote": "up" },
+        { "id": 3, "author": "Patient Family Member", "date": "2024-11-15", "comment": "Fast emergency response saved my father's life. Professional medical team and modern ambulance made the difference.", "upvotes": 456, "downvotes": 3, "userVote": "up" }
+      ],
+      "coordinates": { "lat": 12.8797, "lng": 121.7740 },
+      "position": { "top": "50%", "left": "55%" },
+      "contractor": "Philippine Emergency Medical Services Corp.",
+      "department": "Department of Health",
+      "endDate": "Nov 2025"
+    },
+    "PROJ-2025-068": {
+      "id": "PROJ-2025-068",
+      "title": "National Cybersecurity Infrastructure Program",
+      "location": "Nationwide",
+      "sector": "Safety & Security",
+      "status": "ongoing",
+      "progress": 38,
+      "startDate": "2024-06-01",
+      "expectedCompletion": "2026-12-31",
+      "description": "Comprehensive cybersecurity infrastructure to protect government systems and critical infrastructure",
+      "budget": {
+        "total": 34500000000,
+        "allocated": 34500000000,
+        "spent": 13110000000,
+        "remaining": 21390000000
+      },
+      "milestones": [
+        { "id": 1, "title": "Cybersecurity Assessment", "date": "2024-09-01", "status": "completed" },
+        { "id": 2, "title": "Security Operations Center", "date": "2025-01-01", "status": "ongoing" },
+        { "id": 3, "title": "Government Network Security", "date": "2025-06-01", "status": "pending" },
+        { "id": 4, "title": "Critical Infrastructure Protection", "date": "2026-01-01", "status": "pending" },
+        { "id": 5, "title": "Cyber Training Programs", "date": "2026-08-01", "status": "pending" },
+        { "id": 6, "title": "Full Security Operations", "date": "2026-12-31", "status": "pending" }
+      ],
+      "monthlySpending": [
+        { "month": "Jul", "amount": 1380000000 },
+        { "month": "Aug", "amount": 1500000000 },
+        { "month": "Sep", "amount": 1280000000 },
+        { "month": "Oct", "amount": 1150000000 },
+        { "month": "Nov", "amount": 1020000000 }
+      ],
+      "documents": [
+        { "id": 1, "name": "National Cybersecurity Strategy", "type": "PDF", "size": "78.4 MB", "date": "2024-08-20" },
+        { "id": 2, "name": "Security Operations Center Design", "type": "PDF", "size": "54.3 MB", "date": "2024-10-15" },
+        { "id": 3, "name": "Government Network Security Standards", "type": "PDF", "size": "67.8 MB", "date": "2024-11-10" },
+        { "id": 4, "name": "Incident Response Protocol", "type": "PDF", "size": "42.7 MB", "date": "2024-11-18" }
+      ],
+      "feedback": [
+        { "id": 1, "author": "Cybersecurity Expert", "date": "2024-11-21", "comment": "Critical investment in national security. Modern threat landscape requires comprehensive cyber defense capabilities.", "upvotes": 234, "downvotes": 34, "userVote": "up" },
+        { "id": 2, "author": "Government IT Manager", "date": "2024-11-18", "comment": "Enhanced security measures protect sensitive government data and systems. Professional cyber defense team.", "upvotes": 189, "downvotes": 23, "userVote": "up" },
+        { "id": 3, "author": "Private Sector Security Officer", "date": "2024-11-15", "comment": "Government cybersecurity improvements benefit overall national digital security posture.", "upvotes": 156, "downvotes": 18, "userVote": "up" }
+      ],
+      "coordinates": { "lat": 12.8797, "lng": 121.7740 },
+      "position": { "top": "50%", "left": "55%" },
+      "contractor": "Philippine Cybersecurity Solutions Inc.",
+      "department": "Department of Information and Communications Technology",
+      "endDate": "Dec 2026"
+    },
+    "PROJ-2025-069": {
+      "id": "PROJ-2025-069",
+      "title": "National Financial Inclusion and Digital Banking Program",
+      "location": "Nationwide",
+      "sector": "Economic Development",
+      "status": "ongoing",
+      "progress": 55,
+      "startDate": "2023-08-01",
+      "expectedCompletion": "2025-07-31",
+      "description": "Comprehensive financial inclusion program with digital banking infrastructure and microfinance support",
+      "budget": {
+        "total": 29400000000,
+        "allocated": 29400000000,
+        "spent": 16170000000,
+        "remaining": 13230000000
+      },
+      "milestones": [
+        { "id": 1, "title": "Financial Access Assessment", "date": "2023-11-01", "status": "completed" },
+        { "id": 2, "title": "Digital Banking Platform", "date": "2024-03-01", "status": "completed" },
+        { "id": 3, "title": "Microfinance Network Expansion", "date": "2024-08-01", "status": "completed" },
+        { "id": 4, "title": "Rural Banking Services", "date": "2025-01-01", "status": "ongoing" },
+        { "id": 5, "title": "Financial Literacy Programs", "date": "2025-04-01", "status": "pending" },
+        { "id": 6, "title": "Full Service Integration", "date": "2025-07-31", "status": "pending" }
+      ],
+      "monthlySpending": [
+        { "month": "Jul", "amount": 1470000000 },
+        { "month": "Aug", "amount": 1620000000 },
+        { "month": "Sep", "amount": 1380000000 },
+        { "month": "Oct", "amount": 1240000000 },
+        { "month": "Nov", "amount": 1120000000 }
+      ],
+      "documents": [
+        { "id": 1, "name": "Financial Inclusion Strategy", "type": "PDF", "size": "67.8 MB", "date": "2023-09-20" },
+        { "id": 2, "name": "Digital Banking Platform Specifications", "type": "PDF", "size": "54.3 MB", "date": "2024-02-15" },
+        { "id": 3, "name": "Microfinance Program Guidelines", "type": "PDF", "size": "42.7 MB", "date": "2024-07-10" },
+        { "id": 4, "name": "Rural Banking Services Manual", "type": "PDF", "size": "38.4 MB", "date": "2024-11-05" }
+      ],
+      "feedback": [
+        { "id": 1, "author": "Small Business Owner", "date": "2024-11-21", "comment": "Access to microfinance helped expand my business. Digital banking makes transactions much easier.", "upvotes": 345, "downvotes": 12, "userVote": "up" },
+        { "id": 2, "author": "Rural Resident", "date": "2024-11-18", "comment": "Finally have access to banking services in our remote area. Mobile banking works even with limited internet.", "upvotes": 289, "downvotes": 8, "userVote": "up" },
+        { "id": 3, "author": "Financial Institution Officer", "date": "2024-11-15", "comment": "Digital platform streamlines operations and reaches previously unbanked populations effectively.", "upvotes": 234, "downvotes": 15, "userVote": "up" }
+      ],
+      "coordinates": { "lat": 12.8797, "lng": 121.7740 },
+      "position": { "top": "50%", "left": "55%" },
+      "contractor": "Philippine Financial Services Development Corp.",
+      "department": "Department of Finance",
+      "endDate": "Jul 2025"
+    }
 }
