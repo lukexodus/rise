@@ -19,6 +19,20 @@ export function Layout() {
     }
   }, [location.pathname]);
 
+  // Handle mobile navigation to notifications/profile with scroll position storage
+  const handleMobileNavigation = (path: string) => {
+    // Check if we're on mobile
+    const isMobile = window.innerWidth < 1024 ;
+    
+    if (isMobile) {
+      // Store current scroll position for mobile
+      const currentScroll = window.scrollY;
+      sessionStorage.setItem(`mobile-scroll-${location.pathname}`, currentScroll.toString());
+    }
+    
+    navigate(path);
+  };
+
   // Check if current route should show header (only on home route)
   const showHeader = location.pathname === '/';
 
@@ -37,8 +51,8 @@ export function Layout() {
           {/* Header - only show on home page */}
           {showHeader && (
             <Header
-              onNotificationsClick={() => navigate('/notifications')}
-              onProfileClick={() => navigate('/profile')}
+              onNotificationsClick={() => handleMobileNavigation('/notifications')}
+              onProfileClick={() => handleMobileNavigation('/profile')}
             />
           )}
           

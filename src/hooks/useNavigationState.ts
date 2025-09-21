@@ -79,6 +79,10 @@ export function useNavigationState() {
           console.log('Restoring scroll position:', state.scrollPosition); // Debug log
           setScrollPosition(state.scrollPosition);
         }, 100);
+
+        // requestAnimationFrame(() => {
+        //   setScrollPosition(state.scrollPosition);
+        // });
         
         return true;
       } catch (e) {

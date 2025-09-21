@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { Card } from "./ui/card";
 import { Badge } from "./ui/badge";
 import { Button } from "./ui/button";
@@ -118,6 +119,39 @@ interface ProfileProps {
 }
 
 export function Profile({ onBack }: ProfileProps) {
+  
+  // Reset scroll to top on mobile when component mounts
+  useEffect(() => {
+    const isMobile = window.innerWidth < 1024;
+    if (isMobile) {
+      window.scrollTo(0, 0);
+    }
+  }, []);
+  
+  // Handle back navigation with scroll restoration on mobile
+  const handleBack = () => {
+    if (!onBack) return;
+    
+    const isMobile = window.innerWidth < 1024;
+    
+    if (isMobile) {
+      // Get stored scroll position
+      const storedScroll = sessionStorage.getItem('mobile-scroll-/');
+      
+      // Navigate back
+      onBack();
+      
+      // Restore scroll position after navigation
+      if (storedScroll) {
+        setTimeout(() => {
+          window.scrollTo(0, parseInt(storedScroll));
+          sessionStorage.removeItem('mobile-scroll-/');
+        }, 50);
+      }
+    } else {
+      onBack();
+    }
+  };
   return (
     <div className="pb-20 lg:pb-6">
       {/* Header */}
@@ -127,7 +161,7 @@ export function Profile({ onBack }: ProfileProps) {
             <Button
               variant="ghost"
               size="sm"
-              onClick={onBack}
+              onClick={handleBack}
               className="text-white hover:bg-white/20 p-2 lg:p-3"
             >
               <ArrowLeft className="w-5 h-5 lg:w-6 lg:h-6 xl:w-7 xl:h-7" />

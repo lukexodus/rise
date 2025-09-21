@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { ArrowLeft, Filter, Search, Calendar, MapPin, FileText, DollarSign, BarChart3 } from "lucide-react";
 import { Button } from "./ui/button";
 import { Input } from "./ui/input";
@@ -29,6 +29,14 @@ export function ProjectList({ category, onBack, onProjectClick }: ProjectListPro
   const [searchQuery, setSearchQuery] = React.useState("");
   const [sortBy, setSortBy] = React.useState("title");
   const [filterLocation, setFilterLocation] = React.useState("all");
+
+    // Reset scroll to top on mobile when component mounts
+    useEffect(() => {
+      const isMobile = window.innerWidth < 1024;
+      if (isMobile) {
+        window.scrollTo(0, 0);
+      }
+    }, []);
 
   const handleBack = () => {
     onBack();

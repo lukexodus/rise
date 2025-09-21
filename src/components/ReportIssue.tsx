@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Card } from "./ui/card";
 import { Button } from "./ui/button";
 import { Badge } from "./ui/badge";
@@ -41,6 +41,14 @@ export function ReportIssue({
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [showSuccess, setShowSuccess] = useState(false);
   const [userReports, setUserReports] = useState(reportsData);
+
+    // Reset scroll to top on mobile when component mounts
+    useEffect(() => {
+      const isMobile = window.innerWidth < 1024;
+      if (isMobile) {
+        window.scrollTo(0, 0);
+      }
+    }, []);
 
   // Filter reports for current project
   const currentProjectReports = userReports.filter(

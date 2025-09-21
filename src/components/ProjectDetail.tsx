@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Card } from "./ui/card";
 import { Button } from "./ui/button";
 import { Badge } from "./ui/badge";
@@ -87,6 +87,14 @@ export function ProjectDetail({
   const [isBookmarked, setIsBookmarked] = useState(false);
   const [newFeedback, setNewFeedback] = useState("");
   const [isSubmittingFeedback, setIsSubmittingFeedback] = useState(false);
+
+  // Reset scroll to top on mobile when component mounts
+  useEffect(() => {
+    const isMobile = window.innerWidth < 1024;
+    if (isMobile) {
+      window.scrollTo(0, 0);
+    }
+  }, []);
 
   // Get the project data for the current projectId
   const project = projectsData[projectId as keyof typeof projectsData];
@@ -341,12 +349,13 @@ export function ProjectDetail({
             />
           </Button>
         </div>
-
-        <div className="flex items-center gap-4 text-sm opacity-90">
+        <div className="flex items-center gap-5 text-xs md:text-sm opacity-90">
           <div className="flex items-center gap-1">
             <MapPin className="w-4 h-4" />
             <span>{project.location}</span>
           </div>
+          {/* flex-col space-y-1 md:flex-row */}
+          <div className="flex gap-2">
           <Badge className="bg-white/20 text-white border-0 flex items-center gap-1">
             {getSectorIcon(project.sector)}
             {project.sector}
@@ -355,6 +364,7 @@ export function ProjectDetail({
             {getStatusIconFromData(project.status)}
             {project.status.charAt(0).toUpperCase() + project.status.slice(1)}
           </Badge>
+          </div>
           
           {/* Report Issue Button - only show on larger screens in header */}
           <div className="hidden lg:flex lg:ml-auto">
