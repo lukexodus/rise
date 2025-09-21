@@ -3,11 +3,13 @@
 
 ## Inspiration
 
-RISE was born from the vision of a more transparent and accountable Philippines. Inspired by the values of Responsibility, Integrity, Service, and Excellence, it seeks to address corruption and inefficiency by empowering every Filipino to see where public funds go and to voice concerns directly. It is not just an app, but a movement — a step toward collective action and national progress.
+RISE was born from the vision of a more transparent and accountable Philippines. It seeks to address corruption and inefficiency by empowering every Filipino to see where public funds go and to voice concerns directly. It is not just an app, but a movement — a step toward collective action and national progress.
 
 ### Why RISE?
 
 In the Philippines, public trust is often weakened by corruption, inefficiency, and lack of transparency. Citizens struggle to track how government funds are spent, and feedback systems are either inaccessible or ineffective.
+
+The name **RISE** captures both its values and its mission. It stands for **Responsibility, Integrity, Service, and Excellence**, which are the guiding compass of the platform. At the same time, “rise” reflects the collective aspiration of Filipinos to rise above corruption, inequity, and inefficiency — to build a nation where accountability is the norm and progress is shared by all.
 
 RISE addresses these challenges by:
 
