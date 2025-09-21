@@ -416,7 +416,7 @@ export function CommunityFeed({ onPostClick }: CommunityFeedProps) {
 
   return (
     <div className="px-4 lg:px-8 py-4 lg:py-6">
-      <div className="lg:max-w-6xl lg:mx-auto space-y-4 lg:space-y-6">
+      <div className="lg:max-w-7xl lg:mx-auto space-y-4 lg:space-y-6">
         {/* Header */}
         <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-4">
           <div>
@@ -880,13 +880,14 @@ export function CommunityFeed({ onPostClick }: CommunityFeedProps) {
         </Card>
 
         {/* Posts */}
-        <div className="space-y-3 sm:grid sm:grid-cols-2 sm:gap-4 sm:space-y-0">
+        <div className="columns-1 sm:columns-2 2xl:columns-3 3xl:columns-4 gap-4 space-y-0">
           {filteredPosts.map(post => (
-            <CommunityPost 
-              key={post.id} 
-              post={post}
-              onPostClick={handlePostClick}
-            />
+            <div key={post.id} className="break-inside-avoid mb-4">
+              <CommunityPost 
+                post={post}
+                onPostClick={handlePostClick}
+              />
+            </div>
           ))}
         </div>
 

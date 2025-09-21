@@ -332,117 +332,121 @@ export function NotificationsPage({
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Header */}
-      <div className="bg-[#1A3E73] text-white p-4">
-        <div className="flex items-center gap-3">
+      <div className="bg-gradient-to-br from-[#1A3E73] to-[#2A4E83] text-white p-4 lg:p-6 xl:p-8">
+        <div className="max-w-6xl mx-auto flex items-center gap-3 lg:gap-4">
           <Button
             variant="ghost"
             size="sm"
             onClick={onBack}
-            className="text-white hover:bg-white/20 p-2"
+            className="text-white hover:bg-white/20 p-2 lg:p-3"
           >
-            <ArrowLeft className="w-5 h-5" />
+            <ArrowLeft className="w-5 h-5 lg:w-6 lg:h-6 xl:w-7 xl:h-7" />
           </Button>
           <div className="flex-1">
-            <h1 className="text-lg font-medium">
+            <h1 className="text-lg lg:text-2xl xl:text-3xl 2xl:text-4xl font-semibold">
               Notifications
             </h1>
           </div>
           <Button
             variant="ghost"
             size="sm"
-            className="text-white hover:bg-white/20 p-2"
+            className="text-white hover:bg-white/20 p-2 lg:p-3"
           >
-            <Settings className="w-5 h-5" />
+            <Settings className="w-5 h-5 lg:w-6 lg:h-6 xl:w-7 xl:h-7" />
           </Button>
         </div>
       </div>
 
       {/* Content */}
-      <div className="p-4 space-y-4">
-        {/* Stats Header */}
-        <Card className="p-4">
-          <div className="flex items-center justify-between">
-            <Badge
-              variant="secondary"
-              className="bg-[#1A3E73] text-white flex items-center gap-1"
-            >
-              <BellDot className="w-3 h-3" />
-              {getUnreadCount()} unread
-            </Badge>
-            <Button
-              variant="ghost"
-              size="sm"
-              onClick={markAllAsRead}
-              className="text-[#1A3E73] text-xs flex items-center gap-1"
-            >
-              <CheckCheck className="w-4 h-4" />
-              Mark all read
-            </Button>
-          </div>
-        </Card>
+      <div className="p-4 lg:p-6 xl:p-8 2xl:p-10 space-y-4 lg:space-y-6 xl:space-y-8">
+        <div className="max-w-5xl mx-auto space-y-4 lg:space-y-6 xl:space-y-8">
+          {/* Stats Header */}
+          <Card className="p-4 lg:p-6 xl:p-8">
+            <div className="flex items-center justify-between">
+              <Badge
+                variant="secondary"
+                className="bg-[#1A3E73] text-white flex items-center gap-2 px-3 py-1.5 lg:px-4 lg:py-2 xl:px-5 xl:py-2.5"
+              >
+                <BellDot className="w-3 h-3 lg:w-4 lg:h-4 xl:w-5 xl:h-5" />
+                <span className="text-sm lg:text-base xl:text-lg 2xl:text-xl font-medium">
+                  {getUnreadCount()} unread
+                </span>
+              </Badge>
+              <Button
+                variant="ghost"
+                size="sm"
+                onClick={markAllAsRead}
+                className="text-[#1A3E73] text-sm lg:text-base xl:text-lg 2xl:text-xl flex items-center gap-2 lg:gap-3 px-3 lg:px-4 xl:px-5 py-2 lg:py-2.5"
+              >
+                <CheckCheck className="w-4 h-4 lg:w-5 lg:h-5 xl:w-6 xl:h-6" />
+                Mark all read
+              </Button>
+            </div>
+          </Card>
 
-        {/* Tabs and Notifications */}
-        <Card className="p-4 pb-8 mb-20">
-          <Tabs
-            value={activeTab}
-            onValueChange={setActiveTab}
-            className="space-y-4"
-          >
-            <TabsList className="grid w-full grid-cols-4 bg-gray-100">
-              <TabsTrigger value="all" className="text-xs">
-                All
-              </TabsTrigger>
-              <TabsTrigger value="projects" className="text-xs">
-                Projects
-              </TabsTrigger>
-              <TabsTrigger value="reports" className="text-xs">
-                Reports
-              </TabsTrigger>
-              <TabsTrigger value="system" className="text-xs">
-                System
-              </TabsTrigger>
-            </TabsList>
-
-            <TabsContent value="all" className="">
-              {renderNotificationsList(visibleNotifications)}
-            </TabsContent>
-
-            <TabsContent
-              value="projects"
-              className="space-y-6"
+          {/* Tabs and Notifications */}
+          <Card className="p-4 lg:p-6 xl:p-8 2xl:p-10 pb-8 mb-20 lg:mb-6">
+            <Tabs
+              value={activeTab}
+              onValueChange={setActiveTab}
+              className="space-y-4 lg:space-y-6 xl:space-y-8"
             >
-              <div>
-                <h3 className="text-sm font-medium text-[#1A3E73] mb-3 flex items-center gap-2">
-                  <TrendingUp className="w-4 h-4" />
-                  Project Updates & Engagement
-                </h3>
+              <TabsList className="grid w-full grid-cols-4">
+                <TabsTrigger value="all" className="text-sm xl:text-lg 2xl:text-xl">
+                  All
+                </TabsTrigger>
+                <TabsTrigger value="projects" className="text-sm xl:text-lg 2xl:text-xl">
+                  Projects
+                </TabsTrigger>
+                <TabsTrigger value="reports" className="text-sm xl:text-lg 2xl:text-xl">
+                  Reports
+                </TabsTrigger>
+                <TabsTrigger value="system" className="text-sm xl:text-lg 2xl:text-xl">
+                  System
+                </TabsTrigger>
+              </TabsList>
+
+              <TabsContent value="all" className="">
                 {renderNotificationsList(visibleNotifications)}
-              </div>
-            </TabsContent>
+              </TabsContent>
 
-            <TabsContent value="reports" className="">
-              <h3 className="text-sm font-medium text-[#1A3E73] mb-3 flex items-center gap-2">
-                <FileText className="w-4 h-4" />
-                Report Feedback
-              </h3>
-              {renderNotificationsList(
-                visibleNotifications,
-                "report_feedback",
-              )}
-            </TabsContent>
+              <TabsContent
+                value="projects"
+                className="space-y-6"
+              >
+                <div>
+                  <h3 className="text-base lg:text-lg xl:text-xl 2xl:text-2xl font-semibold text-[#1A3E73] mb-4 lg:mb-6 xl:mb-8 flex items-center gap-2 lg:gap-3 xl:gap-4">
+                    <TrendingUp className="w-5 h-5 lg:w-6 lg:h-6 xl:w-7 xl:h-7 2xl:w-8 2xl:h-8" />
+                    Project Updates & Engagement
+                  </h3>
+                  {renderNotificationsList(visibleNotifications)}
+                </div>
+              </TabsContent>
 
-            <TabsContent value="system" className="">
-              <h3 className="text-sm font-medium text-[#1A3E73] mb-3 flex items-center gap-2">
-                <Building className="w-4 h-4" />
-                System Updates
-              </h3>
-              {renderNotificationsList(
-                visibleNotifications,
-                "system_updates",
-              )}
-            </TabsContent>
-          </Tabs>
-        </Card>
+              <TabsContent value="reports" className="">
+                <h3 className="text-base lg:text-lg xl:text-xl 2xl:text-2xl font-semibold text-[#1A3E73] mb-4 lg:mb-6 xl:mb-8 flex items-center gap-2 lg:gap-3 xl:gap-4">
+                  <FileText className="w-5 h-5 lg:w-6 lg:h-6 xl:w-7 xl:h-7 2xl:w-8 2xl:h-8" />
+                  Report Feedback
+                </h3>
+                {renderNotificationsList(
+                  visibleNotifications,
+                  "report_feedback",
+                )}
+              </TabsContent>
+
+              <TabsContent value="system" className="">
+                <h3 className="text-base lg:text-lg xl:text-xl 2xl:text-2xl font-semibold text-[#1A3E73] mb-4 lg:mb-6 xl:mb-8 flex items-center gap-2 lg:gap-3 xl:gap-4">
+                  <Building className="w-5 h-5 lg:w-6 lg:h-6 xl:w-7 xl:h-7 2xl:w-8 2xl:h-8" />
+                  System Updates
+                </h3>
+                {renderNotificationsList(
+                  visibleNotifications,
+                  "system_updates",
+                )}
+              </TabsContent>
+            </Tabs>
+          </Card>
+        </div>
       </div>
     </div>
   );

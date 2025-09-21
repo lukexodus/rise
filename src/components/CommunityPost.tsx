@@ -168,7 +168,7 @@ export function CommunityPost({ post, onPostClick }: CommunityPostProps) {
           <div className="mt-3">
             <img 
               src={imageUrl}
-              className="w-full h-48 object-cover rounded-lg border border-gray-200"
+              className="w-full h-full max-h-52 object-cover rounded-lg border border-gray-200"
             />
           </div>
         )}
