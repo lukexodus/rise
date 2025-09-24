@@ -1,6 +1,7 @@
 
 # RISE
 RISE is a civic-tech app that tracks government funds and empowers citizens to report issues and promote accountability in the Philippines.
+
 ## Inspiration
 
 RISE was born from the vision of a more transparent and accountable Philippines. It seeks to address corruption and inefficiency by empowering every Filipino to see where public funds go and to voice concerns directly. It is not just an app, but a movement — a step toward collective action and national progress.
@@ -26,7 +27,7 @@ RISE is more than an app. It is a civic platform built on the belief that transp
 - **Report Status Updates** – Stay informed with clear progress markers: *Pending, Reviewed, Resolved.*  
 - **Smart Notifications** – Get timely updates on government fund changes and the status of your reports.  
 
-## Running the code
+## Building from source
 
 Run `npm i` to install the dependencies.
 
