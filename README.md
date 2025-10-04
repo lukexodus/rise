@@ -25,13 +25,83 @@ RISE is more than an app. It is a civic platform built on the belief that transp
 - **Government Fund Tracking** – Every peso is accounted for, with allocations broken down by agency, department, and project.  
 - **Citizen Issue Reporting** – Report problems on projects with photos and comments for better accountability.  
 - **Report Status Updates** – Stay informed with clear progress markers: *Pending, Reviewed, Resolved.*  
-- **Smart Notifications** – Get timely updates on government fund changes and the status of your reports.  
+- **Smart Notifications** – Get timely updates on government fund changes and the status of your reports.
+
+## Project Structure
+
+```
+rise/
+├── rise-frontend/          # React frontend application
+│   ├── src/               # Source code
+│   │   ├── components/    # React components
+│   │   ├── pages/         # Page components
+│   │   ├── data/          # Mock data and JSON files
+│   │   ├── hooks/         # Custom React hooks
+│   │   ├── lib/           # Utility libraries
+│   │   └── styles/        # CSS and styling files
+│   ├── assets/            # Static assets (images, icons)
+│   ├── package.json       # Frontend dependencies
+│   ├── vite.config.ts     # Vite configuration
+│   ├── Dockerfile         # Docker configuration for frontend
+│   └── .dockerignore      # Docker ignore file
+├── docker-compose.yml     # Docker Compose configuration
+└── README.md              # Project documentation
+```  
 
 ## Building from source
 
-Run `npm i` to install the dependencies.
+### Option 1: Using Docker (Recommended)
 
-Run `npm run dev` to start the development server.
+The easiest way to run RISE is using Docker. This ensures a consistent environment across all systems.
+
+**Prerequisites:**
+- Docker and Docker Compose installed on your system
+
+**Steps:**
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/22arun11/rise.git
+   cd rise
+   ```
+
+2. Build and run with Docker Compose:
+   ```bash
+   docker compose up --build
+   ```
+
+3. Access the application:
+   - Open your browser and go to `http://localhost:3000`
+
+4. To run in background:
+   ```bash
+   docker compose up --build -d
+   ```
+
+5. To stop the application:
+   ```bash
+   docker compose down
+   ```
+
+### Option 2: Local Development
+
+If you prefer to run the application locally:
+
+1. Navigate to the frontend directory:
+   ```bash
+   cd rise-frontend
+   ```
+
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+3. Start the development server:
+   ```bash
+   npm run dev
+   ```
+
+4. Open your browser and go to `http://localhost:3000`
 
 ## Contributing
 

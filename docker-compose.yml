@@ -1,0 +1,38 @@
+version: '3.8'
+
+services:
+  rise-frontend:
+    build:
+      context: ./rise-frontend
+      dockerfile: Dockerfile
+    ports:
+      - "3000:80"
+    container_name: rise-app
+    restart: unless-stopped
+    environment:
+      - NODE_ENV=production
+    networks:
+      - rise-network
+
+  # Example: Add more services here if needed (database, API, etc.)
+  # rise-api:
+  #   build:
+  #     context: ./rise-api
+  #     dockerfile: Dockerfile
+  #   ports:
+  #     - "8000:8000"
+  #   container_name: rise-api
+  #   restart: unless-stopped
+  #   environment:
+  #     - NODE_ENV=production
+  #   networks:
+  #     - rise-network
+
+networks:
+  rise-network:
+    driver: bridge
+
+# Example: Add volumes if needed for persistent data
+# volumes:
+#   rise-data:
+#     driver: local
